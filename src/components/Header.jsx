@@ -1,35 +1,57 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import background from '../assets/imgs/bg.jpg'
+//import withWindow from './withWindow'
+import Background from './Background'
+import bg from '../assets/imgs/bg.jpg'
 import logo from '../assets/imgs/logo.png'
 
-class Header extends React.PureComponent {
-  state = {
-    render: false
-  }
+const CSS_NAME = 'app-header-bg' 
+
+class Header extends React.Component {
+  state = { position: 0 }
 
   componentDidMount() {
-    setTimeout(() => this.setState({render: true}))
+    const { position } = this.props
+    this.handlePosition(position)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { position } = this.props
+    
+    if (position !== nextProps.position) {
+      this.handlePosition(position)
+    }
+  }
+
+  handlePosition = (position) => {
+    const percent = 100 / Number(document.querySelector(`.${CSS_NAME}`).offsetHeight)
+    const val = (125 + (position * percent)).toFixed(2)
+
+    document.documentElement.style.setProperty('--headerImgSize', `${val}%`)
   }
 
   render() {
     const { DIC } = this.props
-    const render = this.state.render ? 'app-background-render' : ''
-
     return (
-      <header>
+      <header className="app-section">
         <div className="app-header">
           <h1 className="tit-header">{DIC.HEADER_MAIN}</h1>
           <img src={logo} alt={DIC.HEADER_MAIN} />
           <h2 className="subtit-header">{DIC.DESCRIPTION}</h2>
         </div>
-        <figure className={`app-background ${render}`}>
-          <img src={background} alt="Leo, leo - Concurso de lectura en español." />
-        </figure>
+        <Background 
+          css={CSS_NAME}
+          url={bg} 
+          label={DIC.HEADER_MAIN + ', ' + DIC.DESCRIPTION} 
+        />
       </header>
     )
   }
-  
+}
+
+Header.propTypes = {
+  DIC: PropTypes.object.isRequired,
 }
 
 export default Header

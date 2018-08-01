@@ -40,12 +40,12 @@
 
 .btn-menu {
   border: none;
-    background: transparent;
-    font-size: 2rem;
-    color: var(--secondColor);
-    padding: 1.3rem 1.5rem;
-    cursor: pointer;
-    outline: none;
+  background: transparent;
+  font-size: 2rem;
+  color: var(--secondColor);
+  padding: 1.3rem 1.5rem;
+  cursor: pointer;
+  outline: none;
 }
 
 

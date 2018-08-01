@@ -11,7 +11,6 @@
   transition-property: opacity;
   transition-duration:.5s;
   transition-timing-function: linear;
-  z-index: 0;
 }
 
 .app-background-render {
@@ -23,10 +22,14 @@
     .app-background img {
       background-size: cover !important;
       position: relative;
-      width: 100%;
+      width: 125%;
       height: auto;
       top: 50%;
       transform: translateY(-50%)
+    }
+
+    .app-background.app-header-bg img{
+      width: var(--headerImgSize);
     }
   }
 

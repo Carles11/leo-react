@@ -1,16 +1,34 @@
 p, .txt {
-  font-size: var(--textSize);
   font-family: Lighter;
+  font-size: var(--textSize);
   color: var(--textColor);
   line-height: var(--maxSize);
 }
 
-.tit-header {
+.tit-header,
+.tit-section {
+  position: relative;
   font-family: Regular;
   font-size: var(--titleSize);
   color: var(--secondColor);
   text-align: center;
-  margin: 4rem 0 1.5rem;
+  padding: 4rem 0 1.5rem;
+  margin: 0;
+  z-index: 1;
+}
+
+.tit-section {
+  color: white;
+  padding: 2rem;
+  font-size: var(--maxSize); 
+}
+
+.tit-box,
+.tit-subsection {
+  color: var(--textColor);
+  font-family: Bold;
+  font-size: var(--maxSize);
+  margin-bottom: 0;
 }
 
 .subtit-header {
@@ -19,5 +37,6 @@ p, .txt {
 }
 
 ::selection {
-  background: var(--mainColor) /* WebKit/Blink Browsers */
+  background: var(--mainColor);
+  color: white;
 }

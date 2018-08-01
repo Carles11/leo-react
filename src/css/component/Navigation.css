@@ -62,15 +62,17 @@
   position: relative;
   display: block;
   width: 100%;
+  color: var(--textColor);
   font-family: Bold;
   font-size: var(--textSize);
   text-align: center;
+  text-decoration: none;
   padding: 1.5rem 1rem;
-  cursor: pointer;
+  box-sizing: border-box;
   transition-property: background;
   transition-duration: 0.5s;
   z-index: 0;
-  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .app-nav-item > a:hover,
@@ -135,10 +137,8 @@
 
 @media only screen 
 and (max-width: 649px) {
-  .app-nav {
-    height: 100vh;
-  }
   .app-nav-list{
+    position: absolute;
     display: block;
     width: 380px;
     height: 100vh;

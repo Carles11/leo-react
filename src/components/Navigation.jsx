@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { getSlug } from '../utils/helpers'
+import getSlug from '../utils/helpers'
 import Logo from '../assets/imgs/logo_tiny.png'
 
 class Navigation extends React.Component {
@@ -11,6 +12,20 @@ class Navigation extends React.Component {
 
   handleVisibility = () => {
     this.setState(prevState => ({ visible: !prevState.visible }))
+  }
+
+  handleNavigation = e => {
+    const { name, dataset } = e.target
+    
+    if (dataset.scroll) {
+      setTimeout(() => {
+        document.querySelector(`.${name}`).scrollIntoView({ 
+          behavior: 'smooth', block: 'start' 
+        })
+      })
+    }
+    
+    this.setState({ visible: false })
   }
   
   render() {
@@ -29,20 +44,33 @@ class Navigation extends React.Component {
       <li className="app-nav-item logo">
         <img src={Logo} alt="Leo, leo" />
       </li>
-      {nav.map(item => {
+      {nav.map((item, i) => {
         const label = getSlug(item.label)
         const children = item.children.length ? true : false
+        const section = `app-section-${i}`
 
         return (
           <li key={label} className="app-nav-item">
-            <a name={label}>{item.label.toUpperCase()}</a>
+            <Link 
+              to='/'
+              onClick={this.handleNavigation}
+              data-scroll={true}
+              name={section}
+            >
+              {item.label.toUpperCase()}
+            </Link>
             {children && 
               <ul className={`app-subnav-list`}>
                 {item.children.map(item => {
-                  const link = getSlug(item)
+                  const link = '/' + getSlug(item)
                   return(
                     <li key={link} className="app-subnav-item">
-                      <Link to={link}>{item.toUpperCase()}</Link>
+                      <Link
+                        onClick={this.handleNavigation}
+                        to={link}
+                      >
+                        {item.toUpperCase()}
+                      </Link>
                     </li>
                   )}
                 )}
@@ -71,6 +99,10 @@ class Navigation extends React.Component {
       </nav>
     )
   }
+}
+
+Navigation.propTypes = {
+  nav: PropTypes.array.isRequired
 }
 
 export default Navigation

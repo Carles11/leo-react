@@ -1,6 +1,18 @@
-const express = require('express')
+import express from 'express'
+import colors from 'colors/safe'
 
-const PORT = 8181
+import config from './config'
+import mongoose from './config/mongoose'
+import middleware from './middleware'
+import api from './api'
+
+const { PORT, env } = config
 const app = express()
+mongoose()
+middleware(app)
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT} in development`))
+app.use('/api', api)
+
+app.use('/*', (req, res) => res.status(401).send('This is a private API'))
+
+app.listen(PORT, () => console.log(`Listening on port ${colors.rainbow(PORT)} in ${colors.rainbow(env)}`))

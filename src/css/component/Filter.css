@@ -1,0 +1,113 @@
+.app-filter {
+  position: absolute;
+  top: 6rem;
+  left: -277px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0.99;
+  transition-property: left; 
+  transition-duration: 0.3s;
+}
+
+.app-filter:hover {
+  left: 0;
+}
+
+.app-filter:hover .app-filter-label span[class^=icon-] {
+  transform: rotate(360deg)
+}
+
+.app-filter-label {
+  position: relative;
+  display: flex;
+  background: var(--menuBg);
+  color: var(--textColor);
+  font-family: Bold;
+  font-size: var(--textSize);
+  text-decoration: none;
+  box-sizing: border-box;
+  transition-property: background;
+  transition-duration: 0.5s;
+  z-index: 0;
+  border: 1px solid #eeeeee;
+}
+
+.app-filter-label > p {
+  font-family: Lighter;
+  padding: 1rem 0 1rem 1rem;
+  margin: 0;
+}
+
+.app-filter-label > button {
+  border: none;
+  font-family: Bold;
+  font-size: var(--textSize);
+  background: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.app-filter-label span[class^=icon-] {
+  display: block;
+  transform: rotate(270deg);
+  transition-property: transform;
+  transition-duration: 0.5s; 
+  margin-left: 0.5rem;
+}
+
+.app-filter-list {
+  visibility: hidden;
+  position: absolute;
+  top: 2rem;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition-property: top;
+  transition-duration: 0.5s;
+}
+
+.app-filter-list.active {
+  visibility: visible;
+  top: -1px;
+}
+
+.app-filter-item {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-filter-item > button {
+  display: block;
+  width: 100%;
+  background: var(--menuBg);
+  font-size: var(--textSize);
+  font-family: Lighter;
+  text-align: left;
+  border: none;
+  padding: 1.3rem;
+  border: 1px solid #eeeeee;
+  border-bottom: none;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.5s; 
+}
+
+.app-filter-item > button:hover {
+  background: white;
+}
+.app-filter-item:last-of-type > button {
+  border: 1px solid #eeeeee;
+}
+
+.app-filter-item > button[data-count]:not([data-count=""]):after {
+  margin-left: 0.5rem;
+  content: "(" attr(data-count) ")";
+  color: #cccccc;
+}

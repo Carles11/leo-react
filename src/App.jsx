@@ -2,37 +2,37 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Navigation from './components/Navigation'
-import Routes from './Routes'
+import Routes from './Routes.jsx'
 
 import './css/App.css'
-import { getDictionary } from './utils/dictionary'
+import getDictionary from './utils/dictionary'
 
 const DIC = getDictionary()
 
 const NAV = [
-  { 
-    label: DIC.NAV_INFO, 
+  {
+    label: DIC.NAV_INFO,
     children: [
       DIC.NAV_BASES,
       DIC.NAV_TEXTOS,
       DIC.NAV_CRITERIOS,
       DIC.NAV_CONCURSO,
       DIC.NAV_CERTIFICADOS,
-      DIC.NAV_COLEGIOS
-    ]
+      DIC.NAV_COLEGIOS,
+    ],
   },
   { label: DIC.NAV_GALERIA, children: [] },
-  { label: DIC.NAV_INSCRIPCION, children: [] }
+  { label: DIC.NAV_INSCRIPCION, children: [] },
 ]
 
 const App = () => 
   <section className="app-root">
     <Helmet titleTemplate={`%s | ${DIC.NAME} - ${DIC.DESCRIPTION}`} defaultTitle={`${DIC.NAME} - ${DIC.DESCRIPTION}`} >
-      <meta name="description" content={DIC.DESCRIPTION}  />
+      <meta name="description" content={DIC.DESCRIPTION} />
     </Helmet>
     <Navigation nav={NAV} />
     <Routes DIC={DIC} />
   </section>
 
 
-export default App;
+export default App

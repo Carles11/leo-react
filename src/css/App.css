@@ -5,19 +5,15 @@
 @import './layout/Body.css';
 @import './layout/Content.css';
 @import './layout/Footer.css';
-@import './layout/Header.css';
 
 /** COMPONENT STYLES **/
-@import './component/Article.css';
 @import './component/Background.css';
 @import './component/Button.css';
 @import './component/Form.css';
-@import './component/List.css';
+@import './component/Filter.css';
 @import './component/Loader.css';
 @import './component/Navigation.css';
 
 /** PROPERTY STYLES **/
 @import './property/BoxModel.css';
-@import './property/Grid.css';
-@import './property/Image.css';
 @import './property/Text.css';

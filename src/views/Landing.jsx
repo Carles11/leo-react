@@ -2,12 +2,14 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
+import Concurso from '../components/Concurso'
+import Galeria from '../components/Galeria'
 
 const Landing = props => {
   const { DIC } = props
   
   return (
-    <div className="app-section">
+    <div className="app-main">
       <Helmet 
         title={DIC.DESCRIPTION} 
         meta={[
@@ -16,6 +18,8 @@ const Landing = props => {
         ]}
       />
       <Header DIC={DIC} />
+      <Concurso DIC={DIC} />
+      <Galeria />
     </div>
   )
 }
