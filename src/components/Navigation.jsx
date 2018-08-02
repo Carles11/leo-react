@@ -42,7 +42,14 @@ class Navigation extends React.Component {
         </button>
       </li>
       <li className="app-nav-item logo">
-        <img src={Logo} alt="Leo, leo" />
+        <Link to='/'>
+          <img
+           onClick={this.handleNavigation}
+           data-scroll={true}
+           name="app-header"
+           src={Logo} 
+           alt="Leo, leo" />
+        </Link>
       </li>
       {nav.map((item, i) => {
         const label = getSlug(item.label)

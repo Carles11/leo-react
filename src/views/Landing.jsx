@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-import Concurso from '../components/Concurso'
+import Contest from '../components/Contest'
 import Galeria from '../components/Galeria'
 
 const Landing = props => {
@@ -18,7 +18,7 @@ const Landing = props => {
         ]}
       />
       <Header DIC={DIC} />
-      <Concurso DIC={DIC} />
+      <Contest DIC={DIC} />
       <Galeria />
     </div>
   )

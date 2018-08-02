@@ -6,8 +6,7 @@
   z-index: 10;
 }
 
-.app-nav-list,
-.app-nav-item.logo:hover  {
+.app-nav-list {
   position: relative;
   background: var(--menuBg);
   color: var(--textColor);
@@ -21,12 +20,20 @@
   border-bottom: 1px solid #eeeeee;
 }
 
-.app-nav-item.logo {
+.app-nav-item.logo,
+.app-nav-item.logo:hover {
   flex: 1;
   justify-content: center;
 }
 
-.app-nav-item.logo > img {
+.app-nav-item.logo > a,
+.app-nav-item.logo > a:hover {
+  background: var(--menuBg);
+  padding: 0;
+  cursor: default;
+}
+
+.app-nav-item.logo > a > img {
   width: 50px;
   height: auto;
   cursor: pointer;
@@ -35,7 +42,7 @@
   transition-duration: 0.25s; 
 }
 
-.app-nav-item.logo > img:hover {
+.app-nav-item.logo > a > img:hover {
   width: 60px;
   opacity: 1;
 }

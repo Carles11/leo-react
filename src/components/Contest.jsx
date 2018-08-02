@@ -10,7 +10,7 @@ const PARAGRAPHS = [
   { label: 'CONCURSO_PATROCINA', link: '' }, 
 ]
 
-const Concurso = props => {
+const Contest = props => {
   const { DIC } = props
 
   return (
@@ -30,8 +30,8 @@ const Concurso = props => {
   )
 }
 
-Concurso.propTypes = {
+Contest.propTypes = {
   DIC: PropTypes.object.isRequired
 }
 
-export default Concurso
+export default Contest

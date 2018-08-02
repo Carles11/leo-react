@@ -12,8 +12,8 @@ class Header extends React.Component {
   state = { position: 0 }
 
   componentDidMount() {
-    const { position } = this.props
-    this.handlePosition(position)
+    //const { position } = this.props
+    //this.handlePosition(position)
   }
 
   componentWillReceiveProps(nextProps) {
