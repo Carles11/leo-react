@@ -1,11 +1,12 @@
 import React from 'react'
+import Gallery from 'react-photo-gallery'
 import Lightbox from 'react-images'
-import Gallery from 'react-photo-gallery';
 
 import Loader from './Loader'
 import Filter from './Filter'
+import publicAPI from '../utils/API'
 
-class Galeria extends React.Component {
+class ImageGallery extends React.Component {
   state = { 
     loaded: false,
     currentImage: 0,
@@ -21,18 +22,21 @@ class Galeria extends React.Component {
   handleFilter = e => {
     this.getPhotos(e.target.dataset.year)
     this.setState({ loaded: false, photos: [] })
-  }
 
+    setTimeout(() => {
+      document.querySelector(`.app-section-1`).scrollIntoView({ 
+        behavior: 'smooth', block: 'start' 
+      })
+    },100)
+  }
+    
   getPhotos = async (year) => {
     try {
       const { filter } = this.state
-      const url = year ? `/year/${Number(year)}` : ''
-      const promise = await fetch(`http://localhost:5001/api/images${url}`, { method: 'GET' })
-      
-      this.setState({
-        photos: await promise.json(),
-        loaded: true
-      })
+      const param = year ? `year/${Number(year)}` : ''
+      const photos = await publicAPI.get(`images/${param}`)
+         
+      this.setState({ photos, loaded: true })
 
       if (Object.keys(filter).length === 0) this.getYears()
 
@@ -94,7 +98,7 @@ class Galeria extends React.Component {
           handleFilter={this.handleFilter}
           filter={filter}
         />
-        <Gallery 
+        <Gallery
           photos={photos} 
           onClick={this.openLightbox} 
         />
@@ -111,4 +115,4 @@ class Galeria extends React.Component {
   }
 }
 
-export default Galeria
+export default ImageGallery

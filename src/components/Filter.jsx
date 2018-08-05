@@ -6,6 +6,11 @@ class Filter extends React.PureComponent {
     visible: false
   }
 
+  static propTypes = {
+    filter: PropTypes.object.isRequired,
+    handleFilter: PropTypes.func.isRequired
+  }
+
   handleVisibility = () => {
     this.setState(prevState => ({ visible: !prevState.visible }))
   }
@@ -53,11 +58,6 @@ class Filter extends React.PureComponent {
       </div>
     )
   }
-}
-
-Filter.propTypes = {
-  filter: PropTypes.object.isRequired,
-  handleFilter: PropTypes.func.isRequired
 }
 
 export default Filter

@@ -13,6 +13,8 @@ const dictionary = {
     CONCURSO_PATROCINA: 'Quién nos patrocina?',
     CONCURSO_PATROCINA_TXT: 'Praesent non pretium leo. Duis luctus sem a libero elementum, sit amet elementum est dictum. Nam nec risus est. Vivamus vehicula, ex vel consequat tincidunt, elit sapien malesuada magna, ut rutrum odio tortor non justo. Ut nec neque vel lorem rhoncus placerat. Donec maximus urna ut augue feugiat dapibus. In ultrices velit in sapien laoreet, vel pulvinar risus sodales. Vestibulum pulvinar, ex a consectetur condimentum, magna eros cursus dolor, vel porta arcu erat a tortor. Duis non velit in lectus pellentesque cursus et non arcu',
     DESCRIPTION: 'Concurso de lectura en español.',
+    FORM_COURSE: 'Curso',
+    FORM_SCHOOL_NAME: 'Nombre de la escuela',
     HEADER_MAIN: 'Leo, leo... qué lees?',
     NAME: 'Leo, leo',
     NAV_BASES: 'Bases del concurso',

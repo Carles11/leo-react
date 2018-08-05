@@ -11,6 +11,10 @@ const CSS_NAME = 'app-header-bg'
 class Header extends React.Component {
   state = { position: 0 }
 
+  static propTypes = {
+    DIC: PropTypes.object.isRequired,
+  }
+
   componentDidMount() {
     //const { position } = this.props
     //this.handlePosition(position)
@@ -48,10 +52,6 @@ class Header extends React.Component {
       </header>
     )
   }
-}
-
-Header.propTypes = {
-  DIC: PropTypes.object.isRequired,
 }
 
 export default Header

@@ -4,6 +4,16 @@ import PropTypes from 'prop-types'
 class Background extends React.PureComponent {
   state = { render: false }
 
+  static propTypes = {
+    css: PropTypes.string,
+    label: PropTypes.string,
+    url: PropTypes.string.isRequired,
+  }
+
+  static defaultProps = {
+    css: ''
+  }
+
   componentDidMount() {
     setTimeout(() => this.setState({ render: true }))
   }
@@ -18,12 +28,6 @@ class Background extends React.PureComponent {
       </figure>
     )
   }
-}
-
-Background.propTypes = {
-  css: PropTypes.string,
-  label: PropTypes.string,
-  url: PropTypes.string.isRequired,
 }
 
 export default Background

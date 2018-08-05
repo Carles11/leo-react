@@ -1,41 +1,55 @@
 .btn {
-  outline: none;
-  display: inline-block;
-  background: transparent;
-  color: var(--selectColor);
-  padding: 0.5rem 1.5rem;
+  position: relative;
   font-family: Lighter;
-  font-size: var(--textSize);
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid var(--selectColor);
-  border-radius: 25px;
-  transition-property: color opacity background;
-  transition-duration: .3s;
+  font-size: calc(var(--textSize) * (1.05));
+  color: var(--secondColor);
   text-decoration: none;
-  z-index: 1000 !important;
+  margin: 0.5rem 0 0;
+  line-height: 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
-.btn:hover {
-  background: var(--selectColor);
-  color: var(--textColor);
+.btn .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
-.btn:disabled,
-.btn:hover:disabled {
-  background: var(--bgColor);
-  border: 1px solid grey;
-  color: grey;
+.btn .line span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0.25vw;
+  border-bottom: 1px solid var(--secondColor);
+}
+
+.btn .line span:first-child {
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.23,1,.32,1);
+  transition-delay: .2s;
+}
+
+.btn .line span:last-child {
+  transform: translateX(-102%);
+  transition: transform 1s cubic-bezier(.23,1,.32,1);
+}
+
+.btn:hover .line span:first-child {
+  transform: translateX(102%);
+  transition: transform 1s cubic-bezier(.23,1,.32,1);
+}
+
+.btn:hover .line span:last-child {
+  transform: translateX(0);
+  transition: transform 1s cubic-bezier(.23,1,.32,1) .2s;
 }
 
 .btn-menu {
@@ -47,5 +61,7 @@
   cursor: pointer;
   outline: none;
 }
+
+
 
 

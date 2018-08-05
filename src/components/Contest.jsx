@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+
+import Button from './Button'
 
 const PARAGRAPHS = [
-  { label: 'CONCURSO', link: '' }, 
-  { label: 'CONCURSO_EDICION', link: '' }, 
-  { label: 'CONCURSO_ORGANIZA', link: '' }, 
-  { label: 'CONCURSO_PARTICIPAR', link: '' }, 
-  { label: 'CONCURSO_PATROCINA', link: '' }, 
+  { title: 'CONCURSO', label: 'NAV_BASES', url: '/bases-del-concurso' }, 
+  { title: 'CONCURSO_EDICION', label: '' }, 
+  { title: 'CONCURSO_ORGANIZA', label: '' }, 
+  { title: 'CONCURSO_PARTICIPAR', label: '' }, 
+  { title: 'CONCURSO_PATROCINA', label: '' }, 
 ]
 
 const Contest = props => {
@@ -16,13 +17,15 @@ const Contest = props => {
   return (
     <article className="app-section app-section-boxes app-section-0">
       {PARAGRAPHS.map(p => {
-        const link = p.link ? <Link to={p.link}>{`Go to ${DIC[p.label]}`}</Link> : ''
+        const link = p.url 
+          ? <Button link={p.url} label={`${DIC[p.label]}`} /> 
+          : ''
         
         return (
-          <div key={p.label} className="app-section-box">
-            <h2 className="tit-box">{DIC[p.label]}</h2>
-            <p className="txt">{DIC[p.label + '_TXT']}</p>
-            {link }
+          <div key={p.title} className="app-section-box">
+            <h2 className="tit-box">{DIC[p.title]}</h2>
+            <p className="txt">{DIC[p.title + '_TXT']}</p>
+            {link}
           </div>
         )
       })}

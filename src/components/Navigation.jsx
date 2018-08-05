@@ -10,6 +10,10 @@ class Navigation extends React.Component {
     visible: false 
   }
 
+  static propTypes = {
+    nav: PropTypes.array.isRequired
+  }
+
   handleVisibility = () => {
     this.setState(prevState => ({ visible: !prevState.visible }))
   }
@@ -106,10 +110,6 @@ class Navigation extends React.Component {
       </nav>
     )
   }
-}
-
-Navigation.propTypes = {
-  nav: PropTypes.array.isRequired
 }
 
 export default Navigation
