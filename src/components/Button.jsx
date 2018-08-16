@@ -6,8 +6,8 @@ const Button = props => {
   const { link, label, type } = props
   const span = <span className="line"><span></span><span></span></span>
   const Component = link 
-    ? <Link className="btn" to={link}>{label}{span}</Link>
-    : <button type={type} className="btn">{label}{span}</button>
+    ? <Link className="btn-link" to={link}>{label}{span}</Link>
+    : <button type={type} className="btn m1rem">{label}{span}</button>
 
   return Component
 }

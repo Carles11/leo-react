@@ -1,9 +1,15 @@
 .app-form{
+  position: relative;
   margin-bottom: 15px;
+  z-index: 1;
 }
 
 .app-form-group {
+  display: inline-block;
   min-height: 5rem;
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .app-form-group:last-of-type {
@@ -11,6 +17,7 @@
 }
 
 .app-form-label {
+  color: white;
   font-size: var(--minSize);
   font-family: Lighter;
   display: inline-block;
@@ -38,6 +45,12 @@
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.app-form-input::placeholder {
+  font-family: Lighter;
+  font-size: var(--textSize);
+  color: #aaaaaa;
 }
 
 .app-select {
@@ -83,9 +96,18 @@ textarea.active.invalid {
 
 .app-form-error {
   font-family: Lighter;
-  color: var(--secondColor);
+  color: var(--errorColor);
   font-size: var(--tinySize);
   margin: 2px 0 0 0;
 }
+
+@media only screen 
+  and (max-width: 649px) {
+    .app-form-group {
+      display: block;
+      width: 100%;
+      padding-bottom: 0;
+    }
+  }
 
 

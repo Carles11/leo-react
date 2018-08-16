@@ -6,7 +6,7 @@ const Landing = props => {
 
   console.log(DIC)
   return (
-    <article className="app-section">
+    <article className="app-section h725">
       <Helmet 
         title={DIC.NOTFOUND} 
         meta={[

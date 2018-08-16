@@ -9,6 +9,17 @@ export const list = async (req, res) => {
   }
 }
 
+export const create = async (req, res) => {
+  try {
+    const newSchool = await new School(req.body)
+    await newSchool.save()
+    const schools = await School.find({})
+    return res.status(201).json({ success: true, response: schools })
+  } catch (err) {
+    return res.status(500).send({ success: false, response: err })
+  }
+}
+
 export const update = async (req, res) => {
   try {
     const updateSchool = Object.assign(req.school, req.body)

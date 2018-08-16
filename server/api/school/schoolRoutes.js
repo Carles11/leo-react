@@ -6,6 +6,7 @@ const router = Router()
 router
   .route('/')
   .get(ctrl.list)
+  .post(ctrl.create)
 
 router
   .route('/:schoolId')

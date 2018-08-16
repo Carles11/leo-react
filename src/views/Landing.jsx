@@ -10,7 +10,7 @@ const Landing = props => {
   const { DIC } = props
   
   return (
-    <div className="app-main">
+    <div className="app-landing">
       <Helmet 
         title={DIC.DESCRIPTION} 
         meta={[

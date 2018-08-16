@@ -11,8 +11,16 @@
 .mb10 { margin-bottom: 10px; }
 .mr10 { margin-right: 10px; }
 
-@media only screen 
-  and (max-width: 649px) {
-    
+.m1rem { margin: 1rem; }
+.mb2rem { margin-bottom: 2rem !important; }
+
+.pSides2rem { 
+  padding-left: 2rem;
+  padding-right: 2rem; 
 }
+
+.h725 { min-height: 725px; }
+
+@media only screen 
+  and (max-width: 649px) {}
 

@@ -1,3 +1,7 @@
+import getDictionary from './dictionary'
+
+const DIC = getDictionary()
+
 export const showFormErrors = () => {
   const inputs = document.querySelectorAll('input:required')
   const textareas = document.querySelectorAll('textarea:required')
@@ -42,11 +46,11 @@ function handleText(item) {
 
   if (!item.validity.valid) {
     if (item.validity.valueMissing) {
-      item.error.textContent = `${item.label} is a required field`;
+      item.error.textContent = `${item.label} ${DIC.ERROR_REQUIRED}`;
     } else if (isEmail && item.validity.typeMismatch) {
-      item.error.textContent = `${item.label} should be a valid email address`; 
+      item.error.textContent = `${item.label} ${DIC.ERROR_EMAIL}`; 
     } else if (item.validity.patternMismatch || (isPassword && item.validity.patternMismatch)) {
-      item.error.textContent = `${item.label} should be longer than 6 chars`; 
+      item.error.textContent = `${item.label} ${DIC.ERROR_TEXT}`; 
     } 
     return false;
   } 

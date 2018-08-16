@@ -1,5 +1,7 @@
-.app-header,
-.app-content {
+.app-main {
+  padding: 4rem 0 0;
+}
+.app-header{
   position: relative;
   width: 100%;
   display: flex;
@@ -14,7 +16,6 @@
   position: relative;
   margin: 0;
   padding: 0;
-  min-height: 725px;
 }
 
 .app-section-0,
@@ -48,6 +49,28 @@
   align-items: flex-start;
   padding: 0rem 1rem;
   box-sizing: border-box;
+}
+
+.app-list {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+.app-list-item {
+  counter-increment: item;
+  margin-bottom: 3rem;
+}
+
+.app-list-item:before {
+  font-family: Regular;
+  margin-right: 0.5rem;
+  content: counter(item);
+  background: var(--secondColor);
+  border-radius: 100%;
+  color: white;
+  padding: .4rem .8rem;
+  text-align: center;
 }
 
 

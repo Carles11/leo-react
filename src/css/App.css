@@ -15,5 +15,6 @@
 @import './component/Navigation.css';
 
 /** PROPERTY STYLES **/
-@import './property/BoxModel.css';
 @import './property/Text.css';
+@import './property/BoxModel.css';
+

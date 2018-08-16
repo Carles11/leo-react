@@ -38,7 +38,7 @@ class Header extends React.Component {
   render() {
     const { DIC } = this.props
     return (
-      <header className="app-section">
+      <header className="app-section h725">
         <div className="app-header">
           <h1 className="tit-header">{DIC.HEADER_MAIN}</h1>
           <img src={logo} alt={DIC.HEADER_MAIN} />

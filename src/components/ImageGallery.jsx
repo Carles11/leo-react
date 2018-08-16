@@ -4,7 +4,7 @@ import Lightbox from 'react-images'
 
 import Loader from './Loader'
 import Filter from './Filter'
-import publicAPI from '../utils/API'
+import API from '../utils/API'
 
 class ImageGallery extends React.Component {
   state = { 
@@ -34,7 +34,7 @@ class ImageGallery extends React.Component {
     try {
       const { filter } = this.state
       const param = year ? `year/${Number(year)}` : ''
-      const photos = await publicAPI.get(`images/${param}`)
+      const photos = await API.get(`images/${param}`)
          
       this.setState({ photos, loaded: true })
 
@@ -90,10 +90,10 @@ class ImageGallery extends React.Component {
   render() {
     const { loaded, photos, filter } = this.state
 
-    if (!loaded) return <Loader css={'app-section app-section-1'} />
+    if (!loaded) return <Loader css={'app-section app-section-1 h725'} />
 
     return (
-      <article className="app-section app-section-1">
+      <article className="app-section app-section-1 h725">
         <Filter 
           handleFilter={this.handleFilter}
           filter={filter}

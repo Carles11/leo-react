@@ -15,7 +15,7 @@ const Contest = props => {
   const { DIC } = props
 
   return (
-    <article className="app-section app-section-boxes app-section-0">
+    <article className="app-section app-section-boxes app-section-0 h725">
       {PARAGRAPHS.map(p => {
         const link = p.url 
           ? <Button link={p.url} label={`${DIC[p.label]}`} /> 
