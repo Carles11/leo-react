@@ -1,10 +1,9 @@
 body {
   font-size: 16px;
-  font-family: Regular;
+  font-family: sans-serif;
   color: var(--textColor);
   height: 100vh;
   background: var(--bgColor);
   margin: 0;
   padding: 0;
 }
-

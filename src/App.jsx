@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 import Navigation from './components/Navigation'
 import Routes from './Routes.jsx'
+import Footer from './components/Footer'
 
 import './css/App.css'
 import getDictionary from './utils/dictionary'
@@ -32,6 +33,7 @@ const App = () =>
     </Helmet>
     <Navigation nav={NAV} />
     <Routes DIC={DIC} />
+    <Footer />
   </section>
 
 

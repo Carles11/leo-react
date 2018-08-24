@@ -13,6 +13,12 @@
 
 .m1rem { margin: 1rem; }
 .mb2rem { margin-bottom: 2rem !important; }
+.pb2rem { padding-bottom: 2rem !important; }
+
+.pSides05rem { 
+  padding-left: .5rem;
+  padding-right: .5rem; 
+}
 
 .pSides2rem { 
   padding-left: 2rem;
@@ -20,6 +26,7 @@
 }
 
 .h725 { min-height: 725px; }
+.h100 { height: 100vh; }
 
 @media only screen 
   and (max-width: 649px) {}

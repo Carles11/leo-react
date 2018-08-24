@@ -3,7 +3,7 @@
   display: inline-block;
   background: var(--secondColor);
   color: white;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.75rem;
   font-family: Lighter;
   font-size: var(--textSize);
   line-height: 1.42857143;
@@ -13,28 +13,29 @@
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
   border: 1px solid var(--secondColor);
   border-radius: 25px;
-  transition-property: color opacity background;
+  transition-property: border, background;
   transition-duration: .3s;
   text-decoration: none;
   z-index: 1000 !important;
 }
 
 .btn:hover {
-  background: white;
-  color: var(--secondColor);
+  border: 1px solid white;
+  background: transparent;
+}
+
+.btn:disabled {
+  color: grey;
+  border: 1px solid grey;
+  background: transparent;
 }
 
 .btn-link {
   position: relative;
   font-family: Regular;
-  font-size: calc(var(--textSize) * (1.1));
+  font-size: calc(var(--textSize) * (1.05));
   color: var(--secondColor);
   text-decoration: none;
   margin: 0.5rem 0 0;

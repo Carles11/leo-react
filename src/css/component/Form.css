@@ -5,15 +5,12 @@
 }
 
 .app-form-group {
+  position: relative;
   display: inline-block;
   min-height: 5rem;
   width: 50%;
   padding: 1rem;
   box-sizing: border-box;
-}
-
-.app-form-group:last-of-type {
-  height: 7rem;
 }
 
 .app-form-label {
@@ -23,6 +20,7 @@
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
+  display: none;
 }
 
 .app-form-input,
@@ -30,15 +28,16 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: .5rem .75rem;
-  font-size: 1rem;
+  padding: .8rem .75rem;
+  font-size: var(--textSize);
+  font-family: Lighter;
   line-height: 1.25;
-  color: #464a4c;
-  background-color: #fff;
+  color: white;
+  background-color: var(--mainColorDark);
   background-image: none;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid var(--mainColorDark);
   border-radius: .25rem;
   -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
@@ -50,7 +49,7 @@
 .app-form-input::placeholder {
   font-family: Lighter;
   font-size: var(--textSize);
-  color: #aaaaaa;
+  color: #f1f1f1;
 }
 
 .app-select {
@@ -86,15 +85,18 @@ input:focus{
 
 input.active:valid,
 textarea.active.valid {
-  border: 1px solid var(--selectColor);
+  border: 1px solid var(--secondColor);
 }
 
 input.active:invalid,
 textarea.active.invalid {
-  border: 1px solid var(--secondColor);
+  border: 1px solid var(--errorColor);
 }
 
 .app-form-error {
+  position: absolute;
+  right: 1rem;
+  top: 3.6rem;
   font-family: Lighter;
   color: var(--errorColor);
   font-size: var(--tinySize);

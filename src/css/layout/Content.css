@@ -29,6 +29,12 @@
   min-height: auto;
 }
 
+.app-section-2 {
+  height: auto !important;
+  min-height: auto;
+  background: url('../../assets/imgs/logo.jpg') -100px -50px no-repeat var(--mainColor);
+}
+
 .app-section-width,
 .app-section-boxes {
   position: relative;
@@ -47,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0rem 1rem;
+  padding: 0rem 1.5rem;
   box-sizing: border-box;
 }
 
@@ -69,7 +75,7 @@
   background: var(--secondColor);
   border-radius: 100%;
   color: white;
-  padding: .4rem .8rem;
+  padding: .4rem .85rem;
   text-align: center;
 }
 

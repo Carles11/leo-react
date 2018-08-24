@@ -90,10 +90,10 @@ class ImageGallery extends React.Component {
   render() {
     const { loaded, photos, filter } = this.state
 
-    if (!loaded) return <Loader css={'app-section app-section-1 h725'} />
+    if (!loaded) return <Loader css={'app-section h725'} />
 
     return (
-      <article className="app-section app-section-1 h725">
+      <article className="app-section app-section-1">
         <Filter 
           handleFilter={this.handleFilter}
           filter={filter}

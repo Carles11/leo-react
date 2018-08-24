@@ -11,12 +11,13 @@ export const list = async (req, res) => {
 
 export const create = async (req, res) => {
   try {
+    console.log('create', req.body)
     const newSchool = await new School(req.body)
     await newSchool.save()
     const schools = await School.find({})
     return res.status(201).json({ success: true, response: schools })
   } catch (err) {
-    return res.status(500).send({ success: false, response: err })
+    return res.status(500).send({ success: false, err })
   }
 }
 

@@ -16,7 +16,7 @@
   margin: 0;
   list-style: none;
   box-sizing: border-box;
-  opacity: 0.9;
+  opacity: 0.95;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -74,12 +74,13 @@
   font-size: var(--textSize);
   text-align: center;
   text-decoration: none;
-  padding: 1.555rem 1rem;
+  padding: 1.3rem 1rem;
   box-sizing: border-box;
   transition-property: background;
   transition-duration: 0.5s;
   z-index: 0;
   cursor: pointer;
+  line-height: 1;
 }
 
 .app-nav-item > a:hover,
@@ -112,6 +113,8 @@
   text-align: center;
   background: var(--menuBg);
   border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   color: var(--textColor);
   z-index: 1;
   transition-property: background color;
@@ -184,6 +187,7 @@ and (max-width: 649px) {
     flex-direction: row;
     align-items: flex-start;
     border-bottom: 1px solid #666666;
+    background: var(--menuBg);
   }
 
   .app-nav-item.btn-close > img {
@@ -195,7 +199,7 @@ and (max-width: 649px) {
   .app-nav-item.btn-close > button,
   .btn-menu {
     flex: 1;
-    background: white;
+    background: var(--menuBg);
     border: none;
     outline: none;
     width: auto;
@@ -233,7 +237,7 @@ and (max-width: 649px) {
     color: var(--textColor);
     border-bottom: 1px solid #eeeeee;
     text-align: left;
-    padding: 1.25rem 2rem;
+    padding: 1rem 2rem;
   }
 
   .app-respMenu {

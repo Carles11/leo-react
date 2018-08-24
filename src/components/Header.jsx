@@ -40,7 +40,7 @@ class Header extends React.Component {
     return (
       <header className="app-section h725">
         <div className="app-header">
-          <h1 className="tit-header">{DIC.HEADER_MAIN}</h1>
+          <h1 className="tit-header mb2rem">{DIC.HEADER_MAIN}</h1>
           <img src={logo} alt={DIC.HEADER_MAIN} />
           <h2 className="subtit-header">{DIC.DESCRIPTION}</h2>
         </div>

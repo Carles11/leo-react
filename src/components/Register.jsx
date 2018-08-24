@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import API from '../utils/API'
 import { showFormErrors, showInputError } from '../utils/errorHandler'
-import Background from './Background'
 import SingleInput from './form/SingleInput'
 import Button from './Button'
 import bg from '../assets/imgs/bg2.jpg'
@@ -17,28 +16,52 @@ const Register = props => {
   }
 
   const handleData = e => {
-    const name = e.target.elements.name.value
-    const course = e.target.elements.course.value
-    const phone = e.target.elements.phone.value
-    const address = e.target.elements.address.value
-    const contact = e.target.elements.contact.value
-    const email = e.target.elements.email.value  
+    const { elements } = e.target
+    const name = elements.name.value.trim()
+    const course = elements.course.value.trim()
+    const phone = elements.phone.value.trim()
+    const address = elements.address.value.trim()
+    const contact = elements.contact.value.trim()
+    const email = elements.email.value.trim()
+
+    cleanFields(elements)
 
     return { name, course, phone, address, contact, email }
   }
 
   const handlePost = async body => {
-    if (Object.keys(body).length) {
+    try {
       const promise = await API.post('schools', body)
-      console.log(promise)
+      
+    } catch(err) {
+
+    }
+  }
+
+  const cleanFields = elem => {
+    Array.from(elem).forEach(el => {
+      el.classList.remove('active')
+      el.value = ''
+    })
+
+    disableButton()
+  }
+
+  const disableButton = () => {
+    const btn = document.querySelector('.btn')
+
+    if (btn.hasAttribute('disabled')) {
+      btn.removeAttribute('disabled')
+    } else {
+      btn.setAttribute('disabled', '')
     }
   }
  
   return (
-    <article className="app-section app-section-2">
+    <article className="app-section app-section-2 pSides05rem pb2rem">
       <div className="app-section-width">
         <header className="header-wrapper" >
-          <h2 className="tit-section">Formulario de Inscripción</h2>
+          <h2 className="tit-section pSides05rem">Formulario de Inscripción</h2>
           <h3 className="subtit-section">Registra tu escuela</h3>
         </header>
         <form
@@ -48,6 +71,7 @@ const Register = props => {
             e.preventDefault()
 
             if (showFormErrors()) {
+              disableButton()
               handlePost(handleData(e))
             }
           }}
@@ -56,7 +80,7 @@ const Register = props => {
             name="name"
             inputType="text"
             title={DIC.FORM_SCHOOL_NAME}
-            placeholder={'Escuela pública...'}
+            placeholder={DIC.FORM_SCHOOL_NAME}
             pattern=".{6,}"
             controlFunc={handleChange}
           />
@@ -64,7 +88,7 @@ const Register = props => {
             name="course"
             inputType="text"
             title={DIC.FORM_COURSE}
-            placeholder={'Segundo grado'}
+            placeholder={DIC.FORM_COURSE}
             pattern=".{6,}"
             controlFunc={handleChange}
           />
@@ -72,7 +96,7 @@ const Register = props => {
             name="phone"
             inputType="text"
             title={DIC.FORM_PHONE}
-            placeholder={'436 659 963'}
+            placeholder={DIC.FORM_PHONE}
             pattern=".{6,}"
             controlFunc={handleChange}
           />
@@ -80,7 +104,7 @@ const Register = props => {
             name="address"
             inputType="text"
             title={DIC.FORM_ADDRESS}
-            placeholder={'Main Strasse...'}
+            placeholder={DIC.FORM_ADDRESS}
             pattern=".{6,}"
             controlFunc={handleChange}
           />
@@ -88,7 +112,7 @@ const Register = props => {
             name="contact"
             inputType="text"
             title={DIC.FORM_CONTACT}
-            placeholder={'Pedro Gimenez'}
+            placeholder={DIC.FORM_CONTACT}
             pattern=".{6,}"
             controlFunc={handleChange}
           />
@@ -96,17 +120,13 @@ const Register = props => {
             name="email"
             inputType="email"
             title={DIC.FORM_MAIL}
-            placeholder={'example@gmail.com'}
+            placeholder={DIC.FORM_MAIL}
             pattern=".{6,}"
             controlFunc={handleChange}
           />
-          <Button type={'submit'} label={'Enviar'} />
+          <Button type={'submit'} label={'Enviar'} kindOf={'button'} />
         </form>
       </div>
-      <Background 
-        url={bg} 
-        label={DIC.NAV_INSCRIPCION} 
-      />
     </article>
   )
 }

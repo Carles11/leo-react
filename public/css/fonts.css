@@ -1,23 +1,27 @@
 @font-face {
   font-family: 'Regular';
-  src: url('../fonts/SourceSansPro-Regular.otf') format('truetype');
+  font-display: block;
+  src: local('Regular'), url('../fonts/SourceSansPro-Regular.otf') format('truetype');
 }
 @font-face {
   font-family: 'Lighter';
-  src: url('../fonts/SourceSansPro-ExtraLight.otf') format('truetype');
+  font-display: block;
+  src: local('Lighter'), url('../fonts/SourceSansPro-ExtraLight.otf') format('truetype');
 }
 @font-face {
   font-family: 'Bold';
-  src: url('../fonts/SourceSansPro-Black.otf') format('truetype');
+  font-display: block;
+  src: local('Bold'), url('../fonts/SourceSansPro-Black.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?vibrph');
-  src:  url('../fonts/icomoon.eot?vibrph#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?vibrph') format('truetype'),
-    url('../fonts/icomoon.woff?vibrph') format('woff'),
-    url('../fonts/icomoon.svg?vibrph#icomoon') format('svg');
+  font-display: block;
+  src: local('icomoon'), url('../fonts/icomoon.eot?vibrph');
+  src: local('icomoon'), url('../fonts/icomoon.eot?vibrph#iefix') format('embedded-opentype'),
+    local('icomoon'), url('../fonts/icomoon.ttf?vibrph') format('truetype'),
+    local('icomoon'), url('../fonts/icomoon.woff?vibrph') format('woff'),
+    local('icomoon'), url('../fonts/icomoon.svg?vibrph#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }

@@ -62,6 +62,7 @@ p, .txt, ul > li {
 .subtit-header {
   font-family: Lighter;
   font-size: var(--maxSize);
+  color: var(--mainColor);
 }
 
 ::selection {
@@ -74,5 +75,9 @@ and (max-width: 850px) {
   .tit-header {
     font-size: var(--hugeSize);
     line-height: 2rem;
+  }
+  
+  .tit-section {
+    line-height: 2.5rem;
   }
 }

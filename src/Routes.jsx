@@ -2,6 +2,8 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Landing from './views/Landing'
+import Admin from './views/Admin'
+import AdminPanel from './views/AdminPanel'
 import Bases from './views/Bases'
 import Lectura from './views/Lectura'
 import Criterios from './views/Criterios'
@@ -16,6 +18,8 @@ const Routes = (props) => {
   return (
     <Switch>
       <Route exact path="/" render={ props => <Landing {...props} DIC={DIC} /> } />
+      <Route path="/admin" component={Admin} />
+      <Route path="/admin-panel" component={AdminPanel} />
       <Route path="/bases-del-concurso" render={ props => <Bases {...props} DIC={DIC} /> } />
       <Route path="/textos-de-lectura" render={ props => <Lectura {...props} DIC={DIC} /> } />
       <Route path="/criterios-de-lectores" render={ props => <Criterios {...props} DIC={DIC} /> } />

@@ -1,5 +1,7 @@
 .app-footer {
   position: relative;
+  background: var(--mainColorDark);
+  color: white;
   bottom: 0;
   z-index: 1000;
   display: flex;
@@ -9,36 +11,43 @@
   padding-bottom: 0.5rem;
 }
 
-.app-footer-bg {
-  position: absolute;
-  background: #000000;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.4;
-}
-
-.app-footer-list{
-  flex: 1;
+.app-footer ul {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem 0;
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
+  align-items: center;
 }
 
-.app-footer-item {
-  margin: 0.5rem 1rem 0.25rem;
+.app-footer ul li,
+.app-footer ul li a {
+  color: white;
+  font-family: Lighter;
+  font-size: var(--tinySize);
+  margin: 0 0.5rem;
 }
 
-.app-footer-item a{
-  font-size: var(--textSize);
-  color: var(--textColor);
-  text-decoration: none;
+
+.app-footer ul li a {
+  color: var(--secondColor);
 }
 
-.app-footer span {
-  display: none;
+.app-footer a > .line {
+  height: 1.25rem;
 }
+
+.app-footer a > .line span {
+  border-bottom: 1px solid var(--secondColor);
+}
+
+@media only screen 
+and (max-width: 600px) {
+  .app-footer ul {
+    flex-direction: column;
+  }
+}
+
+
+
