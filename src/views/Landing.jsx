@@ -10,7 +10,7 @@ const Landing = props => {
   const { DIC } = props
   
   return (
-    <div className="app-landing">
+    <section className="app-landing">
       <Helmet 
         title={DIC.DESCRIPTION} 
         meta={[
@@ -22,7 +22,7 @@ const Landing = props => {
       <Contest DIC={DIC} />
       <ImageGallery/>
       <Register DIC={DIC} />
-    </div>
+    </section>
   )
 }
   

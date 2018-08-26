@@ -27,14 +27,14 @@ const NAV = [
 ]
 
 const App = () => 
-  <section className="app-root">
+  <React.Fragment>
     <Helmet titleTemplate={`%s | ${DIC.NAME} - ${DIC.DESCRIPTION}`} defaultTitle={`${DIC.NAME} - ${DIC.DESCRIPTION}`} >
       <meta name="description" content={DIC.DESCRIPTION} />
     </Helmet>
     <Navigation nav={NAV} />
     <Routes DIC={DIC} />
     <Footer />
-  </section>
+  </React.Fragment>
 
 
 export default App

@@ -5,7 +5,7 @@ const Concurso = props => {
   const { DIC } = props
 
   return (
-    <div className="app-main">
+    <div className="app-content">
       <Helmet 
         title={DIC.NAV_CONCURSO} 
         meta={[

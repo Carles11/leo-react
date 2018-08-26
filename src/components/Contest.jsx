@@ -18,7 +18,7 @@ const Contest = props => {
     <article className="app-section app-section-boxes app-section-0 h725">
       {PARAGRAPHS.map(p => {
         const link = p.url 
-          ? <Button link={p.url} label={`${DIC[p.label]}`} kindOf={'internal'} /> 
+          ? <Button link={p.url} label={`${DIC[p.label]}`} external={false} /> 
           : ''
         
         return (

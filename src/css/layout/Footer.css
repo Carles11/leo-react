@@ -3,12 +3,10 @@
   background: var(--mainColorDark);
   color: white;
   bottom: 0;
-  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 0.5rem;
 }
 
 .app-footer ul {

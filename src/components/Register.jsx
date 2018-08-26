@@ -5,7 +5,7 @@ import API from '../utils/API'
 import { showFormErrors, showInputError } from '../utils/errorHandler'
 import SingleInput from './form/SingleInput'
 import Button from './Button'
-import bg from '../assets/imgs/bg2.jpg'
+import { isDisabled } from '../utils/helpers'
 
 const Register = props => {
   const { DIC } = props
@@ -32,7 +32,7 @@ const Register = props => {
   const handlePost = async body => {
     try {
       const promise = await API.post('schools', body)
-      
+      console.log(promise)
     } catch(err) {
 
     }
@@ -47,15 +47,7 @@ const Register = props => {
     disableButton()
   }
 
-  const disableButton = () => {
-    const btn = document.querySelector('.btn')
-
-    if (btn.hasAttribute('disabled')) {
-      btn.removeAttribute('disabled')
-    } else {
-      btn.setAttribute('disabled', '')
-    }
-  }
+  const disableButton = () => isDisabled(document.querySelector('.btn'))
  
   return (
     <article className="app-section app-section-2 pSides05rem pb2rem">
@@ -124,7 +116,7 @@ const Register = props => {
             pattern=".{6,}"
             controlFunc={handleChange}
           />
-          <Button type={'submit'} label={'Enviar'} kindOf={'button'} />
+          <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
         </form>
       </div>
     </article>

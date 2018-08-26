@@ -1,5 +1,20 @@
-.app-main {
-  padding: 4rem 0 0;
+.app-root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-content {
+  flex: 1;
+  padding: 4rem 2rem 0;
+}
+
+.app-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 .app-header{
   position: relative;
@@ -20,7 +35,8 @@
 
 .app-section-0,
 .app-section-1,
-.app-section-2 {
+.app-section-2,
+.app-signIn {
   padding: 5rem 0 0;
 }
 
@@ -33,6 +49,10 @@
   height: auto !important;
   min-height: auto;
   background: url('../../assets/imgs/logo.jpg') -100px -50px no-repeat var(--mainColor);
+}
+
+.app-signIn {
+  flex: 1;
 }
 
 .app-section-width,

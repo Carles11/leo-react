@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import getSlug from "../utils/helpers";
+import { getSlug } from "../utils/helpers";
 import Logo from "../assets/imgs/logo_tiny.png";
 
 class Navigation extends React.Component {

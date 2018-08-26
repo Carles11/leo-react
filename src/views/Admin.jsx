@@ -16,10 +16,7 @@ class Admin extends React.Component {
 
   componentDidMount() {
     const auth = localStorage.getItem('token') ? true : false 
-    
-    setTimeout(() => {
-      this.setState({ checked: true, auth })
-    }, 1000);
+    this.setState({ checked: true, auth })
   }
 
   render() {

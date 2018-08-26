@@ -15,11 +15,11 @@ const Footer = () =>
     <ul>
       <li>&copy; {copy}</li>
       {footerStr.map(item => {
-        const kindOf = item.external ? 'external' : 'internal'
+        const external = item.external ? true : false
 
         return (
           <li key={item.label}>
-            <Button label={item.label} link={item.url} kindOf={kindOf} />
+            <Button label={item.label} link={item.url} external={external} />
           </li>
         )
       })}

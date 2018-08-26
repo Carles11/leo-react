@@ -35,6 +35,8 @@ const SingleInput = (props: Props) => (
       placeholder={props.placeholder}
       pattern={props.pattern}
       required={props.required}
+      aria-label={props.placeholder}
+      aria-required={props.required}
     />
     <p className="app-form-error" id={props.name + 'Error'}></p>
   </div>

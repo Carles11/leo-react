@@ -3,27 +3,25 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const Button = props => {
-  const { link, label, type, kindOf, func } = props
+  const { link, label, type, external, css } = props
   const span = <span className="line"><span></span><span></span></span>
 
-  switch (kindOf) {
-    case 'internal':
-      return <Link className="btn-link" aria-label={label} to={link}>{label}{span}</Link>
-    case 'external':
-      return <a className="btn-link" aria-label={label} href={link}>{label}{span}</a>
-    case 'button':
-      return <button type={type} aria-label={label} className="btn m1rem">{label}{span}</button>
-    default:
-      return <Link className="btn-link" aria-label={label} to={link}>{label}{span}</Link>
+  switch (external) {
+    case false: return <Link className={`btn-link ${css}`} aria-label={label} to={link}>{label}{span}</Link>
+    case true: return <a className={`btn-link ${css}`} aria-label={label} href={link}>{label}{span}</a>
+    default: return <button type={type} aria-label={label} className={`btn ${css}`}>{label}{span}</button>
   }
+}
+
+Button.defaultProps = {
+  css: ''
 }
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  kindOf: PropTypes.string.isRequired,
+  external: PropTypes.bool,
   type: PropTypes.string,
   link: PropTypes.string,
-  func: PropTypes.func,
 }
 
 export default Button

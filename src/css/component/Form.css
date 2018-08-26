@@ -1,6 +1,7 @@
 .app-form{
   position: relative;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 1rem;
   z-index: 1;
 }
 

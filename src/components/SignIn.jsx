@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import SingleInput from './form/SingleInput'
 import Button from './Button'
 import { showFormErrors, showInputError } from '../utils/errorHandler'
+import { isDisabled } from '../utils/helpers'
 
 const SignIn = props => {
 
@@ -13,25 +14,43 @@ const SignIn = props => {
   }
 
   const handleData = e => {
-    const username = e.target.elements.username.value
-    const password = e.target.elements.password.value 
+    const { elements } = e.target
+    const username = elements.username.value.trim()
+    const password = elements.password.value.trim() 
+
+    //cleanFields(elements)
 
     return { username, password }
   }
 
+  const cleanFields = elem => {
+    Array.from(elem).forEach(el => {
+      el.classList.remove('active')
+      el.value = ''
+    })
+
+    disableButton()
+  }
+
+  const disableButton = () => {
+    const btn = document.querySelector('.btn')
+    isDisabled(btn)
+  }
+
   return (
-    <article>
+    <article className="app-content app-column-center">
       <header>
-        <h1>Panel de Administración</h1>
+        <h1 className="">Panel de Administración</h1>
       </header>
       <form
-        className="app-form"
+        className="app-form app-column-center"
         noValidate
         onSubmit={
           e => {
             e.preventDefault()
 
             if (showFormErrors()) {
+              disableButton()
               props.handleSubmit(handleData(e))
             }
           }
@@ -41,7 +60,7 @@ const SignIn = props => {
           name="username"
           inputType="text"
           title="Nombre de Usuario"
-          placeHolder="Juan"
+          placeholder="Nombre"
           pattern=".{4,}"
           controlFunc={handleChange}
         />
@@ -49,11 +68,13 @@ const SignIn = props => {
           name="password"
           inputType="password"
           title="Contraseña"
-          placeHolder="*******"
+          placeholder="Contraseña"
           pattern=".{4,}"
           controlFunc={handleChange}
         />
-        <Button type={'submit'} label={'Enviar'} />
+        <div className="app-form-group">
+          <Button type={'submit'} label={'Iniciar sesión'} css={'btn-invert'} />
+        </div>
       </form>
     </article>
   )
