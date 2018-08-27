@@ -6,4 +6,5 @@
 .rm-txt {
   font-family: Lighter;
   font-size: var(--textSize);
+  line-height: 1;
 }

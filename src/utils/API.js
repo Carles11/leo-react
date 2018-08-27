@@ -11,7 +11,7 @@ const options = {
   mode: 'cors', 
   headers: new Headers({ 
     'Content-Type': 'application/json',
-    'Acces-token':  JSON.parse(localStorage.getItem(ACCESS_TOKEN))
+    'access-token':  ACCESS_TOKEN
   })
 }
 
@@ -24,6 +24,7 @@ const post = (url, obj, auth = false) => {
     Object.assign({}, options, { method: 'POST', body }),
     auth
   )
+
   return postRequest
 } 
 

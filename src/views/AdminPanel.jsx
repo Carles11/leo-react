@@ -2,25 +2,25 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 
 import withAuth from '../components/withAuth'
+import List from '../components/List'
 
-class AdminPanel extends React.Component {
+const AdminPanel = props => {
+  const { auth } = props
 
-  render() {
-    const { auth } = this.props
-
-    return (
-      <React.Fragment>
-        {!auth && <Redirect to="/admin" />}
-        {auth &&
-          <section className="app-content">
-            <header>
-              <h1>Admin Panel</h1>
-            </header>
-          </section>
-        }
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      {!auth && <Redirect to="/admin" />}
+      {auth &&
+        <section className="app-content">
+          <header>
+            <h1>Admin Panel</h1>
+          </header>
+          <List type={'schools'} />
+        </section>
+      }
+    </React.Fragment>
+  )
+  
 }
 
 const AdminPanelWithAuth = withAuth(AdminPanel)

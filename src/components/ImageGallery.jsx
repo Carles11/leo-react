@@ -42,6 +42,7 @@ class ImageGallery extends React.Component {
       if (Object.keys(filter).length === 0) this.getYears()
 
     } catch (err) {
+      //@TODO Switch the console by a ReactMessage
       console.log(err)
     }
   }

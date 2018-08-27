@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 const Landing = props => {
   const { DIC } = props
 
-  console.log(DIC)
   return (
     <article className="app-section h725">
       <Helmet 

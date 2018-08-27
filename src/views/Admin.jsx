@@ -20,7 +20,6 @@ class Admin extends React.Component {
       localStorage.setItem(config.api.API_TOKEN, result.data)
       this.props.checkAuth()
     } else {
-      console.log(result)
       this.setState({ message: result.data, next: true})
     }
   };

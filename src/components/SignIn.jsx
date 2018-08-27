@@ -37,7 +37,7 @@ const SignIn = props => {
   
   return (
     <article className="app-content app-column-center">
-      <ReactMessages message={props.message} next={props.next} icon={'alert'} />
+      <ReactMessages message={props.message} next={props.next} icon={'warning'} />
       <header>
         <h1 className="">Panel de Administración</h1>
       </header>
@@ -82,7 +82,8 @@ const SignIn = props => {
 SignIn.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   message: PropTypes.string,
-  next: PropTypes.bool
+  next: PropTypes.bool,
+  icon: PropTypes.string
 }
 
 export default SignIn
