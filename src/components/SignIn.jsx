@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ReactMessages from 'react-messages'
 
 import SingleInput from './form/SingleInput'
 import Button from './Button'
@@ -33,9 +34,10 @@ const SignIn = props => {
   }
 
   const disableButton = () => isDisabled(document.querySelector('.btn'))
-
+  
   return (
     <article className="app-content app-column-center">
+      <ReactMessages message={props.message} next={props.next} icon={'alert'} />
       <header>
         <h1 className="">Panel de Administración</h1>
       </header>
@@ -78,7 +80,9 @@ const SignIn = props => {
 }
 
 SignIn.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  message: PropTypes.string,
+  next: PropTypes.bool
 }
 
 export default SignIn

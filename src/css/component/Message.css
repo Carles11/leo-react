@@ -1,0 +1,9 @@
+.rm-item {
+  background: var(--errorColor);
+  border: 1px solid var(--mainColorDark);
+}
+
+.rm-txt {
+  font-family: Lighter;
+  font-size: var(--textSize);
+}

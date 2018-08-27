@@ -17,7 +17,7 @@ export const getFreshUser = () => (req, res, next) => {
   User.findById(req.user._id)
     .then(user => {
       if (!user) {
-        return errorHandler({ name: 'UnauthorizedError' }, res)
+        return res.status(401).json({ success: false, data: 'Unauthorized User' })
       } else {
         req.user = user
         next()
@@ -34,17 +34,17 @@ export const verifyUser = () => (req, res, next) => {
 
   // if no username or password then send
   if (!username || !password) {
-    return res.status(400).send('You need a username and password')
+    return res.status(400).json({ success: false, data: 'You need a username and password' })
   }
 
   User.findOne({ username })
     .then(user => {
       if (!user) {
-        return res.status(401).send('No user with the given username')
+        return res.status(401).json({ success: false, data: 'No user with the given username' })
       }
 
       if (!user.authenticate(password)) {
-        return res.status(401).send('Wrong password')
+        return res.status(401).json({ success: false, data: 'Wrong password' })
       }
 
       req.user = user
