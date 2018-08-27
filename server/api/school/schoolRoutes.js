@@ -1,16 +1,19 @@
 import { Router } from 'express'
 import * as ctrl from './schoolController'
+import * as auth from '../../auth'
+
+const checkUser = [auth.decodeToken(), auth.getFreshUser()]
 
 const router = Router()
 
 router
   .route('/')
-  .get(ctrl.list)
-  .post(ctrl.create)
+  .get(checkUser, ctrl.list)
+  .post(checkUser, ctrl.create)
 
 router
   .route('/:schoolId')
-  .put(ctrl.update)
+  .put(checkUser, ctrl.update)
 
 router.param('schoolId', ctrl.schoolById)
 

@@ -17,8 +17,8 @@ const SignIn = props => {
     const { elements } = e.target
     const username = elements.username.value.trim()
     const password = elements.password.value.trim() 
-
-    //cleanFields(elements)
+    
+    cleanFields(elements)
 
     return { username, password }
   }
@@ -32,10 +32,7 @@ const SignIn = props => {
     disableButton()
   }
 
-  const disableButton = () => {
-    const btn = document.querySelector('.btn')
-    isDisabled(btn)
-  }
+  const disableButton = () => isDisabled(document.querySelector('.btn'))
 
   return (
     <article className="app-content app-column-center">

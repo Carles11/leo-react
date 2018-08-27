@@ -1,35 +1,35 @@
-import React from 'react'
-import { Redirect } from 'react-router-dom'
+import React from "react";
+import { Redirect } from "react-router-dom";
 
-import Loader from '../components/Loader'
-import SignIn from '../components/SignIn'
+import API from "../utils/API"
+import SignIn from "../components/SignIn";
+import withAuth from '../components/withAuth'
+import config from '../config'
 
 class Admin extends React.Component {
-  state = {
-    auth: false,
-    checked: false
-  }
 
-  handleData = data => {
-    console.log(data)
-  }
+  handleData = async data => {
+    const promise = await API.post('signin', data, true)
+    const result = await promise.json()
 
-  componentDidMount() {
-    const auth = localStorage.getItem('token') ? true : false 
-    this.setState({ checked: true, auth })
-  }
+    if (result.success) {
+      localStorage.setItem(config.api.API_TOKEN, result.data)
+      this.props.checkAuth()
+    }
+  };
 
   render() {
-    const { auth, checked } = this.state
+    const { auth } = this.props;
 
     return (
       <React.Fragment>
-        {!checked && <Loader css={'h100'} />}
-        {checked && !auth && <SignIn handleSubmit={this.handleData} />}
-        {checked && auth && <Redirect to="/admin-panel" />}
+        {!auth && <SignIn handleSubmit={this.handleData} />}
+        {auth && <Redirect to="/admin-panel" />}
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default Admin
+const AdminWithAuth = withAuth(Admin)
+
+export default AdminWithAuth;
