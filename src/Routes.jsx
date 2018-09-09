@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
 
 import Landing from './views/Landing'
@@ -12,14 +13,14 @@ import Certificados from './views/Certificados'
 import Colegios from './views/Colegios'
 import NotFound from './views/NotFound'
 
-const Routes = (props) => {
-  const { DIC } = props
+const Routes = props => {
+  const { DIC, auth, checkAuth } = props
 
   return (
     <Switch>
       <Route exact path="/" render={ props => <Landing {...props} DIC={DIC} /> } />
-      <Route path="/admin" component={Admin} />
-      <Route path="/admin-panel" component={AdminPanel} />
+      <Route path="/admin" render={ props => <Admin auth={auth} checkAuth={checkAuth} /> } />
+      <Route path="/admin-panel" render={ props => <AdminPanel auth={auth} /> } />
       <Route path="/bases-del-concurso" render={ props => <Bases {...props} DIC={DIC} /> } />
       <Route path="/textos-de-lectura" render={ props => <Lectura {...props} DIC={DIC} /> } />
       <Route path="/criterios-de-lectores" render={ props => <Criterios {...props} DIC={DIC} /> } />
@@ -29,6 +30,12 @@ const Routes = (props) => {
       <Route render={props => <NotFound DIC={DIC} />} />
     </Switch>
   )
+}
+
+Routes.propTypes = {
+  DIC: PropTypes.object.isRequired,
+  auth: PropTypes.bool.isRequired,
+  checkAuth: PropTypes.func.isRequired
 }
   
 export default Routes

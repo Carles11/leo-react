@@ -9,7 +9,7 @@ const router = Router()
 router
   .route('/')
   .get(checkUser, ctrl.list)
-  .post(checkUser, ctrl.create)
+  .post(ctrl.create)
 
 router
   .route('/:schoolId')

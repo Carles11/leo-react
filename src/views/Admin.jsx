@@ -1,9 +1,8 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-import API from "../utils/API"
+import * as API from "../utils/API"
 import SignIn from "../components/SignIn";
-import withAuth from '../components/withAuth'
 import config from '../config'
 
 class Admin extends React.Component {
@@ -19,6 +18,7 @@ class Admin extends React.Component {
     if (result.success) {
       localStorage.setItem(config.api.API_TOKEN, result.data)
       this.props.checkAuth()
+      console.log('Admin Component -> ', this.props)
     } else {
       this.setState({ message: result.data, next: true})
     }
@@ -37,6 +37,4 @@ class Admin extends React.Component {
   }
 }
 
-const AdminWithAuth = withAuth(Admin)
-
-export default AdminWithAuth;
+export default Admin;

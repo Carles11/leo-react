@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactMessages from 'react-messages'
 
-import API from '../utils/API'
+import * as API from '../utils/API'
 import Loader from './Loader'
 
 class List extends React.Component {

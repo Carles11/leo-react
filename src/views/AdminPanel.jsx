@@ -1,7 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
-import withAuth from '../components/withAuth'
 import List from '../components/List'
 
 const AdminPanel = props => {
@@ -20,9 +19,6 @@ const AdminPanel = props => {
       }
     </React.Fragment>
   )
-  
 }
 
-const AdminPanelWithAuth = withAuth(AdminPanel)
-
-export default AdminPanelWithAuth
+export default AdminPanel

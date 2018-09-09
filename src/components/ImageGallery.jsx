@@ -4,7 +4,7 @@ import Lightbox from 'react-images'
 
 import Loader from './Loader'
 import Filter from './Filter'
-import API from '../utils/API'
+import * as API from '../utils/API'
 
 class ImageGallery extends React.Component {
   state = { 

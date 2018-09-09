@@ -2,16 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+import ButtonSignOut from './ButtonSignOut'
 import { getSlug } from "../utils/helpers";
+import config from '../config'
 import Logo from "../assets/imgs/logo_tiny.png";
 
 class Navigation extends React.Component {
   state = {
-    visible: false
+    visible: false,
+    redirectTo: ''
   };
 
   static propTypes = {
-    nav: PropTypes.array.isRequired
+    DIC: PropTypes.object.isRequired
   };
 
   handleVisibility = () => {
@@ -33,10 +36,30 @@ class Navigation extends React.Component {
     this.setState({ visible: false });
   };
 
+  handleSignOut = () => {
+    localStorage.removeItem(config.api.API_TOKEN)
+    this.props.checkAuth()
+  }
+
   render() {
-    const { nav } = this.props;
+    const { DIC, auth } = this.props;
     const { visible } = this.state;
     const icon = visible ? "close" : "menu";
+    const NAV = [
+      {
+        label: DIC.NAV_INFO,
+        children: [
+          DIC.NAV_BASES,
+          DIC.NAV_TEXTOS,
+          DIC.NAV_CRITERIOS,
+          DIC.NAV_CONCURSO,
+          DIC.NAV_CERTIFICADOS,
+          DIC.NAV_COLEGIOS,
+        ],
+      },
+      { label: DIC.NAV_GALERIA, children: [] },
+      { label: DIC.NAV_INSCRIPCION, children: [] },
+    ]
 
     const List = (
       <ul className={`app-nav-list ${icon}`}>
@@ -58,7 +81,7 @@ class Navigation extends React.Component {
             />
           </Link>
         </li>
-        {nav.map((item, i) => {
+        {NAV.map((item, i) => {
           const label = getSlug(item.label);
           const children = item.children.length ? true : false;
           const section = `app-section-${i}`;
@@ -100,6 +123,7 @@ class Navigation extends React.Component {
           <span className="txt">MENU</span>
           <span className={`icon-menu`} />
         </button>
+        {auth && <ButtonSignOut handleClick={this.handleSignOut}/>}
       </div>
     );
 

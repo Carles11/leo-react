@@ -1,7 +1,7 @@
 import React from 'react'
 
-import config from '../config'
-import Loader from '../components/Loader'
+import config from '../../config'
+import Loader from '../Loader'
 
 const withAuth = Component => (
   class extends React.Component {
@@ -19,6 +19,8 @@ const withAuth = Component => (
     }
 
     checkAuth = () => {
+      console.log('Checking auth')
+
       const auth = localStorage.getItem(config.api.API_TOKEN) ? true : false;
       this.setState({ auth, checked: true });
     }
