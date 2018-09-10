@@ -244,8 +244,7 @@ and (max-width: 649px) {
     display: block;
     z-index: 1;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+    align-items: center;
   }
 
   .app-respMenu.close > button {

@@ -3,7 +3,6 @@ import * as ctrl from './schoolController'
 import * as auth from '../../auth'
 
 const checkUser = [auth.decodeToken(), auth.getFreshUser()]
-
 const router = Router()
 
 router

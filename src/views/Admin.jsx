@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import { Redirect } from "react-router-dom";
 
 import * as API from "../utils/API"
@@ -13,14 +14,12 @@ class Admin extends React.Component {
 
   handleData = async data => {
     const promise = await API.post('signin', data, true)
-    const result = await promise.json()
 
-    if (result.success) {
-      localStorage.setItem(config.api.API_TOKEN, result.data)
+    if (promise.success) {
+      localStorage.setItem(config.api.API_TOKEN, promise.data)
       this.props.checkAuth()
-      console.log('Admin Component -> ', this.props)
     } else {
-      this.setState({ message: result.data, next: true})
+      this.setState({ message: promise.data, next: true })
     }
   };
 
@@ -35,6 +34,10 @@ class Admin extends React.Component {
       </React.Fragment>
     );
   }
+}
+
+Admin.propTypes = {
+  auth: PropTypes.bool.isRequired
 }
 
 export default Admin;

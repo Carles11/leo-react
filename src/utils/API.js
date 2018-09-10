@@ -22,9 +22,15 @@ const request = async (url, newOptions, auth) => {
   try {
     const URL = auth ? `${API_AUTH}${url}` : `${API_URL}${url}`
     const promise = await fetch(URL, newOptions)
-    return promise
+
+    if (promise.statusText === 'Unauthorized') {
+      return { success: false, data: {} }
+    }
+
+    return promise.json()
+
   } catch (err) {
-    return err
+    return err.json()
   }
 }
 

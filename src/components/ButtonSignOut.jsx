@@ -6,7 +6,7 @@ const ButtonSignOut = props => {
 
   return (
     <button 
-      className="btn-close" 
+      className="btn-signOut" 
       aria-label="Cerrar el Panel de administración"
       onClick={handleClick}>
       <span className="icon-close"></span>

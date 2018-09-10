@@ -35,9 +35,8 @@ class ImageGallery extends React.Component {
       const { filter } = this.state
       const param = year ? `year/${Number(year)}` : ''
       const promise = await API.get(`images/${param}`)
-      const photos = await promise.json()
          
-      await this.setState({ photos: photos.data, loaded: true })
+      await this.setState({ photos: promise.data, loaded: true })
 
       if (Object.keys(filter).length === 0) this.getYears()
 

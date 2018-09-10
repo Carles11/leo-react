@@ -24,10 +24,9 @@ class List extends React.Component {
     const { error } = this.state
     const { type } = this.props
     const promise = await API.get(type)
-    const result = await promise.json()
-
-    if (result.success) {
-      this.setState({ list: result.data, loaded: true })
+    
+    if (promise.success) {
+      this.setState({ list: promise.data, loaded: true })
     } else {
       this.setState({ error: Object.assign(error, { next: true }), loaded: true })
     }

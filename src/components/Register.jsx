@@ -9,7 +9,6 @@ import Button from './Button'
 import { isDisabled } from '../utils/helpers'
 
 class Register extends React.Component {
-
   state = {
     message: ''
   }
@@ -38,17 +37,14 @@ class Register extends React.Component {
   }
 
   handlePost = async body => {
-    try {
-      const promise = await API.post('schools', body)
-      const result = await promise.json()
+    const promise = await API.post('schools', body)
 
-      if (result.success) {
+    if (promise.success) {
 
-      }
-      
-    } catch(err) {
+    } else {
 
     }
+      
   }
 
   cleanFields = elem => {
@@ -138,6 +134,10 @@ class Register extends React.Component {
       </article>
     )
   }
+}
+
+Register.propTypes = {
+  DIC: PropTypes.object.isRequired
 }
 
 export default Register

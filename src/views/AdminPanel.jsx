@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 
 import List from '../components/List'
@@ -19,6 +20,10 @@ const AdminPanel = props => {
       }
     </React.Fragment>
   )
+}
+
+AdminPanel.propTypes = {
+  auth: PropTypes.bool.isRequired
 }
 
 export default AdminPanel
