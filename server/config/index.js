@@ -1,16 +1,13 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 const config = {
   DEV: 'development',
   TEST: 'test',
   PROD: 'production',
-  PORT: process.env.PORT || 5000,
+  PORT: process.env.REACT_APP_PORT || 5001,
   expireTime: 24 * 60 * 10,
   secrets: {
-    jwt: process.env.JWT,
+    jwt: process.env.REACT_APP_JWT || 'just a token',
   },
-  env: process.env.NODE_ENV,
+  env: process.env.NODE_ENV || 'development',
 }
 
 let envConfig

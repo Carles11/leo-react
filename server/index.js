@@ -1,5 +1,4 @@
 import express from 'express'
-import colors from 'colors/safe'
 
 import config from './config'
 import mongoose from './config/mongoose'
@@ -17,4 +16,4 @@ app.use('/api', api)
 app.use('/auth', auth)
 app.use('/*', (req, res) => res.status(401).send('This is a private API'))
 
-app.listen(PORT, () => console.log(`Listening on port ${colors.rainbow(PORT)} in ${colors.rainbow(env)}`))
+app.listen(PORT, () => console.log(`Listening on port ${PORT} in ${env}`))
