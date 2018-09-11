@@ -13,7 +13,7 @@ class Admin extends React.Component {
   }
 
   handleData = async data => {
-    const promise = await API.post('signin', data, true)
+    const promise = await API.post('signin-leo', data, true)
 
     if (promise.success) {
       localStorage.setItem(config.api.API_TOKEN, promise.data)

@@ -24,7 +24,7 @@ const request = async (url, newOptions, auth) => {
     const promise = await fetch(URL, newOptions)
 
     if (promise.statusText === 'Unauthorized') {
-      return { success: false, data: {} }
+      return { success: false, data: 'User Unauthorized!' }
     }
 
     return promise.json()

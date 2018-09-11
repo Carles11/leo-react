@@ -10,7 +10,7 @@ class List extends React.Component {
     loaded: false,
     list: [],
     error: {
-      message: 'Hay algún problema al cargar el listado, intentalo mas tarde.',
+      message: 'Hay algún problema al cargar el listado, inténtalo mas tarde.',
       next: false,
       icon: 'warning'
     }

@@ -19,8 +19,6 @@ const withAuth = Component => (
     }
 
     checkAuth = () => {
-      console.log('Checking auth')
-
       const auth = localStorage.getItem(config.api.API_TOKEN) ? true : false;
       this.setState({ auth, checked: true });
     }
