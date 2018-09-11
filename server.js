@@ -4,6 +4,7 @@ const compression = require('compression')
 const bodyParser = require('body-parser')
 const app = express()
 const PORT = process.env.REACT_APP_PORT || 5000
+const ENV = process.env.NODE_ENV || 'development'
 
 app.use(compression())
 app.use(bodyParser.urlencoded({ extended: 'true' }))
@@ -19,5 +20,5 @@ app.get('/*', (req, res) => {
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.log(`Server running on port ${String(PORT)} in (development).`)
+  console.log(`Server running on port ${String(PORT)} in (${ENV}).`)
 })
