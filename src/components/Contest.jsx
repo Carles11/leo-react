@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import Button from './Button'
 
 const PARAGRAPHS = [
-  { title: 'CONCURSO', label: 'NAV_BASES', url: '/bases-del-concurso' }, 
-  { title: 'CONCURSO_EDICION', label: '' }, 
-  { title: 'CONCURSO_ORGANIZA', label: '' }, 
-  { title: 'CONCURSO_PARTICIPAR', label: '' }, 
-  { title: 'CONCURSO_PATROCINA', label: '' }, 
+  { title: 'CONCURSO', url: '/bases-del-concurso' }, 
+  { title: 'CONCURSO_EDICION', url: '/bases-del-concurso' }, 
+  { title: 'CONCURSO_ORGANIZA'}, 
+  { title: 'CONCURSO_PARTICIPAR' }, 
+  { title: 'CONCURSO_PATROCINA'}, 
 ]
 
 const Contest = props => {
@@ -18,7 +18,7 @@ const Contest = props => {
     <article className="app-section app-section-boxes app-section-0 h725">
       {PARAGRAPHS.map(p => {
         const link = p.url 
-          ? <Button link={p.url} label={`${DIC[p.label]}`} external={false} /> 
+          ? <Button link={p.url} label={`${DIC.MORE_INFO}`} external={false} /> 
           : ''
         
         return (
