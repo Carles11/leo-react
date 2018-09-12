@@ -22,28 +22,18 @@ class ImageGallery extends React.Component {
   handleFilter = e => {
     this.getPhotos(e.target.dataset.year)
     this.setState({ loaded: false, photos: [] })
-
-    setTimeout(() => {
-      document.querySelector(`.app-section-1`).scrollIntoView({ 
-        behavior: 'smooth', block: 'start' 
-      })
-    },100)
   }
     
-  getPhotos = async (year) => {
-    try {
+  getPhotos = async year => {
       const { filter } = this.state
       const param = year ? `year/${Number(year)}` : ''
       const promise = await API.get(`images/${param}`)
-         
-      await this.setState({ photos: promise.data, loaded: true })
+
+      if (promise.success) {
+        await this.setState({ photos: promise.data, loaded: true })
+      }
 
       if (Object.keys(filter).length === 0) this.getYears()
-
-    } catch (err) {
-      //@TODO Switch the console by a ReactMessage
-      console.log(err)
-    }
   }
 
   getYears = () => {
