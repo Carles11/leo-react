@@ -1,4 +1,5 @@
 .rm-wrapper {
+  position: fixed;
   z-index: 1000;
 }
 .rm-item {

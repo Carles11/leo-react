@@ -42,6 +42,7 @@ class Register extends React.Component {
   handleData = e => {
     const { category } = this.state
     const { elements } = e.target
+
     const name = elements.name.value.trim()
     const course = elements.course.value.trim()
     const phone = elements.phone.value.trim()
@@ -58,19 +59,20 @@ class Register extends React.Component {
     const promise = await API.post('schools', body)
 
     if (promise.success) {
-      this.setState(prevState => ({ 
-        send: !prevState.send,
-        message: 'Gracias por participar en el concurso de lectura Leo, leo.',
+      this.setState({ 
+        send: true,
+        message: 'Gracias por incribirse en el concurso de lectura Leo, leo. En breve recibirá más información.',
         error: false
-      }))
+      })
     } else {
-      this.setState(prevState => ({ 
-        send: !prevState.send,
+      this.setState({ 
+        send: true,
         message: 'Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.',
         error: true
-      }))
+      })
     }
-      
+
+    setTimeout(() => { this.setState({ send: false }) })
   }
 
   cleanFields = elem => {
@@ -93,7 +95,7 @@ class Register extends React.Component {
 
     return (
       <article className="app-section app-section-2 pSides05rem pb2rem">
-        <ReactMessages message={message} next={send} duration={5000} error={error} />
+        <ReactMessages message={message} next={send} duration={9000} error={error} />
         <div className="app-section-width">
           <header className="header-wrapper" >
             <h2 className="tit-section pSides05rem">Formulario de Inscripción</h2>
