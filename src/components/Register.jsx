@@ -93,8 +93,8 @@ class Register extends React.Component {
 
     return (
       <article className="app-section app-section-2 pSides05rem pb2rem">
+        <ReactMessages message={message} next={send} duration={5000} error={error} />
         <div className="app-section-width">
-          <ReactMessages message={message} next={send} duration={5000} error={error} />
           <header className="header-wrapper" >
             <h2 className="tit-section pSides05rem">Formulario de Inscripción</h2>
             <h3 className="subtit-section">Registra tu escuela</h3>

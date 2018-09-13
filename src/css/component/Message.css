@@ -1,5 +1,5 @@
 .rm-wrapper {
-  z-index: 2;
+  z-index: 1000;
 }
 .rm-item {
   background: var(--secondColor);
