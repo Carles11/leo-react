@@ -1,43 +1,50 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { Redirect } from "react-router-dom";
 
-import * as API from "../utils/API"
+import * as API from "../utils/API";
 import SignIn from "../components/SignIn";
-import config from '../config'
+import config from "../config";
 
 class Admin extends React.Component {
   state = {
-    message: '',
+    message: "",
     next: false
-  }
+  };
+
+  static propTypes = {
+    auth: PropTypes.bool.isRequired,
+    checkAuth: PropTypes.func.isRequired
+  };
 
   handleData = async data => {
-    const promise = await API.post('signin-leo', data, true)
+    const promise = await API.post("signin-leo", data, true);
 
     if (promise.success) {
-      localStorage.setItem(config.api.API_TOKEN, promise.data)
-      this.props.checkAuth()
+      localStorage.setItem(config.api.API_TOKEN, promise.data);
+      this.props.checkAuth();
     } else {
-      this.setState({ message: promise.data, next: true })
+      this.setState({ message: promise.data, next: true });
     }
   };
 
   render() {
-    const { message, next } = this.state
+    const { message, next } = this.state;
     const { auth } = this.props;
 
     return (
       <React.Fragment>
-        {!auth && <SignIn handleSubmit={this.handleData} message={message} next={next} />}
+        {!auth && (
+          <SignIn
+            handleSubmit={this.handleData}
+            message={message}
+            next={next}
+          />
+        )}
         {auth && <Redirect to="/admin-panel" />}
       </React.Fragment>
     );
   }
-}
-
-Admin.propTypes = {
-  auth: PropTypes.bool.isRequired
 }
 
 export default Admin;

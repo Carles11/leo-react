@@ -1,0 +1,81 @@
+.app-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--menuBg);
+  border-radius: 3px;
+  border: 1px solid #f1f1f1;
+  padding: 0  0  0 1rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.app-list-item h2 {
+  flex: 1;
+  font-family: Lighter;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+.app-list-btn {
+  border: none;
+  padding: 1.25rem;
+  font-size: 1rem;
+  outline: none;
+  margin-left: 2px;
+  color: var(--mainColor);
+  transition: color .5s, background .5s;
+  cursor: pointer;
+}
+
+.app-list-btn:hover {
+  color: white;
+  background: var(--mainColor);
+}
+
+
+/** ORDERED LIST */
+.app-olist {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+.app-olist li.app-olist-item {
+  counter-increment: item;
+  margin-bottom: 3rem;
+}
+
+.app-olist li.app-olist-item:before {
+  font-family: Regular;
+  margin-right: 0.5rem;
+  content: counter(item);
+  background: var(--secondColor);
+  border-radius: 100%;
+  color: white;
+  padding: .4rem .85rem;
+  text-align: center;
+}
+
+@media only screen 
+  and (max-width: 649px) {
+    .app-list-item h2 > small {
+      display: none;
+    }
+    .app-list-item {
+      flex-direction: column;
+      padding-left: 0;
+    }
+    .app-list-btn {
+      flex: 1;
+      width: 100%;
+      margin: 2px 0 0; 
+    }
+}

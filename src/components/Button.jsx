@@ -9,12 +9,13 @@ const Button = props => {
   switch (external) {
     case false: return <Link className={`btn-link ${css}`} aria-label={label} to={link}>{label}{span}</Link>
     case true: return <a className={`btn-link ${css}`} aria-label={label} href={link}>{label}{span}</a>
-    default: return <button type={type} aria-label={label} className={`btn ${css}`}>{label}{span}</button>
+    default: return <button type={type} aria-label={label} className={`btn ${css}`}>{label}</button>
   }
 }
 
 Button.defaultProps = {
-  css: ''
+  css: '',
+  type: 'button'
 }
 
 Button.propTypes = {

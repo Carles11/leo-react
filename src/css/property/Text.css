@@ -13,6 +13,13 @@ p, .txt, ul > li {
   font-family: Bold;
 }
 
+.txt-italic {
+  display: inline-block;
+  font-family: Lighter;
+  font-style: italic;
+  line-height: 1.75;
+}
+
 .tit-header {
   position: relative;
   font-family: Regular;
