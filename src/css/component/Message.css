@@ -1,6 +1,6 @@
 .rm-wrapper {
   position: fixed;
-  z-index: 1000;
+  z-index: 1000 !important;
 }
 .rm-item {
   background: var(--secondColor);
