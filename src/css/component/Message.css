@@ -1,5 +1,8 @@
+.rm-wrapper {
+  z-index: 2;
+}
 .rm-item {
-  background: var(--errorColor);
+  background: var(--secondColor);
   border: 1px solid var(--mainColorDark);
 }
 
