@@ -114,6 +114,11 @@ class Navigation extends React.Component {
             </li>
           );
         })}
+        {auth && 
+          <li className="app-nav-item btnAdminSignOut">
+            <ButtonSignOut label={'Cerrar Sesión'} handleClick={this.handleSignOut} />
+          </li>
+        }
       </ul>
     );
 
@@ -123,7 +128,7 @@ class Navigation extends React.Component {
           <span className="txt">MENU</span>
           <span className={`icon-menu`} />
         </button>
-        {auth && <ButtonSignOut handleClick={this.handleSignOut}/>}
+        {auth && <ButtonSignOut handleClick={this.handleSignOut} />}
       </div>
     );
 

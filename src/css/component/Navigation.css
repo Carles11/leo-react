@@ -83,6 +83,16 @@
   line-height: 1;
 }
 
+.btnAdminSignOut > button {
+  color: var(--mainColor);
+  background: white;
+  padding: 1.65rem 1rem;
+}
+
+.btnAdminSignOut span {
+  margin-left: 0.5rem;
+}
+
 .app-nav-item > a:hover,
 .app-subnav-item > a:hover {
   background: white;
@@ -255,5 +265,9 @@ and (max-width: 649px) {
     display: block;
     opacity: 0.8;
     z-index: 0;
+  }
+
+  .btnAdminSignOut {
+    display: none;
   }
 }
