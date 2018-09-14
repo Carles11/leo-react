@@ -42,6 +42,7 @@ class List extends React.Component {
     
     if (c) {
       const promise = await API.remove(`${type}/${id}`)
+      
       if (promise.success) {
         this.setState({ list: promise.data, loaded: true })
       } else {
@@ -50,9 +51,18 @@ class List extends React.Component {
     }
   }
 
+  handleShow = e => {
+    const { id } = e.target.dataset
+    const el = document.querySelector(`.app-list-content[data-id="${id}"]`)
+    const els = document.querySelectorAll('.app-list-content.show')
+    
+    if (!el.classList.contains('show')) el.classList.add('show')
+
+    els.forEach(el => el.classList.remove('show'))
+  }
+
   render() {
     const { list, loaded, error } = this.state
-    const { type } = this.props  
     
     return (
       <React.Fragment>
@@ -67,6 +77,7 @@ class List extends React.Component {
                   <Item 
                     item={item}
                     handleRemove={this.handleRemove}
+                    handleShow={this.handleShow}
                   />
                 </li>
               )

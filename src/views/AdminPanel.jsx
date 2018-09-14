@@ -16,7 +16,7 @@ const AdminPanel = props => {
           <header className="app-admin-title">
             <h1>Listado de escuelas</h1>
             <div>
-              <Button label={'Imprimir en PDF'} css={'btn-invert'} />
+              <Button label={'Descargar PDF'} css={'btn-invert'} />
             </div>
           </header>
           <List type={'schools'} />
