@@ -41,3 +41,5 @@ export const post = (url, obj, auth = false) => request(
   Object.assign({}, getOptions(), { method: 'POST', body: JSON.stringify(obj) }),
   auth
 )
+
+export const remove = url => request(url, Object.assign({}, getOptions(), { method: 'DELETE' }))
