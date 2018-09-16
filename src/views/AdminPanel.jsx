@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 
 import List from '../components/List'
-import Button from '../components/Button'
 
 const AdminPanel = props => {
   const { auth } = props
@@ -13,12 +12,6 @@ const AdminPanel = props => {
       {!auth && <Redirect to="/admin" />}
       {auth &&
         <section className="app-content">
-          <header className="app-admin-title">
-            <h1>Listado de escuelas</h1>
-            <div>
-              <Button label={'Descargar PDF'} css={'btn-invert'} />
-            </div>
-          </header>
           <List type={'schools'} />
         </section>
       }

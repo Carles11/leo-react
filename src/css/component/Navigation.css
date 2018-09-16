@@ -1,273 +1,271 @@
 .app-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
 }
 
 .app-nav-list {
-  position: relative;
-  background: var(--menuBg);
-  color: var(--textColor);
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
-  opacity: 0.95;
-  border-bottom: 1px solid #eeeeee;
+	position: relative;
+	background: var(--menuBg);
+	color: var(--textColor);
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+	opacity: 0.95;
+	border-bottom: 1px solid #eeeeee;
 }
 
 .app-nav-item.logo,
 .app-nav-item.logo:hover {
-  flex: 1;
-  justify-content: center;
+	flex: 1;
+	justify-content: center;
 }
 
 .app-nav-item.logo > a,
 .app-nav-item.logo > a:hover {
-  background: var(--menuBg);
-  padding: 0;
-  cursor: default;
+	background: var(--menuBg);
+	padding: 0;
+	cursor: default;
 }
 
 .app-nav-item.logo > a > img {
-  width: 50px;
-  height: auto;
-  cursor: pointer;
-  opacity: 0.9;
-  transition-property: opacity width;
-  transition-duration: 0.25s; 
+	width: 50px;
+	height: auto;
+	cursor: pointer;
+	opacity: 0.9;
+	transition-property: opacity width;
+	transition-duration: 0.25s;
 }
 
 .app-nav-item.logo > a > img:hover {
-  width: 60px;
-  opacity: 1;
+	width: 60px;
+	opacity: 1;
 }
 
 .app-nav-item {
-  position: relative;
-  flex: 2;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  border-right: 1px solid #eeeeee;
+	position: relative;
+	flex: 2;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	border-right: 1px solid #eeeeee;
 }
 
 .app-nav-item:last-of-type {
-  border: none
+	border: none;
 }
 
 .app-nav-item.btn-close {
-  display: none;
+	display: none;
 }
 
 .app-nav-item > a,
 .app-nav-item > button {
-  position: relative;
-  display: block;
-  width: 100%;
-  color: var(--textColor);
-  font-family: Bold;
-  font-size: var(--textSize);
-  text-align: center;
-  text-decoration: none;
-  padding: 1.7rem 1rem;
-  box-sizing: border-box;
-  transition-property: background;
-  transition-duration: 0.5s;
-  z-index: 0;
-  cursor: pointer;
-  line-height: 1;
+	position: relative;
+	display: block;
+	width: 100%;
+	color: var(--textColor);
+	font-family: Regular;
+	font-size: var(--textSize);
+	text-align: center;
+	text-decoration: none;
+	padding: 1.7rem 1rem;
+	box-sizing: border-box;
+	transition: background 0.5s;
+	z-index: 0;
+	cursor: pointer;
+	line-height: 1;
 }
 
-.btnAdminSignOut > button {
-  color: var(--mainColor);
-  background: white;
-  padding: 1.65rem 1rem;
+.app-nav-item .btnAdminSignOut > button {
+	color: var(--mainColor);
+	background: white;
+	padding: 1.65rem 1rem;
 }
 
 .btnAdminSignOut span {
-  margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .app-nav-item > a:hover,
 .app-subnav-item > a:hover {
-  background: white;
+	background: white;
 }
 
 .app-subnav-list {
-  position: absolute;
-  top: -300px;
-  width: 100%;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.5s;
+	position: absolute;
+	top: -300px;
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.5s;
 }
 
 .app-nav-item:hover .app-subnav-list {
-  top: 70px;
-  opacity: 1;
+	top: 70px;
+	opacity: 1;
 }
 
 .app-subnav-item > a {
-  font-family: Regular;
-  display: block;
-  padding: 0.75rem;
-  text-decoration: none;
-  text-align: center;
-  background: var(--menuBg);
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  color: var(--textColor);
-  z-index: 1;
-  transition-property: background color;
-  transition-duration: 0.5s;
+	font-family: Regular;
+	display: block;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+	background: var(--menuBg);
+	border-bottom: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	color: var(--textColor);
+	z-index: 1;
+	transition-property: background color;
+	transition-duration: 0.5s;
 }
 
 .app-respMenu {
-  position: fixed;
-  display: none;
-  top: 0;
-  right: 0;
-  height: 70px;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #eeeeee;
+	position: fixed;
+	display: none;
+	top: 0;
+	right: 0;
+	height: 70px;
+	width: 100%;
+	background: white;
+	border-bottom: 1px solid #eeeeee;
 }
 
 .app-menu-bg {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #666666;
-  opacity: 0;
-  width: 100%;
-  height: 100vh;
-  transition-property: opacity;
-  transition-duration: 0.5s;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #666666;
+	opacity: 0;
+	width: 100%;
+	height: 100vh;
+	transition-property: opacity;
+	transition-duration: 0.5s;
 }
 
-@media only screen 
-and (max-width: 649px) {
-  .app-nav-list{
-    position: absolute;
-    display: block;
-    width: 380px;
-    height: 100vh;
-    left: -380px;
-    background: white;
-    transition-property: left;
-    transition-duration: 0.3s;
-    z-index: 10;
-  }
-  .app-nav-list.close {
-    left: 0;
-  }
-  .app-nav-item {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+@media only screen and (max-width: 649px) {
+	.app-nav-list {
+		position: absolute;
+		display: block;
+		width: 380px;
+		height: 100vh;
+		left: -380px;
+		background: white;
+		transition-property: left;
+		transition-duration: 0.3s;
+		z-index: 10;
+	}
+	.app-nav-list.close {
+		left: 0;
+	}
+	.app-nav-item {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-  .app-nav-item.logo {
-    display: none;
-  }
+	.app-nav-item.logo {
+		display: none;
+	}
 
-  .app-nav-item > a,
-  .app-nav-item > button {
-    background: var(--menuBg);
-    color: var(--textColor);
-    font-size: var(--textSize);
-    padding: 1.25rem 2rem;
-    border-bottom: 1px solid #eeeeee;
-    text-align: left;
-  }
+	.app-nav-item > a,
+	.app-nav-item > button {
+		background: var(--menuBg);
+		color: var(--textColor);
+		font-size: var(--textSize);
+		padding: 1.25rem 2rem;
+		border-bottom: 1px solid #eeeeee;
+		text-align: left;
+	}
 
-  .app-nav-item.btn-close {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    border-bottom: 1px solid #666666;
-    background: var(--menuBg);
-  }
+	.app-nav-item.btn-close {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		border-bottom: 1px solid #666666;
+		background: var(--menuBg);
+	}
 
-  .app-nav-item.btn-close > img {
-    width: 45px;
-    height: auto;
-    margin: 0.5rem 0 0 1.5rem;
-  }
+	.app-nav-item.btn-close > img {
+		width: 45px;
+		height: auto;
+		margin: 0.5rem 0 0 1.5rem;
+	}
 
-  .app-nav-item.btn-close > button,
-  .btn-menu {
-    flex: 1;
-    background: var(--menuBg);
-    border: none;
-    outline: none;
-    width: auto;
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+	.app-nav-item.btn-close > button,
+	.btn-menu {
+		flex: 1;
+		background: var(--menuBg);
+		border: none;
+		outline: none;
+		width: auto;
+		align-self: flex-end;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
 
-  .app-nav-item > button > span,
-  .btn-menu > span {
-    color: var(--secondColor);
-  }
+	.app-nav-item > button > span,
+	.btn-menu > span {
+		color: var(--secondColor);
+	}
 
-  .app-nav-item > button > [class^="icon-"],
-  .btn-menu > [class^="icon-"] {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-  }
+	.app-nav-item > button > [class^="icon-"],
+	.btn-menu > [class^="icon-"] {
+		font-size: 1.5rem;
+		margin-left: 1rem;
+	}
 
-  .app-nav-item > a:hover,
-  .app-subnav-item > a:hover {
-    background: white;
-    color: var(--textColor);
-  }
+	.app-nav-item > a:hover,
+	.app-subnav-item > a:hover {
+		background: white;
+		color: var(--textColor);
+	}
 
-  .app-subnav-list,
-  .app-nav-item:hover .app-subnav-list {
-    opacity: 1;
-    position: relative;
-    flex: 1;
-    top: 0;
-  }
-  .app-subnav-item > a {
-    color: var(--textColor);
-    border-bottom: 1px solid #eeeeee;
-    text-align: left;
-    padding: 1rem 2rem;
-  }
+	.app-subnav-list,
+	.app-nav-item:hover .app-subnav-list {
+		opacity: 1;
+		position: relative;
+		flex: 1;
+		top: 0;
+	}
+	.app-subnav-item > a {
+		color: var(--textColor);
+		border-bottom: 1px solid #eeeeee;
+		text-align: left;
+		padding: 1rem 2rem;
+	}
 
-  .app-respMenu {
-    display: block;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-  }
+	.app-respMenu {
+		display: block;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+	}
 
-  .app-respMenu.close > button {
-    align-items: flex-end;
-  }
-  
-  .app-menu-bg.close {
-    display: block;
-    opacity: 0.8;
-    z-index: 0;
-  }
+	.app-respMenu.close > button {
+		align-items: flex-end;
+	}
 
-  .btnAdminSignOut {
-    display: none;
-  }
+	.app-menu-bg.close {
+		display: block;
+		opacity: 0.8;
+		z-index: 0;
+	}
+
+	.btnAdminSignOut {
+		display: none;
+	}
 }

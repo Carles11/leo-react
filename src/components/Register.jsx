@@ -56,18 +56,19 @@ class Register extends React.Component {
   }
 
   handlePost = async body => {
+    const { DIC } = this.props
     const promise = await API.post('schools', body)
 
     if (promise.success) {
       this.setState({ 
         send: true,
-        message: 'Gracias por incribirse en el concurso de lectura Leo, leo. En breve recibirá más información.',
+        message: DIC.MSG_SCHOOL_CREATED,
         error: false
       })
     } else {
       this.setState({ 
         send: true,
-        message: 'Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.',
+        message: DIC.MSG_SCHOOL_ERROR,
         error: true
       })
     }
@@ -98,8 +99,8 @@ class Register extends React.Component {
         <ReactMessages message={message} next={send} duration={9000} error={error} />
         <div className="app-section-width">
           <header className="header-wrapper" >
-            <h2 className="tit-section pSides05rem">Formulario de Inscripción</h2>
-            <h3 className="subtit-section">Registra tu escuela</h3>
+            <h2 className="tit-section pSides05rem">{DIC.FORM_TITLE}</h2>
+            <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
           </header>
           <form
             className="app-form"
@@ -162,7 +163,7 @@ class Register extends React.Component {
               controlFunc={this.handleChange}
             />
             <div className="app-form-whole">
-              <p className="app-form-label-txt">Selecciona las Categorias del Concurso en las que participará la escuela:</p>
+              <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
               {categories.map(item => 
                 <Checkbox 
                   key={item} 

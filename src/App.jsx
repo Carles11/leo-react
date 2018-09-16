@@ -11,15 +11,19 @@ import getDictionary from './utils/dictionary'
 
 const DIC = getDictionary()
 
-const App = props => 
+const App = props => (
   <React.Fragment>
-    <Helmet titleTemplate={`%s | ${DIC.NAME} - ${DIC.DESCRIPTION}`} defaultTitle={`${DIC.NAME} - ${DIC.DESCRIPTION}`} >
+    <Helmet
+      titleTemplate={`%s | ${DIC.NAME} - ${DIC.DESCRIPTION}`}
+      defaultTitle={`${DIC.NAME} - ${DIC.DESCRIPTION}`}
+    >
       <meta name="description" content={DIC.DESCRIPTION} />
     </Helmet>
     <Navigation {...props} DIC={DIC} />
     <Routes {...props} DIC={DIC} />
-    <Footer />
+    <Footer DIC={DIC} />
   </React.Fragment>
+)
 
 const AppWithApp = withAuth(App)
 

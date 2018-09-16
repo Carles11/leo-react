@@ -1,51 +1,104 @@
 .app-footer {
-  position: relative;
-  background: var(--mainColorDark);
-  color: white;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+	position: relative;
+	background: var(--mainColorDark);
+	color: white;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1rem;
 }
 
-.app-footer ul {
-  position: relative;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 1rem 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
+.app-footer-wrapper {
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	display: flex;
 }
 
-.app-footer ul li,
-.app-footer ul li a {
-  color: white;
-  font-family: Lighter;
-  font-size: var(--tinySize);
-  margin: 0 0.5rem;
+.app-footer-links {
+	width: auto;
+	position: relative;
+	padding: 0rem 5rem 0rem 0.5rem;
+	margin-right: 1.5rem;
+	border-right: 1px dotted var(--mainColor);
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
+.app-footer-links li,
+.app-footer-links a {
+	color: white;
+	font-family: Lighter;
+	font-size: var(--tinySize);
+	margin: 0 0.5rem;
+	height: 2rem;
+}
 
-.app-footer ul li a {
-  color: var(--secondColor);
+.app-footer-links li:last-of-type {
+	padding-top: 0.75rem;
+}
+
+.app-footer-links li > span {
+	font-family: Lighter;
+	font-size: var(--tinySize);
+	color: white;
+	margin-left: 0.5rem;
+}
+
+.app-footer-links li a {
+	color: var(--secondColor);
+}
+
+.app-footer-imgs {
+	flex: 1;
+	width: 100%;
+	padding: 0 3.5rem;
+}
+
+.app-footer-imgs h3 {
+	font-family: Lighter;
+	font-size: var(--textSize);
+	margin: 1.5rem 0;
+}
+
+.app-footer-imgs article {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.app-footer-imgs article img {
+	margin: 0 1.5rem 1.5rem 0;
 }
 
 .app-footer a > .line {
-  height: 1.25rem;
+	height: 1.25rem;
 }
 
 .app-footer a > .line span {
-  border-bottom: 1px solid var(--secondColor);
+	border-bottom: 1px solid var(--secondColor);
 }
 
-@media only screen 
-and (max-width: 600px) {
-  .app-footer ul {
-    flex-direction: column;
-  }
+@media only screen and (max-width: 600px) {
+	.app-footer-wrapper {
+		flex-direction: column;
+	}
+
+	.app-footer-links {
+		align-items: center;
+		padding: 0;
+		margin-right: 0;
+		border-right: none;
+	}
+
+	.app-footer-imgs {
+		padding: 0;
+	}
+
+	.app-footer-imgs h3 {
+		text-align: center;
+	}
 }
-
-
-

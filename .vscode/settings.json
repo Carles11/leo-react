@@ -1,0 +1,10 @@
+{
+  // Set the default
+  "editor.formatOnSave": true,
+  // Enable per-language
+  "[javascript]": {
+      "editor.formatOnSave": true
+  },
+  // Whether to add a semicolon at the end of every line
+  "prettier.semi": false,
+}

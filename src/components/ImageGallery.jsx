@@ -84,7 +84,7 @@ class ImageGallery extends React.Component {
     if (!loaded) return <Loader css={'app-section h725'} />
 
     return (
-      <article className="app-section app-section-1">
+      <React.Fragment>
         <Filter 
           handleFilter={this.handleFilter}
           filter={filter}
@@ -101,7 +101,7 @@ class ImageGallery extends React.Component {
           currentImage={this.state.currentImage}
           isOpen={this.state.lightboxIsOpen}
         />
-      </article>
+      </React.Fragment>
     )
   }
 }

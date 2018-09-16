@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactMessages from 'react-messages'
+import ReactToPrint from 'react-to-print'
 
 import * as API from '../utils/API'
 import Loader from './Loader'
 import Item from './Item'
+import PrintComponent from './PrintComponent'
 
 class List extends React.Component {
   state = {
@@ -69,6 +71,16 @@ class List extends React.Component {
         {!loaded && <Loader />}
         {loaded && 
         <article>
+          <header className="app-admin-title">
+            <h1>Listado de escuelas</h1>
+            <div>
+              <ReactToPrint
+                trigger={() => <button type="button" aria-label="Descargar PDF" className="btn btn-invert">Descargar PDF</button>}
+                content={() => this.componentRef}
+              />
+              <PrintComponent data={list} ref={el => (this.componentRef = el)} />
+            </div>
+          </header>
           <ul className="app-list">
             <ReactMessages message={error.message} next={error.next} error={error.state} icon={error.icon} duration={5000} />
             {Boolean(list.length) && list.map(item => {
