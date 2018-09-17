@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import withScroll from '../components/HOC/withScroll'
+
 const Criterios = (props) => {
   const { DIC } = props
 
@@ -24,14 +26,17 @@ const Criterios = (props) => {
 Criterios de lectura para el jurado:&nbsp;
           </strong>
 					La "calidad" de la lectura se determinará según los siguientes dos criterios:
-          <ul>
-            <li>
+
+        </p>
+        <ul>
+          <li>
 Pronunciación / entonación
-            </li>
-            <li>
+          </li>
+          <li>
 Comprensión / interpretación
-            </li>
-          </ul>
+          </li>
+        </ul>
+        <p className="txt">
 					La puntuación será de 1 a 5, para cada una de las tres categorías, siendo 5 el máximo.
 
         </p>
@@ -58,4 +63,6 @@ Comprensión/interpretación:&nbsp;
   )
 }
 
-export default Criterios
+const CriteriosWithScroll = withScroll(Criterios)
+
+export default CriteriosWithScroll

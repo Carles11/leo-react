@@ -1,145 +1,136 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import ButtonSignOut from './ButtonSignOut'
-import { getSlug } from "../utils/helpers";
+import { getSlug } from '../utils/helpers'
 import config from '../config'
-import Logo from "../assets/imgs/logo_tiny.png";
+import Logo from '../assets/imgs/logo_tiny.png'
 
 class Navigation extends React.Component {
-  state = {
-    visible: false,
-    redirectTo: ''
-  };
+	state = {
+		visible: false,
+		redirectTo: '',
+	}
 
-  static propTypes = {
-    DIC: PropTypes.object.isRequired
-  };
+	static propTypes = {
+		DIC: PropTypes.object.isRequired,
+	}
 
-  handleVisibility = () => {
-    this.setState(prevState => ({ visible: !prevState.visible }));
-  };
+	handleVisibility = () => {
+		this.setState(prevState => ({ visible: !prevState.visible }))
+	}
 
-  handleNavigation = e => {
-    const { name, dataset } = e.target;
+	handleNavigation = e => {
+		const { name } = e.target
 
-    if (dataset.scroll) {
-      setTimeout(() => {
-        document.querySelector(`.${name}`).scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      });
-    }
+		setTimeout(() => {
+			document.querySelector(`.${name}`).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+			})
+		})
 
-    this.setState({ visible: false });
-  };
+		this.setState({ visible: false })
+	}
 
-  handleSignOut = () => {
-    localStorage.removeItem(config.api.API_TOKEN)
-    this.props.checkAuth()
-  }
+	handleSignOut = () => {
+		localStorage.removeItem(config.api.API_TOKEN)
+		this.props.checkAuth()
+	}
 
-  render() {
-    const { DIC, auth } = this.props;
-    const { visible } = this.state;
-    const icon = visible ? "close" : "menu";
-    const NAV = [
-      {
-        label: DIC.NAV_INFO,
-        children: [
-          DIC.NAV_BASES,
-          DIC.NAV_TEXTOS,
-          DIC.NAV_CRITERIOS,
-          DIC.NAV_CONCURSO,
-          DIC.NAV_CERTIFICADOS,
-          DIC.NAV_COLEGIOS,
-        ],
-      },
-      { label: DIC.NAV_GALERIA, children: [] },
-      { label: DIC.NAV_INSCRIPCION, children: [] },
-    ]
+	render() {
+		const { DIC, auth } = this.props
+		const { visible } = this.state
+		const icon = visible ? 'close' : 'menu'
+		const NAV = [
+			{
+				label: DIC.NAV_INFO,
+				children: [
+					DIC.NAV_BASES,
+					DIC.NAV_TEXTOS,
+					DIC.NAV_CRITERIOS,
+					DIC.NAV_CONCURSO,
+					DIC.NAV_CERTIFICADOS,
+					DIC.NAV_COLEGIOS,
+				],
+			},
+			{ label: DIC.NAV_GALERIA, children: [] },
+			{ label: DIC.NAV_INSCRIPCION, children: [] },
+		]
 
-    const List = (
-      <ul className={`app-nav-list ${icon}`}>
-        <li className="app-nav-item btn-close">
-          <img src={Logo} alt="Leo, leo" />
-          <button onClick={this.handleVisibility}>
-            <span className="txt">CERRAR</span>
-            <span className={`icon-close`} />
-          </button>
-        </li>
-        <li className="app-nav-item logo">
-          <Link to="/">
-            <img
-              onClick={this.handleNavigation}
-              data-scroll={true}
-              name="app-header"
-              src={Logo}
-              alt="Leo, leo"
-            />
-          </Link>
-        </li>
-        {NAV.map((item, i) => {
-          const label = getSlug(item.label);
-          const children = item.children.length ? true : false;
-          const section = `app-section-${i}`;
+		const List = (
+			<ul className={`app-nav-list ${icon}`}>
+				<li className="app-nav-item btn-close">
+					<img src={Logo} alt="Leo, leo" />
+					<button onClick={this.handleVisibility}>
+						<span className="txt">CERRAR</span>
+						<span className={`icon-close`} />
+					</button>
+				</li>
+				<li className="app-nav-item logo">
+					<Link to="/">
+						<img
+							onClick={this.handleNavigation}
+							data-scroll={true}
+							name="app-header"
+							src={Logo}
+							alt="Leo, leo"
+						/>
+					</Link>
+				</li>
+				{NAV.map((item, i) => {
+					const label = getSlug(item.label)
+					const children = item.children.length
+					const section = `app-section-${i}`
 
-          return (
-            <li key={label} className="app-nav-item">
-              <Link
-                to="/"
-                onClick={this.handleNavigation}
-                data-scroll={true}
-                name={section}
-              >
-                {item.label.toUpperCase()}
-                {children && <span className="icon-down ml5" />}
-              </Link>
-              {children && (
-                <ul className={`app-subnav-list`}>
-                  {item.children.map(item => {
-                    const link = "/" + getSlug(item);
-                    return (
-                      <li key={link} className="app-subnav-item">
-                        <Link onClick={this.handleNavigation} to={link}>
-                          {item.toUpperCase()}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </li>
-          );
-        })}
-        {auth && 
-          <li className="app-nav-item btnAdminSignOut">
-            <ButtonSignOut label={'Cerrar Sesión'} handleClick={this.handleSignOut} />
-          </li>
-        }
-      </ul>
-    );
+					return (
+						<li key={label} className="app-nav-item">
+							<Link to="/" onClick={this.handleNavigation} name={section}>
+								{item.label.toUpperCase()}
+								{!!children && <span className="icon-down ml5" />}
+							</Link>
+							{!!children && (
+								<ul className={`app-subnav-list`}>
+									{item.children.map(item => {
+										const link = '/' + getSlug(item)
+										return (
+											<li key={link} className="app-subnav-item">
+												<Link to={link}>{item.toUpperCase()}</Link>
+											</li>
+										)
+									})}
+								</ul>
+							)}
+						</li>
+					)
+				})}
+				{auth && (
+					<li className="app-nav-item btnAdminSignOut">
+						<ButtonSignOut label={'Cerrar Sesión'} handleClick={this.handleSignOut} />
+					</li>
+				)}
+			</ul>
+		)
 
-    const ResponsiveMenu = (
-      <div className={`app-respMenu ${icon}`}>
-        <button className="btn-menu" onClick={this.handleVisibility}>
-          <span className="txt">MENU</span>
-          <span className={`icon-menu`} />
-        </button>
-        {auth && <ButtonSignOut handleClick={this.handleSignOut} />}
-      </div>
-    );
+		const ResponsiveMenu = (
+			<div className={`app-respMenu ${icon}`}>
+				<button className="btn-menu" onClick={this.handleVisibility}>
+					<span className="txt">MENU</span>
+					<span className={`icon-menu`} />
+				</button>
+				{auth && <ButtonSignOut handleClick={this.handleSignOut} />}
+			</div>
+		)
 
-    return (
-      <nav className={`app-nav ${icon}`}>
-        {!visible && ResponsiveMenu}
-        {List}
-        <div className={`app-menu-bg ${icon}`} />
-      </nav>
-    );
-  }
+		return (
+			<nav className={`app-nav ${icon}`}>
+				{!visible && ResponsiveMenu}
+				{List}
+				<div className={`app-menu-bg ${icon}`} />
+			</nav>
+		)
+	}
 }
 
-export default Navigation;
+export default Navigation

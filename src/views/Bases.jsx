@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import withScroll from '../components/HOC/withScroll'
+
 const Bases = (props) => {
   const { DIC } = props
 
@@ -265,4 +267,6 @@ Inscripción:&nbsp;
   )
 }
 
-export default Bases
+const BasesWithScroll = withScroll(Bases)
+
+export default BasesWithScroll
