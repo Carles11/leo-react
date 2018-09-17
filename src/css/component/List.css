@@ -1,9 +1,9 @@
 .app-list {
-	margin: 0;
+	margin: 0 0 2rem 0;
 	padding: 0;
 	list-style: none;
 }
-.app-list-item,
+.app-list-item > header,
 .app-list-content {
 	position: relative;
 	width: 100%;
@@ -18,19 +18,23 @@
 }
 
 .app-list-content {
-	visibility: hidden;
-	flex-wrap: wrap;
-	position: absolute;
+	display: none;
+	position: relative;
 	top: 0;
 	left: 0;
 	z-index: 1;
-	opacity: 0;
-	transition: visibility 0.3s, top 0.3s, opacity 0.3s;
+	opacity: 1;
+	transition: opacity 0.3s;
+	margin-bottom: 1.5rem;
+}
+
+.app-list-content article {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .app-list-content.show {
-	visibility: visible;
-	top: 4rem;
+	display: block;
 	opacity: 1;
 }
 
@@ -115,9 +119,9 @@
 	.app-list-item h2 > small {
 		display: none;
 	}
-	.app-list-item {
+	.app-list-header {
 		flex-direction: column;
-		padding-left: 0;
+		padding-left: 0 !important;
 	}
 	.app-list-btn {
 		flex: 1;
@@ -125,17 +129,20 @@
 		margin: 2px 0 0;
 	}
 	.app-list-content {
-		display: block;
-		top: 4rem;
+		display: none;
+		top: 0rem;
 		z-index: 1;
 		padding: 1rem;
 	}
 
 	.app-list-content.show {
-		visibility: visible;
-		top: 7.75rem;
-		opacity: 1;
+		display: block;
 	}
+
+	.app-list-content article {
+		flex-direction: column;
+	}
+
 	.app-list-content-item {
 		margin: 0 0 0.5rem;
 		text-align: center;
