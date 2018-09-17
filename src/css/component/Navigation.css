@@ -198,10 +198,21 @@
 		background: var(--menuBg);
 	}
 
-	.app-nav-item.btn-close > img {
+	.app-nav-item.btn-close > a,
+	.app-nav-item.btn-close > a:hover,
+	.btn-close-item {
+		width: 100px;
+		height: 69px;
+		background: var(--menuBg);
+	}
+
+	.app-nav-item.btn-close > a > img,
+	.btn-close-item > img {
+		position: absolute;
+		top: 0.6rem;
+		left: 2rem;
 		width: 45px;
 		height: auto;
-		margin: 0.5rem 0 0 1.5rem;
 	}
 
 	.app-nav-item.btn-close > button,

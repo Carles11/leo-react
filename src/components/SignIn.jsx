@@ -6,6 +6,7 @@ import SingleInput from './form/SingleInput'
 import Button from './Button'
 import { showFormErrors, showInputError } from '../utils/errorHandler'
 import { isDisabled } from '../utils/helpers'
+import withScroll from './HOC/withScroll'
 
 const SignIn = (props) => {
   const handleChange = (e) => {
@@ -85,4 +86,6 @@ SignIn.propTypes = {
   icon: PropTypes.string,
 }
 
-export default SignIn
+const SignInWithScroll = withScroll(SignIn)
+
+export default SignInWithScroll

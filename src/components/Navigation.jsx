@@ -62,7 +62,9 @@ class Navigation extends React.Component {
 		const List = (
 			<ul className={`app-nav-list ${icon}`}>
 				<li className="app-nav-item btn-close">
-					<img src={Logo} alt="Leo, leo" />
+					<Link onClick={this.handleNavigation} to="/" name={'app-landing'}>
+						<img name={'app-landing'} src={Logo} alt="Leo, leo" />
+					</Link>
 					<button onClick={this.handleVisibility}>
 						<span className="txt">CERRAR</span>
 						<span className={`icon-close`} />
@@ -117,6 +119,14 @@ class Navigation extends React.Component {
 
 		const ResponsiveMenu = (
 			<div className={`app-respMenu ${icon}`}>
+				<Link
+					className="btn-close-item"
+					onClick={this.handleNavigation}
+					to="/"
+					name={'app-landing'}
+				>
+					<img name={'app-landing'} src={Logo} alt="Leo, leo" />
+				</Link>
 				<button className="btn-menu" onClick={this.handleVisibility}>
 					<span className="txt">MENU</span>
 					<span className={`icon-menu`} />
