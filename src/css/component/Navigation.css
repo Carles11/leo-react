@@ -213,6 +213,14 @@
 		left: 2rem;
 		width: 45px;
 		height: auto;
+		transition: width 0.3s, top 0.3s, left 0.3s;
+	}
+
+	.app-nav-item.btn-close > a:hover > img,
+	.btn-close-item:hover > img {
+		width: 55px;
+		top: 0.3rem;
+		left: 1.7rem;
 	}
 
 	.app-nav-item.btn-close > button,
