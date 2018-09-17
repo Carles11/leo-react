@@ -96,7 +96,9 @@ class Navigation extends React.Component {
 										const link = '/' + getSlug(item)
 										return (
 											<li key={link} className="app-subnav-item">
-												<Link to={link}>{item.toUpperCase()}</Link>
+												<Link onClick={this.handleVisibility} to={link}>
+													{item.toUpperCase()}
+												</Link>
 											</li>
 										)
 									})}
