@@ -5,7 +5,7 @@ const Bases = (props) => {
   const { DIC } = props
 
   return (
-    <section className="app-content">
+    <section className="app-content pb2rem mb2rem">
       <Helmet
         title={DIC.NAV_BASES}
         meta={[

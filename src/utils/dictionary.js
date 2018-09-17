@@ -39,7 +39,7 @@ const dictionary = {
     NAV_COLEGIOS: 'Colegios inscritos',
     NAV_CONCURSO: 'Concurso',
     NAV_GALERIA: 'Galeria',
-    NAV_CRITERIOS: 'Criterios de lectores',
+    NAV_CRITERIOS: 'Criterios de lectura',
     NAV_INFO: 'Información para profesores',
     NAV_INSCRIPCION: 'Inscripción',
     NAV_TEXTOS: 'Textos de lectura',
