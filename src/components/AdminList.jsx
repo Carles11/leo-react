@@ -65,16 +65,11 @@ class AdminList extends React.Component {
 		}
 	}
 
-	handlePrint = () => {
-		const els = document.querySelectorAll('.app-list-content')
-		els.forEach(el => el.classList.add('show'))
-	}
-
 	render() {
 		const { list, loaded, error } = this.state
 		const PrintButton = (
 			<button type="button" aria-label="Descargar PDF" className="btn btn-invert">
-				Descargar PDF
+				Descargar / Imprimir
 			</button>
 		)
 
@@ -84,7 +79,9 @@ class AdminList extends React.Component {
 				{loaded && (
 					<article>
 						<header className="app-admin-title">
-							<h1>Listado de escuelas</h1>
+							<h1>
+								Escuelas registradas: <small>{list.length}</small>
+							</h1>
 							<div>
 								<ReactToPrint trigger={() => PrintButton} content={() => this.componentRef} />
 							</div>

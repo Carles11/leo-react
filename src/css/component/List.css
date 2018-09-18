@@ -20,7 +20,8 @@
 .app-list-content {
 	display: none;
 	position: relative;
-	top: 0;
+	background: transparent;
+	top: -0.5rem;
 	left: 0;
 	z-index: 1;
 	opacity: 1;
@@ -130,7 +131,7 @@
 	}
 	.app-list-content {
 		display: none;
-		top: 0rem;
+		top: -0.5rem;
 		z-index: 1;
 		padding: 1rem;
 	}
