@@ -16,7 +16,7 @@ import logoKlett from '../assets/imgs/logo-klett.jpg'
 
 const footerStr = [
   { label: 'Aviso legal', url: '/aviso-legal' },
-  { label: 'Facebook', url: 'https://facebook.com', external: true },
+  { label: 'Facebook', url: 'https://www.facebook.com/pages/Hessenwaldschule/115618345115337', external: true },
   {
     label: 'HessenWald Schule',
     url: 'http://hessenwaldschule.net',
