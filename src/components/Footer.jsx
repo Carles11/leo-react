@@ -52,18 +52,102 @@ const Footer = (props) => {
             {DIC.SPONSOR}
           </h3>
           <article>
-            <img src={logoHws} alt="Hessenwald Schule" />
-            <img src={logoHessen} alt="Hessen" />
-            <img src={logoDsg} alt="Dsg" />
-            <img src={logoIc} alt="Instituto Cervantes" />
-            <img src={logoAecid} alt="Aecid" />
-            <img src={logoColombia} alt="Embajada de Colombia" />
-            <img src={logoChile} alt="Embajada de Chile" />
-            <img src={logoMexico} alt="Embajada de Mexico" />
-            <img src={logoSm} alt="SM" />
-            <img src={logoCornelsen} alt="Cornelsen" />
-            <img src={logoEdinumen} alt="Edinumen" />
-            <img src={logoKlett} alt="Klett"/>
+            <a
+              href="http://www.hessenwaldschule.net/ "
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la Hessenwaldschule"
+            >
+              <img src={logoHws} alt="Hessenwaldschule" />
+            </a>
+            <a
+              href="https://kultusministerium.hessen.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+            >
+              <img src={logoHessen} alt="Hessen" />
+            </a>
+            <a
+              href="https://www.hispanorama.de/landesverbaende/hessen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de SDV"
+            >
+              <img src={logoDsg} alt="SDV" />
+            </a>
+            <a
+              href="https://frankfurt.cervantes.es/de/start.shtm"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+            >
+              <img src={logoIc} alt="Instituto Cervantes" />
+            </a>
+            <a
+              href="http://www.aecid.es/ES"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de AECID (cooperación)"
+            >
+              <img src={logoAecid} alt="AECID (cooperación)" />
+            </a>
+            <a
+              href="http://alemania.embajada.gov.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la embajada de Colombia"
+            >
+              <img src={logoColombia} alt="Cancillería (Colombia)" />
+            </a>
+            <a
+              href="http://www.echile.de/index.php/de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la embajada de Chile"
+            >
+              <img src={logoChile} alt="Consulado de Chile" />
+            </a>
+            <a
+              href="https://consulmex.sre.gob.mx/frankfurt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web del consulado de México"
+            >
+              <img src={logoMexico} alt="Consulado de México" />
+            </a>
+            <a
+              href="https://www.grupo-sm.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web del grupo SM"
+            >
+              <img src={logoSm} alt="Grupo SM" />
+            </a>
+            <a
+              href="https://www.cornelsen.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Cornelsen"
+            >
+              <img src={logoCornelsen} alt="Cornelsen" />
+            </a>
+            <a
+              href="https://edinumen.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Edinumen"
+            >
+              <img src={logoEdinumen} alt="Edinumen" />
+            </a>
+            <a
+              href="https://www.klett.de/index/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Klett"
+            >
+              <img src={logoKlett} alt="Klett" />
+            </a>
           </article>
         </section>
       </div>

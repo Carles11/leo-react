@@ -70,8 +70,15 @@
 	align-items: center;
 }
 
-.app-footer-imgs article img {
-	margin: 0 1.5rem 1.5rem 0;
+.app-footer-imgs article a {
+	margin: 0.25rem 0.5rem 0.25rem 0;
+	padding: 0.25rem 0.25rem 0 0.25rem;
+	border: 1px solid var(--mainColor);
+	transition: border 0.5s;
+}
+
+.app-footer-imgs article a:hover {
+	border: 1px solid white;
 }
 
 .app-footer a > .line {
