@@ -117,7 +117,7 @@ class Navigation extends React.Component {
 				{!auth && (
 					<li className="app-nav-mail">
 						<a
-							href="mailto:c.cid@hws.schule"
+							href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
 							className="icon-envelope"
 							aria-label="Correo de contacto"
 						>

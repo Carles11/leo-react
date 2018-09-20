@@ -45,7 +45,7 @@ const Footer = (props) => {
             </li>
           ))}
           <li>
-            <a className="btn-link" href="mailto:c.cid@hws.schule" aria-label="Correo de contacto">
+            <a className="btn-link" href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'" aria-label="Correo de contacto">
 							Contacto
               <span className="line">
                 <span />
