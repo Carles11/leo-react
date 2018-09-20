@@ -56,6 +56,23 @@
 	border-right: 1px solid #eeeeee;
 }
 
+.app-nav-mail {
+	display: flex;
+	align-items: center;
+}
+
+.app-nav-mail > a {
+	text-decoration: none;
+	color: var(--secondColor);
+	padding: 1.4rem 1.6rem;
+	font-size: 1rem;
+	transition: color 0.5s;
+}
+
+.app-nav-mail > a:hover {
+	color: var(--textColor);
+}
+
 .app-nav-item:last-of-type {
 	border: none;
 }

@@ -114,6 +114,17 @@ class Navigation extends React.Component {
 						<ButtonSignOut label={'Cerrar Sesión'} handleClick={this.handleSignOut} />
 					</li>
 				)}
+				{!auth && (
+					<li className="app-nav-mail">
+						<a
+							href="mailto:c.cid@hws.schule"
+							className="icon-envelope"
+							aria-label="Correo de contacto"
+						>
+							<span className="hidden">Correo de contacto</span>
+						</a>
+					</li>
+				)}
 			</ul>
 		)
 

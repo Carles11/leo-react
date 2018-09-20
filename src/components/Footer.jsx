@@ -16,13 +16,17 @@ import logoKlett from '../assets/imgs/logo-klett.jpg'
 
 const footerStr = [
   { label: 'Aviso legal', url: '/aviso-legal' },
-  { label: 'Facebook', url: 'https://www.facebook.com/pages/Hessenwaldschule/115618345115337', external: true },
+  { label: 'Impressum', url: '/impressum' },
   {
     label: 'HessenWald Schule',
     url: 'http://hessenwaldschule.net',
     external: true,
   },
-  { label: 'Impressum', url: '/impressum' },
+  {
+    label: 'Facebook',
+    url: 'https://www.facebook.com/pages/Hessenwaldschule/115618345115337',
+    external: true,
+  },
   { label: 'Admin', url: '/admin' },
 ]
 
@@ -40,6 +44,15 @@ const Footer = (props) => {
               <Button label={item.label} link={item.url} external={!!item.external} />
             </li>
           ))}
+          <li>
+            <a className="btn-link" href="mailto:c.cid@hws.schule" aria-label="Correo de contacto">
+							Contacto
+              <span className="line">
+                <span />
+                <span />
+              </span>
+            </a>
+          </li>
           <li>
             <span>
 							&copy;&nbsp;
