@@ -2,22 +2,41 @@ import getDictionary from './dictionary'
 
 const DIC = getDictionary()
 
-export const showFormErrors = () => {
-  const inputs = document.querySelectorAll('input:required')
-  const textareas = document.querySelectorAll('textarea:required')
-  let isFormValid = true
+function handleText(item) {
+  const itemArg = item
+  const isEmail = itemArg.id.type === 'email'
+  const isPassword = itemArg.id.type === 'password'
 
-  inputs.forEach((input: Input) => {
-    const isInputValid = showInputError(input)
-    if (!isInputValid) isFormValid = false
-  })
+  if (!itemArg.validity.valid) {
+    if (itemArg.validity.valueMissing) {
+      itemArg.error.textContent = `${itemArg.label} ${DIC.ERROR_REQUIRED}`
+    } else if (isEmail && itemArg.validity.typeMismatch) {
+      itemArg.error.textContent = `${itemArg.label} ${DIC.ERROR_EMAIL}`
+    } else if (
+      itemArg.validity.patternMismatch
+			|| (isPassword && itemArg.validity.patternMismatch) // eslint-disable-line no-tabs
+    ) {
+      itemArg.error.textContent = `${itemArg.label} ${DIC.ERROR_TEXT}`
+    }
+    return false
+  }
 
-  textareas.forEach((textarea) => {
-    const isTextareaValid = showInputError(textarea)
-    if (!isTextareaValid) isFormValid = false
-  })
+  itemArg.error.textContent = ''
+  return true
+}
 
-  return isFormValid
+function handleTextarea(item) {
+  const itemArg = item
+  if (itemArg.id.value.length < 25) {
+    itemArg.id.classList.add('invalid')
+    itemArg.error.textContent = `${itemArg.label} should be longer than 25 chars`
+    return false
+  }
+
+  itemArg.id.classList.remove('invalid')
+  itemArg.id.classList.add('valid')
+  itemArg.error.textContent = ''
+  return true
 }
 
 export const showInputError = (input) => {
@@ -25,10 +44,10 @@ export const showInputError = (input) => {
     id: document.querySelector(`#${input.id}`),
     validity: document.querySelector(`#${input.id}`).validity,
     label: document.querySelector(`#${input.name}Label`).textContent,
-    error: document.querySelector(`#${input.name}Error`)
+    error: document.querySelector(`#${input.name}Error`),
   }
 
-  switch(input.type) {
+  switch (input.type) {
     case 'text':
     case 'email':
     case 'password':
@@ -40,34 +59,20 @@ export const showInputError = (input) => {
   }
 }
 
-function handleText(item) {
-  const isEmail = item.id.type === 'email'
-  const isPassword = item.id.type === 'password'
+export const showFormErrors = () => {
+  const inputs = document.querySelectorAll('input:required')
+  const textareas = document.querySelectorAll('textarea:required')
+  let isFormValid = true
 
-  if (!item.validity.valid) {
-    if (item.validity.valueMissing) {
-      item.error.textContent = `${item.label} ${DIC.ERROR_REQUIRED}`;
-    } else if (isEmail && item.validity.typeMismatch) {
-      item.error.textContent = `${item.label} ${DIC.ERROR_EMAIL}`; 
-    } else if (item.validity.patternMismatch || (isPassword && item.validity.patternMismatch)) {
-      item.error.textContent = `${item.label} ${DIC.ERROR_TEXT}`; 
-    } 
-    return false;
-  } 
+  inputs.forEach((input) => {
+    const isInputValid = showInputError(input)
+    if (!isInputValid) isFormValid = false
+  })
 
-  item.error.textContent = '';
-  return true;
-}
+  textareas.forEach((textarea) => {
+    const isTextareaValid = showInputError(textarea)
+    if (!isTextareaValid) isFormValid = false
+  })
 
-function handleTextarea(item) {
-  if (item.id.value.length < 25) {
-    item.id.classList.add('invalid')
-    item.error.textContent = `${item.label} should be longer than 25 chars`; 
-    return false;
-  } 
-  
-  item.id.classList.remove('invalid')
-  item.id.classList.add('valid')
-  item.error.textContent = '';
-  return true;
+  return isFormValid
 }

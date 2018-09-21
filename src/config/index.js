@@ -1,11 +1,8 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 const config = {
   dev: 'development',
   test: 'test',
   prod: 'production',
-  env: process.env.NODE_ENV || ''
+  env: process.env.NODE_ENV || '',
 }
 
 let envConfig
@@ -15,7 +12,7 @@ try {
     config.env = 'testing'
   }
   // eslint-disable-next-line
-  envConfig = require(`./${config.env}`)
+	envConfig = require(`./${config.env}`)
 } catch (e) {
   envConfig = {}
 }

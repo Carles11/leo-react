@@ -1,12 +1,14 @@
 {
-  "extends": "airbnb",
-  "env": {
-    "jest": true,
-    "browser": true
-  },
-  "rules": {
-    "semi": [2, "never"],
-    "no-unexpected-multiline": 2,
-    "import/no-named-as-default": 0
-  }
+	"extends": "airbnb",
+	"env": {
+		"jest": true,
+		"browser": true
+	},
+	"rules": {
+		"semi": [2, "never"],
+		"no-tabs": [0],
+		"no-mixed-spaces-and-tabs": [0],
+		"no-unexpected-multiline": 2,
+		"import/no-named-as-default": 0
+	}
 }
