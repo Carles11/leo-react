@@ -2,6 +2,7 @@
 	margin: 0 0 2rem 0;
 	padding: 0;
 	list-style: none;
+	display: block;
 }
 .app-list-item > header,
 .app-list-content {
@@ -86,7 +87,7 @@
 
 .app-list-header > small {
 	color: grey;
-	margin-right: 0.5rem;
+	margin-right: 1rem;
 }
 
 /** ORDERED LIST */

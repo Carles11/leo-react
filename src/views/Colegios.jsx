@@ -37,7 +37,7 @@ class Colegios extends React.Component {
 					<article>
 						<ul className="app-list app-section-boxes">
 							{schools.map(item => (
-								<li key={item._id} className="app-list-item app-section-box">
+								<li key={item._id} className="app-list-item">
 									<header className="app-list-header">
 										<h2>{item.name}</h2>
 										<small>{item.address}</small>
