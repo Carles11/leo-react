@@ -194,7 +194,7 @@
 	.app-nav-list {
 		position: absolute;
 		display: block;
-		width: 380px;
+		width: 350px;
 		height: 100vh;
 		left: -380px;
 		background: white;
