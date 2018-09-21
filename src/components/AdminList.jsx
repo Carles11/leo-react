@@ -86,21 +86,19 @@ class AdminList extends React.Component {
 								<ReactToPrint trigger={() => PrintButton} content={() => this.componentRef} />
 							</div>
 						</header>
-						<ul className="app-list">
-							<ReactMessages
-								message={error.message}
-								next={error.next}
-								error={error.state}
-								icon={error.icon}
-								duration={5000}
-							/>
-							<PrintComponent
-								data={list}
-								handleRemove={this.handleRemove}
-								handleShow={this.handleShow}
-								ref={el => (this.componentRef = el)}
-							/>
-						</ul>
+						<ReactMessages
+							message={error.message}
+							next={error.next}
+							error={error.state}
+							icon={error.icon}
+							duration={5000}
+						/>
+						<PrintComponent
+							data={list}
+							handleRemove={this.handleRemove}
+							handleShow={this.handleShow}
+							ref={el => (this.componentRef = el)}
+						/>
 					</article>
 				)}
 			</React.Fragment>

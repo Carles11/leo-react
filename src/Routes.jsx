@@ -8,8 +8,6 @@ import AdminPanel from './views/AdminPanel'
 import Bases from './views/Bases'
 import Lectura from './views/Lectura'
 import Criterios from './views/Criterios'
-import Concurso from './views/Concurso'
-import Certificados from './views/Certificados'
 import Colegios from './views/Colegios'
 import NotFound from './views/NotFound'
 
@@ -24,8 +22,6 @@ const Routes = (props) => {
       <Route path="/bases-del-concurso" render={props => <Bases {...props} DIC={DIC} />} />
       <Route path="/textos-de-lectura" render={props => <Lectura {...props} DIC={DIC} />} />
       <Route path="/criterios-de-lectura" render={props => <Criterios {...props} DIC={DIC} />} />
-      <Route path="/concurso" render={props => <Concurso {...props} DIC={DIC} />} />
-      <Route path="/certificados" render={props => <Certificados {...props} DIC={DIC} />} />
       <Route path="/colegios-inscritos" render={props => <Colegios {...props} DIC={DIC} />} />
       <Route render={props => <NotFound DIC={DIC} />} />
     </Switch>
