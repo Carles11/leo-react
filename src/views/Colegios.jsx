@@ -21,7 +21,7 @@ class Colegios extends React.Component {
 		const { schools } = this.state
 
 		return (
-			<div className="app-content">
+			<section className="app-content pb2rem mb2rem">
 				<Helmet
 					title={DIC.NAV_COLEGIOS}
 					meta={[
@@ -47,7 +47,7 @@ class Colegios extends React.Component {
 						</ul>
 					</article>
 				)}
-			</div>
+			</section>
 		)
 	}
 }
