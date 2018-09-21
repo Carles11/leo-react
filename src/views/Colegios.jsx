@@ -40,6 +40,7 @@ class Colegios extends React.Component {
 								<li key={item._id} className="app-list-item app-section-box">
 									<header className="app-list-header">
 										<h2>{item.name}</h2>
+										<small>{item.address}</small>
 									</header>
 								</li>
 							))}

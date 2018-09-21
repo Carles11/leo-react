@@ -84,6 +84,11 @@
 	background: var(--mainColor);
 }
 
+.app-list-header > small {
+	color: grey;
+	margin-right: 0.5rem;
+}
+
 /** ORDERED LIST */
 .app-olist {
 	list-style: none;
