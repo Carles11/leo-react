@@ -7,103 +7,97 @@ import Filter from './Filter'
 import * as API from '../utils/API'
 
 class ImageGallery extends React.Component {
-  state = { 
-    loaded: false,
-    currentImage: 0,
-    lightboxIsOpen: false,
-    photos: [],
-    filter: {}
-  }
+	state = {
+		loaded: false,
+		currentImage: 0,
+		lightboxIsOpen: false,
+		photos: [],
+		filter: {},
+	}
 
-  componentDidMount() {
-    this.getPhotos()
-  }
+	componentDidMount() {
+		this.getPhotos()
+	}
 
-  handleFilter = e => {
-    this.getPhotos(e.target.dataset.year)
-    this.setState({ loaded: false, photos: [] })
-  }
-    
-  getPhotos = async year => {
-      const { filter } = this.state
-      const param = year ? `year/${Number(year)}` : ''
-      const promise = await API.get(`images/${param}`)
+	handleFilter = e => {
+		this.getPhotos(e.target.dataset.year)
+		this.setState({ loaded: false, photos: [] })
+	}
 
-      if (promise.success) {
-        await this.setState({ photos: promise.data, loaded: true })
-      }
+	getPhotos = async year => {
+		const { filter } = this.state
+		const param = year ? `year/${Number(year)}` : ''
+		const promise = await API.get(`images/${param}`)
 
-      if (Object.keys(filter).length === 0) this.getYears()
-  }
+		if (promise.success) {
+			await this.setState({ photos: promise.data, loaded: true })
+		}
 
-  getYears = () => {
-    const { photos } = this.state
+		if (Object.keys(filter).length === 0) this.getYears()
+	}
 
-    const filter = photos.reduce((acc, val) => {
-      if (!acc[val.year]) acc[val.year] = 0
-      acc[val.year]++
-      return acc
-    }, {})
+	getYears = () => {
+		const { photos } = this.state
 
-    this.setState({ filter })
-  }
+		const filter = photos.reduce((acc, val) => {
+			if (!acc[val.year]) acc[val.year] = 0
+			acc[val.year]++
+			return acc
+		}, {})
 
-  openLightbox = (event, obj) => {
-    this.setState({
-        currentImage: obj.index,
-        lightboxIsOpen: true,
-    })
-  }
+		this.setState({ filter })
+	}
 
-  closeLightbox = () => {
-    this.setState({
-      currentImage: 0,
-      lightboxIsOpen: false,
-    })
-  }
+	openLightbox = (event, obj) => {
+		this.setState({
+			currentImage: obj.index,
+			lightboxIsOpen: true,
+		})
+	}
 
-  gotoPrevious = () => {
-    const { currentImage } = this.state
+	closeLightbox = () => {
+		this.setState({
+			currentImage: 0,
+			lightboxIsOpen: false,
+		})
+	}
 
-    this.setState({
-      currentImage: currentImage - 1,
-    })
-  }
+	gotoPrevious = () => {
+		const { currentImage } = this.state
 
-  gotoNext = () => {
-    const { currentImage } = this.state
-    
-    this.setState({
-      currentImage: currentImage + 1,
-    })
-  }
-  
-  render() {
-    const { loaded, photos, filter } = this.state
+		this.setState({
+			currentImage: currentImage - 1,
+		})
+	}
 
-    if (!loaded) return <Loader css={'app-section h725'} />
+	gotoNext = () => {
+		const { currentImage } = this.state
 
-    return (
-      <React.Fragment>
-        <Filter 
-          handleFilter={this.handleFilter}
-          filter={filter}
-        />
-        <Gallery
-          photos={photos} 
-          onClick={this.openLightbox} 
-        />
-        <Lightbox
-          images={photos}
-          onClose={this.closeLightbox}
-          onClickPrev={this.gotoPrevious}
-          onClickNext={this.gotoNext}
-          currentImage={this.state.currentImage}
-          isOpen={this.state.lightboxIsOpen}
-        />
-      </React.Fragment>
-    )
-  }
+		this.setState({
+			currentImage: currentImage + 1,
+		})
+	}
+
+	render() {
+		const { loaded, photos, filter } = this.state
+
+		if (!loaded) return <Loader css={'app-section h725'} />
+
+		return (
+			<React.Fragment>
+				<Filter handleFilter={this.handleFilter} filter={filter} />
+				<Gallery photos={photos} onClick={this.openLightbox} />
+				<Lightbox
+					images={photos}
+					onClose={this.closeLightbox}
+					onClickPrev={this.gotoPrevious}
+					onClickNext={this.gotoNext}
+					currentImage={this.state.currentImage}
+					isOpen={this.state.lightboxIsOpen}
+				/>
+			</React.Fragment>
+		)
+	}
 }
 
 export default ImageGallery

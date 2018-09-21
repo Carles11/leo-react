@@ -24,6 +24,8 @@ class Navigation extends React.Component {
 	handleNavigation = e => {
 		const { name } = e.target
 
+		console.log(name)
+
 		setTimeout(() => {
 			document.querySelector(`.${name}`).scrollIntoView({
 				behavior: 'smooth',
@@ -85,12 +87,12 @@ class Navigation extends React.Component {
 					const label = getSlug(item.label)
 					const children = item.children.length
 					const section = `app-section-${i}`
+					const iconDown = children ? 'item dropdown' : ''
 
 					return (
 						<li key={label} className="app-nav-item">
-							<Link to="/" onClick={this.handleNavigation} name={section}>
+							<Link className={iconDown} to="/" onClick={this.handleNavigation} name={section}>
 								{item.label.toUpperCase()}
-								{!!children && <span className="icon-down ml5" />}
 							</Link>
 							{!!children && (
 								<ul className={`app-subnav-list`}>
@@ -121,10 +123,18 @@ class Navigation extends React.Component {
 							className="icon-envelope"
 							aria-label="Correo de contacto"
 						>
-							<span className="hidden">Correo de contacto</span>
+							<span className="hidden">Contacto</span>
 						</a>
 					</li>
 				)}
+				<li className="app-nav-item app-nav-item-responsive">
+					<a
+						href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+						aria-label="Correo de contacto"
+					>
+						{'Contacto'.toUpperCase()}
+					</a>
+				</li>
 			</ul>
 		)
 
