@@ -39,16 +39,21 @@
 	padding: 5rem 0 0;
 }
 
+.app-section-0 {
+	padding-bottom: 4rem;
+}
+
 .app-section-1 {
 	height: auto !important;
 	min-height: auto;
+	background: url("../../assets/imgs/logo.jpg") -100px -50px no-repeat
+		var(--mainColor);
 }
 
 .app-section-2 {
 	height: auto !important;
 	min-height: auto;
-	background: url("../../assets/imgs/logo.jpg") -100px -50px no-repeat
-		var(--mainColor);
+	padding: 0;
 }
 
 .app-signIn {

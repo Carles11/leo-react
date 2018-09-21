@@ -50,8 +50,8 @@ class Navigation extends React.Component {
 				label: DIC.NAV_INFO,
 				children: [DIC.NAV_BASES, DIC.NAV_TEXTOS, DIC.NAV_CRITERIOS, DIC.NAV_COLEGIOS],
 			},
-			{ label: DIC.NAV_GALERIA, children: [] },
 			{ label: DIC.NAV_INSCRIPCION, children: [] },
+			{ label: DIC.NAV_GALERIA, children: [] },
 		]
 
 		const List = (

@@ -20,10 +20,10 @@ const Landing = (props) => {
       />
       <Header DIC={DIC} />
       <Contest DIC={DIC} />
-      <article className="app-section app-section-1">
+      <Register DIC={DIC} />
+      <article className="app-section app-section-2">
         <ImageGallery />
       </article>
-      <Register DIC={DIC} />
     </section>
   )
 }
