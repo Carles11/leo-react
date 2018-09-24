@@ -5,6 +5,7 @@ import Lightbox from 'react-images'
 import Loader from './Loader'
 import Filter from './Filter'
 import * as API from '../utils/API'
+import withWindow from './HOC/withWindow'
 
 class ImageGallery extends React.Component {
 	state = {
@@ -13,10 +14,17 @@ class ImageGallery extends React.Component {
 		lightboxIsOpen: false,
 		photos: [],
 		filter: {},
+		position: 0,
+		lazyLoad: false,
 	}
 
-	componentDidMount() {
-		this.getPhotos()
+	componentDidUpdate(prevState) {
+		const { position, lazyLoad } = this.state
+
+		if (position !== prevState.position && !lazyLoad) {
+			this.setState(oldState => ({ lazyLoad: !oldState.lazyLoad }))
+			this.getPhotos()
+		}
 	}
 
 	handleFilter = e => {
@@ -100,4 +108,6 @@ class ImageGallery extends React.Component {
 	}
 }
 
-export default ImageGallery
+const ImageGalleryWithWindow = withWindow(ImageGallery)
+
+export default ImageGalleryWithWindow
