@@ -44,6 +44,8 @@ const dictionary = {
     NAV_INSCRIPCION: 'Inscripción',
     NAV_TEXTOS: 'Textos de lectura',
     NOTFOUND: 'No se ha encontrado la página.',
+    NOTFOUND_TXT:
+			'Lo sentimos, pero probablemente el link que ha seguido está roto o se ha eliminado la página.',
     SPONSOR: 'Cooperación y patrocinio: ',
   },
 }

@@ -1,90 +1,95 @@
-p, .txt, ul > li {
-  font-family: Regular;
-  font-size: var(--textSize);
-  color: var(--textColor);
-  line-height: var(--maxSize);
+p,
+.txt,
+ul > li {
+	font-family: Regular;
+	font-size: var(--textSize);
+	color: var(--textColor);
+	line-height: var(--maxSize);
 }
 
 .txt-inline {
-  display: inline;
+	display: inline;
 }
 
 .txt-highlight {
-  font-family: Bold;
+	font-family: Bold;
 }
 
 .txt-italic {
-  display: inline-block;
-  font-family: Lighter;
-  font-style: italic;
-  line-height: 1.75;
+	display: inline-block;
+	font-family: Lighter;
+	font-style: italic;
+	line-height: 1.75;
+}
+
+.txt-center {
+	text-align: center;
 }
 
 .tit-header {
-  position: relative;
-  font-family: Regular;
-  font-size: var(--titleSize);
-  color: var(--secondColor);
-  text-align: center;
-  padding: 4rem 0 1.5rem;
-  margin: 0;
-  z-index: 1;
-  line-height: 3rem;
+	position: relative;
+	font-family: Regular;
+	font-size: var(--titleSize);
+	color: var(--secondColor);
+	text-align: center;
+	padding: 4rem 0 1.5rem;
+	margin: 0;
+	z-index: 1;
+	line-height: 3rem;
 }
 
 .header-wrapper {
-  position: relative;
-  z-index: 1;
-  text-align: center;
+	position: relative;
+	z-index: 1;
+	text-align: center;
 }
 
 .header-wrapper > * {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .tit-section {
-  color: white;
-  padding: 2rem 0 0;
-  font-family: Lighter;
-  font-size: var(--hugeSize); 
+	color: white;
+	padding: 2rem 0 0;
+	font-family: Lighter;
+	font-size: var(--hugeSize);
 }
 
 .subtit-section {
-  padding: 0 0 2rem;
-  margin: 0;
-  font-size: 1.75rem;
-  font-family: Bold;
-  color: var(--secondColor);
+	padding: 0 0 2rem;
+	margin: 0;
+	font-size: 1.75rem;
+	font-family: Bold;
+	color: var(--secondColor);
 }
 
 .tit-box,
 .tit-subsection {
-  color: var(--textColor);
-  font-family: Bold;
-  font-size: var(--maxSize);
-  margin-bottom: 0;
+	color: var(--textColor);
+	font-family: Bold;
+	font-size: var(--maxSize);
+	margin-bottom: 0;
 }
 
 .subtit-header {
-  font-family: Lighter;
-  font-size: var(--maxSize);
-  color: var(--mainColor);
+	font-family: Lighter;
+	font-size: var(--maxSize);
+	color: var(--mainColor);
 }
 
 ::selection {
-  background: var(--mainColor);
-  color: white;
+	background: var(--mainColor);
+	color: white;
 }
 
-@media only screen 
-and (max-width: 850px) {
-  .tit-header {
-    font-size: var(--hugeSize);
-    line-height: 2rem;
-  }
-  
-  .tit-section {
-    line-height: 2.5rem;
-  }
+@media only screen and (max-width: 850px) {
+	.tit-header {
+		font-size: var(--hugeSize);
+		line-height: 2.5rem;
+	}
+
+	.tit-section {
+		line-height: 2.5rem;
+	}
 }

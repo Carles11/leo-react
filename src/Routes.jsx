@@ -70,7 +70,7 @@ const Routes = props => {
 
 			<Route
 				component={props => (
-					<RoutesAsync props={props} loadingPromise={import('./views/NotFound')} />
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/NotFound')} />
 				)}
 			/>
 		</Switch>
