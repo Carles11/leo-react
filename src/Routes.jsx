@@ -1,37 +1,86 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
+import RoutesAsync from './RoutesAsync'
 
-import Landing from './views/Landing'
-import Admin from './views/Admin'
-import AdminPanel from './views/AdminPanel'
-import Bases from './views/Bases'
-import Lectura from './views/Lectura'
-import Criterios from './views/Criterios'
-import Colegios from './views/Colegios'
-import NotFound from './views/NotFound'
+const Routes = props => {
+	const { DIC, auth, checkAuth } = props
 
-const Routes = (props) => {
-  const { DIC, auth, checkAuth } = props
+	return (
+		<Switch>
+			<Route
+				exact
+				path="/"
+				component={props => (
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Landing')} />
+				)}
+			/>
 
-  return (
-    <Switch>
-      <Route exact path="/" render={props => <Landing {...props} DIC={DIC} />} />
-      <Route path="/admin" render={props => <Admin auth={auth} checkAuth={checkAuth} />} />
-      <Route path="/admin-panel" render={props => <AdminPanel auth={auth} />} />
-      <Route path="/bases-del-concurso" render={props => <Bases {...props} DIC={DIC} />} />
-      <Route path="/textos-de-lectura" render={props => <Lectura {...props} DIC={DIC} />} />
-      <Route path="/criterios-de-lectura" render={props => <Criterios {...props} DIC={DIC} />} />
-      <Route path="/colegios-inscritos" render={props => <Colegios {...props} DIC={DIC} />} />
-      <Route render={props => <NotFound DIC={DIC} />} />
-    </Switch>
-  )
+			<Route
+				path="/admin"
+				component={props => (
+					<RoutesAsync
+						props={props}
+						auth={auth}
+						checkAuth={checkAuth}
+						loadingPromise={import('./views/Admin')}
+					/>
+				)}
+			/>
+
+			<Route
+				path="/admin-panel"
+				component={props => (
+					<RoutesAsync
+						props={props}
+						auth={auth}
+						checkAuth={checkAuth}
+						loadingPromise={import('./views/AdminPanel')}
+					/>
+				)}
+			/>
+
+			<Route
+				path="/bases-del-concurso"
+				component={props => (
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Bases')} />
+				)}
+			/>
+
+			<Route
+				path="/textos-de-lectura"
+				component={props => (
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Lectura')} />
+				)}
+			/>
+
+			<Route
+				path="/criterios-de-lectura"
+				component={props => (
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Criterios')} />
+				)}
+			/>
+
+			<Route
+				path="/colegios-inscritos"
+				component={props => (
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Colegios')} />
+				)}
+			/>
+
+			<Route
+				component={props => (
+					<RoutesAsync props={props} loadingPromise={import('./views/NotFound')} />
+				)}
+			/>
+		</Switch>
+	)
 }
 
 Routes.propTypes = {
-  DIC: PropTypes.object.isRequired,
-  auth: PropTypes.bool.isRequired,
-  checkAuth: PropTypes.func.isRequired,
+	DIC: PropTypes.object.isRequired,
+	auth: PropTypes.bool.isRequired,
+	checkAuth: PropTypes.func.isRequired,
 }
 
 export default Routes
