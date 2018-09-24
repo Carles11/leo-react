@@ -24,8 +24,6 @@ class Navigation extends React.Component {
 	handleNavigation = e => {
 		const { name } = e.target
 
-		console.log(name)
-
 		setTimeout(() => {
 			document.querySelector(`.${name}`).scrollIntoView({
 				behavior: 'smooth',
