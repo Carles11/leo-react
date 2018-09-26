@@ -92,6 +92,10 @@
 	color: var(--textColor);
 }
 
+.app-nav-mail > a > span {
+	display: none !important;
+}
+
 .app-nav-item:last-of-type {
 	border: none;
 }

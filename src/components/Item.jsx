@@ -37,12 +37,6 @@ const Item = (props) => {
           <article>
             <p className="app-list-content-item">
               <small>
-Curso:
-              </small>
-              {item.course}
-            </p>
-            <p className="app-list-content-item">
-              <small>
 Teléfono:
               </small>
               {item.phone}
