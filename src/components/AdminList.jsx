@@ -19,6 +19,10 @@ class AdminList extends React.Component {
 		},
 	}
 
+	static propTypes = {
+		type: PropTypes.string.isRequired,
+	}
+
 	componentDidMount() {
 		this.getData()
 	}
@@ -104,10 +108,6 @@ class AdminList extends React.Component {
 			</React.Fragment>
 		)
 	}
-}
-
-AdminList.propTypes = {
-	type: PropTypes.string.isRequired,
 }
 
 export default AdminList

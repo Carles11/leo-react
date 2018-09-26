@@ -1,28 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ButtonSignOut = props => {
+const ButtonSignOut = (props) => {
   const { handleClick, label } = props
   const labelTxt = label ? label.toUpperCase() : ''
 
   return (
-    <button 
-      className="btn-signOut" 
+    <button
+      className="btn-signOut"
       aria-label="Cerrar el Panel de administración"
-      onClick={handleClick}>
+      onClick={handleClick}
+    >
       {labelTxt}
-      <span className="icon-stand-by"></span>
+      <span className="icon-stand-by" />
     </button>
   )
-  
 }
 
 ButtonSignOut.defaultProps = {
-  label: ''
+  label: '',
 }
 
 ButtonSignOut.propTypes = {
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func.isRequired,
 }
 
 export default ButtonSignOut
