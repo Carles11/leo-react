@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import * as API from '../utils/API'
 import withScroll from '../components/HOC/withScroll'
@@ -7,6 +8,10 @@ import Loader from '../components/Loader'
 
 class Colegios extends React.Component {
 	state = { schools: [] }
+
+	static propTypes = {
+		DIC: PropTypes.object.isRequired,
+	}
 
 	async componentDidMount() {
 		const promise = await API.get('schools')
@@ -54,4 +59,5 @@ class Colegios extends React.Component {
 
 const ColegiosWithScroll = withScroll(Colegios)
 
+export const Unwrapped = Colegios
 export default ColegiosWithScroll

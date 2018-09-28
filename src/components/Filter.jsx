@@ -28,7 +28,7 @@ class Filter extends React.PureComponent {
 			<div className="app-filter">
 				<div className="app-filter-label">
 					<p>Galeria de Images de la edición del </p>
-					<button onClick={this.handleVisibility}>
+					<button id="btn_visibility" onClick={this.handleVisibility}>
 						<span>{'Año'.toUpperCase()}</span>
 						<span className="icon-down" />
 					</button>
@@ -36,6 +36,7 @@ class Filter extends React.PureComponent {
 						{Object.keys(filter).map(k => (
 							<li className="app-filter-item" key={k}>
 								<button
+									id={`btn_${k}`}
 									data-year={k}
 									data-count={filter[k]}
 									onClick={this.handleFilter}

@@ -24,12 +24,14 @@ class Navigation extends React.Component {
 	handleNavigation = e => {
 		const { name } = e.target
 
-		setTimeout(() => {
-			document.querySelector(`.${name}`).scrollIntoView({
-				behavior: 'smooth',
-				block: 'start',
+		if (name) {
+			setTimeout(() => {
+				document.querySelector(`.${name}`).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+				})
 			})
-		})
+		}
 
 		this.setState({ visible: false })
 	}

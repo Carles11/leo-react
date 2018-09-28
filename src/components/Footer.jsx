@@ -14,24 +14,8 @@ import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg'
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg'
 import logoKlett from '../assets/imgs/logo-klett.jpg'
 
-const footerStr = [
-  { label: 'Aviso legal', url: '/aviso-legal' },
-  { label: 'Impressum', url: '/impressum' },
-  {
-    label: 'HessenWald Schule',
-    url: 'http://hessenwaldschule.net',
-    external: true,
-  },
-  {
-    label: 'Facebook',
-    url: 'https://www.facebook.com/pages/Hessenwaldschule/115618345115337',
-    external: true,
-  },
-  { label: 'Admin', url: '/admin' },
-]
-
 const Footer = (props) => {
-  const { DIC } = props
+  const { DIC, FOOTER_DATA } = props
 
   const copy = `${new Date().getFullYear()}  ${DIC.HEADER_MAIN}`
 
@@ -39,7 +23,7 @@ const Footer = (props) => {
     <footer className="app-footer">
       <div className="app-footer-wrapper w1024">
         <ul className="app-footer-links">
-          {footerStr.map(item => (
+          {FOOTER_DATA.map(item => (
             <li key={item.label}>
               <Button label={item.label} link={item.url} external={!!item.external} />
             </li>

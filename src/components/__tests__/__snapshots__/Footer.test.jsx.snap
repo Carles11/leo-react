@@ -1,0 +1,3062 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render itself 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer
+    DIC={
+        Object {
+            "CONCURSO": "El Concurso",
+            "CONCURSO_EDICION": "¿Cuándo es la próxima edición?",
+            "CONCURSO_EDICION_TXT": "La Final de la octava convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 16 de mayo de 2019 en la sede de Fráncfort del Instituto Cervantes. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2018.",
+            "CONCURSO_ORGANIZA": "¿Quién lo organiza?",
+            "CONCURSO_ORGANIZA_TXT": "Siguiendo la larga tradición de los concursos de lectura en Alemania el Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees ?” nació como propuesta educativa en el colegio Hessenwaldschule (Weiterstadt) para dar respuesta a un vacío de iniciativas que reforzaran el aprendizaje de la lengua española.",
+            "CONCURSO_PARTICIPAR": "¿Quién puede participar?",
+            "CONCURSO_PARTICIPAR_TXT": "Todos los alumnos de secundario en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas (MCER).",
+            "CONCURSO_PATROCINA": "¿Quién nos patrocina?",
+            "CONCURSO_PATROCINA_TXT": "En su octavo año de celebración consecutiva cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort y de la Asociación Alemana de Profesores de Español en Hesse (DSV). Asímismo con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.",
+            "CONCURSO_TXT": "La lectura nos ayuda a comunicarnos con nuestro entorno y los concursos motivan a alumnos y profesores de todos los ámbitos de la enseñanza a conseguir nuevas metas. En este contexto surgió en 2012 la idea de poner en marcha un concurso de lectura en español en Hesse. Tras una fase de prueba se ha ido consolidando la iniciativa obteniendo en 2015 el apoyo del Kultusministerium de Hesse y entrando a formar parte de la red oficial de concursos escolares en esta Comunidad Autónoma. La trayectoria del concurso desde 2012 ha demostrado la gran acogida del concurso por parte de los centros educativos.Esto se ha debido especialmente a la fácil organización del concurso en la clase de español. Todos los alumnos de secundario en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas(MCER).",
+            "DESCRIPTION": "Concurso de lectura en español",
+            "ERROR_EMAIL": "debe ser un correo electronico válido.",
+            "ERROR_REQUIRED": "es un campo obligatorio.",
+            "ERROR_TEXT": "debe ser mas de 6 caracteres",
+            "FORM_ADDRESS": "Dirección",
+            "FORM_CATEGORIES": "Selecciona las categorias del concurso en las que participará el colegio:",
+            "FORM_CONTACT": "Persona de contacto",
+            "FORM_COURSE": "Curso",
+            "FORM_MAIL": "Correo electrónico",
+            "FORM_PHONE": "Teléfono",
+            "FORM_SCHOOL_NAME": "Nombre del colegio",
+            "FORM_SUBTITLE": "Registra tu colegio",
+            "FORM_TITLE": "Formulario de inscripción",
+            "HEADER_MAIN": "Leo, leo... ¿qué lees?",
+            "MORE_INFO": "Más información",
+            "MSG_SCHOOL_CREATED": "Gracias por inscribirse al concurso de lectura en español \\"Leo, leo... ¿qué lees?\\". En breve nos pondremos en contacto con usted.",
+            "MSG_SCHOOL_ERROR": "Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.",
+            "NAME": "Leo, leo",
+            "NAV_BASES": "Bases del concurso",
+            "NAV_CERTIFICADOS": "Certificados",
+            "NAV_COLEGIOS": "Colegios inscritos",
+            "NAV_CONCURSO": "Concurso",
+            "NAV_CRITERIOS": "Criterios de lectura",
+            "NAV_GALERIA": "Galeria",
+            "NAV_INFO": "Información para profesores",
+            "NAV_INSCRIPCION": "Inscripción",
+            "NAV_TEXTOS": "Textos de lectura",
+            "NOTFOUND": "No se ha encontrado la página.",
+            "NOTFOUND_TXT": "Lo sentimos, pero probablemente el link que ha seguido está roto o se ha eliminado la página.",
+            "SPONSOR": "Cooperación y patrocinio: ",
+          }
+    }
+    FOOTER_DATA={
+        Array [
+            Object {
+              "label": "Aviso legal",
+              "url": "/aviso-legal",
+            },
+            Object {
+              "label": "Impressum",
+              "url": "/impressum",
+            },
+            Object {
+              "external": true,
+              "label": "HessenWald Schule",
+              "url": "http://hessenwaldschule.net",
+            },
+            Object {
+              "external": true,
+              "label": "Facebook",
+              "url": "https://www.facebook.com/pages/Hessenwaldschule/115618345115337",
+            },
+            Object {
+              "label": "Admin",
+              "url": "/admin",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="app-footer-wrapper w1024"
+>
+        <ul
+                className="app-footer-links"
+        >
+                <li>
+                        <Button
+                                css=""
+                                external={false}
+                                fn={[Function]}
+                                label="Aviso legal"
+                                link="/aviso-legal"
+                                type="button"
+                        />
+                </li>
+                <li>
+                        <Button
+                                css=""
+                                external={false}
+                                fn={[Function]}
+                                label="Impressum"
+                                link="/impressum"
+                                type="button"
+                        />
+                </li>
+                <li>
+                        <Button
+                                css=""
+                                external={true}
+                                fn={[Function]}
+                                label="HessenWald Schule"
+                                link="http://hessenwaldschule.net"
+                                type="button"
+                        />
+                </li>
+                <li>
+                        <Button
+                                css=""
+                                external={true}
+                                fn={[Function]}
+                                label="Facebook"
+                                link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                                type="button"
+                        />
+                </li>
+                <li>
+                        <Button
+                                css=""
+                                external={false}
+                                fn={[Function]}
+                                label="Admin"
+                                link="/admin"
+                                type="button"
+                        />
+                </li>
+                <li>
+                        <a
+                                aria-label="Correo de contacto"
+                                className="btn-link"
+                                href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+                        >
+                                Contacto
+                                <span
+                                        className="line"
+                                >
+                                        <span />
+                                        <span />
+                                </span>
+                        </a>
+                </li>
+                <li>
+                        <span>
+                                © 
+                                2018  Leo, leo... ¿qué lees?
+                        </span>
+                </li>
+        </ul>
+        <section
+                className="app-footer-imgs"
+        >
+                <h3>
+                        Cooperación y patrocinio: 
+                </h3>
+                <article>
+                        <a
+                                aria-label="Enlace a la página web de la Hessenwaldschule"
+                                href="http://www.hessenwaldschule.net/ "
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Hessenwaldschule"
+                                        src="logo-hws.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                                href="https://kultusministerium.hessen.de/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Hessen"
+                                        src="logo-hessen.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de SDV"
+                                href="https://www.hispanorama.de/landesverbaende/hessen/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="SDV"
+                                        src="logo-dsg.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                                href="https://frankfurt.cervantes.es/de/start.shtm"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Instituto Cervantes"
+                                        src="logo-ic.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de AECID (cooperación)"
+                                href="http://www.aecid.es/ES"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="AECID (cooperación)"
+                                        src="logo-aecid.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de la embajada de Colombia"
+                                href="http://alemania.embajada.gov.co/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Cancillería (Colombia)"
+                                        src="logo-colombia.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de la embajada de Chile"
+                                href="http://www.echile.de/index.php/de/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Consulado de Chile"
+                                        src="logo-chile.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web del consulado de México"
+                                href="https://consulmex.sre.gob.mx/frankfurt/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Consulado de México"
+                                        src="logo-mexico.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web del grupo SM"
+                                href="https://www.grupo-sm.com/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Grupo SM"
+                                        src="logo-sm.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de Cornelsen"
+                                href="https://www.cornelsen.de/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Cornelsen"
+                                        src="logo-cornelsen.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de Edinumen"
+                                href="https://edinumen.es/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Edinumen"
+                                        src="logo-edinumen.jpg"
+                                />
+                        </a>
+                        <a
+                                aria-label="Enlace a la página web de Klett"
+                                href="https://www.klett.de/index/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                        >
+                                <img
+                                        alt="Klett"
+                                        src="logo-klett.jpg"
+                                />
+                        </a>
+                </article>
+        </section>
+</div>,
+      "className": "app-footer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ul
+            className="app-footer-links"
+>
+            <li>
+                        <Button
+                                    css=""
+                                    external={false}
+                                    fn={[Function]}
+                                    label="Aviso legal"
+                                    link="/aviso-legal"
+                                    type="button"
+                        />
+            </li>
+            <li>
+                        <Button
+                                    css=""
+                                    external={false}
+                                    fn={[Function]}
+                                    label="Impressum"
+                                    link="/impressum"
+                                    type="button"
+                        />
+            </li>
+            <li>
+                        <Button
+                                    css=""
+                                    external={true}
+                                    fn={[Function]}
+                                    label="HessenWald Schule"
+                                    link="http://hessenwaldschule.net"
+                                    type="button"
+                        />
+            </li>
+            <li>
+                        <Button
+                                    css=""
+                                    external={true}
+                                    fn={[Function]}
+                                    label="Facebook"
+                                    link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                                    type="button"
+                        />
+            </li>
+            <li>
+                        <Button
+                                    css=""
+                                    external={false}
+                                    fn={[Function]}
+                                    label="Admin"
+                                    link="/admin"
+                                    type="button"
+                        />
+            </li>
+            <li>
+                        <a
+                                    aria-label="Correo de contacto"
+                                    className="btn-link"
+                                    href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+                        >
+                                    Contacto
+                                    <span
+                                                className="line"
+                                    >
+                                                <span />
+                                                <span />
+                                    </span>
+                        </a>
+            </li>
+            <li>
+                        <span>
+                                    © 
+                                    2018  Leo, leo... ¿qué lees?
+                        </span>
+            </li>
+</ul>,
+          <section
+            className="app-footer-imgs"
+>
+            <h3>
+                        Cooperación y patrocinio: 
+            </h3>
+            <article>
+                        <a
+                                    aria-label="Enlace a la página web de la Hessenwaldschule"
+                                    href="http://www.hessenwaldschule.net/ "
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Hessenwaldschule"
+                                                src="logo-hws.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                                    href="https://kultusministerium.hessen.de/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Hessen"
+                                                src="logo-hessen.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de SDV"
+                                    href="https://www.hispanorama.de/landesverbaende/hessen/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="SDV"
+                                                src="logo-dsg.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                                    href="https://frankfurt.cervantes.es/de/start.shtm"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Instituto Cervantes"
+                                                src="logo-ic.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de AECID (cooperación)"
+                                    href="http://www.aecid.es/ES"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="AECID (cooperación)"
+                                                src="logo-aecid.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de la embajada de Colombia"
+                                    href="http://alemania.embajada.gov.co/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Cancillería (Colombia)"
+                                                src="logo-colombia.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de la embajada de Chile"
+                                    href="http://www.echile.de/index.php/de/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Consulado de Chile"
+                                                src="logo-chile.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web del consulado de México"
+                                    href="https://consulmex.sre.gob.mx/frankfurt/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Consulado de México"
+                                                src="logo-mexico.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web del grupo SM"
+                                    href="https://www.grupo-sm.com/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Grupo SM"
+                                                src="logo-sm.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de Cornelsen"
+                                    href="https://www.cornelsen.de/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Cornelsen"
+                                                src="logo-cornelsen.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de Edinumen"
+                                    href="https://edinumen.es/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Edinumen"
+                                                src="logo-edinumen.jpg"
+                                    />
+                        </a>
+                        <a
+                                    aria-label="Enlace a la página web de Klett"
+                                    href="https://www.klett.de/index/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    <img
+                                                alt="Klett"
+                                                src="logo-klett.jpg"
+                                    />
+                        </a>
+            </article>
+</section>,
+        ],
+        "className": "app-footer-wrapper w1024",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              Array [
+                <li>
+                  <Button
+                                    css=""
+                                    external={false}
+                                    fn={[Function]}
+                                    label="Aviso legal"
+                                    link="/aviso-legal"
+                                    type="button"
+                  />
+</li>,
+                <li>
+                  <Button
+                                    css=""
+                                    external={false}
+                                    fn={[Function]}
+                                    label="Impressum"
+                                    link="/impressum"
+                                    type="button"
+                  />
+</li>,
+                <li>
+                  <Button
+                                    css=""
+                                    external={true}
+                                    fn={[Function]}
+                                    label="HessenWald Schule"
+                                    link="http://hessenwaldschule.net"
+                                    type="button"
+                  />
+</li>,
+                <li>
+                  <Button
+                                    css=""
+                                    external={true}
+                                    fn={[Function]}
+                                    label="Facebook"
+                                    link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                                    type="button"
+                  />
+</li>,
+                <li>
+                  <Button
+                                    css=""
+                                    external={false}
+                                    fn={[Function]}
+                                    label="Admin"
+                                    link="/admin"
+                                    type="button"
+                  />
+</li>,
+              ],
+              <li>
+                <a
+                                aria-label="Correo de contacto"
+                                className="btn-link"
+                                href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+                >
+                                Contacto
+                                <span
+                                                className="line"
+                                >
+                                                <span />
+                                                <span />
+                                </span>
+                </a>
+</li>,
+              <li>
+                <span>
+                                © 
+                                2018  Leo, leo... ¿qué lees?
+                </span>
+</li>,
+            ],
+            "className": "app-footer-links",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "Aviso legal",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  css=""
+                  external={false}
+                  fn={[Function]}
+                  label="Aviso legal"
+                  link="/aviso-legal"
+                  type="button"
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "css": "",
+                  "external": false,
+                  "fn": [Function],
+                  "label": "Aviso legal",
+                  "link": "/aviso-legal",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "Impressum",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  css=""
+                  external={false}
+                  fn={[Function]}
+                  label="Impressum"
+                  link="/impressum"
+                  type="button"
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "css": "",
+                  "external": false,
+                  "fn": [Function],
+                  "label": "Impressum",
+                  "link": "/impressum",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "HessenWald Schule",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  css=""
+                  external={true}
+                  fn={[Function]}
+                  label="HessenWald Schule"
+                  link="http://hessenwaldschule.net"
+                  type="button"
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "css": "",
+                  "external": true,
+                  "fn": [Function],
+                  "label": "HessenWald Schule",
+                  "link": "http://hessenwaldschule.net",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "Facebook",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  css=""
+                  external={true}
+                  fn={[Function]}
+                  label="Facebook"
+                  link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                  type="button"
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "css": "",
+                  "external": true,
+                  "fn": [Function],
+                  "label": "Facebook",
+                  "link": "https://www.facebook.com/pages/Hessenwaldschule/115618345115337",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "Admin",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  css=""
+                  external={false}
+                  fn={[Function]}
+                  label="Admin"
+                  link="/admin"
+                  type="button"
+/>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "css": "",
+                  "external": false,
+                  "fn": [Function],
+                  "label": "Admin",
+                  "link": "/admin",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  aria-label="Correo de contacto"
+                  className="btn-link"
+                  href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+>
+                  Contacto
+                  <span
+                                    className="line"
+                  >
+                                    <span />
+                                    <span />
+                  </span>
+</a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-label": "Correo de contacto",
+                  "children": Array [
+                    "Contacto",
+                    <span
+                      className="line"
+>
+                      <span />
+                      <span />
+</span>,
+                  ],
+                  "className": "btn-link",
+                  "href": "mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Contacto",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span />,
+                        <span />,
+                      ],
+                      "className": "line",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": "span",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": "span",
+                      },
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "a",
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  © 
+                  2018  Leo, leo... ¿qué lees?
+</span>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "© ",
+                    "2018  Leo, leo... ¿qué lees?",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "© ",
+                  "2018  Leo, leo... ¿qué lees?",
+                ],
+                "type": "span",
+              },
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Cooperación y patrocinio: 
+</h3>,
+              <article>
+                <a
+                                aria-label="Enlace a la página web de la Hessenwaldschule"
+                                href="http://www.hessenwaldschule.net/ "
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Hessenwaldschule"
+                                                src="logo-hws.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                                href="https://kultusministerium.hessen.de/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Hessen"
+                                                src="logo-hessen.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de SDV"
+                                href="https://www.hispanorama.de/landesverbaende/hessen/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="SDV"
+                                                src="logo-dsg.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                                href="https://frankfurt.cervantes.es/de/start.shtm"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Instituto Cervantes"
+                                                src="logo-ic.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de AECID (cooperación)"
+                                href="http://www.aecid.es/ES"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="AECID (cooperación)"
+                                                src="logo-aecid.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de la embajada de Colombia"
+                                href="http://alemania.embajada.gov.co/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Cancillería (Colombia)"
+                                                src="logo-colombia.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de la embajada de Chile"
+                                href="http://www.echile.de/index.php/de/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Consulado de Chile"
+                                                src="logo-chile.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web del consulado de México"
+                                href="https://consulmex.sre.gob.mx/frankfurt/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Consulado de México"
+                                                src="logo-mexico.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web del grupo SM"
+                                href="https://www.grupo-sm.com/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Grupo SM"
+                                                src="logo-sm.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de Cornelsen"
+                                href="https://www.cornelsen.de/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Cornelsen"
+                                                src="logo-cornelsen.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de Edinumen"
+                                href="https://edinumen.es/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Edinumen"
+                                                src="logo-edinumen.jpg"
+                                />
+                </a>
+                <a
+                                aria-label="Enlace a la página web de Klett"
+                                href="https://www.klett.de/index/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                >
+                                <img
+                                                alt="Klett"
+                                                src="logo-klett.jpg"
+                                />
+                </a>
+</article>,
+            ],
+            "className": "app-footer-imgs",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Cooperación y patrocinio: ",
+              },
+              "ref": null,
+              "rendered": "Cooperación y patrocinio: ",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a
+                    aria-label="Enlace a la página web de la Hessenwaldschule"
+                    href="http://www.hessenwaldschule.net/ "
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Hessenwaldschule"
+                                        src="logo-hws.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                    href="https://kultusministerium.hessen.de/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Hessen"
+                                        src="logo-hessen.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de SDV"
+                    href="https://www.hispanorama.de/landesverbaende/hessen/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="SDV"
+                                        src="logo-dsg.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                    href="https://frankfurt.cervantes.es/de/start.shtm"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Instituto Cervantes"
+                                        src="logo-ic.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de AECID (cooperación)"
+                    href="http://www.aecid.es/ES"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="AECID (cooperación)"
+                                        src="logo-aecid.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de la embajada de Colombia"
+                    href="http://alemania.embajada.gov.co/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Cancillería (Colombia)"
+                                        src="logo-colombia.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de la embajada de Chile"
+                    href="http://www.echile.de/index.php/de/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Consulado de Chile"
+                                        src="logo-chile.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web del consulado de México"
+                    href="https://consulmex.sre.gob.mx/frankfurt/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Consulado de México"
+                                        src="logo-mexico.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web del grupo SM"
+                    href="https://www.grupo-sm.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Grupo SM"
+                                        src="logo-sm.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de Cornelsen"
+                    href="https://www.cornelsen.de/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Cornelsen"
+                                        src="logo-cornelsen.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de Edinumen"
+                    href="https://edinumen.es/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Edinumen"
+                                        src="logo-edinumen.jpg"
+                    />
+</a>,
+                  <a
+                    aria-label="Enlace a la página web de Klett"
+                    href="https://www.klett.de/index/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+>
+                    <img
+                                        alt="Klett"
+                                        src="logo-klett.jpg"
+                    />
+</a>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de la Hessenwaldschule",
+                    "children": <img
+                      alt="Hessenwaldschule"
+                      src="logo-hws.jpg"
+/>,
+                    "href": "http://www.hessenwaldschule.net/ ",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Hessenwaldschule",
+                      "src": "logo-hws.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web del Ministerio de cultura de Hessen",
+                    "children": <img
+                      alt="Hessen"
+                      src="logo-hessen.jpg"
+/>,
+                    "href": "https://kultusministerium.hessen.de/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Hessen",
+                      "src": "logo-hessen.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de SDV",
+                    "children": <img
+                      alt="SDV"
+                      src="logo-dsg.jpg"
+/>,
+                    "href": "https://www.hispanorama.de/landesverbaende/hessen/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "SDV",
+                      "src": "logo-dsg.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web del Instituto Cervantes de Frankfurt",
+                    "children": <img
+                      alt="Instituto Cervantes"
+                      src="logo-ic.jpg"
+/>,
+                    "href": "https://frankfurt.cervantes.es/de/start.shtm",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Instituto Cervantes",
+                      "src": "logo-ic.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de AECID (cooperación)",
+                    "children": <img
+                      alt="AECID (cooperación)"
+                      src="logo-aecid.jpg"
+/>,
+                    "href": "http://www.aecid.es/ES",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "AECID (cooperación)",
+                      "src": "logo-aecid.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de la embajada de Colombia",
+                    "children": <img
+                      alt="Cancillería (Colombia)"
+                      src="logo-colombia.jpg"
+/>,
+                    "href": "http://alemania.embajada.gov.co/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Cancillería (Colombia)",
+                      "src": "logo-colombia.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de la embajada de Chile",
+                    "children": <img
+                      alt="Consulado de Chile"
+                      src="logo-chile.jpg"
+/>,
+                    "href": "http://www.echile.de/index.php/de/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Consulado de Chile",
+                      "src": "logo-chile.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web del consulado de México",
+                    "children": <img
+                      alt="Consulado de México"
+                      src="logo-mexico.jpg"
+/>,
+                    "href": "https://consulmex.sre.gob.mx/frankfurt/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Consulado de México",
+                      "src": "logo-mexico.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web del grupo SM",
+                    "children": <img
+                      alt="Grupo SM"
+                      src="logo-sm.jpg"
+/>,
+                    "href": "https://www.grupo-sm.com/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Grupo SM",
+                      "src": "logo-sm.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de Cornelsen",
+                    "children": <img
+                      alt="Cornelsen"
+                      src="logo-cornelsen.jpg"
+/>,
+                    "href": "https://www.cornelsen.de/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Cornelsen",
+                      "src": "logo-cornelsen.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de Edinumen",
+                    "children": <img
+                      alt="Edinumen"
+                      src="logo-edinumen.jpg"
+/>,
+                    "href": "https://edinumen.es/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Edinumen",
+                      "src": "logo-edinumen.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Enlace a la página web de Klett",
+                    "children": <img
+                      alt="Klett"
+                      src="logo-klett.jpg"
+/>,
+                    "href": "https://www.klett.de/index/",
+                    "rel": "noopener noreferrer",
+                    "target": "_blank",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Klett",
+                      "src": "logo-klett.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "a",
+                },
+              ],
+              "type": "article",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "footer",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="app-footer-wrapper w1024"
+>
+          <ul
+                    className="app-footer-links"
+          >
+                    <li>
+                              <Button
+                                        css=""
+                                        external={false}
+                                        fn={[Function]}
+                                        label="Aviso legal"
+                                        link="/aviso-legal"
+                                        type="button"
+                              />
+                    </li>
+                    <li>
+                              <Button
+                                        css=""
+                                        external={false}
+                                        fn={[Function]}
+                                        label="Impressum"
+                                        link="/impressum"
+                                        type="button"
+                              />
+                    </li>
+                    <li>
+                              <Button
+                                        css=""
+                                        external={true}
+                                        fn={[Function]}
+                                        label="HessenWald Schule"
+                                        link="http://hessenwaldschule.net"
+                                        type="button"
+                              />
+                    </li>
+                    <li>
+                              <Button
+                                        css=""
+                                        external={true}
+                                        fn={[Function]}
+                                        label="Facebook"
+                                        link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                                        type="button"
+                              />
+                    </li>
+                    <li>
+                              <Button
+                                        css=""
+                                        external={false}
+                                        fn={[Function]}
+                                        label="Admin"
+                                        link="/admin"
+                                        type="button"
+                              />
+                    </li>
+                    <li>
+                              <a
+                                        aria-label="Correo de contacto"
+                                        className="btn-link"
+                                        href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+                              >
+                                        Contacto
+                                        <span
+                                                  className="line"
+                                        >
+                                                  <span />
+                                                  <span />
+                                        </span>
+                              </a>
+                    </li>
+                    <li>
+                              <span>
+                                        © 
+                                        2018  Leo, leo... ¿qué lees?
+                              </span>
+                    </li>
+          </ul>
+          <section
+                    className="app-footer-imgs"
+          >
+                    <h3>
+                              Cooperación y patrocinio: 
+                    </h3>
+                    <article>
+                              <a
+                                        aria-label="Enlace a la página web de la Hessenwaldschule"
+                                        href="http://www.hessenwaldschule.net/ "
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Hessenwaldschule"
+                                                  src="logo-hws.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                                        href="https://kultusministerium.hessen.de/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Hessen"
+                                                  src="logo-hessen.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de SDV"
+                                        href="https://www.hispanorama.de/landesverbaende/hessen/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="SDV"
+                                                  src="logo-dsg.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                                        href="https://frankfurt.cervantes.es/de/start.shtm"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Instituto Cervantes"
+                                                  src="logo-ic.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de AECID (cooperación)"
+                                        href="http://www.aecid.es/ES"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="AECID (cooperación)"
+                                                  src="logo-aecid.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de la embajada de Colombia"
+                                        href="http://alemania.embajada.gov.co/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Cancillería (Colombia)"
+                                                  src="logo-colombia.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de la embajada de Chile"
+                                        href="http://www.echile.de/index.php/de/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Consulado de Chile"
+                                                  src="logo-chile.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web del consulado de México"
+                                        href="https://consulmex.sre.gob.mx/frankfurt/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Consulado de México"
+                                                  src="logo-mexico.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web del grupo SM"
+                                        href="https://www.grupo-sm.com/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Grupo SM"
+                                                  src="logo-sm.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de Cornelsen"
+                                        href="https://www.cornelsen.de/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Cornelsen"
+                                                  src="logo-cornelsen.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de Edinumen"
+                                        href="https://edinumen.es/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Edinumen"
+                                                  src="logo-edinumen.jpg"
+                                        />
+                              </a>
+                              <a
+                                        aria-label="Enlace a la página web de Klett"
+                                        href="https://www.klett.de/index/"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                              >
+                                        <img
+                                                  alt="Klett"
+                                                  src="logo-klett.jpg"
+                                        />
+                              </a>
+                    </article>
+          </section>
+</div>,
+        "className": "app-footer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ul
+              className="app-footer-links"
+>
+              <li>
+                            <Button
+                                          css=""
+                                          external={false}
+                                          fn={[Function]}
+                                          label="Aviso legal"
+                                          link="/aviso-legal"
+                                          type="button"
+                            />
+              </li>
+              <li>
+                            <Button
+                                          css=""
+                                          external={false}
+                                          fn={[Function]}
+                                          label="Impressum"
+                                          link="/impressum"
+                                          type="button"
+                            />
+              </li>
+              <li>
+                            <Button
+                                          css=""
+                                          external={true}
+                                          fn={[Function]}
+                                          label="HessenWald Schule"
+                                          link="http://hessenwaldschule.net"
+                                          type="button"
+                            />
+              </li>
+              <li>
+                            <Button
+                                          css=""
+                                          external={true}
+                                          fn={[Function]}
+                                          label="Facebook"
+                                          link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                                          type="button"
+                            />
+              </li>
+              <li>
+                            <Button
+                                          css=""
+                                          external={false}
+                                          fn={[Function]}
+                                          label="Admin"
+                                          link="/admin"
+                                          type="button"
+                            />
+              </li>
+              <li>
+                            <a
+                                          aria-label="Correo de contacto"
+                                          className="btn-link"
+                                          href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+                            >
+                                          Contacto
+                                          <span
+                                                        className="line"
+                                          >
+                                                        <span />
+                                                        <span />
+                                          </span>
+                            </a>
+              </li>
+              <li>
+                            <span>
+                                          © 
+                                          2018  Leo, leo... ¿qué lees?
+                            </span>
+              </li>
+</ul>,
+            <section
+              className="app-footer-imgs"
+>
+              <h3>
+                            Cooperación y patrocinio: 
+              </h3>
+              <article>
+                            <a
+                                          aria-label="Enlace a la página web de la Hessenwaldschule"
+                                          href="http://www.hessenwaldschule.net/ "
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Hessenwaldschule"
+                                                        src="logo-hws.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                                          href="https://kultusministerium.hessen.de/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Hessen"
+                                                        src="logo-hessen.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de SDV"
+                                          href="https://www.hispanorama.de/landesverbaende/hessen/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="SDV"
+                                                        src="logo-dsg.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                                          href="https://frankfurt.cervantes.es/de/start.shtm"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Instituto Cervantes"
+                                                        src="logo-ic.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de AECID (cooperación)"
+                                          href="http://www.aecid.es/ES"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="AECID (cooperación)"
+                                                        src="logo-aecid.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de la embajada de Colombia"
+                                          href="http://alemania.embajada.gov.co/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Cancillería (Colombia)"
+                                                        src="logo-colombia.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de la embajada de Chile"
+                                          href="http://www.echile.de/index.php/de/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Consulado de Chile"
+                                                        src="logo-chile.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web del consulado de México"
+                                          href="https://consulmex.sre.gob.mx/frankfurt/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Consulado de México"
+                                                        src="logo-mexico.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web del grupo SM"
+                                          href="https://www.grupo-sm.com/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Grupo SM"
+                                                        src="logo-sm.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de Cornelsen"
+                                          href="https://www.cornelsen.de/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Cornelsen"
+                                                        src="logo-cornelsen.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de Edinumen"
+                                          href="https://edinumen.es/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Edinumen"
+                                                        src="logo-edinumen.jpg"
+                                          />
+                            </a>
+                            <a
+                                          aria-label="Enlace a la página web de Klett"
+                                          href="https://www.klett.de/index/"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                            >
+                                          <img
+                                                        alt="Klett"
+                                                        src="logo-klett.jpg"
+                                          />
+                            </a>
+              </article>
+</section>,
+          ],
+          "className": "app-footer-wrapper w1024",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  <li>
+                    <Button
+                                        css=""
+                                        external={false}
+                                        fn={[Function]}
+                                        label="Aviso legal"
+                                        link="/aviso-legal"
+                                        type="button"
+                    />
+</li>,
+                  <li>
+                    <Button
+                                        css=""
+                                        external={false}
+                                        fn={[Function]}
+                                        label="Impressum"
+                                        link="/impressum"
+                                        type="button"
+                    />
+</li>,
+                  <li>
+                    <Button
+                                        css=""
+                                        external={true}
+                                        fn={[Function]}
+                                        label="HessenWald Schule"
+                                        link="http://hessenwaldschule.net"
+                                        type="button"
+                    />
+</li>,
+                  <li>
+                    <Button
+                                        css=""
+                                        external={true}
+                                        fn={[Function]}
+                                        label="Facebook"
+                                        link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                                        type="button"
+                    />
+</li>,
+                  <li>
+                    <Button
+                                        css=""
+                                        external={false}
+                                        fn={[Function]}
+                                        label="Admin"
+                                        link="/admin"
+                                        type="button"
+                    />
+</li>,
+                ],
+                <li>
+                  <a
+                                    aria-label="Correo de contacto"
+                                    className="btn-link"
+                                    href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+                  >
+                                    Contacto
+                                    <span
+                                                      className="line"
+                                    >
+                                                      <span />
+                                                      <span />
+                                    </span>
+                  </a>
+</li>,
+                <li>
+                  <span>
+                                    © 
+                                    2018  Leo, leo... ¿qué lees?
+                  </span>
+</li>,
+              ],
+              "className": "app-footer-links",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "Aviso legal",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    css=""
+                    external={false}
+                    fn={[Function]}
+                    label="Aviso legal"
+                    link="/aviso-legal"
+                    type="button"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "css": "",
+                    "external": false,
+                    "fn": [Function],
+                    "label": "Aviso legal",
+                    "link": "/aviso-legal",
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "Impressum",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    css=""
+                    external={false}
+                    fn={[Function]}
+                    label="Impressum"
+                    link="/impressum"
+                    type="button"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "css": "",
+                    "external": false,
+                    "fn": [Function],
+                    "label": "Impressum",
+                    "link": "/impressum",
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "HessenWald Schule",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    css=""
+                    external={true}
+                    fn={[Function]}
+                    label="HessenWald Schule"
+                    link="http://hessenwaldschule.net"
+                    type="button"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "css": "",
+                    "external": true,
+                    "fn": [Function],
+                    "label": "HessenWald Schule",
+                    "link": "http://hessenwaldschule.net",
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "Facebook",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    css=""
+                    external={true}
+                    fn={[Function]}
+                    label="Facebook"
+                    link="https://www.facebook.com/pages/Hessenwaldschule/115618345115337"
+                    type="button"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "css": "",
+                    "external": true,
+                    "fn": [Function],
+                    "label": "Facebook",
+                    "link": "https://www.facebook.com/pages/Hessenwaldschule/115618345115337",
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "Admin",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    css=""
+                    external={false}
+                    fn={[Function]}
+                    label="Admin"
+                    link="/admin"
+                    type="button"
+/>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "css": "",
+                    "external": false,
+                    "fn": [Function],
+                    "label": "Admin",
+                    "link": "/admin",
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    aria-label="Correo de contacto"
+                    className="btn-link"
+                    href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'"
+>
+                    Contacto
+                    <span
+                                        className="line"
+                    >
+                                        <span />
+                                        <span />
+                    </span>
+</a>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Correo de contacto",
+                    "children": Array [
+                      "Contacto",
+                      <span
+                        className="line"
+>
+                        <span />
+                        <span />
+</span>,
+                    ],
+                    "className": "btn-link",
+                    "href": "mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Contacto",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <span />,
+                          <span />,
+                        ],
+                        "className": "line",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": "span",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": "span",
+                        },
+                      ],
+                      "type": "span",
+                    },
+                  ],
+                  "type": "a",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span>
+                    © 
+                    2018  Leo, leo... ¿qué lees?
+</span>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "© ",
+                      "2018  Leo, leo... ¿qué lees?",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "© ",
+                    "2018  Leo, leo... ¿qué lees?",
+                  ],
+                  "type": "span",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Cooperación y patrocinio: 
+</h3>,
+                <article>
+                  <a
+                                    aria-label="Enlace a la página web de la Hessenwaldschule"
+                                    href="http://www.hessenwaldschule.net/ "
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Hessenwaldschule"
+                                                      src="logo-hws.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                                    href="https://kultusministerium.hessen.de/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Hessen"
+                                                      src="logo-hessen.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de SDV"
+                                    href="https://www.hispanorama.de/landesverbaende/hessen/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="SDV"
+                                                      src="logo-dsg.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                                    href="https://frankfurt.cervantes.es/de/start.shtm"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Instituto Cervantes"
+                                                      src="logo-ic.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de AECID (cooperación)"
+                                    href="http://www.aecid.es/ES"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="AECID (cooperación)"
+                                                      src="logo-aecid.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de la embajada de Colombia"
+                                    href="http://alemania.embajada.gov.co/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Cancillería (Colombia)"
+                                                      src="logo-colombia.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de la embajada de Chile"
+                                    href="http://www.echile.de/index.php/de/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Consulado de Chile"
+                                                      src="logo-chile.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web del consulado de México"
+                                    href="https://consulmex.sre.gob.mx/frankfurt/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Consulado de México"
+                                                      src="logo-mexico.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web del grupo SM"
+                                    href="https://www.grupo-sm.com/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Grupo SM"
+                                                      src="logo-sm.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de Cornelsen"
+                                    href="https://www.cornelsen.de/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Cornelsen"
+                                                      src="logo-cornelsen.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de Edinumen"
+                                    href="https://edinumen.es/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Edinumen"
+                                                      src="logo-edinumen.jpg"
+                                    />
+                  </a>
+                  <a
+                                    aria-label="Enlace a la página web de Klett"
+                                    href="https://www.klett.de/index/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                  >
+                                    <img
+                                                      alt="Klett"
+                                                      src="logo-klett.jpg"
+                                    />
+                  </a>
+</article>,
+              ],
+              "className": "app-footer-imgs",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cooperación y patrocinio: ",
+                },
+                "ref": null,
+                "rendered": "Cooperación y patrocinio: ",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <a
+                      aria-label="Enlace a la página web de la Hessenwaldschule"
+                      href="http://www.hessenwaldschule.net/ "
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Hessenwaldschule"
+                                            src="logo-hws.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web del Ministerio de cultura de Hessen"
+                      href="https://kultusministerium.hessen.de/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Hessen"
+                                            src="logo-hessen.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de SDV"
+                      href="https://www.hispanorama.de/landesverbaende/hessen/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="SDV"
+                                            src="logo-dsg.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web del Instituto Cervantes de Frankfurt"
+                      href="https://frankfurt.cervantes.es/de/start.shtm"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Instituto Cervantes"
+                                            src="logo-ic.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de AECID (cooperación)"
+                      href="http://www.aecid.es/ES"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="AECID (cooperación)"
+                                            src="logo-aecid.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de la embajada de Colombia"
+                      href="http://alemania.embajada.gov.co/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Cancillería (Colombia)"
+                                            src="logo-colombia.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de la embajada de Chile"
+                      href="http://www.echile.de/index.php/de/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Consulado de Chile"
+                                            src="logo-chile.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web del consulado de México"
+                      href="https://consulmex.sre.gob.mx/frankfurt/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Consulado de México"
+                                            src="logo-mexico.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web del grupo SM"
+                      href="https://www.grupo-sm.com/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Grupo SM"
+                                            src="logo-sm.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de Cornelsen"
+                      href="https://www.cornelsen.de/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Cornelsen"
+                                            src="logo-cornelsen.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de Edinumen"
+                      href="https://edinumen.es/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Edinumen"
+                                            src="logo-edinumen.jpg"
+                      />
+</a>,
+                    <a
+                      aria-label="Enlace a la página web de Klett"
+                      href="https://www.klett.de/index/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+>
+                      <img
+                                            alt="Klett"
+                                            src="logo-klett.jpg"
+                      />
+</a>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de la Hessenwaldschule",
+                      "children": <img
+                        alt="Hessenwaldschule"
+                        src="logo-hws.jpg"
+/>,
+                      "href": "http://www.hessenwaldschule.net/ ",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Hessenwaldschule",
+                        "src": "logo-hws.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web del Ministerio de cultura de Hessen",
+                      "children": <img
+                        alt="Hessen"
+                        src="logo-hessen.jpg"
+/>,
+                      "href": "https://kultusministerium.hessen.de/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Hessen",
+                        "src": "logo-hessen.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de SDV",
+                      "children": <img
+                        alt="SDV"
+                        src="logo-dsg.jpg"
+/>,
+                      "href": "https://www.hispanorama.de/landesverbaende/hessen/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "SDV",
+                        "src": "logo-dsg.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web del Instituto Cervantes de Frankfurt",
+                      "children": <img
+                        alt="Instituto Cervantes"
+                        src="logo-ic.jpg"
+/>,
+                      "href": "https://frankfurt.cervantes.es/de/start.shtm",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Instituto Cervantes",
+                        "src": "logo-ic.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de AECID (cooperación)",
+                      "children": <img
+                        alt="AECID (cooperación)"
+                        src="logo-aecid.jpg"
+/>,
+                      "href": "http://www.aecid.es/ES",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "AECID (cooperación)",
+                        "src": "logo-aecid.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de la embajada de Colombia",
+                      "children": <img
+                        alt="Cancillería (Colombia)"
+                        src="logo-colombia.jpg"
+/>,
+                      "href": "http://alemania.embajada.gov.co/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Cancillería (Colombia)",
+                        "src": "logo-colombia.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de la embajada de Chile",
+                      "children": <img
+                        alt="Consulado de Chile"
+                        src="logo-chile.jpg"
+/>,
+                      "href": "http://www.echile.de/index.php/de/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Consulado de Chile",
+                        "src": "logo-chile.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web del consulado de México",
+                      "children": <img
+                        alt="Consulado de México"
+                        src="logo-mexico.jpg"
+/>,
+                      "href": "https://consulmex.sre.gob.mx/frankfurt/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Consulado de México",
+                        "src": "logo-mexico.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web del grupo SM",
+                      "children": <img
+                        alt="Grupo SM"
+                        src="logo-sm.jpg"
+/>,
+                      "href": "https://www.grupo-sm.com/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Grupo SM",
+                        "src": "logo-sm.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de Cornelsen",
+                      "children": <img
+                        alt="Cornelsen"
+                        src="logo-cornelsen.jpg"
+/>,
+                      "href": "https://www.cornelsen.de/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Cornelsen",
+                        "src": "logo-cornelsen.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de Edinumen",
+                      "children": <img
+                        alt="Edinumen"
+                        src="logo-edinumen.jpg"
+/>,
+                      "href": "https://edinumen.es/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Edinumen",
+                        "src": "logo-edinumen.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-label": "Enlace a la página web de Klett",
+                      "children": <img
+                        alt="Klett"
+                        src="logo-klett.jpg"
+/>,
+                      "href": "https://www.klett.de/index/",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Klett",
+                        "src": "logo-klett.jpg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "a",
+                  },
+                ],
+                "type": "article",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "footer",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

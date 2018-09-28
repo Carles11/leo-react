@@ -8,6 +8,7 @@ import withAuth from './components/HOC/withAuth'
 
 import './css/App.css'
 import getDictionary from './utils/dictionary'
+import { FOOTER_DATA } from './utils/constants'
 
 const DIC = getDictionary()
 
@@ -21,7 +22,7 @@ const App = props => (
     </Helmet>
     <Navigation {...props} DIC={DIC} />
     <Routes {...props} DIC={DIC} />
-    <Footer DIC={DIC} />
+    <Footer DIC={DIC} FOOTER_DATA={FOOTER_DATA} />
   </React.Fragment>
 )
 

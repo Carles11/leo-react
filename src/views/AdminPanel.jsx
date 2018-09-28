@@ -10,7 +10,7 @@ const AdminPanel = (props) => {
   return (
     <React.Fragment>
       {!auth && <Redirect to="/admin" />}
-      {auth && (
+      {!!auth && (
       <section className="app-content">
         <AdminList type="schools" />
       </section>

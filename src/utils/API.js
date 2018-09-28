@@ -29,6 +29,11 @@ const request = async (url, newOptions, auth) => {
 
     return promise.json()
   } catch (err) {
+    if (!Object.keys(err).length) {
+      // @todo - Conexion err and/or unit tests
+      return err
+    }
+
     return err.json()
   }
 }

@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import Contest from '../components/Contest'
 import ImageGallery from '../components/ImageGallery'
 import Register from '../components/Register'
+import { PARAGRAPHS } from '../utils/constants'
 
 const Landing = (props) => {
   const { DIC } = props
@@ -19,7 +20,7 @@ const Landing = (props) => {
         ]}
       />
       <Header DIC={DIC} />
-      <Contest DIC={DIC} />
+      <Contest DIC={DIC} PARAGRAPHS={PARAGRAPHS} />
       <Register DIC={DIC} />
       <article className="app-section app-section-2">
         <ImageGallery />

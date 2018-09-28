@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import withScroll from '../components/HOC/withScroll'
 
@@ -63,6 +64,11 @@ Comprensión/interpretación:&nbsp;
   )
 }
 
+Criterios.propTypes = {
+  DIC: PropTypes.object.isRequired,
+}
+
 const CriteriosWithScroll = withScroll(Criterios)
 
+export const Unwrapped = Criterios
 export default CriteriosWithScroll

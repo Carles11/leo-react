@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import withScroll from '../components/HOC/withScroll'
 
@@ -267,6 +268,11 @@ Inscripción:&nbsp;
   )
 }
 
+Bases.propTypes = {
+  DIC: PropTypes.object.isRequired,
+}
+
 const BasesWithScroll = withScroll(Bases)
+export const Unwrapped = Bases
 
 export default BasesWithScroll

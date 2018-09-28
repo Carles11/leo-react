@@ -7,46 +7,27 @@ import logo from '../assets/imgs/logo.png'
 
 const CSS_NAME = 'app-header-bg'
 
-class Header extends React.Component {
-	state = { position: 0 }
+const Header = (props) => {
+  const { DIC } = props
 
-	static propTypes = {
-		DIC: PropTypes.object.isRequired,
-	}
+  return (
+    <header className="app-section h725">
+      <div className="app-header">
+        <h1 className="tit-header mb2rem">
+          {DIC.HEADER_MAIN}
+        </h1>
+        <img src={logo} alt={DIC.HEADER_MAIN} />
+        <h2 className="subtit-header">
+          {DIC.DESCRIPTION}
+        </h2>
+      </div>
+      <Background css={CSS_NAME} url={bg} label={`${DIC.HEADER_MAIN}, ${DIC.DESCRIPTION}`} />
+    </header>
+  )
+}
 
-	componentDidMount() {
-		//const { position } = this.props
-		//this.handlePosition(position)
-	}
-
-	componentWillReceiveProps(nextProps) {
-		const { position } = this.props
-
-		if (position !== nextProps.position) {
-			this.handlePosition(position)
-		}
-	}
-
-	handlePosition = position => {
-		const percent = 100 / Number(document.querySelector(`.${CSS_NAME}`).offsetHeight)
-		const val = (125 + position * percent).toFixed(2)
-
-		document.documentElement.style.setProperty('--headerImgSize', `${val}%`)
-	}
-
-	render() {
-		const { DIC } = this.props
-		return (
-			<header className="app-section h725">
-				<div className="app-header">
-					<h1 className="tit-header mb2rem">{DIC.HEADER_MAIN}</h1>
-					<img src={logo} alt={DIC.HEADER_MAIN} />
-					<h2 className="subtit-header">{DIC.DESCRIPTION}</h2>
-				</div>
-				<Background css={CSS_NAME} url={bg} label={DIC.HEADER_MAIN + ', ' + DIC.DESCRIPTION} />
-			</header>
-		)
-	}
+Header.propTypes = {
+  DIC: PropTypes.object.isRequired,
 }
 
 export default Header

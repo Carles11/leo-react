@@ -6,7 +6,9 @@ export const getSlug = text => text
 export const isDisabled = (el) => {
   if (el.hasAttribute('disabled')) {
     el.removeAttribute('disabled')
-  } else {
-    el.setAttribute('disabled', '')
+    return false
   }
+
+  el.setAttribute('disabled', '')
+  return true
 }

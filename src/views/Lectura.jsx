@@ -304,4 +304,5 @@ Texto 5: Santa
 
 const LecturaWithScroll = withScroll(Lectura)
 
+export const Unwrapped = Lectura
 export default LecturaWithScroll

@@ -2,10 +2,14 @@ import React from 'react'
 
 const withScroll = Component => class extends React.Component {
   componentDidMount() {
-    document.querySelector('.app-content').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
+    const section = document.querySelector('.app-content')
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
   }
 
   render() {
