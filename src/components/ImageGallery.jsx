@@ -110,4 +110,5 @@ class ImageGallery extends React.Component {
 
 const ImageGalleryWithWindow = withWindow(ImageGallery)
 
+export const Unwrapped = ImageGallery
 export default ImageGalleryWithWindow
