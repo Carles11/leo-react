@@ -78,11 +78,6 @@ ul > li {
 	color: var(--mainColor);
 }
 
-::selection {
-	background: var(--mainColor);
-	color: white;
-}
-
 @media only screen and (max-width: 850px) {
 	.tit-header {
 		font-size: var(--hugeSize);
