@@ -20,8 +20,42 @@
 	border-bottom: 1px solid #eeeeee;
 }
 
+.app-nav-item {
+	position: relative;
+	flex: 2;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	border-right: 1px solid #eeeeee;
+	overflow: hidden;
+}
+
+.app-nav-item:hover {
+	overflow: visible;
+}
+
+.app-nav-item > a,
+.app-nav-item > button {
+	position: relative;
+	display: block;
+	width: 100%;
+	background: var(--menuBg);
+	color: var(--textColor);
+	font-family: Regular;
+	font-size: var(--textSize);
+	text-align: center;
+	text-decoration: none;
+	padding: 1.7rem 1rem;
+	box-sizing: border-box;
+	transition: background 0.5s;
+	z-index: 0;
+	cursor: pointer;
+	line-height: 1;
+}
+
 .app-nav-item.logo,
 .app-nav-item.logo:hover {
+	background: var(--menuBg);
 	flex: 1;
 	justify-content: center;
 }
@@ -34,6 +68,7 @@
 }
 
 .app-nav-item.logo > a > img {
+	background: transparent;
 	width: 50px;
 	height: auto;
 	cursor: pointer;
@@ -45,15 +80,6 @@
 .app-nav-item.logo > a > img:hover {
 	width: 60px;
 	opacity: 1;
-}
-
-.app-nav-item {
-	position: relative;
-	flex: 2;
-	height: 70px;
-	display: flex;
-	align-items: center;
-	border-right: 1px solid #eeeeee;
 }
 
 .item.dropdown:after {
@@ -72,6 +98,7 @@
 }
 
 .app-nav-mail {
+	background: var(--menuBg);
 	display: flex;
 	align-items: center;
 }
@@ -82,6 +109,7 @@
 
 .app-nav-mail > a {
 	text-decoration: none;
+	background: var(--menuBg);
 	color: var(--secondColor);
 	padding: 1.4rem 1.6rem;
 	font-size: 1rem;
@@ -102,24 +130,6 @@
 
 .app-nav-item.btn-close {
 	display: none;
-}
-
-.app-nav-item > a,
-.app-nav-item > button {
-	position: relative;
-	display: block;
-	width: 100%;
-	color: var(--textColor);
-	font-family: Regular;
-	font-size: var(--textSize);
-	text-align: center;
-	text-decoration: none;
-	padding: 1.7rem 1rem;
-	box-sizing: border-box;
-	transition: background 0.5s;
-	z-index: 0;
-	cursor: pointer;
-	line-height: 1;
 }
 
 .app-nav-item .btnAdminSignOut > button {
@@ -249,6 +259,7 @@
 
 	.app-nav-item.btn-close > a > img,
 	.btn-close-item > img {
+		background: transparent;
 		position: absolute;
 		top: 0.6rem;
 		left: 2rem;
@@ -280,6 +291,7 @@
 	.app-nav-item > button > span,
 	.btn-menu > span {
 		color: var(--secondColor);
+		background: transparent;
 	}
 
 	.app-nav-item > button > [class^="icon-"],
