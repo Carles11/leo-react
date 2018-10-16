@@ -15,7 +15,7 @@ const dictionary = {
     CONCURSO_PATROCINA: '¿Quién nos patrocina?',
     CONCURSO_PATROCINA_TXT:
 			'En su octavo año de celebración consecutiva cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort y de la Asociación Alemana de Profesores de Español en Hesse (DSV). Asímismo con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.',
-    DESCRIPTION: 'Concurso de lectura en español',
+    DESCRIPTION: 'Concurso de lectura en español.',
     ERROR_EMAIL: 'debe ser un correo electronico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'debe ser mas de 6 caracteres',
