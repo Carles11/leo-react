@@ -56,7 +56,7 @@
 .app-nav-item.logo,
 .app-nav-item.logo:hover {
 	background: var(--menuBg);
-	flex: 1;
+	flex: 1 0 auto;
 	justify-content: center;
 }
 
@@ -199,7 +199,8 @@
 	background: #666666;
 	opacity: 0;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	height: 100px;
 	transition-property: opacity;
 	transition-duration: 0.5s;
 }
@@ -209,7 +210,8 @@
 		position: absolute;
 		display: block;
 		width: 350px;
-		height: 100vh;
+		min-height: 100vh;
+		height: 100px;
 		left: -380px;
 		background: white;
 		transition-property: left;
@@ -277,7 +279,7 @@
 
 	.app-nav-item.btn-close > button,
 	.btn-menu {
-		flex: 1;
+		flex: 1 0 auto;
 		background: var(--menuBg);
 		border: none;
 		outline: none;
@@ -310,7 +312,7 @@
 	.app-nav-item:hover .app-subnav-list {
 		opacity: 1;
 		position: relative;
-		flex: 1;
+		flex: 1 0 auto;
 		top: 0;
 	}
 	.app-subnav-item > a {

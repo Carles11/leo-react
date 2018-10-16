@@ -62,7 +62,7 @@
 }
 
 .app-list-header > h2 {
-	flex: 1;
+	flex: 1 0 auto;
 	font-family: Bold;
 	font-size: 1.25rem;
 	margin: 0;
@@ -139,7 +139,7 @@
 		padding-left: 0 !important;
 	}
 	.app-list-btn {
-		flex: 1;
+		flex: 1 0 auto;
 		width: 100%;
 		margin: 2px 0 0;
 	}
@@ -172,7 +172,7 @@
 	}
 	.app-list-content-btn button,
 	.app-list-content-btn a {
-		flex: 1;
+		flex: 1 0 auto;
 		text-align: center;
 	}
 }

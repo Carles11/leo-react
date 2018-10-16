@@ -10,7 +10,7 @@
 }
 .app-content {
 	background: white;
-	flex: 1;
+	flex: 1 0 auto;
 	padding: 4rem 2rem 0;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .app-signIn {
-	flex: 1;
+	flex: 1 0 auto;
 }
 
 .app-section-width,
@@ -96,7 +96,7 @@
 }
 
 .app-admin-title h1 {
-	flex: 1;
+	flex: 1 0 auto;
 	font-family: Lighter;
 	font-size: var(--maxSize);
 }
