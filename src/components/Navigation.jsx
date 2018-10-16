@@ -45,6 +45,7 @@ class Navigation extends React.Component {
 		const { DIC, auth } = this.props
 		const { visible } = this.state
 		const icon = visible ? 'close' : 'menu'
+		
 		const NAV = [
 			{
 				label: DIC.NAV_INFO,
