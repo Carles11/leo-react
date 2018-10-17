@@ -32,7 +32,7 @@ const dictionary = {
     FORM_SUBTITLE: "Registra tu colegio",
     HEADER_MAIN: "Leo, leo... ¿qué lees?",
     MSG_SCHOOL_CREATED:
-      'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". En breve nos pondremos en contacto con usted.',
+      'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". Finalizado el plazo de inscripción nos pondremos en contacto con usted.',
     MSG_SCHOOL_ERROR:
       "Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.",
     MORE_INFO: "Más información",
