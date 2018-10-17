@@ -16,7 +16,7 @@ const Header = props => {
         <h1 className="tit-header mb2rem">{DIC.HEADER_MAIN}</h1>
         <img src={logo} alt={DIC.HEADER_MAIN} />
         <h2 className="subtit-header">{DIC.DESCRIPTION}</h2>
-        <h3>{DIC.SUBDESCRIPTION}</h3>
+        <h3 className="mt0">{DIC.SUBDESCRIPTION}</h3>
       </div>
       <Background
         css={CSS_NAME}
