@@ -58,6 +58,10 @@
   padding-right: 2rem;
 }
 
+.w100 {
+  width: 100%;
+}
+
 .h725 {
   min-height: 725px;
 }

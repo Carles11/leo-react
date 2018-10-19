@@ -16,6 +16,7 @@ const dictionary = {
     CONCURSO_PATROCINA_TXT:
       "En su octavo año de celebración consecutiva cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort y de la Asociación Alemana de Profesores de Español en Hesse (DSV). Asímismo con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.",
     DESCRIPTION: "Concurso de lectura en español",
+    DOWNLOAD_TEXT: "Descargue aquí los textos de la edición anterior 2018.",
     SUBDESCRIPTION: "Próxima final el 16 de mayo de 2019",
     ERROR_EMAIL: "debe ser un correo electronico válido.",
     ERROR_REQUIRED: "es un campo obligatorio.",
@@ -35,6 +36,7 @@ const dictionary = {
       'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". Finalizado el plazo de inscripción nos pondremos en contacto con usted.',
     MSG_SCHOOL_ERROR:
       "Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.",
+    MSG_SOON:"Los textos para la edición 2019 se publicarán aquí en breve.",
     MORE_INFO: "Más información",
     NAME: "Leo, leo",
     NAV_BASES: "Bases del concurso",

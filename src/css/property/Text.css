@@ -11,6 +11,19 @@ ul > li {
   display: inline;
 }
 
+.txt-message {
+  display: block;
+  width: 80%;
+  margin: 0 auto 4rem;
+  padding: 1rem;
+  color: var(--mainColorDark);
+  background: var(--menuBg);
+  border: 1px solid var(--mainColorDark);
+  font-family: Regular;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .txt-highlight {
   font-family: Bold;
 }
@@ -62,6 +75,11 @@ ul > li {
   font-size: 1.75rem;
   font-family: Bold;
   color: var(--secondColor);
+}
+
+.subtit-section-underline {
+  border-bottom: 1px dotted;
+  margin-bottom: 2rem;
 }
 
 .tit-box,
