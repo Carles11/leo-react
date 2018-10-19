@@ -84,7 +84,7 @@ class AdminList extends React.Component {
 					<article>
 						<header className="app-admin-title">
 							<h1>
-								Escuelas registradas: <small>{list.length}</small>
+								Colegios registrados: <small>{list.length}</small>
 							</h1>
 							<div>
 								<ReactToPrint trigger={() => PrintButton} content={() => this.componentRef} />
