@@ -16,6 +16,17 @@ import B2_1 from "../assets/docs/2018/B2/B2-la_culpa_es_de_los_tlaxcaltecas.docx
 import B2_2 from "../assets/docs/2018/B2/B2-el_llano_en_llamas.docx"
 import B2_3 from "../assets/docs/2018/B2/B2-pedro_paramo.docx"
 import B2_4 from "../assets/docs/2018/B2/B2-santa.docx"
+import A1_2019 from "../assets/docs/2019/A1/A1-vamos_a_la_playa.docx"
+import A1_1_2019 from "../assets/docs/2019/A1/A1-la_chica_nueva.docx"
+import A1_2_2019 from "../assets/docs/2019/A1/A1-que_hacemos_el_fin_de_semana.docx"
+import A2_2019 from "../assets/docs/2019/A2/A2-quienes_han_sido.docx"
+import A2_1_2019 from "../assets/docs/2019/A2/A2-mexico_es_otro_mundo.docx"
+import A2_2_2019 from "../assets/docs/2019/A2/A2-la_nueva_familia.docx"
+import A2_3_2019 from "../assets/docs/2019/A2/A2-mira_el_cielo_y_no_el_suelo.docx"
+import B1_2019 from "../assets/docs/2019/B1/B1-la_vuelta.docx"
+import B1_1_2019 from "../assets/docs/2019/B1/B1-los_jovenes_y_europa.docx"
+import B1_2_2019 from "../assets/docs/2019/B1/B1-lo_mas_importante.docx"
+import B1_3_2019 from "../assets/docs/2019/B1/B1-donde_esta_san_valentin.docx"
 
 const Lectura = props => {
   const { DIC } = props
@@ -33,8 +44,235 @@ const Lectura = props => {
         <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
       </header>
       <div className="app-section-width app-section-boxes">
-        <p className="txt-message">{DIC.MSG_SOON}</p>
         <h2 className="subtit-section subtit-section-underline txt-center w100">
+          {DIC.DOWNLOAD_TEXT_2019}
+        </h2>
+        <article className="app-section-box mb2rem">
+          <h2 className="txt-highlight">
+            Textos de lectura de la categoría A1
+          </h2>
+          <ul className="app-list">
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>Vamos a la playa</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'Vamos a la playa'"
+                    download="A1-vamos_a_la_playa.docx"
+                    href={A1_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'Vamos a la playa'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'Vamos a la playa'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>La chica nueva</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'La chica nueva'"
+                    download="A1-la_chica_nueva.docx"
+                    href={A1_1_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'La chica nueva'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'La chica nueva'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>Qué hacemos el fin de semana</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'Qué hacemos el fin de semana'"
+                    download="A1-que_hacemos_el_fin_de_semana.docx"
+                    href={A1_2_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'Qué hacemos el fin de semana'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'Qué hacemos el fin de semana'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+          </ul>
+        </article>
+        <article className="app-section-box">
+          <h2 className="txt-highlight">
+            Textos de lectura de la categoría A2
+          </h2>
+          <ul className="app-list">
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>¿Quiénes han sido?</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto '¿Quiénes han sido?'"
+                    download="A2-quienes_han_sido.docx"
+                    href={A2_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto '¿Quiénes han sido?'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto '¿Quiénes han sido?'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>México es otro mundo</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'México es otro mundo'"
+                    download="A2-mexico_es_otro_mundo.docx"
+                    href={A2_1_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'México es otro mundo'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'México es otro mundo'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>La nueva familia</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'La nueva familia'"
+                    download="A2-la_nueva_familia.docx"
+                    href={A2_2_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'La nueva familia'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'La nueva familia'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>Mira al cielo y no al suelo</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'Mira al cielo y no al suelo'"
+                    download="A2-mira_al_cielo_y_no_al_suelo.docx"
+                    href={A2_3_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'Mira al cielo y no al suelo'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'Mira al cielo y no al suelo'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+          </ul>
+        </article>
+        <article className="app-section-box">
+          <h2 className="txt-highlight">
+            Textos de lectura de la categoría B1
+          </h2>
+          <ul className="app-list">
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>La vuelta</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'La vuelta'"
+                    download="B1-la_vuelta.docx"
+                    href={B1_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'La vuelta'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'La vuelta'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>Los jovenes y europa</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'Los jovenes y europa'"
+                    download="B1-los_jovenes_y_europa.docx"
+                    href={B1_1_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'Los jovenes y europa'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'Los jovenes y europa'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>Lo más importante</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto 'Lo más importante'"
+                    download="B1-lo_mas_importante.docx"
+                    href={B1_2_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto 'Lo más importante'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto 'Lo más importante'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+            <li className="app-list-item">
+              <header className="app-list-header">
+                <h2>¿Dónde está San Valentin?</h2>
+                <div className="app-list-content-btn">
+                  <a
+                    aria-label="Descargar el texto '¿Dónde está San Valentin?'"
+                    download="B1-donde_esta_san_valentin.docx"
+                    href={B1_3_2019}
+                    className="app-list-btn icon-down"
+                    title="Descargar el texto '¿Dónde está San Valentin?'"
+                  >
+                    <span className="hidden">
+                      Descargar el texto '¿Dónde está San Valentin?'
+                    </span>
+                  </a>
+                </div>
+              </header>
+            </li>
+          </ul>
+        </article>
+        <article className="app-section-box">
+          <h2 className="txt-highlight">
+            Textos de lectura de la categoría B2
+          </h2>
+          <p className="txt-message">{DIC.MSG_SOON}</p>
+        </article>
+        <h2 className="subtit-section subtit-section-underline txt-center w100 mt3rem">
           {DIC.DOWNLOAD_TEXT}
         </h2>
         <article className="app-section-box">

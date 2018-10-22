@@ -1,6 +1,6 @@
 {
   "name": "leo",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.3",
