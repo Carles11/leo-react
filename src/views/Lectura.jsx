@@ -3,19 +3,19 @@ import Helmet from "react-helmet"
 
 import withScroll from "../components/HOC/withScroll"
 
-import A1 from "../assets/docs/A1/A1-la_bruja_maruja_pablin_y_pablon.docx"
-import A1_1 from "../assets/docs/A1/A1-eres_un_desastre.doc"
-import A2 from "../assets/docs/A2/A2-buena_onda_desde_cusco.docx"
-import B1 from "../assets/docs/B1/B1-los_alfajores_de_helena_pinto.docx"
-import B1_1 from "../assets/docs/B1/B1-la_compra_de_ropa.docx"
-import B1_2 from "../assets/docs/B1/B1-en_directo_desde_la_ciudad_de_los_contrastes.docx"
-import B1_3 from "../assets/docs/B1/B1-una_noticia_del_periodico.docx"
-import B1_4 from "../assets/docs/B1/B1-la_tienda_de_la_verdad.docx"
-import B2 from "../assets/docs/B2/B2-un_chango_de_malasia.docx"
-import B2_1 from "../assets/docs/B2/B2-la_culpa_es_de_los_tlaxcaltecas.docx"
-import B2_2 from "../assets/docs/B2/B2-el_llano_en_llamas.docx"
-import B2_3 from "../assets/docs/B2/B2-pedro_paramo.docx"
-import B2_4 from "../assets/docs/B2/B2-santa.docx"
+import A1 from "../assets/docs/2018/A1/A1-la_bruja_maruja_pablin_y_pablon.docx"
+import A1_1 from "../assets/docs/2018/A1/A1-eres_un_desastre.doc"
+import A2 from "../assets/docs/2018/A2/A2-buena_onda_desde_cusco.docx"
+import B1 from "../assets/docs/2018/B1/B1-los_alfajores_de_helena_pinto.docx"
+import B1_1 from "../assets/docs/2018/B1/B1-la_compra_de_ropa.docx"
+import B1_2 from "../assets/docs/2018/B1/B1-en_directo_desde_la_ciudad_de_los_contrastes.docx"
+import B1_3 from "../assets/docs/2018/B1/B1-una_noticia_del_periodico.docx"
+import B1_4 from "../assets/docs/2018/B1/B1-la_tienda_de_la_verdad.docx"
+import B2 from "../assets/docs/2018/B2/B2-un_chango_de_malasia.docx"
+import B2_1 from "../assets/docs/2018/B2/B2-la_culpa_es_de_los_tlaxcaltecas.docx"
+import B2_2 from "../assets/docs/2018/B2/B2-el_llano_en_llamas.docx"
+import B2_3 from "../assets/docs/2018/B2/B2-pedro_paramo.docx"
+import B2_4 from "../assets/docs/2018/B2/B2-santa.docx"
 
 const Lectura = props => {
   const { DIC } = props
@@ -33,10 +33,10 @@ const Lectura = props => {
         <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
       </header>
       <div className="app-section-width app-section-boxes">
-        <p className="txt-message">
-          {DIC.MSG_SOON}
-        </p>
-        <h2 className="subtit-section subtit-section-underline txt-center w100">{DIC.DOWNLOAD_TEXT}</h2>
+        <p className="txt-message">{DIC.MSG_SOON}</p>
+        <h2 className="subtit-section subtit-section-underline txt-center w100">
+          {DIC.DOWNLOAD_TEXT}
+        </h2>
         <article className="app-section-box">
           <h2 className="txt-highlight">
             Textos de lectura de la categoría A1
