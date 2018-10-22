@@ -3,7 +3,11 @@ import PropTypes from "prop-types"
 import ReactMessages from "react-messages"
 
 import * as API from "../utils/API"
-import { showFormErrors, showInputError } from "../utils/errorHandler"
+import {
+  showFormErrors,
+  showInputError,
+  showCheckboxError
+} from "../utils/errorHandler"
 import SingleInput from "./form/SingleInput"
 import Checkbox from "./form/Checkbox"
 import Button from "./Button"
@@ -31,6 +35,15 @@ class Register extends React.Component {
   handleCheckbox = e => {
     const { category } = this.state
     const { value } = e.target
+    const elem = e.target
+
+    if (!elem.dataset.checked) {
+      elem.dataset.checked = "checked"
+    } else {
+      elem.dataset.checked = ""
+    }
+
+    showCheckboxError(elem)
 
     if (category.indexOf(value) === -1) {
       category.push(value)
@@ -163,8 +176,9 @@ class Register extends React.Component {
               pattern=".{6,}"
               controlFunc={this.handleChange}
             />
-            <div className="app-form-whole">
+            <div id="checkboxWrapper" className="app-form-whole">
               <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
+              <p className="app-form-label-txt-error" />
               {categories.map(item => (
                 <Checkbox
                   key={item}
