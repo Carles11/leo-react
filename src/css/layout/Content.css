@@ -101,6 +101,10 @@
 	font-size: var(--maxSize);
 }
 
+.app-list-button {
+	margin-right: 1rem
+}
+
 @media only screen and (max-width: 850px) {
 	.app-section-boxes {
 		flex-direction: column;
@@ -117,5 +121,10 @@
 	}
 	.app-admin-title h1 {
 		text-align: center;
+	}
+
+	.app-list-button {
+		margin-right: 0rem;
+		margin-bottom: 0.5rem;
 	}
 }

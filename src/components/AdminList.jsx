@@ -1,113 +1,141 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import ReactMessages from 'react-messages'
-import ReactToPrint from 'react-to-print'
+import React from "react"
+import PropTypes from "prop-types"
+import ReactMessages from "react-messages"
+import ReactToPrint from "react-to-print"
 
-import * as API from '../utils/API'
-import Loader from './Loader'
-import PrintComponent from './PrintComponent'
+import * as API from "../utils/API"
+import Loader from "./Loader"
+import PrintComponent from "./PrintComponent"
 
 class AdminList extends React.Component {
-	state = {
-		loaded: false,
-		list: [],
-		error: {
-			message: 'Hay algún problema al cargar el listado, inténtalo mas tarde.',
-			next: false,
-			icon: 'warning',
-			state: true,
-		},
-	}
+  state = {
+    loaded: false,
+    list: [],
+    error: {
+      message: "Hay algún problema al cargar el listado, inténtalo mas tarde.",
+      next: false,
+      icon: "warning",
+      state: true
+    }
+  }
+  
+  static propTypes = {
+    type: PropTypes.string.isRequired
+  }
 
-	static propTypes = {
-		type: PropTypes.string.isRequired,
-	}
+  componentDidMount() {
+    this.getData()
+  }
 
-	componentDidMount() {
-		this.getData()
-	}
+  getData = async () => {
+    const { error } = this.state
+    const { type } = this.props
+    const promise = await API.get(type)
 
-	getData = async () => {
-		const { error } = this.state
-		const { type } = this.props
-		const promise = await API.get(type)
+    if (promise.success) {
+      this.setState({ list: promise.data, loaded: true })
+    } else {
+      this.setState({
+        error: Object.assign(error, { next: true }),
+        loaded: true
+      })
+    }
+  }
 
-		if (promise.success) {
-			this.setState({ list: promise.data, loaded: true })
-		} else {
-			this.setState({ error: Object.assign(error, { next: true }), loaded: true })
-		}
-	}
+  handleRemove = async e => {
+    const { id } = e.target.dataset
+    const { error } = this.state
+    const { type } = this.props
+    const c = window.confirm(
+      "Estás seguro qué quieres eliminar está escuela? Ten en cuenta que es una acción irreversible."
+    )
 
-	handleRemove = async e => {
-		const { id } = e.target.dataset
-		const { error } = this.state
-		const { type } = this.props
-		const c = window.confirm(
-			'Estás seguro qué quieres eliminar está escuela? Ten en cuenta que es una acción irreversible.',
-		)
+    if (c) {
+      const promise = await API.remove(`${type}/${id}`)
 
-		if (c) {
-			const promise = await API.remove(`${type}/${id}`)
+      if (promise.success) {
+        this.setState({ list: promise.data, loaded: true })
+      } else {
+        this.setState({
+          error: Object.assign(error, { next: true }),
+          loaded: true
+        })
+      }
+    }
+  }
 
-			if (promise.success) {
-				this.setState({ list: promise.data, loaded: true })
-			} else {
-				this.setState({ error: Object.assign(error, { next: true }), loaded: true })
-			}
-		}
-	}
+  handleShow = e => {
+    const { id } = e.target.dataset
+    const el = document.querySelector(`.app-list-content[data-id="${id}"]`)
 
-	handleShow = e => {
-		const { id } = e.target.dataset
-		const el = document.querySelector(`.app-list-content[data-id="${id}"]`)
+    if (!el.classList.contains("show")) {
+      el.classList.add("show")
+    } else {
+      el.classList.remove("show")
+    }
+  }
 
-		if (!el.classList.contains('show')) {
-			el.classList.add('show')
-		} else {
-			el.classList.remove('show')
-		}
-	}
+  render() {
+    const { list, loaded, error } = this.state
+    const mailAddress = list.map(l => l.email).join(',')
 
-	render() {
-		const { list, loaded, error } = this.state
-		const PrintButton = (
-			<button type="button" aria-label="Descargar PDF" className="btn btn-invert">
-				Descargar / Imprimir
-			</button>
-		)
+    const PrintButton = (
+      <button
+        type="button"
+        aria-label="Descargar PDF"
+        className="btn btn-invert"
+      >
+        Descargar / Imprimir
+      </button>
+    )
 
-		return (
-			<React.Fragment>
-				{!loaded && <Loader />}
-				{loaded && (
-					<article>
-						<header className="app-admin-title">
-							<h1>
-								Colegios registrados: <small>{list.length}</small>
-							</h1>
-							<div>
-								<ReactToPrint trigger={() => PrintButton} content={() => this.componentRef} />
-							</div>
-						</header>
-						<ReactMessages
-							message={error.message}
-							next={error.next}
-							error={error.state}
-							icon={error.icon}
-							duration={5000}
-						/>
-						<PrintComponent
-							data={list}
-							handleRemove={this.handleRemove}
-							handleShow={this.handleShow}
-							ref={el => (this.componentRef = el)}
-						/>
-					</article>
-				)}
-			</React.Fragment>
-		)
-	}
+    const SendToAllButton = (
+      <a 
+        href={`mailto:${mailAddress}`}
+        aria-label="Correo a todas las escuelas"
+        className="btn btn-invert"
+      >
+        Enviar correo a todos
+      </a>
+    )
+
+    return (
+      <React.Fragment>
+        {!loaded && <Loader />}
+        {loaded && (
+          <article>
+            <header className="app-admin-title">
+              <h1>
+                Colegios registrados: <small>{list.length}</small>
+              </h1>
+              <div className="app-list-button">
+                {SendToAllButton}
+              </div>
+              <div>
+                <ReactToPrint
+                  trigger={() => PrintButton}
+                  content={() => this.componentRef}
+                />
+              </div>
+            </header>
+            <ReactMessages
+              message={error.message}
+              next={error.next}
+              error={error.state}
+              icon={error.icon}
+              duration={5000}
+            />
+            <PrintComponent
+              data={list}
+              handleRemove={this.handleRemove}
+              handleShow={this.handleShow}
+              ref={el => (this.componentRef = el)}
+            />
+          </article>
+        )}
+      </React.Fragment>
+    )
+  }
 }
 
 export default AdminList
