@@ -1,111 +1,114 @@
-import React from 'react'
-import Gallery from 'react-photo-gallery'
-import Lightbox from 'react-images'
+import React from "react"
+import Gallery from "react-photo-gallery"
+import Lightbox from "react-images"
 
-import Loader from './Loader'
-import Filter from './Filter'
-import * as API from '../utils/API'
-import withWindow from './HOC/withWindow'
+import Loader from "./Loader"
+import Filter from "./Filter"
+import * as API from "../utils/API"
+import withWindow from "./HOC/withWindow"
 
 class ImageGallery extends React.Component {
-	state = {
-		loaded: false,
-		currentImage: 0,
-		lightboxIsOpen: false,
-		photos: [],
-		filter: {},
-		position: 0,
-		lazyLoad: false,
-	}
+  state = {
+    loaded: false,
+    currentImage: 0,
+    lightboxIsOpen: false,
+    data: [],
+    photos: [],
+    filter: {},
+    position: 0,
+    lazyLoad: false
+  }
 
-	componentDidUpdate(prevState) {
-		const { position, lazyLoad } = this.state
+  componentDidUpdate(prevState) {
+    const { position, lazyLoad } = this.state
 
-		if (position !== prevState.position && !lazyLoad) {
-			this.setState(oldState => ({ lazyLoad: !oldState.lazyLoad }))
-			this.getPhotos()
-		}
-	}
+    if (position !== prevState.position && !lazyLoad) {
+      this.setState(oldState => ({ lazyLoad: !oldState.lazyLoad }))
+      this.getPhotos(2018)
+    }
+  }
 
-	handleFilter = e => {
-		this.getPhotos(e.target.dataset.year)
-		this.setState({ loaded: false, photos: [] })
-	}
+  handleFilter = e => {
+    const { data } = this.state
+    const { year } = e.target.dataset
+    const photos = data.filter(photo => photo.year === Number(year))
 
-	getPhotos = async year => {
-		const { filter } = this.state
-		const param = year ? `year/${Number(year)}` : ''
-		const promise = await API.get(`images/${param}`)
+    this.setState({ photos })
+  }
 
-		if (promise.success) {
-			await this.setState({ photos: promise.data, loaded: true })
-		}
+  getPhotos = async year => {
+    const promise = await API.get(`images`)
+    const data = promise.data.sort((a, b) => a._id > b._id)
 
-		if (Object.keys(filter).length === 0) this.getYears()
-	}
+    this.setState({
+      data,
+      photos: promise.data.filter(photo => photo.year === Number(year)),
+      loaded: true
+    })
 
-	getYears = () => {
-		const { photos } = this.state
+    this.getYears(promise.data)
+  }
 
-		const filter = photos.reduce((acc, val) => {
-			if (!acc[val.year]) acc[val.year] = 0
-			acc[val.year]++
-			return acc
-		}, {})
+  getYears = years => {
+    const filter = years.reduce((acc, val) => {
+      if (!acc[val.year]) acc[val.year] = 0
+      acc[val.year]++
+      return acc
+    }, {})
 
-		this.setState({ filter })
-	}
+    this.setState({ filter })
+  }
 
-	openLightbox = (event, obj) => {
-		this.setState({
-			currentImage: obj.index,
-			lightboxIsOpen: true,
-		})
-	}
+  openLightbox = (event, obj) => {
+    this.setState({
+      currentImage: obj.index,
+      lightboxIsOpen: true
+    })
+  }
 
-	closeLightbox = () => {
-		this.setState({
-			currentImage: 0,
-			lightboxIsOpen: false,
-		})
-	}
+  closeLightbox = () => {
+    this.setState({
+      currentImage: 0,
+      lightboxIsOpen: false
+    })
+  }
 
-	gotoPrevious = () => {
-		const { currentImage } = this.state
+  gotoPrevious = () => {
+    const { currentImage } = this.state
 
-		this.setState({
-			currentImage: currentImage - 1,
-		})
-	}
+    this.setState({
+      currentImage: currentImage - 1
+    })
+  }
 
-	gotoNext = () => {
-		const { currentImage } = this.state
+  gotoNext = () => {
+    const { currentImage } = this.state
 
-		this.setState({
-			currentImage: currentImage + 1,
-		})
-	}
+    this.setState({
+      currentImage: currentImage + 1
+    })
+  }
 
-	render() {
-		const { loaded, photos, filter } = this.state
+  render() {
+    const { loaded, photos, filter } = this.state
 
-		if (!loaded) return <Loader css={'app-section h725'} />
+    if (!loaded) return <Loader css={"app-section h725"} />
 
-		return (
-			<React.Fragment>
-				<Filter handleFilter={this.handleFilter} filter={filter} />
-				<Gallery photos={photos} onClick={this.openLightbox} />
-				<Lightbox
-					images={photos}
-					onClose={this.closeLightbox}
-					onClickPrev={this.gotoPrevious}
-					onClickNext={this.gotoNext}
-					currentImage={this.state.currentImage}
-					isOpen={this.state.lightboxIsOpen}
-				/>
-			</React.Fragment>
-		)
-	}
+    return (
+      <React.Fragment>
+        <Filter handleFilter={this.handleFilter} filter={filter} />
+        <Gallery photos={photos} onClick={this.openLightbox} />
+        <Lightbox
+          images={photos}
+          onClose={this.closeLightbox}
+          onClickPrev={this.gotoPrevious}
+          onClickNext={this.gotoNext}
+          currentImage={this.state.currentImage}
+          isOpen={this.state.lightboxIsOpen}
+        />
+      </React.Fragment>
+    )
+  }
 }
 
 const ImageGalleryWithWindow = withWindow(ImageGallery)
