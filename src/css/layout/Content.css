@@ -50,7 +50,7 @@
 
 .app-section-1 {
   height: auto !important;
-  min-height: 100vh;
+  min-height: auto;
   background: url("../../assets/imgs/logo.jpg") -100px -50px no-repeat
     var(--mainColor);
 }
