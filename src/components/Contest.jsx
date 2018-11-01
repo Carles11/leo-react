@@ -20,7 +20,7 @@ const Contest = (props) => {
     <h2 className="tit-box">
       {DIC[p.title]}
     </h2>
-    <p className="txt">
+    <p className="txt txt-IE">
       {DIC[`${p.title}_TXT`]}
     </p>
     {link}

@@ -7,6 +7,10 @@ ul > li {
   line-height: var(--maxSize);
 }
 
+.txt-IE {
+  flex: 1;
+}
+
 .txt-inline {
   display: inline;
 }
