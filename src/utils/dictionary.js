@@ -1,4 +1,4 @@
-import Loader from "../components/Loader";
+import Loader from "../components/Loader"
 
 const dictionary = {
   es: {
@@ -50,7 +50,8 @@ const dictionary = {
     NAV_GALERIA: "Galeria",
     NAV_CRITERIOS: "Criterios de lectura",
     NAV_LATINOAMERICA: "Semifinal latinoamericana",
-    NAV_LATINOAMERICA_SUBJECT: "Solicitud de inscripción a la semifinal latinoamericanas",
+    NAV_LATINOAMERICA_SUBJECT:
+      "Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?",
     NAV_INFO: "Información para profesores",
     NAV_INSCRIPCION: "Inscripción",
     NAV_TEXTOS: "Textos de lectura",
