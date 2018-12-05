@@ -15,8 +15,8 @@ const Landing = (props) => {
       <Helmet
         title={DIC.DESCRIPTION}
         meta={[
-				  { name: 'description', content: `${DIC.DESCRIPTION}` },
-				  { property: 'og:title', content: `${DIC.DESCRIPTION}` },
+          { name: 'description', content: `${DIC.DESCRIPTION}` },
+          { property: 'og:title', content: `${DIC.DESCRIPTION}` },
         ]}
       />
       <Header DIC={DIC} />

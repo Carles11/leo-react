@@ -45,11 +45,11 @@ class Navigation extends React.Component {
 		const { DIC, auth } = this.props
 		const { visible } = this.state
 		const icon = visible ? 'close' : 'menu'
-		
+
 		const NAV = [
 			{
 				label: DIC.NAV_INFO,
-				children: [DIC.NAV_BASES, DIC.NAV_TEXTOS, DIC.NAV_CRITERIOS, DIC.NAV_COLEGIOS],
+				children: [DIC.NAV_BASES, DIC.NAV_TEXTOS, DIC.NAV_CRITERIOS, DIC.NAV_COLEGIOS, DIC.NAV_LATINOAMERICA],
 			},
 			{ label: DIC.NAV_INSCRIPCION, children: [] },
 			{ label: DIC.NAV_GALERIA, children: [] },

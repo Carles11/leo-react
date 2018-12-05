@@ -87,7 +87,16 @@ const Routes = props => {
           />
         )}
       />
-
+      <Route
+        path='/semifinal-latinoamericana'
+        component={props => (
+          <RoutesAsync
+            props={props}
+            DIC={DIC}
+            loadingPromise={import('./views/Latinoamerica')}
+          />
+        )}
+      />
       <Route
         component={props => (
           <RoutesAsync

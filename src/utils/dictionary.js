@@ -1,3 +1,5 @@
+import Loader from "../components/Loader"
+
 const dictionary = {
   es: {
     CONCURSO: "El Concurso",
@@ -31,13 +33,14 @@ const dictionary = {
     FORM_PHONE: "Teléfono",
     FORM_SCHOOL_NAME: "Nombre del colegio",
     FORM_TITLE: "Formulario de inscripción",
+    FORM_WARNING: "EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.",
     FORM_SUBTITLE: "Registra tu colegio",
     HEADER_MAIN: "Leo, leo... ¿qué lees?",
     MSG_SCHOOL_CREATED:
       'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". Finalizado el plazo de inscripción nos pondremos en contacto con usted.',
     MSG_SCHOOL_ERROR:
       "Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.",
-    MSG_SOON:"Los textos para la edición 2019 se publicarán aquí en breve.",
+    MSG_SOON: "Los textos para la edición 2019 se publicarán aquí en breve.",
     MORE_INFO: "Más información",
     NAME: "Leo, leo",
     NAV_BASES: "Bases del concurso",
@@ -46,6 +49,9 @@ const dictionary = {
     NAV_CONCURSO: "Concurso",
     NAV_GALERIA: "Galeria",
     NAV_CRITERIOS: "Criterios de lectura",
+    NAV_LATINOAMERICA: "Semifinal latinoamericana",
+    NAV_LATINOAMERICA_SUBJECT:
+      "Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?",
     NAV_INFO: "Información para profesores",
     NAV_INSCRIPCION: "Inscripción",
     NAV_TEXTOS: "Textos de lectura",
