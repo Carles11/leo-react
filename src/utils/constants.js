@@ -20,5 +20,11 @@ export const FOOTER_DATA = [
       "https://kultusministerium.hessen.de/foerderangebote/schuelerwettbewerbe",
     external: true
   },
+  {
+    label: "GER Gemeinsamen Europäischen Referenzrahmen",
+    url:
+      "http://www.europaeischer-referenzrahmen.de/spanisch-sprachzertifikate.php",
+    external: true
+  },
   { label: "Admin", url: "/admin" }
 ]

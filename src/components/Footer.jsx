@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 
+import logoLesbar from '../assets/imgs/logo-lesbar.jpg'
 import logoHws from '../assets/imgs/logo-hws.jpg'
 import logoHessen from '../assets/imgs/logo-hessen.jpg'
 import logoDsg from '../assets/imgs/logo-dsg.jpg'
@@ -30,7 +31,7 @@ const Footer = (props) => {
           ))}
           <li>
             <a className="btn-link" href="mailto:c.cid@hws.schule?subject=Concurso 'Leo, leo... ¿Qué lees?'" aria-label="Correo de contacto">
-							Contacto
+              Contacto
               <span className="line">
                 <span />
                 <span />
@@ -39,7 +40,7 @@ const Footer = (props) => {
           </li>
           <li>
             <span>
-							&copy;&nbsp;
+              &copy;&nbsp;
               {copy}
             </span>
           </li>
@@ -50,14 +51,6 @@ const Footer = (props) => {
           </h3>
           <article>
             <a
-              href="http://www.hessenwaldschule.net/ "
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de la Hessenwaldschule"
-            >
-              <img src={logoHws} alt="Hessenwaldschule" />
-            </a>
-            <a
               href="https://kultusministerium.hessen.de/"
               target="_blank"
               rel="noopener noreferrer"
@@ -66,10 +59,26 @@ const Footer = (props) => {
               <img src={logoHessen} alt="Hessen" />
             </a>
             <a
+              href="http://www.hessenwaldschule.net/ "
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la Hessenwaldschule"
+            >
+              <img src={logoHws} alt="Hessenwaldschule" />
+            </a>
+            <a
+              href="http://www.lesbar-die-buchhandlung.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la Buchhandlung Lesbar"
+            >
+              <img src={logoLesbar} alt="Buchhandlung Lesbar" />
+            </a>
+            <a
               href="https://www.hispanorama.de/landesverbaende/hessen/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Enlace a la página web de SDV"
+              aria-label="Enlace a la página web de Spanisch Deutsch Lehrerverband"
             >
               <img src={logoDsg} alt="SDV" />
             </a>
