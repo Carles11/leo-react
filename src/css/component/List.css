@@ -68,6 +68,10 @@
 	margin: 0;
 	padding: 0;
 	line-height: 2;
+	width: 75%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .app-list-btn {
@@ -82,6 +86,7 @@
 	transition: color 0.5s, background 0.5s;
 	cursor: pointer;
 	text-decoration: none;
+	box-sizing: border-box;
 }
 
 .app-list-btn:hover {

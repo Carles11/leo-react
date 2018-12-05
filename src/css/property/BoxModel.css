@@ -1,73 +1,80 @@
 .mt0 {
-	margin-top: 0;
+  margin-top: 0;
 }
 .mb0 {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .mt5 {
-	margin-top: 5px;
+  margin-top: 5px;
 }
 .ml5 {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 .mb5 {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .mr5 {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 
 .mt10 {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 .ml10 {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 .mb10 {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .mr10 {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .m1rem {
-	margin: 1rem;
+  margin: 1rem;
 }
 
 .m2rem {
-	margin: 2rem;
+  margin: 2rem;
+}
+.mt3rem {
+  margin-top: 3rem !important;
 }
 .mb2rem {
-	margin-bottom: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 .pb1rem {
-	padding-bottom: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 .pb2rem {
-	padding-bottom: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .pSides05rem {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pSides2rem {
-	padding-left: 2rem;
-	padding-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .h725 {
-	min-height: 725px;
+  min-height: 725px;
 }
 .h100 {
-	min-height: 100vh;
-	height: 100px;
+  min-height: 100vh;
+  height: 100px;
 }
 
 .w1024 {
-	width: 1024px;
+  width: 1024px;
 }
 
 @media only screen and (max-width: 649px) {

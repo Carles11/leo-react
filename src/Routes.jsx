@@ -67,7 +67,12 @@ const Routes = props => {
 					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Colegios')} />
 				)}
 			/>
-
+			<Route
+				path="/semifinal-latinoamericana"
+				component={props => (
+					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/Latinoamerica')} />
+				)}
+			/>
 			<Route
 				component={props => (
 					<RoutesAsync props={props} DIC={DIC} loadingPromise={import('./views/NotFound')} />

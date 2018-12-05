@@ -1,3 +1,5 @@
+import Loader from "../components/Loader"
+
 const dictionary = {
   es: {
     CONCURSO: "El Concurso",
@@ -15,7 +17,9 @@ const dictionary = {
     CONCURSO_PATROCINA: "¿Quién nos patrocina?",
     CONCURSO_PATROCINA_TXT:
       "En su octavo año de celebración consecutiva cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort y de la Asociación Alemana de Profesores de Español en Hesse (DSV). Asímismo con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.",
-    DESCRIPTION: "Concurso de lectura en español.",
+    DESCRIPTION: "Concurso de lectura en español",
+    DOWNLOAD_TEXT: "Descargue aquí los textos de la edición anterior 2018.",
+    DOWNLOAD_TEXT_2019: "Descargue aquí los textos de la edición de 2019.",
     SUBDESCRIPTION: "Próxima final el 16 de mayo de 2019",
     ERROR_EMAIL: "debe ser un correo electronico válido.",
     ERROR_REQUIRED: "es un campo obligatorio.",
@@ -29,12 +33,14 @@ const dictionary = {
     FORM_PHONE: "Teléfono",
     FORM_SCHOOL_NAME: "Nombre del colegio",
     FORM_TITLE: "Formulario de inscripción",
+    FORM_WARNING: "EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.",
     FORM_SUBTITLE: "Registra tu colegio",
     HEADER_MAIN: "Leo, leo... ¿qué lees?",
     MSG_SCHOOL_CREATED:
-      'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". En breve nos pondremos en contacto con usted.',
+      'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". Finalizado el plazo de inscripción nos pondremos en contacto con usted.',
     MSG_SCHOOL_ERROR:
       "Lamentablemente no se pudo enviar el formulario, inténtelo más tarde.",
+    MSG_SOON: "Los textos para la edición 2019 se publicarán aquí en breve.",
     MORE_INFO: "Más información",
     NAME: "Leo, leo",
     NAV_BASES: "Bases del concurso",
@@ -43,6 +49,9 @@ const dictionary = {
     NAV_CONCURSO: "Concurso",
     NAV_GALERIA: "Galeria",
     NAV_CRITERIOS: "Criterios de lectura",
+    NAV_LATINOAMERICA: "Semifinal latinoamericana",
+    NAV_LATINOAMERICA_SUBJECT:
+      "Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?",
     NAV_INFO: "Información para profesores",
     NAV_INSCRIPCION: "Inscripción",
     NAV_TEXTOS: "Textos de lectura",
