@@ -47,7 +47,7 @@ const Item = props => {
             </p>
             <p className='app-list-content-item'>
               <small>CP:</small>
-              {item.zip_code}
+              {item.cp}
             </p>
             <p className='app-list-content-item'>
               <small>Contacto:</small>
