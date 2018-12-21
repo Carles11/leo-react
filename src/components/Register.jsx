@@ -61,12 +61,12 @@ class Register extends React.Component {
     const address = elements.address.value.trim()
     const contact = elements.contact.value.trim()
     const email = elements.email.value.trim()
-    const zip_code = elements.zip_code.value.trim()
+    const cp = elements.cp.value.trim()
     const city = elements.city.value.trim()
 
     this.cleanFields(elements)
 
-    return { name, phone, address, contact, email, category, zip_code, city }
+    return { name, phone, address, contact, email, category, cp, city }
   }
 
   handlePost = async body => {
@@ -163,7 +163,7 @@ class Register extends React.Component {
               controlFunc={this.handleChange}
             />
             <SingleInput
-              name='zip_code'
+              name='cp'
               inputType='text'
               title={DIC.FORM_CP}
               placeholder={DIC.FORM_CP}
