@@ -1,7 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 /info
-# content docs
+# Content files
 /Content
 
 # dependencies
