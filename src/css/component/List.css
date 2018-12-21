@@ -145,7 +145,7 @@
 	}
 	.app-list-btn {
 		flex: 1 0 auto;
-		width: 100%;
+		width: 50%;
 		margin: 2px 0 0;
 	}
 	.app-list-content {

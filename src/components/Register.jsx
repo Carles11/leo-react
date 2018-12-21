@@ -1,34 +1,34 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactMessages from "react-messages"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactMessages from 'react-messages'
 
-import * as API from "../utils/API"
+import * as API from '../utils/API'
 import {
   showFormErrors,
   showInputError,
-  showCheckboxError
-} from "../utils/errorHandler"
-import SingleInput from "./form/SingleInput"
-import Checkbox from "./form/Checkbox"
-import Button from "./Button"
-import { isDisabled } from "../utils/helpers"
+  showCheckboxError,
+} from '../utils/errorHandler'
+import SingleInput from './form/SingleInput'
+import Checkbox from './form/Checkbox'
+import Button from './Button'
+import { isDisabled } from '../utils/helpers'
 
-const categories = ["A1", "A2", "B1", "B2"]
+const categories = ['A1', 'A2', 'B1', 'B2']
 
 class Register extends React.Component {
   state = {
     send: false,
     error: false,
-    message: "",
-    category: []
+    message: '',
+    category: [],
   }
 
   static propTypes = {
-    DIC: PropTypes.object.isRequired
+    DIC: PropTypes.object.isRequired,
   }
 
   handleChange = e => {
-    e.target.classList.add("active")
+    e.target.classList.add('active')
     showInputError(e.target)
   }
 
@@ -38,9 +38,9 @@ class Register extends React.Component {
     const elem = e.target
 
     if (!elem.dataset.checked) {
-      elem.dataset.checked = "checked"
+      elem.dataset.checked = 'checked'
     } else {
-      elem.dataset.checked = ""
+      elem.dataset.checked = ''
     }
 
     showCheckboxError(elem)
@@ -61,27 +61,29 @@ class Register extends React.Component {
     const address = elements.address.value.trim()
     const contact = elements.contact.value.trim()
     const email = elements.email.value.trim()
+    const zip_code = elements.zip_code.value.trim()
+    const city = elements.city.value.trim()
 
     this.cleanFields(elements)
 
-    return { name, phone, address, contact, email, category }
+    return { name, phone, address, contact, email, category, zip_code, city }
   }
 
   handlePost = async body => {
     const { DIC } = this.props
-    const promise = await API.post("schools", body)
+    const promise = await API.post('schools', body)
 
     if (promise.success) {
       this.setState({
         send: true,
         message: DIC.MSG_SCHOOL_CREATED,
-        error: false
+        error: false,
       })
     } else {
       this.setState({
         send: true,
         message: DIC.MSG_SCHOOL_ERROR,
-        error: true
+        error: true,
       })
     }
 
@@ -92,40 +94,40 @@ class Register extends React.Component {
 
   cleanFields = elem => {
     Array.from(elem).forEach(el => {
-      el.classList.remove("active")
-      el.value = ""
+      el.classList.remove('active')
+      el.value = ''
     })
 
     const checkboxes = Array.from(
-      document.querySelectorAll(".app-form-whole input[type=checkbox]")
+      document.querySelectorAll('.app-form-whole input[type=checkbox]'),
     )
     checkboxes.forEach(item => (item.checked = false))
 
     this.disableButton()
   }
 
-  disableButton = () => isDisabled(document.querySelector(".btn"))
+  disableButton = () => isDisabled(document.querySelector('.btn'))
 
   render() {
     const { DIC } = this.props
     const { message, send, error } = this.state
 
     return (
-      <article className="app-section app-section-1 pSides05rem pb2rem">
+      <article className='app-section app-section-1 pSides05rem pb2rem'>
         <ReactMessages
           message={message}
           next={send}
           duration={9000}
           error={error}
         />
-        <div className="app-section-width">
-          <header className="header-wrapper">
-            <h2 className="tit-section pSides05rem">{DIC.FORM_TITLE}</h2>
-            <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
-            <h4 className="subtit-section">{DIC.FORM_WARNING}</h4>
+        <div className='app-section-width'>
+          <header className='header-wrapper'>
+            <h2 className='tit-section pSides05rem'>{DIC.FORM_TITLE}</h2>
+            <h3 className='subtit-section'>{DIC.FORM_SUBTITLE}</h3>
+            <h4 className='subtit-section'>{DIC.FORM_WARNING}</h4>
           </header>
           <form
-            className="app-form"
+            className='app-form'
             noValidate
             onSubmit={e => {
               e.preventDefault()
@@ -134,52 +136,67 @@ class Register extends React.Component {
                 this.disableButton()
                 this.handlePost(this.handleData(e))
               }
-            }}
-          >
+            }}>
             <SingleInput
-              name="name"
-              inputType="text"
+              name='name'
+              inputType='text'
               title={DIC.FORM_SCHOOL_NAME}
               placeholder={DIC.FORM_SCHOOL_NAME}
-              pattern=".{6,}"
+              pattern='.{6,}'
               controlFunc={this.handleChange}
             />
             <SingleInput
-              name="contact"
-              inputType="text"
+              name='contact'
+              inputType='text'
               title={DIC.FORM_CONTACT}
               placeholder={DIC.FORM_CONTACT}
-              pattern=".{6,}"
+              pattern='.{6,}'
               controlFunc={this.handleChange}
             />
 
             <SingleInput
-              name="address"
-              inputType="text"
+              name='address'
+              inputType='text'
               title={DIC.FORM_ADDRESS}
               placeholder={DIC.FORM_ADDRESS}
-              pattern=".{6,}"
+              pattern='.{6,}'
               controlFunc={this.handleChange}
             />
             <SingleInput
-              name="phone"
-              inputType="text"
+              name='zip_code'
+              inputType='text'
+              title={DIC.FORM_CP}
+              placeholder={DIC.FORM_CP}
+              pattern='.{3,}'
+              controlFunc={this.handleChange}
+            />
+            <SingleInput
+              name='city'
+              inputType='text'
+              title={DIC.FORM_CITY}
+              placeholder={DIC.FORM_CITY}
+              pattern='.{5,}'
+              controlFunc={this.handleChange}
+            />
+            <SingleInput
+              name='phone'
+              inputType='text'
               title={DIC.FORM_PHONE}
               placeholder={DIC.FORM_PHONE}
-              pattern=".{6,}"
+              pattern='.{6,}'
               controlFunc={this.handleChange}
             />
             <SingleInput
-              name="email"
-              inputType="email"
+              name='email'
+              inputType='email'
               title={DIC.FORM_MAIL}
               placeholder={DIC.FORM_MAIL}
-              pattern=".{6,}"
+              pattern='.{6,}'
               controlFunc={this.handleChange}
             />
-            <div id="checkboxWrapper" className="app-form-whole">
-              <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
-              <p className="app-form-label-txt-error" />
+            <div id='checkboxWrapper' className='app-form-whole'>
+              <p className='app-form-label-txt'>{DIC.FORM_CATEGORIES}</p>
+              <p className='app-form-label-txt-error' />
               {categories.map(item => (
                 <Checkbox
                   key={item}
@@ -189,7 +206,7 @@ class Register extends React.Component {
                 />
               ))}
             </div>
-            <Button type={"submit"} label={"Enviar"} css={"m1rem"} />
+            <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
           </form>
         </div>
       </article>

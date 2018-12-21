@@ -29,6 +29,8 @@ const dictionary = {
       "Selecciona las categorias del concurso en las que participará el colegio:",
     FORM_CONTACT: "Persona de contacto",
     FORM_COURSE: "Curso",
+    FORM_CP: "Código Postal",
+    FORM_CITY: "Localidad",
     FORM_MAIL: "Correo electrónico",
     FORM_PHONE: "Teléfono",
     FORM_SCHOOL_NAME: "Nombre del colegio",
