@@ -13,18 +13,18 @@ const Item = props => {
           <h2>{item.name}</h2>
           <div className='app-list-content-btn'>
             {/* <button
-              className="app-list-btn icon-pencil"
+              className="app-list-btn icon-edit-2"
               arial-label="Edit"
             >
             </button> */}
             <button
-              className='app-list-btn icon-close'
+              className='app-list-btn icon-x-circle'
               arial-label='Remove Item'
               data-id={item._id}
               onClick={handleRemove}
             />
             <button
-              className='app-list-btn icon-down'
+              className='app-list-btn icon-arrow-down-circle'
               arial-label='Show Item'
               data-id={item._id}
               onClick={handleShow}

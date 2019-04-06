@@ -30,7 +30,7 @@ class Filter extends React.PureComponent {
           <p>Galeria de Images de la edición del </p>
           <button id="btn_visibility" onClick={this.handleVisibility}>
             <span>{"Año".toUpperCase()}</span>
-            <span className="icon-down" />
+            <span className="icon-arrow-down-circle" />
           </button>
           <ul className={`app-filter-list ${active}`}>
             {Object.keys(filter).map(k => (

@@ -5,21 +5,26 @@ import withScroll from '../components/HOC/withScroll'
 import * as API from '../utils/API'
 
 class Lectura extends React.PureComponent {
-  state = { data: [] }
+  state = { data: [], audio: '' }
 
   async componentDidMount() {
     const promise = await API.get('documents')
+
     if (promise.success) {
       this.setState({ data: promise.data })
     }
   }
 
+  handleAudio = audio => {
+    this.setState({ audio })
+  }
+
   render() {
     const { DIC } = this.props
-    const { data } = this.state
+    const { data, audio } = this.state
 
     return (
-      <section className='app-content pb2rem mb2rem'>
+      <section className="app-content pb2rem mb2rem">
         <Helmet
           title={DIC.NAV_TEXTOS}
           meta={[
@@ -28,37 +33,53 @@ class Lectura extends React.PureComponent {
           ]}
         />
         <header>
-          <h1 className='tit-header mb2rem'>{DIC.NAV_TEXTOS}</h1>
+          <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
         </header>
-        <div className='app-section-width app-section-boxes'>
+        <div className="app-audio">
+          <audio src={audio} controls="controls">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+        </div>
+        <div className="app-section-width app-section-boxes">
           {!!data.length &&
             data
               .sort((a, b) => (a._id > b._id ? 1 : -1))
               .map(d => (
                 <React.Fragment key={d._id}>
-                  <h2 className='subtit-section subtit-section-underline txt-center w100'>
+                  <h2 className="subtit-section subtit-section-underline txt-center w100">
                     {d.title}
                   </h2>
+
                   {d.projects.map(project => (
-                    <article
-                      key={project.title}
-                      className='app-section-box mb2rem'>
-                      <h2 className='txt-highlight'>{project.title}</h2>
-                      <ul className='app-list'>
+                    <article key={project.title} className="app-section-box mb2rem">
+                      <h2 className="txt-highlight">{project.title}</h2>
+                      <ul className="app-list">
                         {project.items.map(item => (
-                          <li key={item.title} className='app-list-item'>
-                            <header className='app-list-header'>
+                          <li key={item.title} className="app-list-item">
+                            <header className="app-list-header">
                               <h2>{item.title}</h2>
-                              <div className='app-list-content-btn'>
+                              <div className="app-list-content-btn">
+                                {item.audio && (
+                                  <button
+                                    aria-label={`Descargar el audio '${item.title}'`}
+                                    onClick={() => this.handleAudio(item.audio)}
+                                    className="app-list-btn icon-headphones"
+                                    title={`Descargar el audio '${item.title}'`}
+                                  >
+                                    <span className="hidden">
+                                      {`Descargar el texto '${item.title}'`}
+                                    </span>
+                                  </button>
+                                )}
+
                                 <a
-                                  aria-label={`Descargar el texto '${
-                                    item.title
-                                  }'`}
+                                  aria-label={`Descargar el texto '${item.title}'`}
                                   download={item.url}
                                   href={item.url}
-                                  className='app-list-btn icon-down'
-                                  title={`Descargar el texto '${item.title}'`}>
-                                  <span className='hidden'>
+                                  className="app-list-btn icon-arrow-down-circle"
+                                  title={`Descargar el texto '${item.title}'`}
+                                >
+                                  <span className="hidden">
                                     {`Descargar el texto '${item.title}'`}
                                   </span>
                                 </a>

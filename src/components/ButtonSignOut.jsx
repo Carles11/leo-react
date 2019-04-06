@@ -12,7 +12,7 @@ const ButtonSignOut = (props) => {
       onClick={handleClick}
     >
       {labelTxt}
-      <span className="icon-stand-by" />
+      <span className="icon-power" />
     </button>
   )
 }
