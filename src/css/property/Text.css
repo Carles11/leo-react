@@ -82,6 +82,12 @@ ul > li {
   color: var(--secondColor);
 }
 
+.subtit-section > small {
+  color: #666;
+  font-family: Lighter;
+  font-size: var(--textSize);
+}
+
 .subtit-section-underline {
   border-bottom: 1px dotted;
   margin-bottom: 2rem;

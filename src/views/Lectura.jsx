@@ -35,11 +35,6 @@ class Lectura extends React.PureComponent {
         <header>
           <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
         </header>
-        <div className="app-audio">
-          <audio src={audio} controls="controls">
-            Your browser does not support the <code>audio</code> element.
-          </audio>
-        </div>
         <div className="app-section-width app-section-boxes">
           {!!data.length &&
             data
@@ -47,7 +42,8 @@ class Lectura extends React.PureComponent {
               .map(d => (
                 <React.Fragment key={d._id}>
                   <h2 className="subtit-section subtit-section-underline txt-center w100">
-                    {d.title}
+                    {d.title}<br/>
+                    <small className="txt-center">* Textos leídos por Sara Casado Ocaña</small>
                   </h2>
 
                   {d.projects.map(project => (
@@ -61,13 +57,13 @@ class Lectura extends React.PureComponent {
                               <div className="app-list-content-btn">
                                 {item.audio && (
                                   <button
-                                    aria-label={`Descargar el audio '${item.title}'`}
+                                    aria-label={`Escuchar el audio '${item.title}'`}
                                     onClick={() => this.handleAudio(item.audio)}
                                     className="app-list-btn icon-headphones"
-                                    title={`Descargar el audio '${item.title}'`}
+                                    title={`Escuchar el audio '${item.title}'`}
                                   >
                                     <span className="hidden">
-                                      {`Descargar el texto '${item.title}'`}
+                                      {`Escuchar el audio '${item.title}'`}
                                     </span>
                                   </button>
                                 )}
@@ -85,6 +81,11 @@ class Lectura extends React.PureComponent {
                                 </a>
                               </div>
                             </header>
+                            {audio === item.audio && (
+                              <audio className="app-audio" src={audio} controls="controls" autoPlay>
+                                Your browser does not support the <code>audio</code> element.
+                              </audio>
+                            )}
                           </li>
                         ))}
                       </ul>
