@@ -82,7 +82,7 @@ class Register extends React.Component {
     } else {
       this.setState({
         send: true,
-        message: DIC.MSG_SCHOOL_ERROR,
+        message: promise.data || DIC.MSG_SCHOOL_ERROR,
         error: true,
       })
     }
