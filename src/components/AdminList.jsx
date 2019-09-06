@@ -12,13 +12,13 @@ class AdminList extends React.Component {
     loaded: false,
     list: [],
     error: {
-      message: "Hay algún problema al cargar el listado, inténtalo mas tarde.",
+      message: "Hay algún problema al cargar el listado, inténtalo más tarde.",
       next: false,
       icon: "warning",
       state: true
     }
   }
-  
+
   static propTypes = {
     type: PropTypes.string.isRequired
   }
@@ -47,7 +47,7 @@ class AdminList extends React.Component {
     const { error } = this.state
     const { type } = this.props
     const c = window.confirm(
-      "Estás seguro qué quieres eliminar está escuela? Ten en cuenta que es una acción irreversible."
+      "Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible."
     )
 
     if (c) {
@@ -90,7 +90,7 @@ class AdminList extends React.Component {
     )
 
     const SendToAllButton = (
-      <a 
+      <a
         href={`mailto:${mailAddress}`}
         aria-label="Correo a todas las escuelas"
         className="btn btn-invert"
