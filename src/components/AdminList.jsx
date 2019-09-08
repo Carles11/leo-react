@@ -1,26 +1,27 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactMessages from "react-messages"
-import ReactToPrint from "react-to-print"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactMessages from 'react-messages'
+import ReactToPrint from 'react-to-print'
 
-import * as API from "../utils/API"
-import Loader from "./Loader"
-import PrintComponent from "./PrintComponent"
+import * as API from '../utils/API'
+import Loader from './Loader'
+import PrintComponent from './PrintComponent'
+import ExcelExport from '../components/ExcelExport'
 
 class AdminList extends React.Component {
   state = {
     loaded: false,
     list: [],
     error: {
-      message: "Hay algún problema al cargar el listado, inténtalo más tarde.",
+      message: 'Hay algún problema al cargar el listado, inténtalo más tarde.',
       next: false,
-      icon: "warning",
-      state: true
-    }
+      icon: 'warning',
+      state: true,
+    },
   }
 
   static propTypes = {
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
   }
 
   componentDidMount() {
@@ -37,7 +38,7 @@ class AdminList extends React.Component {
     } else {
       this.setState({
         error: Object.assign(error, { next: true }),
-        loaded: true
+        loaded: true,
       })
     }
   }
@@ -47,7 +48,7 @@ class AdminList extends React.Component {
     const { error } = this.state
     const { type } = this.props
     const c = window.confirm(
-      "Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible."
+      'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.',
     )
 
     if (c) {
@@ -58,7 +59,7 @@ class AdminList extends React.Component {
       } else {
         this.setState({
           error: Object.assign(error, { next: true }),
-          loaded: true
+          loaded: true,
         })
       }
     }
@@ -68,10 +69,10 @@ class AdminList extends React.Component {
     const { id } = e.target.dataset
     const el = document.querySelector(`.app-list-content[data-id="${id}"]`)
 
-    if (!el.classList.contains("show")) {
-      el.classList.add("show")
+    if (!el.classList.contains('show')) {
+      el.classList.add('show')
     } else {
-      el.classList.remove("show")
+      el.classList.remove('show')
     }
   }
 
@@ -81,10 +82,9 @@ class AdminList extends React.Component {
 
     const PrintButton = (
       <button
-        type="button"
-        aria-label="Descargar PDF"
-        className="btn btn-invert"
-      >
+        type='button'
+        aria-label='Descargar PDF'
+        className='btn btn-invert'>
         Descargar / Imprimir
       </button>
     )
@@ -92,9 +92,8 @@ class AdminList extends React.Component {
     const SendToAllButton = (
       <a
         href={`mailto:${mailAddress}`}
-        aria-label="Correo a todas las escuelas"
-        className="btn btn-invert"
-      >
+        aria-label='Correo a todas las escuelas'
+        className='btn btn-invert'>
         Enviar correo a todos
       </a>
     )
@@ -104,18 +103,19 @@ class AdminList extends React.Component {
         {!loaded && <Loader />}
         {loaded && (
           <article>
-            <header className="app-admin-title">
+            <header className='app-admin-title'>
               <h1>
                 Colegios registrados: <small>{list.length}</small>
               </h1>
-              <div className="app-list-button">
-                {SendToAllButton}
-              </div>
+              <div className='app-list-button'>{SendToAllButton}</div>
               <div>
                 <ReactToPrint
                   trigger={() => PrintButton}
                   content={() => this.componentRef}
                 />
+              </div>
+              <div>
+                <ExcelExport schools={list} />
               </div>
             </header>
             <ReactMessages

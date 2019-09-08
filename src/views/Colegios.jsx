@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import * as API from '../utils/API'
 import withScroll from '../components/HOC/withScroll'
 import Loader from '../components/Loader'
-import ExcelExport from '../components/ExcelExport'
 
 class Colegios extends React.Component {
   state = { schools: [] }
@@ -37,8 +36,7 @@ class Colegios extends React.Component {
         />
         <header>
           <h1 className='tit-header mb2rem'>{DIC.NAV_COLEGIOS}</h1>
-          <ExcelExport 
-						schools= {schools}/>
+          
         </header>
         {!schools.length && <Loader />}
         {!!schools.length && (
