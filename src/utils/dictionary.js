@@ -43,6 +43,7 @@ const dictionary = {
     MSG_SOON: 'Los textos para la edición 2019 se publicarán aquí en breve.',
     MORE_INFO: 'Más información',
     NAME: 'Leo, leo',
+    NAV_AVISO_LEGAL: 'Datenschutzerklärung',
     NAV_BASES: 'Bases del concurso',
     NAV_CERTIFICADOS: 'Certificados',
     NAV_COLEGIOS: 'Colegios inscritos',
@@ -52,6 +53,7 @@ const dictionary = {
     NAV_LATINOAMERICA: 'Semifinal latinoamericana',
     NAV_LATINOAMERICA_SUBJECT:
       'Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?',
+    NAV_IMPRESSUM: 'Impressum',
     NAV_INFO: 'Información para profesores',
     NAV_INSCRIPCION: 'Inscripción',
     NAV_TEXTOS: 'Textos de lectura',

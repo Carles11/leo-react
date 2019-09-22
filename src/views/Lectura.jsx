@@ -24,7 +24,7 @@ class Lectura extends React.PureComponent {
     const { data, audio } = this.state
 
     return (
-      <section className="app-content pb2rem mb2rem">
+      <section className='app-content pb2rem mb2rem'>
         <Helmet
           title={DIC.NAV_TEXTOS}
           meta={[
@@ -33,36 +33,40 @@ class Lectura extends React.PureComponent {
           ]}
         />
         <header>
-          <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
+          <h1 className='tit-header mb2rem'>{DIC.NAV_TEXTOS}</h1>
         </header>
-        <div className="app-section-width app-section-boxes">
+        <div className='app-section-width app-section-boxes'>
           {!!data.length &&
             data
               .sort((a, b) => (a._id > b._id ? 1 : -1))
               .map(d => (
                 <React.Fragment key={d._id}>
-                  <h2 className="subtit-section subtit-section-underline txt-center w100">
-                    {d.title}<br/>
-                    <small className="txt-center">* Textos leídos por Sara Casado Ocaña</small>
+                  <h2 className='subtit-section subtit-section-underline txt-center w100'>
+                    {d.title}
+                    <br />
+                    <small className='txt-center'>
+                      * Textos leídos por Sara Casado Ocaña
+                    </small>
                   </h2>
 
                   {d.projects.map(project => (
-                    <article key={project.title} className="app-section-box mb2rem">
-                      <h2 className="txt-highlight">{project.title}</h2>
-                      <ul className="app-list">
+                    <article
+                      key={project.title}
+                      className='app-section-box mb2rem'>
+                      <h2 className='txt-highlight'>{project.title}</h2>
+                      <ul className='app-list'>
                         {project.items.map(item => (
-                          <li key={item.title} className="app-list-item">
-                            <header className="app-list-header">
+                          <li key={item.title} className='app-list-item'>
+                            <header className='app-list-header'>
                               <h2>{item.title}</h2>
-                              <div className="app-list-content-btn">
+                              <div className='app-list-content-btn'>
                                 {item.audio && (
                                   <button
                                     aria-label={`Escuchar el audio '${item.title}'`}
                                     onClick={() => this.handleAudio(item.audio)}
-                                    className="app-list-btn icon-headphones"
-                                    title={`Escuchar el audio '${item.title}'`}
-                                  >
-                                    <span className="hidden">
+                                    className='app-list-btn icon-headphones'
+                                    title={`Escuchar el audio '${item.title}'`}>
+                                    <span className='hidden'>
                                       {`Escuchar el audio '${item.title}'`}
                                     </span>
                                   </button>
@@ -72,18 +76,22 @@ class Lectura extends React.PureComponent {
                                   aria-label={`Descargar el texto '${item.title}'`}
                                   download={item.url}
                                   href={item.url}
-                                  className="app-list-btn icon-arrow-down-circle"
-                                  title={`Descargar el texto '${item.title}'`}
-                                >
-                                  <span className="hidden">
+                                  className='app-list-btn icon-arrow-down-circle'
+                                  title={`Descargar el texto '${item.title}'`}>
+                                  <span className='hidden'>
                                     {`Descargar el texto '${item.title}'`}
                                   </span>
                                 </a>
                               </div>
                             </header>
                             {audio === item.audio && (
-                              <audio className="app-audio" src={audio} controls="controls" autoPlay>
-                                Your browser does not support the <code>audio</code> element.
+                              <audio
+                                className='app-audio'
+                                src={audio}
+                                controls='controls'
+                                autoPlay>
+                                Your browser does not support the{' '}
+                                <code>audio</code> element.
                               </audio>
                             )}
                           </li>

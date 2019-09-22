@@ -98,6 +98,26 @@ const Routes = props => {
         )}
       />
       <Route
+        path='/aviso-legal'
+        component={props => (
+          <RoutesAsync
+            props={props}
+            DIC={DIC}
+            loadingPromise={import('./views/AvisoLegal')}
+          />
+        )}
+      />
+      <Route
+        path='/impressum'
+        component={props => (
+          <RoutesAsync
+            props={props}
+            DIC={DIC}
+            loadingPromise={import('./views/Impressum')}
+          />
+        )}
+      />
+      <Route
         component={props => (
           <RoutesAsync
             props={props}
