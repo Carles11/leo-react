@@ -38,7 +38,7 @@ class Lectura extends React.PureComponent {
         <div className='app-section-width app-section-boxes'>
           {!!data.length &&
             data
-              .sort((a, b) => (a._id > b._id ? 1 : -1))
+              .sort((a, b) => (a.year > b.year ? -1 : 1))
               .map(d => (
                 <React.Fragment key={d._id}>
                   <h2 className='subtit-section subtit-section-underline txt-center w100'>
