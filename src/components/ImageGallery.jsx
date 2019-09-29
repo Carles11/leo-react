@@ -1,11 +1,11 @@
-import React from "react"
-import Gallery from "react-photo-gallery"
-import Lightbox from "react-images"
+import React from 'react'
+import Gallery from 'react-photo-gallery'
+import Lightbox from 'react-images'
 
-import Loader from "./Loader"
-import Filter from "./Filter"
-import * as API from "../utils/API"
-import withWindow from "./HOC/withWindow"
+import Loader from './Loader'
+import Filter from './Filter'
+import * as API from '../utils/API'
+import withWindow from './HOC/withWindow'
 
 class ImageGallery extends React.Component {
   state = {
@@ -16,7 +16,7 @@ class ImageGallery extends React.Component {
     photos: [],
     filter: {},
     position: 0,
-    lazyLoad: false
+    lazyLoad: false,
   }
 
   componentDidUpdate(prevState) {
@@ -43,7 +43,7 @@ class ImageGallery extends React.Component {
     this.setState({
       data,
       photos: promise.data.filter(photo => photo.year === Number(year)),
-      loaded: true
+      loaded: true,
     })
 
     this.getYears(promise.data)
@@ -62,14 +62,14 @@ class ImageGallery extends React.Component {
   openLightbox = (event, obj) => {
     this.setState({
       currentImage: obj.index,
-      lightboxIsOpen: true
+      lightboxIsOpen: true,
     })
   }
 
   closeLightbox = () => {
     this.setState({
       currentImage: 0,
-      lightboxIsOpen: false
+      lightboxIsOpen: false,
     })
   }
 
@@ -77,7 +77,7 @@ class ImageGallery extends React.Component {
     const { currentImage } = this.state
 
     this.setState({
-      currentImage: currentImage - 1
+      currentImage: currentImage - 1,
     })
   }
 
@@ -85,17 +85,23 @@ class ImageGallery extends React.Component {
     const { currentImage } = this.state
 
     this.setState({
-      currentImage: currentImage + 1
+      currentImage: currentImage + 1,
     })
   }
 
   render() {
     const { loaded, photos, filter } = this.state
 
-    if (!loaded) return <Loader css={"app-section h725"} />
+    if (!loaded) return <Loader css={'app-section h725'} />
 
     return (
       <React.Fragment>
+        <header className='header-wrapper'>
+          <h2 className='tit-section m2rem tit-section-secondColor'>
+            Galeria de Imágenes
+          </h2>
+        </header>
+
         <Filter handleFilter={this.handleFilter} filter={filter} />
         <Gallery photos={photos} onClick={this.openLightbox} />
         <Lightbox

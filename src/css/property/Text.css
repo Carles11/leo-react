@@ -74,6 +74,10 @@ ul > li {
   font-size: var(--hugeSize);
 }
 
+.tit-section-secondColor {
+  color: var(--secondColor);
+}
+
 .subtit-section {
   padding: 0 0 2rem;
   margin: 0;
