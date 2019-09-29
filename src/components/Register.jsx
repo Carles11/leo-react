@@ -124,7 +124,7 @@ class Register extends React.Component {
           <header className='header-wrapper'>
             <h2 className='tit-section pSides05rem'>{DIC.FORM_TITLE}</h2>
             <h3 className='subtit-section'>{DIC.FORM_SUBTITLE}</h3>
-            <h4 className='subtit-section'>{DIC.FORM_WARNING}</h4>
+            {/* <h4 className='subtit-section'>{DIC.FORM_WARNING}</h4> */}
           </header>
           <form
             className='app-form'
