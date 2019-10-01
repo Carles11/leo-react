@@ -1,5 +1,6 @@
 const dictionary = {
   es: {
+    AVISO_LEGAL_CONTENT: 'Datenschützerklärung',
     CONCURSO: 'El Concurso',
     CONCURSO_TXT:
       'La lectura nos ayuda a comunicarnos con nuestro entorno y los concursos motivan a alumnos y profesores de todos los ámbitos de la enseñanza a conseguir nuevas metas. En este contexto surgió en 2012 la idea de poner en marcha un concurso de lectura en español en Hesse. Tras una fase de prueba se ha ido consolidando la iniciativa obteniendo en 2015 el apoyo del Kultusministerium de Hesse y entrando a formar parte de la red oficial de concursos escolares en esta Comunidad Autónoma. La trayectoria del concurso desde 2012 ha demostrado la gran acogida del concurso por parte de los centros educativos.Esto se ha debido especialmente a la fácil organización del concurso en la clase de español. Todos los alumnos de secundario en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas(MCER).',
@@ -18,7 +19,7 @@ const dictionary = {
     DESCRIPTION: 'Concurso de lectura en español',
     DOWNLOAD_TEXT: 'Descargue aquí los textos de la edición anterior 2018.',
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
-    SUBDESCRIPTION: 'Próxima final el 16 de mayo de 2019',
+    SUBDESCRIPTION: 'Próxima final el 19 de mayo de 2020',
     ERROR_EMAIL: 'debe ser un correo electronico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'debe ser mas de 6 caracteres',

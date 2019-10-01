@@ -114,7 +114,7 @@ class AdminList extends React.Component {
                   content={() => this.componentRef}
                 />
               </div>
-              <div>
+              <div className='app-list-button'>
                 <ExcelExport schools={list} />
               </div>
             </header>
