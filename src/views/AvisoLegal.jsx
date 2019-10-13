@@ -63,7 +63,7 @@ const AvisoLegal = (props) => {
           {' '}
           Fax: 06150 - 974621
           {' '}
-          Mail: hws_weiterstadt@schulen.ladadi.de
+              Mail: <a href="mailto:hws_weiterstadt@schulen.ladadi.de">hws_weiterstadt@schulen.ladadi.de</a>
           {' '}
           </li>
           </p>
@@ -71,9 +71,9 @@ const AvisoLegal = (props) => {
             <li className="app-olist-item">
             <strong className="txt-highlight">
           4. Erreichbarkeit in Datenschutzfragen: Sie erreichen uns in
-          datenschutzrechtlichen Fragen unter
+          datenschutzrechtlichen Fragen unter{' '}
 </strong>        
-          <a href="mailto:c.cid@hws.schule">Celia Cid Sánchez</a>
+              <a href="mailto:c.cid@hws.schule">Celia Cid Sánchez{' '}</a>
           </li>  
           </p>
           <p className="txt">
@@ -176,63 +176,63 @@ const AvisoLegal = (props) => {
             <strong className="txt-highlight">
           8. Analyse-Tools</strong>
           a. Tracking-Tools
-          Die im Folgenden aufgeführten und von uns eingesetzten
-          Tracking-Maßnahmen werden auf Grundlage des Art. 6 Abs. 1 S. 1 lit. f
-          DSGVO durchgeführt. Mit den zum Einsatz kommenden Tracking-Maßnahmen
-          wollen wir eine bedarfsgerechte Gestaltung und die fortlaufende
-          Optimierung unserer Webseite sicherstellen. Zum anderen setzen wir die
-          Tracking-Maßnahmen ein, um die Nutzung unserer Webseite statistisch zu
-          erfassen und zum Zwecke der Optimierung unseres Angebotes für Sie
-          auszuwerten. Diese Interessen sind als berechtigt im Sinne der
-          vorgenannten Vorschrift anzusehen. Die jeweiligen
-          Datenverarbeitungszwecke und Datenkategorien sind aus den
-          entsprechenden Tracking-Tools zu entnehmen.
-          b. Google Analytics1
-          Zum Zwecke der bedarfsgerechten Gestaltung und fortlaufenden
-          Optimierung unserer Seiten nutzen wir Google Analytics, ein
-          Webanalysedienst der Google Inc.
-          (https://www.google.de/intl/de/about/) (1600 Amphitheatre Parkway,
-          Mountain View, CA 94043, USA; im Folgenden „Google“). In diesem
-          Zusammenhang werden pseudonymisierte Nutzungsprofile erstellt und
-          Cookies (siehe unter Ziff. 4) verwendet. Die durch den Cookie
-          erzeugten Informationen über Ihre Benutzung dieser Website wie i.
-          Browser-Typ/-Version,
-          ii. verwendetes Betriebssystem,
-          iii. Referrer-URL (die zuvor besuchte Seite),
-          iv. Hostname des zugreifenden Rechners (IP-Adresse),
-          v. Uhrzeit der Serveranfrage,
-          werden an einen Server von Google in den USA übertragen und dort
-          gespeichert. Die Informationen werden verwendet, um die Nutzung der
-          Website auszuwerten, um Reports über die Websiteaktivitäten
-          zusammenzustellen und um weitere mit der Websitenutzung und der
-          Internetnutzung verbundene Dienstleistungen zu Zwecken der
-          Marktforschung und bedarfsgerechten Gestaltung dieser Internetseiten
-          zu erbringen. Auch werden diese Informationen gegebenenfalls an Dritte
-          übertragen, sofern dies gesetzlich vorgeschrieben ist oder soweit
-          Dritte diese Daten im Auftrag verarbeiten. Es wird in keinem Fall Ihre
-          IP-Adresse mit anderen Daten von Google zusammengeführt. Die
-          IP-Adressen werden anonymisiert, so dass eine Zuordnung nicht möglich
-          ist (IP-Masking).
-          Sie können die Installation der Cookies durch eine entsprechende
-          Einstellung der Browser-Software verhindern; wir weisen jedoch darauf
-          hin, dass in diesem Fall gegebenenfalls nicht sämtliche Funktionen
-          dieser Website vollumfänglich genutzt werden können.
-          Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten
-          und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer
-          IP-Adresse) sowie die Verarbeitung dieser Daten durch Google
-          verhindern, indem Sie ein Browser-Add-on herunterladen und
-          installieren (https://tools.google.com/dlpage/gaoptout?hl=de).
-          Alternativ zum Browser-Add-on, insbesondere bei Browsern auf mobilen
-          Endgeräten, können Sie die Erfassung durch Google Analytics zudem
-          verhindern, indem Sie auf diesen Link klicken. Es wird ein
-          Opt-out-Cookie gesetzt, das die zukünftige Erfassung Ihrer Daten beim
-          Besuch dieser Website verhindert. Der Opt-out-Cookie gilt nur in
-          diesem Browser und nur für unsere Website und wird auf Ihrem Gerät
-          abgelegt. Löschen Sie die Cookies in diesem Browser, müssen Sie das
-          Opt-out-Cookie erneut setzen.
-          Weitere Informationen zum Datenschutz im Zusammenhang mit Google
-          Analytics finden Sie etwa in der Google Analytics-Hilfe
-          (https://support.google.com/analytics/answer/6004245?hl=de). c. Google
+                  Die im Folgenden aufgeführten und von uns eingesetzten
+                  Tracking-Maßnahmen werden auf Grundlage des Art. 6 Abs. 1 S. 1 lit. f
+                  DSGVO durchgeführt. Mit den zum Einsatz kommenden Tracking-Maßnahmen
+                  wollen wir eine bedarfsgerechte Gestaltung und die fortlaufende
+                  Optimierung unserer Webseite sicherstellen. Zum anderen setzen wir die
+                  Tracking-Maßnahmen ein, um die Nutzung unserer Webseite statistisch zu
+                  erfassen und zum Zwecke der Optimierung unseres Angebotes für Sie
+                  auszuwerten. Diese Interessen sind als berechtigt im Sinne der
+                  vorgenannten Vorschrift anzusehen. Die jeweiligen
+                  Datenverarbeitungszwecke und Datenkategorien sind aus den
+                  entsprechenden Tracking-Tools zu entnehmen.
+                  b. Google Analytics1
+                  Zum Zwecke der bedarfsgerechten Gestaltung und fortlaufenden
+                  Optimierung unserer Seiten nutzen wir Google Analytics, ein
+                  Webanalysedienst der Google Inc.
+          (<a href="https://www.google.de/intl/de/about/">https://www.google.de/intl/de/about/</a>) (1600 Amphitheatre Parkway,
+                  Mountain View, CA 94043, USA; im Folgenden „Google“). In diesem
+                  Zusammenhang werden pseudonymisierte Nutzungsprofile erstellt und
+                  Cookies (siehe unter Ziff. 4) verwendet. Die durch den Cookie
+                  erzeugten Informationen über Ihre Benutzung dieser Website wie i.
+                  Browser-Typ/-Version,
+                  ii. verwendetes Betriebssystem,
+                  iii. Referrer-URL (die zuvor besuchte Seite),
+                  iv. Hostname des zugreifenden Rechners (IP-Adresse),
+                  v. Uhrzeit der Serveranfrage,
+                  werden an einen Server von Google in den USA übertragen und dort
+                  gespeichert. Die Informationen werden verwendet, um die Nutzung der
+                  Website auszuwerten, um Reports über die Websiteaktivitäten
+                  zusammenzustellen und um weitere mit der Websitenutzung und der
+                  Internetnutzung verbundene Dienstleistungen zu Zwecken der
+                  Marktforschung und bedarfsgerechten Gestaltung dieser Internetseiten
+                  zu erbringen. Auch werden diese Informationen gegebenenfalls an Dritte
+                  übertragen, sofern dies gesetzlich vorgeschrieben ist oder soweit
+                  Dritte diese Daten im Auftrag verarbeiten. Es wird in keinem Fall Ihre
+                  IP-Adresse mit anderen Daten von Google zusammengeführt. Die
+                  IP-Adressen werden anonymisiert, so dass eine Zuordnung nicht möglich
+                  ist (IP-Masking).
+                  Sie können die Installation der Cookies durch eine entsprechende
+                  Einstellung der Browser-Software verhindern; wir weisen jedoch darauf
+                  hin, dass in diesem Fall gegebenenfalls nicht sämtliche Funktionen
+                  dieser Website vollumfänglich genutzt werden können.
+                  Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten
+                  und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer
+                  IP-Adresse) sowie die Verarbeitung dieser Daten durch Google
+                  verhindern, indem Sie ein Browser-Add-on herunterladen und
+          installieren (<a href="https://tools.google.com/dlpage/gaoptout?hl=de">https://tools.google.com/dlpage/gaoptout?hl=de</a>).
+                  Alternativ zum Browser-Add-on, insbesondere bei Browsern auf mobilen
+                  Endgeräten, können Sie die Erfassung durch Google Analytics zudem
+                  verhindern, indem Sie auf diesen Link klicken. Es wird ein
+                  Opt-out-Cookie gesetzt, das die zukünftige Erfassung Ihrer Daten beim
+                  Besuch dieser Website verhindert. Der Opt-out-Cookie gilt nur in
+                  diesem Browser und nur für unsere Website und wird auf Ihrem Gerät
+                  abgelegt. Löschen Sie die Cookies in diesem Browser, müssen Sie das
+                  Opt-out-Cookie erneut setzen.
+                  Weitere Informationen zum Datenschutz im Zusammenhang mit Google
+                  Analytics finden Sie etwa in der Google Analytics-Hilfe
+          (<a href="https://support.google.com/analytics/answer/6004245?hl=de">https://support.google.com/analytics/answer/6004245?hl=de</a>). c. Google
           Adwords Conversion Tracking
           Um die Nutzung unserer Webseite statistisch zu erfassen und zum Zwecke
           der Optimierung unserer Website für Sie auszuwerten, nutzen wir ferner
