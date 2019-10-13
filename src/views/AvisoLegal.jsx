@@ -40,7 +40,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-              2. Aktualisierung der Datenschutzerklärung
+              2. Aktualisierung der Datenschutzerklärung:&nbsp;
             </strong>
               Wir behalten uns deshalb das Recht vor, die Erklärung nach Bedarf
               zu ändern oder zu ergänzen. Die Änderung werden wir an dieser
@@ -50,7 +50,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          3. Name und Anschrift des für die Verarbeitung Verantwortlichen
+          3. Name und Anschrift des für die Verarbeitung Verantwortlichen:&nbsp;
           </strong>
           Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger
           in den Mitgliedstaaten der Europäischen Union geltenden
@@ -107,7 +107,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          6. Weitergabe von Daten
+          6. Weitergabe von Daten:&nbsp;
           </strong>
           Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als
           den im Folgenden aufgeführten Zwecken findet nicht statt.
@@ -130,7 +130,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          7. Cookies
+          7. Cookies:&nbsp;
           </strong>
           Wir setzen auf unserer Seite Cookies ein. Hierbei handelt es sich um
           kleine Dateien, die Ihr Browser automatisch erstellt und die auf Ihrem
@@ -174,23 +174,23 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          8. Analyse-Tools</strong>
-          a. Tracking-Tools
-                  Die im Folgenden aufgeführten und von uns eingesetzten
-                  Tracking-Maßnahmen werden auf Grundlage des Art. 6 Abs. 1 S. 1 lit. f
-                  DSGVO durchgeführt. Mit den zum Einsatz kommenden Tracking-Maßnahmen
-                  wollen wir eine bedarfsgerechte Gestaltung und die fortlaufende
-                  Optimierung unserer Webseite sicherstellen. Zum anderen setzen wir die
-                  Tracking-Maßnahmen ein, um die Nutzung unserer Webseite statistisch zu
-                  erfassen und zum Zwecke der Optimierung unseres Angebotes für Sie
-                  auszuwerten. Diese Interessen sind als berechtigt im Sinne der
-                  vorgenannten Vorschrift anzusehen. Die jeweiligen
-                  Datenverarbeitungszwecke und Datenkategorien sind aus den
-                  entsprechenden Tracking-Tools zu entnehmen.
-                  b. Google Analytics1
-                  Zum Zwecke der bedarfsgerechten Gestaltung und fortlaufenden
-                  Optimierung unserer Seiten nutzen wir Google Analytics, ein
-                  Webanalysedienst der Google Inc.
+                8. Analyse-Tools</strong>:&nbsp;
+              a. Tracking-Tools
+                      Die im Folgenden aufgeführten und von uns eingesetzten
+                      Tracking-Maßnahmen werden auf Grundlage des Art. 6 Abs. 1 S. 1 lit. f
+                      DSGVO durchgeführt. Mit den zum Einsatz kommenden Tracking-Maßnahmen
+                      wollen wir eine bedarfsgerechte Gestaltung und die fortlaufende
+                      Optimierung unserer Webseite sicherstellen. Zum anderen setzen wir die
+                      Tracking-Maßnahmen ein, um die Nutzung unserer Webseite statistisch zu
+                      erfassen und zum Zwecke der Optimierung unseres Angebotes für Sie
+                      auszuwerten. Diese Interessen sind als berechtigt im Sinne der
+                      vorgenannten Vorschrift anzusehen. Die jeweiligen
+                      Datenverarbeitungszwecke und Datenkategorien sind aus den
+                      entsprechenden Tracking-Tools zu entnehmen.
+                      b. Google Analytics1
+                      Zum Zwecke der bedarfsgerechten Gestaltung und fortlaufenden
+                      Optimierung unserer Seiten nutzen wir Google Analytics, ein
+                      Webanalysedienst der Google Inc.
           (<a href="https://www.google.de/intl/de/about/">https://www.google.de/intl/de/about/</a>) (1600 Amphitheatre Parkway,
                   Mountain View, CA 94043, USA; im Folgenden „Google“). In diesem
                   Zusammenhang werden pseudonymisierte Nutzungsprofile erstellt und
@@ -305,7 +305,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          9. Speicherung der IP Adresse
+          9. Speicherung der IP Adresse:&nbsp;
           </strong>
           Unsere Kommentarfunktion speichert die IP-Adressen der Nutzer, die
           Kommentare verfassen. Da wir Kommentare auf unserer Seite nicht vor
@@ -317,7 +317,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          10. SSL-Verschlüsselung
+          10. SSL-Verschlüsselung:&nbsp;
           </strong>
           Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der
           Übertragung vertraulicher Inhalte, wie zum Beispiel der Anfragen, die
@@ -332,7 +332,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          11. Betroffenenrechte
+          11. Betroffenenrechte:&nbsp;
           </strong>
           Sie haben das Recht:
           a. gemäß Art. 15 DSGVO Auskunft über Ihre von uns verarbeiteten
@@ -399,7 +399,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-           12. Widerspruchsrecht
+           12. Widerspruchsrecht:&nbsp;
            </strong>
           Sofern Ihre personenbezogenen Daten auf Grundlage von berechtigten
           Interessen gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO verarbeitet werden,
@@ -416,7 +416,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          13. Recht auf Beschwerde bei einer Aufsichtsbehörde
+          13. Recht auf Beschwerde bei einer Aufsichtsbehörde:&nbsp;
           </strong>
           Unbeschadet eines anderweitigen verwaltungsrechtlichen oder
           gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf Beschwerde bei
@@ -433,7 +433,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          14. Rechtsgrundlage der Verarbeitung
+          14. Rechtsgrundlage der Verarbeitung:&nbsp;
           </strong>
           Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine
           Einwilligung der betroffenen Person einholen, dient Artikel 6 Absatz 1
@@ -462,7 +462,7 @@ const AvisoLegal = (props) => {
           <p className="txt">
             <li className="app-olist-item">
             <strong className="txt-highlight">
-          15. Dauer der Speicherung personenbezogener Daten </strong>
+          15. Dauer der Speicherung personenbezogener Daten: </strong>
           Personenbezogene Daten werden für die Dauer der jeweiligen
           gesetzlichen Aufbewahrungsfrist gespeichert. Nach Ablauf der Frist
           erfolgt eine routinemäßige Löschung der Daten, sofern nicht eine
