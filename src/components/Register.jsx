@@ -206,6 +206,20 @@ class Register extends React.Component {
                 />
               ))}
             </div>
+            <div className='app-form-accept'>
+              <div className='app-form-accept'>
+                <input required type='checkbox' />
+                <p className='app-form-label-txt '>{DIC.FORM_ACCEPT_BASES}</p>
+              </div>
+              <div className='app-form-accept'>
+                <input required type='checkbox' />
+                <p className='app-form-label-txt'>
+                  {DIC.FORM_ACCEPT_PHOTO_AUTH}
+                </p>
+              </div>
+            </div>
+            <p className='app-form-label-txt-error' />
+
             <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
           </form>
         </div>

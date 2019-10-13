@@ -19,6 +19,16 @@
   width: 100%;
 }
 
+.app-form-accept {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 5rem;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
 .app-form-label {
   color: white;
   font-size: var(--minSize);
@@ -31,7 +41,7 @@
 
 .app-form-label-txt {
   color: white;
-  font-size: var(--minSize);
+  font-size: var(--tinySize);
   font-family: Regular;
   display: inline-block;
   max-width: 100%;
@@ -91,6 +101,7 @@
   width: 78%;
   box-sizing: border-box;
 }
+
 .app-form-input-button {
   width: 18%;
   float: right;
@@ -187,7 +198,7 @@ textarea.active.invalid {
   visibility: hidden;
 }
 
-.app-form-checkbox input[type="checkbox"]:checked + label {
+.app-form-checkbox input[type="checkbox"]:checked+label {
   left: 43px;
   background: var(--secondColor);
   color: white;

@@ -21,6 +21,37 @@ const Bases = (props) => {
 {DIC.NAV_BASES}
 </h1>
       </header>
+      <article className="app-section-width">
+        <p>
+Estimados compañeros:
+</p>
+        <p>
+          El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía
+          de vuestros alumnos de español, a la novena edición del Concurso
+          Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”. A continuación
+          encontraréis las bases del concurso, el proceso de selección de
+          candidatos e información general sobre las semifinales pre
+          eliminatorias y la final regional, que tendrá lugar el día 19 de mayo
+          de 2020 en la sede de Fráncfort del Instituto Cervantes. La fecha
+          límite para la inscripción de los colegios participantes será el 30 de
+          noviembre de 2019.
+{' '}
+        </p>
+        <p>
+          Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está
+          incluido en la red de concursos oficiales del Kultusministerium de
+          Hesse. En su noveno año de celebración consecutiva cuenta con el apoyo
+          institucional de la Consejería de Educación de la Embajada de España
+          en Alemania, del Instituto Cervantes de Fráncfort, del Consulado
+          General de España en Fráncfort, del Consulado General de México en
+          Fráncfort, del Consulado General de Colombia en Fráncfort, del
+          Consulado General de Chile en Fráncfort, del Consulado General de Perú
+          en Fráncfort y de la Asociación Alemana de Profesores de Español en
+          Hesse (DSV). Asímismo con el patrocinio de las editoriales Grupo SM,
+          Schulverlag Klett, Cornelsen Verlag y Edinumen.
+        </p>
+      </article>
+      <hr className="hr-margin" />
       <article>
         <ol className="app-section-width app-olist">
           <li className="app-olist-item">
@@ -62,7 +93,10 @@ const Bases = (props) => {
               presente al concurso. Como pauta orientativa se establece un nivel
               A1 para alumnos en primer año de aprendizaje; A2 segundo o tercero
               y B1 cuarto o quinto; dependiendo de si los alumnos estudian el
-              español como segunda o tercera lengua extranjera.
+              español como segunda o tercera lengua extranjera. Otro criterio
+              importante a la hora de establecer el nivel en el que participen
+              los candidatos será el nivel (MCER) del libro de texto que se esté
+              tratando en clase en la segunda mitad del curso escolar.
             </p>
             <br />
             <p className="txt">
@@ -82,6 +116,13 @@ const Bases = (props) => {
               concursar, siempre y cuando no hayan recibido hasta el momento
               ningún primer premio.
             </p>
+            <p className="txt">
+              Los alumnos que hayan concursado ya en una categoría no podrán
+              repetir en el futuro en la misma categoría, sí en la siguiente.
+              Los alumnos que participen en el nivel B2 podrán volver a
+              concursar, siempre y cuando no hayan recibido hasta el momento
+              ningún primer premio.
+            </p>
           </li>
           <li className="app-olist-item">
             <p className="txt txt-inline">
@@ -93,7 +134,7 @@ Textos:&nbsp;
               -procedentes de libros de texto de español como lengua extranjera
               o de literatura juvenil (según la categoría) y correspondientes al
               nivel para el que participe- y leerá el que se elija al azar en el
-              momento de la lectura.
+              momento previo a la lectura.
             </p>
             <p className="txt">
               <strong className="txt-highlight">
@@ -104,7 +145,7 @@ Textos:&nbsp;
               candidatos por parte del jurado, ésta será la selección de textos
               a leer:
               <strong className="txt-highlight">
-                &nbsp;En la categoría A1 habrá 3 texto, en A2 4 y en B1 / B2 5
+                &nbsp;En la categoría A1 habrá 3 texto, en A2 y B1 4 y en B2 5
                 textos, fijados por la organización del concurso, los alumnos
                 prepararán todos los textos de su categoría y leerán uno de
                 ellos, elegido al azar el día del concurso. Los textos A1
@@ -114,8 +155,8 @@ Textos:&nbsp;
             <p className="txt">
               <strong className="txt-highlight">
                 Los textos para la categoría B2 son fragmentos -adaptados- de
-                literatura juvenil mejicana, colombiana y chilena (resultado de
-                la cooperación con los consulados de estos tres países).
+                literatura juvenil latinoamericana (resultado de la cooperación
+                con los consulados de México, Colombia, Chile y Perú).
               </strong>
             </p>
           </li>
@@ -130,6 +171,8 @@ Jurado:&nbsp;
               colegios participantes. Igualmente es de desear que siempre que
               sea posible los jurados de las semifinales también estén formados
               por personas externas (por lo menos 2 de los miembros del jurado).
+              Todos los miembros del jurado hablarán español como lengua
+              materna.
             </p>
             <p className="txt">
               Los miembros del jurado tendrán que entregar la puntuación de cada
@@ -159,11 +202,12 @@ Premios:&nbsp;
               para los ganadores y finalistas serán lotes de libros de las
               editoriales Grupo SM, Schulverlag Klett y Cornelsen Verlag,
               licencias del juego digital para aprender español Guadalingo de la
-              editorial Edinumen y vales de libros de la Asociación Alemana de
-              Profesores de Español en Hesse. También recibirán un certificado
-              por su participación, para los alumnos que consigan los primeros
-              puestos en las cuatro categorías, los certificados estarán
-              firmados por el Ministro de Cultura de Hesse.
+              editorial Edinumen , vales de libros de la Asociación Alemana de
+              Profesores de Español en Hesse y matrículas DELE del Instituto
+              Cervantes de Fráncfort. También recibirán un certificado por su
+              participación, para los alumnos que consigan los primeros puestos
+              en las cuatro categorías, los certificados estarán firmados por el
+              Ministro de Cultura de Hesse.
             </p>
           </li>
           <li className="app-olist-item">
@@ -220,14 +264,28 @@ Las semifinales&nbsp;
 </strong>
               se habrán celebrado antes del
               <strong className="txt-highlight">
-                &nbsp;12 de abril de 2019.&nbsp;
+                &nbsp;30 de abril de 2020.&nbsp;
               </strong>
               Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
               número de centros que se inscriban al concurso (fecha máxima de
-              inscripción 30 de noviembre de 2018). El número de SF no será
+              inscripción 30 de noviembre de 2019). El número de SF no será
               mayor a 6, para evitar que la final se prolongue demasiado.
+            </p>
+            <p className="txt">
+              Todos los centros escolares que se inscriban al concurso estarán
+              dispuestos a celebrar y organizar en su colegio una de las
+              semifinales. En caso contrario se avisará a la organización antes
+              de terminar el plazo de inscripción. Organizar una semifinal sólo
+              requiere tener una sala grande en el colegio, contactar e invitar
+              a los miembros del jurado con la ayuda del resto de los centros de
+              la semifinal y recoger los premios en el IC.
+            </p>
+            <p className="txt">
+              Un representante de cada semifinal recogerá los premios para su
+              eliminatoria en Instituto Cervantes de Fráncfort en la fecha
+              indicada por la organización (normalmente en febrero de cada año).
             </p>
           </li>
           <li className="app-olist-item">
@@ -236,10 +294,12 @@ Las semifinales&nbsp;
                 Semifinal Latinoamérica: &nbsp;
               </strong>
               Fruto de la colaboración con los Consulados Generales de México,
-              Colombia y Chile se celebrará una semifinal B2 para alumnos
-              procedentes de los tres países. Para ello no será necesario ser
+              Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
+              procedentes de los cuatro países. Para ello no será necesario ser
               poseedor de la nacionalidad del país. La SF se celebrará también
-              antes del 12 de abril de 2019.
+              antes del 30 de abril de 2020 en el Instituto Cervantes de
+              Fráncfort con el apoyo y tutela de los consulados latinoamericanos
+              antes mencionados.
             </p>
             <p className="txt">
               <strong className="txt-highlight">
@@ -254,10 +314,44 @@ Semifinal ALCE:&nbsp;
           <li className="app-olist-item double">
             <p className="txt txt-inline">
               <strong className="txt-highlight">
+Página web:&nbsp;
+</strong>
+A
+              partir de la convocatoria 2019 el concurso cuenta con una página
+              web
+{' '}
+              <strong className="txt-highlight">
+www.leo-leo-hessen.com
+</strong>
+{' '}
+              donde los colegios interesados se podrán informar de los detalles
+              del concurso. En la página se encuentran audios para practicar los
+              textos de lectura.
+            </p>
+          </li>
+          <li className="app-olist-item double">
+            <p className="txt txt-inline">
+              <strong className="txt-highlight">
 Inscripción:&nbsp;
 </strong>
-              Tendrá lugar hasta el 30 de noviembre de 2018 y se realizará
-              exclusivamente a través de la página web.
+              Tendrá lugar hasta el
+{' '}
+              <strong className="txt-highlight">
+                30 de noviembre de 2019
+              </strong>
+{' '}
+              y se realizará exclusivamente a través de la página web. Para la
+              Semifinal Latinoamérica también se utilizará este medio.
+            </p>
+          </li>
+          <li className="app-olist-item double">
+            <p className="txt txt-inline">
+              <strong className="txt-highlight">
+                Protección de datos:&nbsp;
+              </strong>
+              Los centros inscritos se asegurarán de poseer la autorización de
+              los padres de los alumnos que participen para la posible
+              publicación de sus nombre y/o fotos en la página web del concurso.
             </p>
           </li>
         </ol>

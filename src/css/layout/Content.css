@@ -1,13 +1,18 @@
 .app-root {
   position: relative;
-  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Chrome */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .app-content {
   background: white;
   flex: 1 0 auto;
@@ -20,6 +25,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .app-header {
   position: relative;
   width: 100%;
@@ -51,8 +57,7 @@
 .app-section-1 {
   height: auto !important;
   min-height: auto;
-  background: url("../../assets/imgs/logo.jpg") -100px -50px no-repeat
-    var(--mainColor);
+  background: url("../../assets/imgs/logo.jpg") -100px -50px no-repeat var(--mainColor);
 }
 
 .app-section-2 {
@@ -109,6 +114,7 @@
   .app-section-boxes {
     flex-direction: column;
   }
+
   .app-section-box {
     width: 100%;
   }
@@ -119,6 +125,7 @@
     flex-direction: column;
     padding-bottom: 1rem;
   }
+
   .app-admin-title h1 {
     text-align: center;
   }
@@ -127,4 +134,10 @@
     margin-right: 0rem;
     margin-bottom: 0.5rem;
   }
+}
+
+.hr-margin {
+  margin: 3rem auto;
+  width: 40%;
+
 }
