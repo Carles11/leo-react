@@ -83,6 +83,8 @@ export const showInputError = input => {
       return handleText(item)
     case "textarea":
       return handleTextarea(item)
+    case "checkbox":
+      return true
     default:
       return true
   }
