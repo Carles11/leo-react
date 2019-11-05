@@ -34,7 +34,7 @@ const dictionary = {
     FORM_CP: 'Código Postal',
     FORM_CITY: 'Localidad',
     FORM_MAIL: 'Correo electrónico',
-    FORM_PHONE: 'Teléfono',
+    FORM_PHONE: 'Teléfono móvil de contacto',
     FORM_SCHOOL_NAME: 'Nombre del colegio',
     FORM_TITLE: 'Formulario de inscripción',
     FORM_WARNING: 'EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.',

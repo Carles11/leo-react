@@ -98,6 +98,16 @@ class AdminList extends React.Component {
       </a>
     )
 
+    const ExportToExcelButton = (
+      <button
+        type='button'
+        aria-label='Exportar Excel'
+        className='btn btn-invert'>
+        Exportar Excel
+        <ExcelExport schools={list} />
+      </button>
+    )
+
     return (
       <React.Fragment>
         {!loaded && <Loader />}
@@ -114,9 +124,7 @@ class AdminList extends React.Component {
                   content={() => this.componentRef}
                 />
               </div>
-              <div className='app-list-button'>
-                <ExcelExport schools={list} />
-              </div>
+              <div className='app-list-button'>{ExportToExcelButton}</div>
             </header>
             <ReactMessages
               message={error.message}
