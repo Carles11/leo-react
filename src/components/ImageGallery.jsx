@@ -24,7 +24,7 @@ class ImageGallery extends React.Component {
 
     if (position !== prevState.position && !lazyLoad) {
       this.setState(oldState => ({ lazyLoad: !oldState.lazyLoad }))
-      this.getPhotos(2018)
+      this.getPhotos(2019)
     }
   }
 
