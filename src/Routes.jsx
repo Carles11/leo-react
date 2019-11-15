@@ -107,7 +107,7 @@ const Routes = props => {
           />
         )}
       />
-      <Route
+      {/* <Route
         path='/impressum'
         component={props => (
           <RoutesAsync
@@ -116,7 +116,7 @@ const Routes = props => {
             loadingPromise={import('./views/Impressum')}
           />
         )}
-      />
+      /> */}
       <Route
         component={props => (
           <RoutesAsync

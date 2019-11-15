@@ -8,7 +8,7 @@ export const PARAGRAPHS = [
 
 export const FOOTER_DATA = [
   { label: "Aviso legal", url: "/aviso-legal" },
-  { label: "Impressum", url: "/impressum" },
+  // { label: "Impressum", url: "/impressum" },
   {
     label: "HessenWald Schule",
     url: "http://hessenwaldschule.net",
