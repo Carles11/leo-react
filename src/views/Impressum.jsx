@@ -10,6 +10,9 @@ const Impressum = props => {
     textAlign: 'center',
     padding: '2rem',
   }
+  const marginTop = {
+    marginTop: '2rem',
+  }
   return (
     <section className='app-content pb2rem mb2rem'>
       <Helmet
@@ -26,25 +29,18 @@ const Impressum = props => {
         <p className='txt txt-inline'>
           <ul style={style} className='app-section-width'>
             <li>
-              <strong className='txt-highlight'>
-                Land Hessen Hessisches Kultusministerium
-              </strong>
+              <strong className='txt-highlight'>Celia Cid Sánchez</strong>
             </li>
-            <li>Luisenplatz 10 65185 Wiesbaden </li>{' '}
-            <li>Telefon und Fax Tel.: +49 (0) 611 368 -0 </li>
-            <li>Fax.: +49 (0) 611 368 -2099</li>{' '}
-            <li>E-Mail: poststelle.hkm@kultus.hessen.de</li>
-            <li>
-              Das Land Hessen ist eine Körperschaft des öffentlichen Rechts.
-              Vertretungsberechtigt ist der hessische Ministerpräsident. Die
-              Umsatzsteueridentifikationsnummer für den Geschäftsbereich des
-              Hessischen Kultusministerium: DE270134985
-            </li>
-            <Button
-              label='Volver a la página de inicio'
-              link='/'
-              external={false}
-            />
+            <li>Wolfsgartenallee 8 </li>
+            <li>64331 Weiterstadt</li> <li>Tel.: +49 (0) 611 368 -0 </li>{' '}
+            <li>E-Mail: c.cid@hws.schule</li>
+            <div style={marginTop}>
+              <Button
+                label='Volver a la página de inicio'
+                link='/'
+                external={false}
+              />
+            </div>
           </ul>
         </p>
       </article>

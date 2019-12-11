@@ -2,13 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Button = (props) => {
-  const {
-    link, label, type, external, css, fn,
-  } = props
+const Button = props => {
+  const { link, label, type, external, css, fn } = props
 
   const span = (
-    <span className="line">
+    <span className='line'>
       <span />
       <span />
     </span>
@@ -24,14 +22,22 @@ const Button = (props) => {
       )
     case true:
       return (
-        <a className={`btn-link ${css}`} aria-label={label} href={link} target="_blank">
+        <a
+          className={`btn-link ${css}`}
+          aria-label={label}
+          href={link}
+          target='_blank'>
           {label}
           {span}
         </a>
       )
     default:
       return (
-        <button onClick={fn} type={type} aria-label={label} className={`btn ${css}`}>
+        <button
+          onClick={fn}
+          type={type}
+          aria-label={label}
+          className={`btn ${css}`}>
           {label}
         </button>
       )
