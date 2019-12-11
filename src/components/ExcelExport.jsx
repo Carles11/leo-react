@@ -9,7 +9,7 @@ const ExcelColumn = ReactExport.ExcelFile.ExcelColumn
 
 function ExcelExport(props) {
   return (
-    <ExcelFile element={<button>Descarga Excel</button>}>
+    <ExcelFile>
       <ExcelSheet data={props.schools} name='Colegios'>
         <ExcelColumn label='Colegio' value='name' />
         <ExcelColumn label='Contacto' value='contact' />
