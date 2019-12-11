@@ -24,7 +24,7 @@ const dictionary = {
     FORM_ACCEPT_PHOTO_AUTH:
       'Sé que debo adquirir la autorización de los alumnos/as que participan en el concurso en cuanto a la posible publicación de sus nombres y/o fotos en la página web del concurso o en revistas especializadas',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
-    ERROR_REQUIRED: 'Es un campo obligatorio.',
+    ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',
     FORM_ADDRESS: 'Dirección',
     FORM_CATEGORIES:

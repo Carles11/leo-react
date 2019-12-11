@@ -1,11 +1,11 @@
-import getDictionary from "./dictionary"
+import getDictionary from './dictionary'
 
 const DIC = getDictionary()
 
 function handleText(item) {
   const itemArg = item
-  const isEmail = itemArg.id.type === "email"
-  const isPassword = itemArg.id.type === "password"
+  const isEmail = itemArg.id.type === 'email'
+  const isPassword = itemArg.id.type === 'password'
 
   if (!itemArg.validity.valid) {
     if (itemArg.validity.valueMissing) {
@@ -21,23 +21,21 @@ function handleText(item) {
     return false
   }
 
-  itemArg.error.textContent = ""
+  itemArg.error.textContent = ''
   return true
 }
 
 function handleTextarea(item) {
   const itemArg = item
   if (itemArg.id.value.length < 25) {
-    itemArg.id.classList.add("invalid")
-    itemArg.error.textContent = `${
-      itemArg.label
-    } should be longer than 25 chars`
+    itemArg.id.classList.add('invalid')
+    itemArg.error.textContent = `${itemArg.label} should be longer than 25 chars`
     return false
   }
 
-  itemArg.id.classList.remove("invalid")
-  itemArg.id.classList.add("valid")
-  itemArg.error.textContent = ""
+  itemArg.id.classList.remove('invalid')
+  itemArg.id.classList.add('valid')
+  itemArg.error.textContent = ''
   return true
 }
 
@@ -46,24 +44,24 @@ export const showCheckboxError = item => {
     error = null
 
   if (item.value === undefined) {
-    checkboxes = Array.from(item.querySelectorAll("input[type=checkbox]"))
-    error = item.querySelector(".app-form-label-txt-error")
+    checkboxes = Array.from(item.querySelectorAll('input[type=checkbox]'))
+    error = item.querySelector('.app-form-label-txt-error')
   } else {
     checkboxes = Array.from(
-      item.parentNode.parentNode.querySelectorAll("input[type=checkbox]")
+      item.parentNode.parentNode.querySelectorAll('input[type=checkbox]'),
     )
     error = item.parentNode.parentNode.querySelector(
-      ".app-form-label-txt-error"
+      '.app-form-label-txt-error',
     )
   }
 
   const isChecked = checkboxes.some(checkbox => checkbox.dataset.checked)
 
   if (isChecked) {
-    error.textContent = " "
+    error.textContent = ''
     return true
   } else {
-    error.textContent = "Debe seleccionar al menos una categoría."
+    error.textContent = 'Debe seleccionar al menos una categoría.'
     return false
   }
 }
@@ -73,17 +71,17 @@ export const showInputError = input => {
     id: document.querySelector(`#${input.id}`),
     validity: document.querySelector(`#${input.id}`).validity,
     label: document.querySelector(`#${input.name}Label`).textContent,
-    error: document.querySelector(`#${input.name}Error`)
+    error: document.querySelector(`#${input.name}Error`),
   }
 
   switch (input.type) {
-    case "text":
-    case "email":
-    case "password":
+    case 'text':
+    case 'email':
+    case 'password':
       return handleText(item)
-    case "textarea":
+    case 'textarea':
       return handleTextarea(item)
-    case "checkbox":
+    case 'checkbox':
       return true
     default:
       return true
@@ -91,9 +89,9 @@ export const showInputError = input => {
 }
 
 export const showFormErrors = () => {
-  const inputs = document.querySelectorAll("input:required")
-  const textareas = document.querySelectorAll("textarea:required")
-  const checkboxParent = document.getElementById("checkboxWrapper")
+  const inputs = document.querySelectorAll('input:required')
+  const textareas = document.querySelectorAll('textarea:required')
+  const checkboxParent = document.getElementById('checkboxWrapper')
 
   let isFormValid = true
 
@@ -108,6 +106,6 @@ export const showFormErrors = () => {
   })
 
   if (checkboxParent && !showCheckboxError(checkboxParent)) isFormValid = false
-
+  debugger
   return isFormValid
 }

@@ -15,7 +15,6 @@ import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg'
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg'
 import logoKlett from '../assets/imgs/logo-klett.jpg'
 import logoPeru from '../assets/imgs/logo-peru.jpg'
-import logoHkm from '../assets/imgs/logo-hkm.png'
 
 const Footer = props => {
   const { DIC, FOOTER_DATA } = props
@@ -155,13 +154,7 @@ const Footer = props => {
               aria-label='Enlace a la página web de Consulado del Perú en Frankfurt'>
               <img src={logoPeru} alt='Klett' />
             </a>
-            <a
-              href='https://landhatzukunft.hessen.de/'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Enlace a la página web de Hessisches Kultusministerium'>
-              <img src={logoHkm} alt='Klett' />
-            </a>
+            
           </article>
         </section>
       </div>

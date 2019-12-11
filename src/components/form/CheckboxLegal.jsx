@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class Checkbox extends React.Component {
+class CheckboxLegal extends React.Component {
   state = {
     active: false,
   }
@@ -45,4 +45,4 @@ class Checkbox extends React.Component {
   }
 }
 
-export default Checkbox
+export default CheckboxLegal
