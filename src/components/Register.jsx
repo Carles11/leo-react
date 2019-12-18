@@ -12,6 +12,7 @@ import SingleInput from './form/SingleInput'
 import Checkbox from './form/Checkbox'
 import Button from './Button'
 import { isDisabled } from '../utils/helpers'
+import Einwilligung from '../assets/docs/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf'
 
 const categories = ['A1', 'A2', 'B1', 'B2']
 
@@ -111,7 +112,11 @@ class Register extends React.Component {
   render() {
     const { DIC } = this.props
     const { message, send, error } = this.state
-
+    // const styleMessage = {
+    //   color: 'white',
+    //   marginTop: 0,
+    //   marginLeft: '1rem',
+    // }
     return (
       <article className='app-section app-section-1 pSides05rem pb2rem'>
         <ReactMessages
@@ -217,7 +222,16 @@ class Register extends React.Component {
                   type='checkbox'
                 />
                 <label htmlFor='bases' className='app-form-label-txt '>
-                  {DIC.FORM_ACCEPT_BASES}
+                  He leído y acepto{' '}
+                  <a
+                    className='btn-link-auth'
+                    href='https://www.leo-leo-hessen.com/bases-del-concurso'
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    <strong>las bases</strong>
+                  </a>{' '}
+                  del concurso 2020
+                  {/* {DIC.FORM_ACCEPT_BASES} */}
                 </label>
               </div>
               <div className='app-form-accept'>
@@ -230,7 +244,18 @@ class Register extends React.Component {
                   type='checkbox'
                 />
                 <label htmlFor='photo' className='app-form-label-txt'>
-                  {DIC.FORM_ACCEPT_PHOTO_AUTH}
+                  {/* {DIC.FORM_ACCEPT_PHOTO_AUTH} */}
+                  Sé que debo adquirir
+                  <a
+                    className='btn-link-auth'
+                    href={Einwilligung}
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    <strong>la autorización (.pdf)</strong>
+                  </a>{' '}
+                  de los alumnos/as que participan en el concurso en cuanto a la
+                  posible publicación de sus nombres y/o fotos en la página web
+                  del concurso o en revistas especializadas
                 </label>
               </div>
             </div>

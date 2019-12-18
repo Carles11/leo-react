@@ -20,9 +20,6 @@ const dictionary = {
     DOWNLOAD_TEXT: 'Descargue aquí los textos de la edición anterior 2018.',
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
     SUBDESCRIPTION: 'Próxima final el 19 de mayo de 2020',
-    FORM_ACCEPT_BASES: 'He leído y acepto las bases del concurso 2020',
-    FORM_ACCEPT_PHOTO_AUTH:
-      'Sé que debo adquirir la autorización de los alumnos/as que participan en el concurso en cuanto a la posible publicación de sus nombres y/o fotos en la página web del concurso o en revistas especializadas',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',

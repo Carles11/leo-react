@@ -53,6 +53,14 @@
 	outline: none;
 }
 
+.btn-link-auth {
+	color: var(--secondColor);
+	text-decoration: none;
+	margin: 0 0.5rem;
+
+}
+
+
 .btn-link .line {
 	position: absolute;
 	top: 0;
