@@ -1,0 +1,18 @@
+.grid-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.mini-grid-row {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.mini-grid-margin {
+  margin-left: 1rem;
+}
+
+.mini-grid-item-center {
+  align-self: center;
+}

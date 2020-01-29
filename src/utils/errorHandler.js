@@ -58,14 +58,13 @@ export const showCheckboxError = item => {
   }
 
   const isChecked = checkboxes.some(checkbox => checkbox.dataset.checked)
-
+  debugger
   if (isChecked) {
     error.textContent = ''
     return true
-  } else {
-    error.textContent = 'Debe seleccionar al menos una categoría.'
-    return false
   }
+  error.textContent = 'Esta selección es obligatoria.'
+  return false
 }
 
 export const showInputError = input => {

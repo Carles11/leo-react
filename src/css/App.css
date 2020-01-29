@@ -5,6 +5,8 @@
 @import './layout/Body.css';
 @import './layout/Content.css';
 @import './layout/Footer.css';
+@import './layout/MiniGrid.css';
+
 
 /** COMPONENT STYLES **/
 @import './component/Background.css';
@@ -19,4 +21,3 @@
 /** PROPERTY STYLES **/
 @import './property/Text.css';
 @import './property/BoxModel.css';
-

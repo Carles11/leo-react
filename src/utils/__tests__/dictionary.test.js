@@ -1,6 +1,6 @@
 import getDicionary from '../dictionary'
 
-describe('getDictionary funciton', () => {
+describe('getDictionary function', () => {
   it('should return an object with dictionary entries', () => {
     const result = getDicionary()
     expect(result).toBeInstanceOf(Object)

@@ -13,6 +13,7 @@ import Checkbox from './form/Checkbox'
 import Button from './Button'
 import { isDisabled } from '../utils/helpers'
 import Einwilligung from '../assets/docs/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf'
+import '../css/layout/MiniGrid.css'
 
 const categories = ['A1', 'A2', 'B1', 'B2']
 
@@ -45,7 +46,7 @@ class Register extends React.Component {
     }
 
     showCheckboxError(elem)
-
+    console.log('E-TARGET', elem)
     if (category.indexOf(value) === -1) {
       category.push(value)
     } else {
@@ -211,6 +212,58 @@ class Register extends React.Component {
                 />
               ))}
             </div>
+            <div className='grid-row'>
+              <div id='checkboxWrapper' className=' app-form-whole'>
+                <div className='mini-grid-row'>
+                  <p className='app-form-label-txt-error' />
+                  <Checkbox
+                    key='bases'
+                    label='Ok'
+                    handleCheckbox={this.handleCheckbox}
+                    send={send}
+                  />
+                  <p className='app-form-label-txt '>
+                    He leído y acepto{' '}
+                    <a
+                      className='btn-link-auth'
+                      href='https://www.leo-leo-hessen.com/bases-del-concurso'
+                      target='_blank'
+                      rel='noopener noreferrer'>
+                      <strong>las bases</strong>
+                    </a>{' '}
+                    del concurso 2020
+                  </p>
+                </div>
+              </div>
+
+              <div id='checkboxWrapper' className='app-form-accept'>
+                <div className='mini-grid-row'>
+                  <div>
+                    <p className='app-form-label-txt-error' />
+                    <Checkbox
+                      key='photo'
+                      label='Ok'
+                      handleCheckbox={this.handleCheckbox}
+                      send={send}
+                    />
+                  </div>
+                  <p className='app-form-label-txt '>
+                    Sé que debo adquirir
+                    <a
+                      className='btn-link-auth'
+                      href={Einwilligung}
+                      target='_blank'
+                      rel='noopener noreferrer'>
+                      <strong>la autorización (.pdf)</strong>
+                    </a>{' '}
+                    de los alumnos/as que participan en el concurso en cuanto a
+                    la posible publicación de sus nombres y/o fotos en la página
+                    web del concurso o en revistas especializadas
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*
             <div id='checkboxWrapper' className='app-form-accept'>
               <div className='app-form-accept'>
                 <input
@@ -230,9 +283,9 @@ class Register extends React.Component {
                     rel='noopener noreferrer'>
                     <strong>las bases</strong>
                   </a>{' '}
-                  del concurso 2020
-                  {/* {DIC.FORM_ACCEPT_BASES} */}
-                </label>
+                  del concurso 2020  */}
+            {/* {DIC.FORM_ACCEPT_BASES} */}
+            {/*</label> 
               </div>
               <div className='app-form-accept'>
                 <input
@@ -244,7 +297,7 @@ class Register extends React.Component {
                   type='checkbox'
                 />
                 <label htmlFor='photo' className='app-form-label-txt'>
-                  {/* {DIC.FORM_ACCEPT_PHOTO_AUTH} */}
+                  {/* {DIC.FORM_ACCEPT_PHOTO_AUTH} 
                   Sé que debo adquirir
                   <a
                     className='btn-link-auth'
@@ -260,7 +313,7 @@ class Register extends React.Component {
               </div>
             </div>
             <p className='app-form-label-txt-error' />
-
+*/}
             <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
           </form>
         </div>
