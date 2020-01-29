@@ -25,11 +25,13 @@ function handleText(item) {
   return true
 }
 
+// No text-areas in leo
+
 function handleTextarea(item) {
   const itemArg = item
   if (itemArg.id.value.length < 25) {
     itemArg.id.classList.add('invalid')
-    itemArg.error.textContent = `${itemArg.label} should be longer than 25 chars`
+    itemArg.error.textContent = `${itemArg.label} ${DIC.ERROR_TEXTAREA}`
     return false
   }
 
@@ -106,6 +108,5 @@ export const showFormErrors = () => {
   })
 
   if (checkboxParent && !showCheckboxError(checkboxParent)) isFormValid = false
-  debugger
   return isFormValid
 }

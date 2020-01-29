@@ -23,6 +23,7 @@ const dictionary = {
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',
+    ERROR_TEXTAREA: 'Debe tener más de 25 caracteres.',
     FORM_ADDRESS: 'Dirección',
     FORM_CATEGORIES:
       'Selecciona las categorias del concurso en las que participará el colegio:',
@@ -34,7 +35,7 @@ const dictionary = {
     FORM_PHONE: 'Teléfono móvil de contacto',
     FORM_SCHOOL_NAME: 'Nombre del colegio',
     FORM_TITLE: 'Formulario de inscripción',
-    FORM_WARNING: 'EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.',
+    FORM_WARNING: 'LO SENTIMOS, EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.',
     FORM_SUBTITLE: 'Registra tu colegio',
     HEADER_MAIN: 'Leo, leo... ¿qué lees?',
     MSG_SCHOOL_CREATED:
