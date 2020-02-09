@@ -116,13 +116,7 @@ Estimados compañeros:
               concursar, siempre y cuando no hayan recibido hasta el momento
               ningún primer premio.
             </p>
-            <p className="txt">
-              Los alumnos que hayan concursado ya en una categoría no podrán
-              repetir en el futuro en la misma categoría, sí en la siguiente.
-              Los alumnos que participen en el nivel B2 podrán volver a
-              concursar, siempre y cuando no hayan recibido hasta el momento
-              ningún primer premio.
-            </p>
+           
           </li>
           <li className="app-olist-item">
             <p className="txt txt-inline">
