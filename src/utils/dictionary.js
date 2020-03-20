@@ -36,6 +36,8 @@ const dictionary = {
     FORM_SCHOOL_NAME: 'Nombre del colegio',
     FORM_TITLE: 'Formulario de inscripción',
     FORM_WARNING: 'LO SENTIMOS, EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.',
+    FORM_CANCELLATION:
+      'DEBIDO A CAUSAS AJENAS AL CONCURSO, LA EDICIÓN DE ESTE AÑO 2020 QUEDA CANCELADA.',
     FORM_SUBTITLE: 'Registra tu colegio',
     HEADER_MAIN: 'Leo, leo... ¿qué lees?',
     MSG_SCHOOL_CREATED:

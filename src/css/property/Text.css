@@ -86,13 +86,17 @@ ul>li {
   color: var(--secondColor);
 }
 
-.subtit-section>small {
-  color: #666;
-  font-family: Lighter;
-  font-size: var(--textSize);
-}
+.subtit-section>small {}
 
 .subtit-section-underline {
+  border-bottom: 1px dotted;
+  margin-bottom: 2rem;
+}
+
+.subtit-section-red {
+  color: red;
+  font-family: Lighter;
+  font-size: var(--hugeSize);
   border-bottom: 1px dotted;
   margin-bottom: 2rem;
 }
