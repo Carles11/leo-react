@@ -93,6 +93,10 @@ ul>li {
   margin-bottom: 2rem;
 }
 
+.red-text {
+  color: red;
+}
+
 .subtit-section-red {
   color: red;
   font-family: Lighter;
