@@ -17,6 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
+app.use(express.cookieParser('mySecret'))
+app.use(express.session())
+app.use('/api', expressJwt({ secret: 'mySecret' }))
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
