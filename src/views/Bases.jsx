@@ -116,13 +116,7 @@ Estimados compañeros:
               concursar, siempre y cuando no hayan recibido hasta el momento
               ningún primer premio.
             </p>
-            <p className="txt">
-              Los alumnos que hayan concursado ya en una categoría no podrán
-              repetir en el futuro en la misma categoría, sí en la siguiente.
-              Los alumnos que participen en el nivel B2 podrán volver a
-              concursar, siempre y cuando no hayan recibido hasta el momento
-              ningún primer premio.
-            </p>
+           
           </li>
           <li className="app-olist-item">
             <p className="txt txt-inline">
@@ -296,10 +290,7 @@ Las semifinales&nbsp;
               Fruto de la colaboración con los Consulados Generales de México,
               Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
               procedentes de los cuatro países. Para ello no será necesario ser
-              poseedor de la nacionalidad del país. La SF se celebrará también
-              antes del 30 de abril de 2020 en el Instituto Cervantes de
-              Fráncfort con el apoyo y tutela de los consulados latinoamericanos
-              antes mencionados.
+              poseedor de la nacionalidad del país. La SF se celebrará también en el Instituto Cervantes de Fráncfort el 25 de abril de 2020 con el apoyo y tutela de los consulados latinoamericanos antes mencionados.
             </p>
             <p className="txt">
               <strong className="txt-highlight">

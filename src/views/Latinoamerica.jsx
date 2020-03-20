@@ -27,9 +27,7 @@ const Latinoamerica = props => {
           Fruto de la colaboración con los Consulados Generales de México,
           Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
           procedentes de Latinoamérica. Para ello no será necesario ser poseedor
-          de la nacionalidad del país latinoamericano que se represente. La SF
-          se celebrará también en el Instituto Cervantes de Fráncfort en abril
-          del 2020. Más información a finales del 2019.
+          de la nacionalidad del país latinoamericano que se represente. La SF se celebrará también en el Instituto Cervantes de Fráncfort el 25 de abril de 2020. Plazo de inscripción hasta el 23 de abril de 2020.
         </p>
         <p className='txt'>
           Para inscribirse a esta semifinal envíe un correo electrónico a{' '}
@@ -41,13 +39,12 @@ const Latinoamerica = props => {
         </p>
         <ul>
           <li>Nombre y apellidos del concursante</li>
-          <li>Persona de contacto</li>
-          <li>Dirección</li>
-          <li>Persona de contacto</li>
-          <li>Teléfono</li>
-          <li>E-Mail</li>
           <li>Edad</li>
           <li>País latinoamericano al que representa</li>
+          <li>Persona de contacto</li>
+          <li>E-Mail</li>
+          <li>Dirección</li>
+          <li>Teléfono</li>
         </ul>
       </article>
     </div>

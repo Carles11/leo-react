@@ -32,7 +32,7 @@ const Impressum = props => {
               <strong className='txt-highlight'>Celia Cid Sánchez</strong>
             </li>
             <li>Wolfsgartenallee 8 </li>
-            <li>64331 Weiterstadt</li> <li>Tel.: +49 (0) 611 368 -0 </li>{' '}
+            <li>64331 Weiterstadt</li> <li>Tel.: +49 (0) 6150 97460 </li>{' '}
             <li>E-Mail: c.cid@hws.schule</li>
             <div style={marginTop}>
               <Button
