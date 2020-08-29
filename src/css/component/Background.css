@@ -18,6 +18,7 @@
 }
 
 @media only screen and (min-width: 850px) {
+
 	.app-background img {
 		background-size: cover !important;
 		position: relative;
@@ -29,6 +30,7 @@
 
 	.app-background.app-header-bg img {
 		width: var(--headerImgSize);
+		height: 100%;
 	}
 }
 
