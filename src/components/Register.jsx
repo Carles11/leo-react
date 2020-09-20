@@ -29,12 +29,12 @@ class Register extends React.Component {
     DIC: PropTypes.object.isRequired,
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     e.target.classList.add('active')
     showInputError(e.target)
   }
 
-  handleCheckbox = e => {
+  handleCheckbox = (e) => {
     const { category } = this.state
     const { value } = e.target
     const elem = e.target
@@ -54,7 +54,7 @@ class Register extends React.Component {
     }
   }
 
-  handleData = e => {
+  handleData = (e) => {
     const { category } = this.state
     const { elements } = e.target
 
@@ -71,7 +71,7 @@ class Register extends React.Component {
     return { name, phone, address, contact, email, category, cp, city }
   }
 
-  handlePost = async body => {
+  handlePost = async (body) => {
     const { DIC } = this.props
     const promise = await API.post('schools', body)
 
@@ -94,8 +94,8 @@ class Register extends React.Component {
     })
   }
 
-  cleanFields = elem => {
-    Array.from(elem).forEach(el => {
+  cleanFields = (elem) => {
+    Array.from(elem).forEach((el) => {
       el.classList.remove('active')
       el.value = ''
     })
@@ -103,7 +103,7 @@ class Register extends React.Component {
     const checkboxes = Array.from(
       document.querySelectorAll('.app-form-whole input[type=checkbox]'),
     )
-    checkboxes.forEach(item => (item.checked = false))
+    checkboxes.forEach((item) => (item.checked = false))
 
     this.disableButton()
   }
@@ -130,13 +130,13 @@ class Register extends React.Component {
           <header className='header-wrapper'>
             <h2 className='tit-section pSides05rem'>{DIC.FORM_TITLE}</h2>
             <h3 className='subtit-section'>{DIC.FORM_SUBTITLE}</h3>
-            <h4 className='subtit-section'>{DIC.FORM_WARNING}</h4>
-            <h4 className='subtit-section-red'>{DIC.FORM_CANCELLATION}</h4>
+            {/* <h4 className='subtit-section'>{DIC.FORM_WARNING}</h4> */}
+            {/* <h4 className='subtit-section-red'>{DIC.FORM_CANCELLATION}</h4> */}
           </header>
           <form
             className='app-form'
             noValidate
-            onSubmit={e => {
+            onSubmit={(e) => {
               e.preventDefault()
 
               if (showFormErrors()) {
@@ -204,7 +204,7 @@ class Register extends React.Component {
             <div id='checkboxWrapper' className='app-form-whole'>
               <p className='app-form-label-txt'>{DIC.FORM_CATEGORIES}</p>
               <p className='app-form-label-txt-error' />
-              {categories.map(item => (
+              {categories.map((item) => (
                 <Checkbox
                   key={item}
                   label={item}
@@ -232,7 +232,7 @@ class Register extends React.Component {
                       rel='noopener noreferrer'>
                       <strong>las bases</strong>
                     </a>{' '}
-                    del concurso 2020
+                    del concurso 2021
                   </p>
                 </div>
               </div>
@@ -284,7 +284,7 @@ class Register extends React.Component {
                     rel='noopener noreferrer'>
                     <strong>las bases</strong>
                   </a>{' '}
-                  del concurso 2020  */}
+                  del concurso 202  */}
             {/* {DIC.FORM_ACCEPT_BASES} */}
             {/*</label> 
               </div>

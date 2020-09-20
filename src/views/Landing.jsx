@@ -11,7 +11,7 @@ const Landing = (props) => {
   const { DIC } = props
 
   return (
-    <section className="app-landing">
+    <section className='app-landing'>
       <Helmet
         title={DIC.DESCRIPTION}
         meta={[
@@ -22,7 +22,7 @@ const Landing = (props) => {
       <Header DIC={DIC} />
       <Contest DIC={DIC} PARAGRAPHS={PARAGRAPHS} />
       <Register DIC={DIC} />
-      <article className="app-section app-section-2">
+      <article className='app-section app-section-2'>
         <ImageGallery />
       </article>
     </section>

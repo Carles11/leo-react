@@ -7,7 +7,7 @@ import logo from '../assets/imgs/logo.png'
 
 const CSS_NAME = 'app-header-bg'
 
-const Header = props => {
+const Header = (props) => {
   const { DIC } = props
 
   return (
@@ -17,7 +17,7 @@ const Header = props => {
         <img src={logo} alt={DIC.HEADER_MAIN} />
         <h2 className='subtit-header'>{DIC.DESCRIPTION}</h2>
         <h3 className='mt0'>{DIC.SUBDESCRIPTION}</h3>
-        <h4 className='mt0 red-text'>{DIC.FORM_CANCELLATION}</h4>
+        {/* <h4 className='mt0 red-text'>{DIC.FORM_CANCELLATION}</h4> */}
       </div>
       <Background
         css={CSS_NAME}

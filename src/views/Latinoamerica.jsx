@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import withScroll from '../components/HOC/withScroll'
 
-const Latinoamerica = props => {
+const Latinoamerica = (props) => {
   const { DIC } = props
 
   return (
@@ -27,7 +27,10 @@ const Latinoamerica = props => {
           Fruto de la colaboración con los Consulados Generales de México,
           Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
           procedentes de Latinoamérica. Para ello no será necesario ser poseedor
-          de la nacionalidad del país latinoamericano que se represente. La SF se celebrará también en el Instituto Cervantes de Fráncfort el 25 de abril de 2020. Plazo de inscripción hasta el 23 de abril de 2020.
+          de la nacionalidad del país latinoamericano que se represente. La SF
+          se celebrará también en el Instituto Cervantes de Fráncfort el{' '}
+          {`${DIC.CONCURSO_LATINOAMERICA_DATE}`}. Plazo de inscripción hasta el
+          {`${DIC.CONCURSO_LATINOAMERICA_INSCRIPTION_DUE}`}.
         </p>
         <p className='txt'>
           Para inscribirse a esta semifinal envíe un correo electrónico a{' '}

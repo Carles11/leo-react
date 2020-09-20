@@ -41,7 +41,7 @@ function handleTextarea(item) {
   return true
 }
 
-export const showCheckboxError = item => {
+export const showCheckboxError = (item) => {
   let checkboxes,
     error = null
 
@@ -57,8 +57,7 @@ export const showCheckboxError = item => {
     )
   }
 
-  const isChecked = checkboxes.some(checkbox => checkbox.dataset.checked)
-  debugger
+  const isChecked = checkboxes.some((checkbox) => checkbox.dataset.checked)
   if (isChecked) {
     error.textContent = ''
     return true
@@ -67,7 +66,7 @@ export const showCheckboxError = item => {
   return false
 }
 
-export const showInputError = input => {
+export const showInputError = (input) => {
   const item = {
     id: document.querySelector(`#${input.id}`),
     validity: document.querySelector(`#${input.id}`).validity,
@@ -96,12 +95,12 @@ export const showFormErrors = () => {
 
   let isFormValid = true
 
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     const isInputValid = showInputError(input)
     if (!isInputValid) isFormValid = false
   })
 
-  textareas.forEach(textarea => {
+  textareas.forEach((textarea) => {
     const isTextareaValid = showInputError(textarea)
     if (!isTextareaValid) isFormValid = false
   })
