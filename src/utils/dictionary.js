@@ -5,10 +5,10 @@ const dictionary = {
     CONCURSO_TXT:
       'La lectura nos ayuda a comunicarnos con nuestro entorno y los concursos motivan a alumnos y profesores de todos los ámbitos de la enseñanza a conseguir nuevas metas. En este contexto surgió en 2012 la idea de poner en marcha un concurso de lectura en español en Hesse. Tras una fase de prueba se ha ido consolidando la iniciativa obteniendo en 2015 el apoyo del Kultusministerium de Hesse y entrando a formar parte de la red oficial de concursos escolares en esta Comunidad Autónoma. La trayectoria del concurso desde 2012 ha demostrado la gran acogida del concurso por parte de los centros educativos.Esto se ha debido especialmente a la fácil organización del concurso en la clase de español. Todos los alumnos de secundario en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas(MCER).',
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
-    CONCURSO_EDICION_CURRENT_DATE: '16 de mayo de 2021',
-    CONCURSO_EDICION_INSCRIPTION_DUE: '30 de noviembre de 2021',
+    CONCURSO_EDICION_CURRENT_DATE: '18 de mayo de 2021',
+    CONCURSO_EDICION_INSCRIPTION_DUE: '30 de noviembre de 2020',
     CONCURSO_EDICION_TXT:
-      'La Final de la novena convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 16 de mayo de 2021 en la sede de Fráncfort del Instituto Cervantes. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2019.',
+      'La Final de la novena convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 18 de mayo de 2021 en la sede de Fráncfort del Instituto Cervantes. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2019.',
     CONCURSO_LATINOAMERICA_DATE: '25 de abril de 2021',
     CONCURSO_SEMI_LATINOAMERICA_DATE: '30 de abril de 2021',
     CONCURSO_ORGANIZA: '¿Quién lo organiza?',
@@ -24,7 +24,7 @@ const dictionary = {
     DESCRIPTION: 'Concurso de lectura en español',
     DOWNLOAD_TEXT: 'Descargue aquí los textos de la edición anterior 2018.',
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
-    SUBDESCRIPTION: 'Próxima final el 16 de mayo de 2021',
+    SUBDESCRIPTION: 'Próxima final el 18 de mayo de 2021',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',

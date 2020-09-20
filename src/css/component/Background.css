@@ -39,8 +39,7 @@
 		background-size: cover !important;
 		position: relative;
 		width: auto;
-		min-height: 100vh;
-		height: 100px;
+		min-height: 100%;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -50,9 +49,8 @@
 	.app-background img {
 		background-size: cover !important;
 		position: relative;
-		width: 100%;
-		height: auto;
-		top: -25%;
+		width: auto;
+		height: 100%;
 		left: 50%;
 		transform: translateX(-50%);
 	}
