@@ -7,7 +7,8 @@ const dictionary = {
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
     CONCURSO_EDICION_CURRENT_DATE: '18 de mayo de 2021',
     CONCURSO_EDICION_INSCRIPTION_DUE: '30 de noviembre de 2020',
-    CONCURSO_EDICION_TXT:
+    "CONCURSO_EDICION_SF_SELECT":"01 de marzo de 2021",   
+     CONCURSO_EDICION_TXT:
       'La Final de la novena convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 18 de mayo de 2021. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2020.',
     CONCURSO_LATINOAMERICA_DATE: '25 de abril de 2021',
     CONCURSO_SEMI_LATINOAMERICA_DATE: '30 de abril de 2021',

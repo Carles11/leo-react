@@ -28,10 +28,10 @@ const Bases = (props) => {
           encontraréis las bases del concurso, el proceso de selección de
           candidatos e información general sobre las semifinales
           preeliminatorias y la final regional, que tendrá lugar el día{' '}
-          {`${DIC.CONCURSO_EDICION_CURRENT_DATE}`} en la sede de Fráncfort del
+          <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_CURRENT_DATE}`}</strong> en la sede de Fráncfort del
           Instituto Cervantes. La fecha límite para la inscripción de los
           colegios participantes será el{' '}
-          {`${DIC.CONCURSO_EDICION_INSCRIPTION_DUE}`} .{' '}
+          <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_INSCRIPTION_DUE}`}</strong>.{' '}
         </p>
         <p>
           Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está
@@ -55,10 +55,11 @@ const Bases = (props) => {
               <strong className='txt-highlight'>
                 Selección interna de participantes:&nbsp;
               </strong>
-              Cada uno de los colegios participantes habrá realizado hasta
+              Cada uno de los colegios participantes habrá realizado hasta el {''}
               <strong className='txt-highlight'>
-                &nbsp;el 01 de marzo de 2021&nbsp;
-              </strong>
+                {`${DIC.CONCURSO_EDICION_SF_SELECT}`}
+                
+              </strong> {''}
               la selección interna de sus candidatos para la semifinal, éstos
               serán un mínimo de uno y un máximo de cuatro, según el número de
               categorías en las que se participe. El proceso de selección queda
@@ -233,16 +234,16 @@ const Bases = (props) => {
           <li className='app-olist-item'>
             <p className='txt txt-inline'>
               <strong className='txt-highlight'>Las semifinales&nbsp;</strong>
-              se habrán celebrado antes del
+              se habrán celebrado antes del{' '}
               <strong className='txt-highlight'>
                 {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`}
-              </strong>
+              </strong>.
               Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
               número de centros que se inscriban al concurso (fecha máxima de
               inscripción {''}
-              {`${DIC.CONCURSO_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}). El número
+               <strong className='txt-highlight'>{`${DIC.CONCURSO_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>). El número
               de SF no será mayor a 6, para evitar que la final se prolongue
               demasiado.
             </p>
@@ -271,7 +272,7 @@ const Bases = (props) => {
               procedentes de países latinoamericanos. Para ello no será
               necesario ser poseedor de la nacionalidad del país. La SF se
               celebrará también antes del{' '}
-              {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`} en el Instituto
+              <strong className='txt-highlight'> {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`} </strong>en el Instituto
               Cervantes de Fráncfort con el apoyo y tutela de los consulados
               latinoamericanos antes mencionados.
             </p>
@@ -283,7 +284,7 @@ const Bases = (props) => {
               Semifinal ALCE, la fecha se dará a conocer en las aulas de dicho
               programa de enseñanza. Participarán sólo en la categoría B2 y
               presentarán a dos candidatos para la final en el Instituto
-              Cervantes el 18 de mayo de 2021.
+              Cervantes el  <strong className='txt-highlight'>18 de mayo de 2021</strong>.
             </p>
           </li>
           <li className='app-olist-item double'>
@@ -293,7 +294,7 @@ const Bases = (props) => {
               <strong className='txt-highlight'>www.leo-leo-hessen.com</strong>{' '}
               donde los colegios interesados se podrán informar de los detalles
               del concurso. En la página se encuentran audios para practicar los
-              textos de lectura
+              textos de lectura.
             </p>
           </li>
           <li className='app-olist-item double'>
@@ -365,7 +366,7 @@ const Bases = (props) => {
                 el 17 y el 18 de mayo de 2021{' '}
               </strong>
               en horario escolar. Las SF habrán sido realizadas, como se indica
-              en el punto 9, antes del 30 de abril de 2021, los centros
+              en el punto 9, antes del   <strong className='txt-highlight'> {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`} </strong>, los centros
               escolares organizadores decidirán si la SF es virtual por
               videoconferencia o presencial. La misma regla regirá la SF ALCE y
               la SF Latinoamérica. La organización del concurso fijará, llegado
