@@ -28,9 +28,9 @@ const Latinoamerica = (props) => {
           Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
           procedentes de Latinoamérica. Para ello no será necesario ser poseedor
           de la nacionalidad del país latinoamericano que se represente. La SF
-          se celebrará también en el Instituto Cervantes de Fráncfort el{' '}
-          {`${DIC.CONCURSO_LATINOAMERICA_DATE}`}. Plazo de inscripción hasta el
-          {`${DIC.CONCURSO_LATINOAMERICA_INSCRIPTION_DUE}`}.
+          se celebrará también en el Instituto Cervantes de Fráncfort el{' '} <strong className='txt-highlight'>
+          {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`}</strong>. Plazo de inscripción hasta el{''} <strong className='txt-highlight'>
+          {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>.
         </p>
         <p className='txt'>
           Para inscribirse a esta semifinal envíe un correo electrónico a{' '}

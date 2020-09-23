@@ -236,14 +236,14 @@ const Bases = (props) => {
               <strong className='txt-highlight'>Las semifinales&nbsp;</strong>
               se habrán celebrado antes del{' '}
               <strong className='txt-highlight'>
-                {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`}
+                {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`}
               </strong>.
               Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
               número de centros que se inscriban al concurso (fecha máxima de
               inscripción {''}
-               <strong className='txt-highlight'>{`${DIC.CONCURSO_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>). El número
+               <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>). El número
               de SF no será mayor a 6, para evitar que la final se prolongue
               demasiado.
             </p>
@@ -272,7 +272,7 @@ const Bases = (props) => {
               procedentes de países latinoamericanos. Para ello no será
               necesario ser poseedor de la nacionalidad del país. La SF se
               celebrará también antes del{' '}
-              <strong className='txt-highlight'> {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`} </strong>en el Instituto
+              <strong className='txt-highlight'> {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`} </strong>en el Instituto
               Cervantes de Fráncfort con el apoyo y tutela de los consulados
               latinoamericanos antes mencionados.
             </p>
@@ -366,7 +366,7 @@ const Bases = (props) => {
                 el 17 y el 18 de mayo de 2021{' '}
               </strong>
               en horario escolar. Las SF habrán sido realizadas, como se indica
-              en el punto 9, antes del   <strong className='txt-highlight'> {`${DIC.CONCURSO_SEMI_LATINOAMERICA_DATE}`} </strong>, los centros
+              en el punto 9, antes del   <strong className='txt-highlight'> {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`} </strong>, los centros
               escolares organizadores decidirán si la SF es virtual por
               videoconferencia o presencial. La misma regla regirá la SF ALCE y
               la SF Latinoamérica. La organización del concurso fijará, llegado
