@@ -29,8 +29,8 @@ const Latinoamerica = (props) => {
           procedentes de Latinoamérica. Para ello no será necesario ser poseedor
           de la nacionalidad del país latinoamericano que se represente. La SF
           se celebrará también en el Instituto Cervantes de Fráncfort el{' '} <strong className='txt-highlight'>
-          {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`}</strong>. Plazo de inscripción hasta el{''} <strong className='txt-highlight'>
-          {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>.
+          {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}</strong>. Plazo de inscripción hasta el{''} <strong className='txt-highlight'>
+          {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>.
         </p>
         <p className='txt'>
           Para inscribirse a esta semifinal envíe un correo electrónico a{' '}

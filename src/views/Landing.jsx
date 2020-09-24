@@ -7,6 +7,7 @@ import ImageGallery from '../components/ImageGallery'
 import Register from '../components/Register'
 import { PARAGRAPHS } from '../utils/constants'
 
+console.log(process.env);
 const Landing = (props) => {
   const { DIC } = props
 

@@ -28,10 +28,10 @@ const Bases = (props) => {
           encontraréis las bases del concurso, el proceso de selección de
           candidatos e información general sobre las semifinales
           preeliminatorias y la final regional, que tendrá lugar el día{' '}
-          <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_CURRENT_DATE}`}</strong> en la sede de Fráncfort del
+          <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}</strong> en la sede de Fráncfort del
           Instituto Cervantes. La fecha límite para la inscripción de los
           colegios participantes será el{' '}
-          <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_INSCRIPTION_DUE}`}</strong>.{' '}
+          <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}</strong>.{' '}
         </p>
         <p>
           Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está
@@ -57,7 +57,7 @@ const Bases = (props) => {
               </strong>
               Cada uno de los colegios participantes habrá realizado hasta el {''}
               <strong className='txt-highlight'>
-                {`${DIC.CONCURSO_EDICION_SF_SELECT}`}
+                {`${DIC.CONCURSO_EDICION_SF_INSCRIPTION_DUE}`}
                 
               </strong> {''}
               la selección interna de sus candidatos para la semifinal, éstos
@@ -236,14 +236,14 @@ const Bases = (props) => {
               <strong className='txt-highlight'>Las semifinales&nbsp;</strong>
               se habrán celebrado antes del{' '}
               <strong className='txt-highlight'>
-                {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}
               </strong>.
               Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
               número de centros que se inscriban al concurso (fecha máxima de
               inscripción {''}
-               <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>). El número
+               <strong className='txt-highlight'>{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>). El número
               de SF no será mayor a 6, para evitar que la final se prolongue
               demasiado.
             </p>
@@ -272,7 +272,7 @@ const Bases = (props) => {
               procedentes de países latinoamericanos. Para ello no será
               necesario ser poseedor de la nacionalidad del país. La SF se
               celebrará también antes del{' '}
-              <strong className='txt-highlight'> {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`} </strong>en el Instituto
+              <strong className='txt-highlight'> {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`} </strong>en el Instituto
               Cervantes de Fráncfort con el apoyo y tutela de los consulados
               latinoamericanos antes mencionados.
             </p>
@@ -302,7 +302,7 @@ const Bases = (props) => {
               <strong className='txt-highlight'>Inscripción:&nbsp;</strong>
               Tendrá lugar hasta el{' '}
               <strong className='txt-highlight'>
-                {`${DIC.CONCURSO_EDICION_INSCRIPTION_DUE}`}
+                {`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}
               </strong>{' '}
               y se realizará exclusivamente a través de la página web. Para la
               Semifinal Latinoamérica también se utilizará este medio.
@@ -321,7 +321,7 @@ const Bases = (props) => {
                 regionales y de la final{' '}
               </strong>{' '}
               <strong className='txt-highlight'>
-                {`${DIC.CONCURSO_EDICION_CURRENT_DATE}`}.
+                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}.
               </strong>{' '}
               En caso de que la situación a partir de marzo de 2021 no permita
               una celebración presencial de estos actos, se llevarán a cabo a
@@ -366,7 +366,7 @@ const Bases = (props) => {
                 el 17 y el 18 de mayo de 2021{' '}
               </strong>
               en horario escolar. Las SF habrán sido realizadas, como se indica
-              en el punto 9, antes del   <strong className='txt-highlight'> {`${DIC.CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE}`} </strong>, los centros
+              en el punto 9, antes del   <strong className='txt-highlight'> {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`} </strong>, los centros
               escolares organizadores decidirán si la SF es virtual por
               videoconferencia o presencial. La misma regla regirá la SF ALCE y
               la SF Latinoamérica. La organización del concurso fijará, llegado

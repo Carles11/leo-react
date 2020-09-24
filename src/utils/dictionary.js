@@ -5,11 +5,12 @@ const dictionary = {
     CONCURSO_TXT:
       'La lectura nos ayuda a comunicarnos con nuestro entorno y los concursos motivan a alumnos y profesores de todos los ámbitos de la enseñanza a conseguir nuevas metas. En este contexto surgió en 2012 la idea de poner en marcha un concurso de lectura en español en Hesse. Tras una fase de prueba se ha ido consolidando la iniciativa obteniendo en 2015 el apoyo del Kultusministerium de Hesse y entrando a formar parte de la red oficial de concursos escolares en esta Comunidad Autónoma. La trayectoria del concurso desde 2012 ha demostrado la gran acogida del concurso por parte de los centros educativos.Esto se ha debido especialmente a la fácil organización del concurso en la clase de español. Todos los alumnos de secundario en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas(MCER).',
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
-    CONCURSO_EDICION_CURRENT_DATE: '18 de mayo de 2021',
-    CONCURSO_EDICION_INSCRIPTION_DUE: '30 de noviembre de 2020',
-    CONCURSO_EDICION_SEMI_LATINOAMERICA_DATE: '30 de abril de 2021',
-    CONCURSO_EDICION_SEMI_LATINOAMERICA_INSCRIPTION_DUE: '30 de noviembre de 2020',
-    CONCURSO_EDICION_SF_SELECT:"01 de marzo de 2021",   
+    CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2020',
+    CONCURSO_EDICION_FINAL_NEXT_DATE: '18 de mayo de 2021',
+    CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: '30 de noviembre de 2020',
+    CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '30 de abril de 2021',
+    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '24 de abril de 2021',
+    CONCURSO_EDICION_SF_INSCRIPTION_DUE:"01 de marzo de 2021",   
      CONCURSO_EDICION_TXT:
       'La Final de la novena convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 18 de mayo de 2021. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2020.',
     CONCURSO_ORGANIZA: '¿Quién lo organiza?',
