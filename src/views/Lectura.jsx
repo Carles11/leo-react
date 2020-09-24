@@ -46,19 +46,27 @@ class Lectura extends React.PureComponent {
                     <br />
                     <small className='txt-center'>
                       * Textos A1-B1 leídos por Sara Casado.                
-                    </small>
-                    <small className='txt-center'>
+                    </small>< br/>
                     <small className='txt-center'>
                       * Textos B2 leídos por:       
                     </small>
-                    <ul>
+                    <ul className="decoration-none">
+                    <small >
                       <li>Texto 1: Norma Palacios</li>
-                      <li>Texto 2: Gema Bonnín</li>
-                      <li>Texto 3: Carolín Fuentes</li>
-                      <li>Texto 4: Heidy González</li>
-                      <li>Texto 5: María E. Martínez</li>
-                      </ul>
                       </small>
+                    <small >
+                      <li>Texto 2: Gema Bonnín</li>
+                      </small>
+                    <small >
+                      <li>Texto 3: Carolín Fuentes</li>
+                      </small>
+                    <small >
+                      <li>Texto 4: Heidy González</li>
+                      </small>
+                    <small >
+                      <li>Texto 5: María E. Martínez</li>
+                      </small>
+                      </ul>
                   </h2>
 
                   {d.projects.map(project => (

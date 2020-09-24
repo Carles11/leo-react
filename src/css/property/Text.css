@@ -132,3 +132,7 @@ ul>li {
     line-height: 2.5rem;
   }
 }
+
+.decoration-none{
+  text-decoration: none;
+}
