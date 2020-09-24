@@ -74,7 +74,7 @@ class Lectura extends React.PureComponent {
                    <small className='txt-center'>
                       * Textos leídos por Sara Casado Ocaña.                
                     </small>< br/>
-                   </h2> : null }
+                   </h2> : "" }
 
                   {d.projects.map(project => (
                     <article
