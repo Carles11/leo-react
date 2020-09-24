@@ -41,7 +41,7 @@ class Lectura extends React.PureComponent {
               .sort((a, b) => (a.year > b.year ? -1 : 1))
               .map(d => (
                 <React.Fragment key={d._id}>
-                 { d.year === "2021" ?
+                 { d.year === 2021 ?
                   <h2 className='subtit-section subtit-section-underline txt-center w100'>
                     {d.title}
                     <br />
