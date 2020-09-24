@@ -122,7 +122,7 @@ class AdminList extends React.Component {
                 <ReactToPrint
                   trigger={() => PrintButton}
                   content={() => this.componentRef}
-                  documentTitle={() => "Imprime"}
+                  documentTitle={() => "Exportar Excel"}
                 />
               </div>
               <div className='app-list-button'>{ExportToExcelButton}</div>
