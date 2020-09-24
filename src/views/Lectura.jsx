@@ -41,10 +41,11 @@ class Lectura extends React.PureComponent {
               .sort((a, b) => (a.year > b.year ? -1 : 1))
               .map(d => (
                 <React.Fragment key={d._id}>
+                 { d.year === "2021" ?
                   <h2 className='subtit-section subtit-section-underline txt-center w100'>
                     {d.title}
                     <br />
-                    <small className='txt-center'>
+                   <small className='txt-center'>
                       * Textos A1-B1 leídos por Sara Casado.                
                     </small>< br/>
                     <small className='txt-center margin-text'>
@@ -67,8 +68,13 @@ class Lectura extends React.PureComponent {
                     <small >
                       <li>Texto 5: María E. Martínez</li>
                       </small>
-                      </ul>
-                  </h2>
+                      </ul> </h2> :     <h2 className='subtit-section subtit-section-underline txt-center w100'>
+                    {d.title}
+                    <br />
+                   <small className='txt-center'>
+                      * Textos A1-B1 leídos por Sara Casado Ocaña.                
+                    </small>< br/>
+                   </h2>}
 
                   {d.projects.map(project => (
                     <article
