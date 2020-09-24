@@ -47,9 +47,10 @@ class Lectura extends React.PureComponent {
                     <small className='txt-center'>
                       * Textos A1-B1 leídos por Sara Casado.                
                     </small>< br/>
-                    <small className='txt-center'>
+                    <small className='txt-center margin-text'>
                       * Textos B2 leídos por:       
                     </small>
+               
                     <ul className="decoration-none">
                     <small >
                       <li>Texto 1: Norma Palacios</li>
