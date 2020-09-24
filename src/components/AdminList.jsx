@@ -103,7 +103,7 @@ class AdminList extends React.Component {
         type='button'
         aria-label='Exportar Excel'
         className='btn btn-invert'>
-        Exportar Excel
+        Excel
         <ExcelExport schools={list} />
       </button>
     )
