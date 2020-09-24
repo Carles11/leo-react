@@ -68,13 +68,13 @@ class Lectura extends React.PureComponent {
                     <small >
                       <li>Texto 5: María E. Martínez</li>
                       </small>
-                      </ul> </h2> :     <h2 className='subtit-section subtit-section-underline txt-center w100'>
+                      </ul> </h2> : d.year !== 2018  ? <h2 className='subtit-section subtit-section-underline txt-center w100'>
                     {d.title}
                     <br />
                    <small className='txt-center'>
                       * Textos leídos por Sara Casado Ocaña.                
                     </small>< br/>
-                   </h2>}
+                   </h2> : null }
 
                   {d.projects.map(project => (
                     <article
