@@ -43,7 +43,7 @@ const Bases = (props) => {
           Fráncfort, del Consulado General de Colombia en Fráncfort, del
           Consulado General de Chile en Fráncfort, del Consulado General de Perú
           en Fráncfort y de la Asociación Alemana de Profesores de Español en
-          Hesse (DSV). Asímismo con el patrocinio de las editoriales Grupo SM,
+          Hesse (DSV). Así mismo cuenta con el patrocinio de las editoriales Grupo SM,
           Schulverlag Klett, Cornelsen Verlag y Edinumen.
         </p>
       </article>
