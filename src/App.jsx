@@ -1,18 +1,18 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import Navigation from './components/Navigation'
-import Routes from './Routes.jsx'
-import Footer from './components/Footer'
-import withAuth from './components/HOC/withAuth'
+import Navigation from './components/Navigation';
+import Routes from './Routes.jsx';
+import Footer from './components/Footer';
+import withAuth from './components/HOC/withAuth';
 
-import './css/App.css'
-import getDictionary from './utils/dictionary'
-import { FOOTER_DATA } from './utils/constants'
+import './css/App.css';
+import getDictionary from './utils/dictionary';
+import { FOOTER_DATA } from './utils/constants';
 
-const DIC = getDictionary()
+const DIC = getDictionary();
 
-const App = props => (
+const App = (props) => (
   <React.Fragment>
     <Helmet
       titleTemplate={`%s | ${DIC.NAME} - ${DIC.DESCRIPTION}`}
@@ -24,8 +24,8 @@ const App = props => (
     <Routes {...props} DIC={DIC} />
     <Footer DIC={DIC} FOOTER_DATA={FOOTER_DATA} />
   </React.Fragment>
-)
+);
 
-const AppWithApp = withAuth(App)
+const AppWithApp = withAuth(App);
 
-export default AppWithApp
+export default AppWithApp;
