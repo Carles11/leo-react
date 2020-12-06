@@ -1,6 +1,6 @@
 p,
 .txt,
-ul>li {
+ul > li {
   font-family: Regular;
   font-size: var(--textSize);
   color: var(--textColor);
@@ -62,7 +62,7 @@ ul>li {
   text-align: center;
 }
 
-.header-wrapper>* {
+.header-wrapper > * {
   padding: 0;
   margin: 0;
 }
@@ -85,8 +85,12 @@ ul>li {
   font-family: Bold;
   color: var(--secondColor);
 }
+.warning-color{
+  color: var(--errorColor);
+}
 
-.subtit-section>small {}
+.subtit-section > small {
+}
 
 .subtit-section-underline {
   border-bottom: 1px dotted;
@@ -133,13 +137,13 @@ ul>li {
   }
 }
 
-.decoration-none{
+.decoration-none {
   text-decoration: none;
-  list-style:none;
-  padding:0;
-  margin:0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.margin-text{
+.margin-text {
   margin-bottom: 2.5rem;
 }
