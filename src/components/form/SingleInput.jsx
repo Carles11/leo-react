@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 type Props = {
   wrapper?: string,
@@ -11,13 +11,13 @@ type Props = {
   size?: string,
   required?: boolean,
   pattern?: string,
-}
+};
 
 const SingleInput = (props: Props) => (
   <div className={props.wrapper}>
     <label
       id={props.name + 'Label'}
-      htmlFor={props.name} 
+      htmlFor={props.name}
       className="app-form-label"
     >
       {props.title}
@@ -35,11 +35,12 @@ const SingleInput = (props: Props) => (
       required={props.required}
       aria-label={props.placeholder}
       aria-required={props.required}
+      disabled={props.disabled}
     />
     <p className="app-form-error" id={props.name + 'Error'}></p>
   </div>
-) 
-  
+);
+
 SingleInput.defaultProps = {
   wrapper: 'app-form-group',
   content: '',
@@ -47,7 +48,7 @@ SingleInput.defaultProps = {
   size: '',
   pattern: '',
   required: true,
-  controlFunc: () => {}
-}
+  controlFunc: () => {},
+};
 
-export default SingleInput
+export default SingleInput;

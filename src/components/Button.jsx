@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const Button = props => {
-  const { link, label, type, external, css, fn } = props
+const Button = (props) => {
+  const { link, label, type, external, css, fn, disabled } = props;
 
   const span = (
-    <span className='line'>
+    <span className="line">
       <span />
       <span />
     </span>
-  )
+  );
 
   switch (external) {
     case false:
@@ -19,42 +19,45 @@ const Button = props => {
           {label}
           {span}
         </Link>
-      )
+      );
     case true:
       return (
         <a
           className={`btn-link ${css}`}
           aria-label={label}
           href={link}
-          target='_blank'>
+          target="_blank"
+        >
           {label}
           {span}
         </a>
-      )
+      );
     default:
       return (
         <button
           onClick={fn}
           type={type}
           aria-label={label}
-          className={`btn ${css}`}>
+          className={`btn ${css}`}
+          disabled={disabled}
+        >
           {label}
         </button>
-      )
+      );
   }
-}
+};
 
 Button.defaultProps = {
   css: '',
   type: 'button',
   fn: () => {},
-}
+};
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   external: PropTypes.bool,
   type: PropTypes.string,
   link: PropTypes.string,
-}
+};
 
-export default Button
+export default Button;

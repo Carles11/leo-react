@@ -152,6 +152,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_SCHOOL_NAME}
               pattern=".{6,}"
               controlFunc={this.handleChange}
+              disabled
             />
             <SingleInput
               name="contact"
@@ -160,6 +161,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CONTACT}
               pattern=".{6,}"
               controlFunc={this.handleChange}
+              disabled
             />
 
             <SingleInput
@@ -169,6 +171,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_ADDRESS}
               pattern=".{6,}"
               controlFunc={this.handleChange}
+              disabled
             />
             <SingleInput
               name="cp"
@@ -177,6 +180,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CP}
               pattern=".{3,}"
               controlFunc={this.handleChange}
+              disabled
             />
             <SingleInput
               name="city"
@@ -185,6 +189,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CITY}
               pattern=".{5,}"
               controlFunc={this.handleChange}
+              disabled
             />
             <SingleInput
               name="phone"
@@ -193,6 +198,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_PHONE}
               pattern=".{6,}"
               controlFunc={this.handleChange}
+              disabled
             />
             <SingleInput
               name="email"
@@ -201,6 +207,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_MAIL}
               pattern=".{6,}"
               controlFunc={this.handleChange}
+              disabled
             />
             <div id="checkboxWrapper" className="app-form-whole">
               <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
@@ -211,6 +218,7 @@ class Register extends React.Component {
                   label={item}
                   handleCheckbox={this.handleCheckbox}
                   send={send}
+                  disabled
                 />
               ))}
             </div>
@@ -223,6 +231,7 @@ class Register extends React.Component {
                     label="Ok"
                     handleCheckbox={this.handleCheckbox}
                     send={send}
+                    disabled
                   />
                   <p className="app-form-label-txt ">
                     He leído y acepto{' '}
@@ -248,6 +257,7 @@ class Register extends React.Component {
                       label="Ok"
                       handleCheckbox={this.handleCheckbox}
                       send={send}
+                      disabled
                     />
                   </div>
                   <p className="app-form-label-txt ">

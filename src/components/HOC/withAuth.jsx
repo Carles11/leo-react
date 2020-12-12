@@ -1,38 +1,48 @@
-import React from 'react'
+import React from 'react';
 
-import config from '../../config'
-import Loader from '../Loader'
+import config from '../../config';
+import Loader from '../Loader';
 
-const withAuth = Component =>
-	class extends React.Component {
-		state = {
-			auth: false,
-			checked: false,
-		}
+const withAuth = (Component) =>
+  class extends React.Component {
+    state = {
+      auth: false,
+      checked: false,
+    };
 
-		componentDidMount() {
-			this.checkAuth()
-		}
+    componentDidMount() {
+      this.checkAuth();
+    }
 
-		componentWillUnmount() {
-			this.setState({ auth: false, checked: false })
-		}
+    componentWillUnmount() {
+      this.setState({ auth: false, checked: false });
+    }
 
-		checkAuth = () => {
-			const auth = localStorage.getItem(config.api.API_TOKEN) ? true : false
-			this.setState({ auth, checked: true })
-		}
+    checkAuth = () => {
+      const auth = localStorage.getItem(config.api.API_TOKEN) ? true : false;
+      this.setState({ auth, checked: true });
+      console.log(
+        'CHECKINGGGGGGOUTH',
+        localStorage.getItem(config.api.API_TOKEN)
+      );
+    };
 
-		render() {
-			const { checked } = this.state
+    render() {
+      const { checked } = this.state;
 
-			return (
-				<React.Fragment>
-					{!checked && <Loader />}
-					{checked && <Component checkAuth={this.checkAuth} {...this.props} {...this.state} />}
-				</React.Fragment>
-			)
-		}
-	}
+      return (
+        <React.Fragment>
+          {!checked && <Loader />}
+          {checked && (
+            <Component
+              checkAuth={this.checkAuth}
+              {...this.props}
+              {...this.state}
+            />
+          )}
+        </React.Fragment>
+      );
+    }
+  };
 
-export default withAuth
+export default withAuth;
