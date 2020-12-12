@@ -3,6 +3,7 @@ const path = require('path');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+const session = require('express-session');
 const app = express();
 const PORT = process.env.REACT_APP_PORT || 5000;
 const ENV = process.env.NODE_ENV || 'development';
@@ -19,7 +20,7 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 app.use(cookieParser('mySecret'));
-app.use(express.session());
+app.use(session());
 app.use('/api', expressJwt({ secret: 'mySecret' }));
 
 app.listen(PORT, () => {
