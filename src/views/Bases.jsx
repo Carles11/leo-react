@@ -332,7 +332,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">videoconferencia</strong>. El
               programa a utilizar por todos los centros y candidatos será:{' '}
               <strong className="txt-highlight">
-                Microsoft Office 365 – GoToMeeting
+                Microsoft Office 365 – Teams
               </strong>
               , ya que el Ministerio de Cultura de Hesse ha puesto este programa
               -de forma gratuita- a disposición de todos los centros de
