@@ -1,0 +1,19 @@
+qCox7vOYzDoU86!#
+
+
+cd /var/www/leo-react
+
+Git pull
+
+Git add .
+
+Git commit -m "commit"
+
+yarn 
+
+Yarn build
+
+systemctl restart nginx
+
+
+
