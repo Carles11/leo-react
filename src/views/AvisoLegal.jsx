@@ -43,8 +43,8 @@ const AvisoLegal = (props) => {
               Stelle veröffentlichen.
             </li>
           </p>
-          <li className="app-olist-item">
-            <p className="txt">
+          <p className="txt">
+            <li className="app-olist-item">
               <strong className="txt-highlight">
                 Urheberrechtshinweis:&nbsp;
               </strong>
@@ -64,30 +64,31 @@ const AvisoLegal = (props) => {
               nicht ausdrücklich anders gekennzeichnet, bei Celia Cid Sánchez.
               Bitte fragen Sie
               <a href="mailto:c.cid@hws.schule"> Celia Cid Sánchez </a>, falls
-              Sie die Inhalte dieses Internetangebotes verwenden möchten.
-            </p>
-            <p className="txt txt-inline">
-              Wer gegen das Urheberrecht verstößt (z.B. Bilder, Grafiken oder
-              Texte unerlaubt kopiert), macht sich gem.{' '}
-              <a
-                href="https://dejure.org/gesetze/UrhG/106.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                §§ 106 ff UrhG
-              </a>{' '}
-              strafbar, wird zudem kostenpflichtig abgemahnt und muss
-              Schadensersatz leisten{' '}
-              <a
-                href="https://dejure.org/gesetze/UrhG/97.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                (§ 97 UrhG)
-              </a>
-              .
-            </p>
-          </li>
+              Sie die Inhalte dieses Internetangebotes verwenden möchten.&nbsp;
+              <p className="txt txt-inline">
+                Wer gegen das Urheberrecht verstößt (z.B. Bilder, Grafiken oder
+                Texte unerlaubt kopiert), macht sich gem.{' '}
+                <a
+                  href="https://dejure.org/gesetze/UrhG/106.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  §§ 106 ff UrhG
+                </a>{' '}
+                strafbar, wird zudem kostenpflichtig abgemahnt und muss
+                Schadensersatz leisten{' '}
+                <a
+                  href="https://dejure.org/gesetze/UrhG/97.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (§ 97 UrhG)
+                </a>
+                .
+              </p>
+            </li>
+          </p>
+
           <p className="txt">
             <li className="app-olist-item">
               <strong className="txt-highlight">
@@ -257,7 +258,11 @@ const AvisoLegal = (props) => {
               (inkl. Ihrer IP-Adresse) sowie die Verarbeitung dieser Daten durch
               Google verhindern, indem Sie ein Browser-Add-on herunterladen und
               installieren (
-              <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://tools.google.com/dlpage/gaoptout?hl=de"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://tools.google.com/dlpage/gaoptout?hl=de
               </a>
               ). Alternativ zum Browser-Add-on, insbesondere bei Browsern auf
@@ -270,7 +275,11 @@ const AvisoLegal = (props) => {
               in diesem Browser, müssen Sie das Opt-out-Cookie erneut setzen.
               Weitere Informationen zum Datenschutz im Zusammenhang mit Google
               Analytics finden Sie etwa in der Google Analytics-Hilfe (
-              <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://support.google.com/analytics/answer/6004245?hl=de"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://support.google.com/analytics/answer/6004245?hl=de
               </a>
               ). c. Google Adwords Conversion Tracking Um die Nutzung unserer
