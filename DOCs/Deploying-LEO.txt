@@ -1,5 +1,0 @@
-DEPLOY LEO-REACT
-
-make changes, merge to master and push to remote
-
-
