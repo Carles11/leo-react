@@ -1,18 +1,18 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import Header from '../components/Header'
-import Contest from '../components/Contest'
-import ImageGallery from '../components/ImageGallery'
-import Register from '../components/Register'
-import { PARAGRAPHS } from '../utils/constants'
+import Header from '../components/Header';
+import Contest from '../components/Contest';
+import ImageGallery from '../components/ImageGallery';
+import Register from '../components/Register';
+import { PARAGRAPHS } from '../utils/constants';
 
-console.log(process.env);
+// console.log(process.env);
 const Landing = (props) => {
-  const { DIC } = props
+  const { DIC } = props;
 
   return (
-    <section className='app-landing'>
+    <section className="app-landing">
       <Helmet
         title={DIC.DESCRIPTION}
         meta={[
@@ -23,11 +23,11 @@ const Landing = (props) => {
       <Header DIC={DIC} />
       <Contest DIC={DIC} PARAGRAPHS={PARAGRAPHS} />
       <Register DIC={DIC} />
-      <article className='app-section app-section-2'>
+      <article className="app-section app-section-2">
         <ImageGallery />
       </article>
     </section>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;

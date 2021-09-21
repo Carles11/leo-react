@@ -21,10 +21,10 @@ const withAuth = (Component) =>
     checkAuth = () => {
       const auth = localStorage.getItem(config.api.API_TOKEN) ? true : false;
       this.setState({ auth, checked: true });
-      console.log(
-        'CHECKINGGGGGGOUTH',
-        localStorage.getItem(config.api.API_TOKEN)
-      );
+      // console.log(
+      //   'CHECKINGGGGGGOUTH',
+      //   localStorage.getItem(config.api.API_TOKEN)
+      // );
     };
 
     render() {

@@ -19,12 +19,12 @@ class Admin extends React.Component {
 
   handleData = async (data) => {
     const promise = await API.post('signin-leo', data, true);
-    console.log('LOGIIIIIIIIN', data);
+    // console.log('LOGIIIIIIIIN', data);
 
     if (promise.success) {
       localStorage.setItem(config.api.API_TOKEN, promise.data);
       this.props.checkAuth();
-      console.log('WOOOOOOOOORKS', data);
+      // console.log('WOOOOOOOOORKS', data);
     } else {
       this.setState({ message: promise.data, next: true });
     }

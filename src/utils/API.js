@@ -8,7 +8,7 @@ const getOptions = () => {
     localStorage.getItem(API_TOKEN) !== 'undefined'
       ? localStorage.getItem(API_TOKEN)
       : '';
-  console.log('ACCESS_TOKENasss', localStorage.getItem(API_TOKEN));
+  // console.log('ACCESS_TOKENasss', localStorage.getItem(API_TOKEN));
   return {
     method: null,
     body: null,
