@@ -243,7 +243,7 @@ class Register extends React.Component {
                     >
                       <strong>las bases</strong>
                     </a>{' '}
-                    del concurso 2021
+                    del concurso 2022
                   </p>
                 </div>
               </div>

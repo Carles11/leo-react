@@ -287,7 +287,11 @@ const Bases = (props) => {
               programa de enseñanza. Participarán sólo en la categoría B2 y
               presentarán a dos candidatos para la final en el Instituto
               Cervantes el{' '}
-              <strong className="txt-highlight">18 de mayo de 2021</strong>.
+              <strong className="txt-highlight">
+                {' '}
+                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
+              </strong>
+              .
             </p>
           </li>
           <li className="app-olist-item double">
