@@ -36,7 +36,7 @@ class Lectura extends React.PureComponent {
           <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
         </header>
         <div className="app-section-width app-section-boxes">
-          {!!data.length &&
+          {data.length > 0 &&
             data
               .sort((a, b) => (a.year > b.year ? 1 : -1))
               .map((d) => (
