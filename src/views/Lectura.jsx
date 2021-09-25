@@ -104,6 +104,8 @@ class Lectura extends React.PureComponent {
                                     aria-label={`Descargar el texto '${item.title}'`}
                                     download={item.url}
                                     href={item.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="app-list-btn icon-arrow-down-circle"
                                     title={`Descargar el texto '${item.title}'`}
                                   >
