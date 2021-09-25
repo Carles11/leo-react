@@ -38,10 +38,10 @@ class Lectura extends React.PureComponent {
         <div className="app-section-width app-section-boxes">
           {data.length > 0 &&
             data
-              .sort((a, b) => (a.year > b.year ? 1 : -1))
+              .sort((a, b) => (a.year > b.year ? -1 : 1))
               .map((d) => (
                 <React.Fragment key={d._id}>
-                  {d.year === 2021 ? (
+                  {d.year === 2022 || d.year === 2021 ? (
                     <h2 className="subtit-section subtit-section-underline txt-center w100">
                       {d.title}
                       <br />
@@ -70,76 +70,65 @@ class Lectura extends React.PureComponent {
                         </small>
                       </ul>{' '}
                     </h2>
-                  ) : d.year !== 2018 ? (
-                    <h2 className="subtit-section subtit-section-underline txt-center w100">
-                      {d.title}
-                      <br />
-                      <small className="txt-center">
-                        * Textos leídos por Sara Casado Ocaña.
-                      </small>
-                      <br />
-                    </h2>
-                  ) : (
-                    <h2 className="subtit-section subtit-section-underline txt-center w100">
-                      {d.title}
-                      <br />
-                    </h2>
-                  )}
+                  ) : null}
 
-                  {d.projects.map((project) => (
-                    <article
-                      key={project.title}
-                      className="app-section-box mb2rem"
-                    >
-                      <h2 className="txt-highlight">{project.title}</h2>
-                      <ul className="app-list">
-                        {project.items.map((item) => (
-                          <li key={item.title} className="app-list-item">
-                            <header className="app-list-header">
-                              <h2>{item.title}</h2>
-                              <div className="app-list-content-btn">
-                                {item.audio && (
-                                  <button
-                                    aria-label={`Escuchar el audio '${item.title}'`}
-                                    onClick={() => this.handleAudio(item.audio)}
-                                    className="app-list-btn icon-headphones"
-                                    title={`Escuchar el audio '${item.title}'`}
+                  {(d.year === 2022 || d.year === 2021) &&
+                    d.projects.map((project) => (
+                      <article
+                        key={project.title}
+                        className="app-section-box mb2rem"
+                      >
+                        <h2 className="txt-highlight">{project.title}</h2>
+                        <ul className="app-list">
+                          {project.items.map((item) => (
+                            <li key={item.title} className="app-list-item">
+                              <header className="app-list-header">
+                                <h2>{item.title}</h2>
+                                <div className="app-list-content-btn">
+                                  {item.audio && (
+                                    <button
+                                      aria-label={`Escuchar el audio '${item.title}'`}
+                                      onClick={() =>
+                                        this.handleAudio(item.audio)
+                                      }
+                                      className="app-list-btn icon-headphones"
+                                      title={`Escuchar el audio '${item.title}'`}
+                                    >
+                                      <span className="hidden">
+                                        {`Escuchar el audio '${item.title}'`}
+                                      </span>
+                                    </button>
+                                  )}
+
+                                  <a
+                                    aria-label={`Descargar el texto '${item.title}'`}
+                                    download={item.url}
+                                    href={item.url}
+                                    className="app-list-btn icon-arrow-down-circle"
+                                    title={`Descargar el texto '${item.title}'`}
                                   >
                                     <span className="hidden">
-                                      {`Escuchar el audio '${item.title}'`}
+                                      {`Descargar el texto '${item.title}'`}
                                     </span>
-                                  </button>
-                                )}
-
-                                <a
-                                  aria-label={`Descargar el texto '${item.title}'`}
-                                  download={item.url}
-                                  href={item.url}
-                                  className="app-list-btn icon-arrow-down-circle"
-                                  title={`Descargar el texto '${item.title}'`}
+                                  </a>
+                                </div>
+                              </header>
+                              {audio === item.audio && (
+                                <audio
+                                  className="app-audio"
+                                  src={audio}
+                                  controls="controls"
+                                  autoPlay
                                 >
-                                  <span className="hidden">
-                                    {`Descargar el texto '${item.title}'`}
-                                  </span>
-                                </a>
-                              </div>
-                            </header>
-                            {audio === item.audio && (
-                              <audio
-                                className="app-audio"
-                                src={audio}
-                                controls="controls"
-                                autoPlay
-                              >
-                                Your browser does not support the{' '}
-                                <code>audio</code> element.
-                              </audio>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </article>
-                  ))}
+                                  Your browser does not support the{' '}
+                                  <code>audio</code> element.
+                                </audio>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </article>
+                    ))}
                 </React.Fragment>
               ))}
         </div>
