@@ -26,6 +26,7 @@ const dictionary = {
     DOWNLOAD_TEXT: 'Descargue aquí los textos de la edición anterior 2018.',
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
     SUBDESCRIPTION: 'Próxima final el 19 de mayo de 2022',
+    EDITION_CURRENT: 'XI convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',
