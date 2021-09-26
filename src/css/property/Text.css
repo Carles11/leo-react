@@ -29,6 +29,11 @@ ul > li {
   border-radius: 5px;
 }
 
+.txt-subtitle {
+  font-family: Bold;
+  color: var(--mainColorDark);
+  text-transform: uppercase;
+}
 .txt-highlight {
   font-family: Bold;
 }
@@ -85,7 +90,7 @@ ul > li {
   font-family: Bold;
   color: var(--secondColor);
 }
-.warning-color{
+.warning-color {
   color: var(--errorColor);
 }
 

@@ -25,11 +25,13 @@ class Navigation extends React.Component {
     const { name } = e.target;
 
     if (name) {
+      const navItem = document.querySelector(`.${name}`);
       setTimeout(() => {
-        document.querySelector(`.${name}`).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+        navItem !== null &&
+          navItem.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
       });
     }
 
