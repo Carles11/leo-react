@@ -32,7 +32,7 @@ const Impresos = (props) => {
 
       <article>
         <ul className="app-list">
-          <li key="ganadores" className="app-list-item">
+          <li key="ganadores" className="app-list-item ml5r mr5r">
             <header className="app-list-header">
               <h2>Cuadro de ganadores</h2>
               <div className="app-list-content-btn">
@@ -52,7 +52,7 @@ const Impresos = (props) => {
               </div>
             </header>
           </li>
-          <li key="puntos-jurado" className="app-list-item">
+          <li key="puntos-jurado" className="app-list-item  ml5r mr5r">
             <header className="app-list-header">
               <h2>Impreso de puntos para el jurado</h2>
               <div className="app-list-content-btn">
@@ -72,7 +72,7 @@ const Impresos = (props) => {
               </div>
             </header>
           </li>
-          <li key="datenschuetzerklaerung" className="app-list-item">
+          <li key="datenschuetzerklaerung" className="app-list-item  ml5r mr5r">
             <header className="app-list-header">
               <h2>Datenschützerklärung</h2>
               <div className="app-list-content-btn">

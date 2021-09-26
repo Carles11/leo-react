@@ -14,13 +14,23 @@
 .ml5 {
   margin-left: 5px;
 }
+@media only screen and (min-width: 649px) {
+  .ml5r {
+    margin-left: 5rem;
+  }
+}
+
 .mb5 {
   margin-bottom: 5px;
 }
 .mr5 {
   margin-right: 5px;
 }
-
+@media only screen and (min-width: 649px) {
+  .mr5r {
+    margin-right: 5rem;
+  }
+}
 .mt10 {
   margin-top: 10px;
 }
