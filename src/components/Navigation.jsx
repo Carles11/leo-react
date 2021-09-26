@@ -1,50 +1,50 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import ButtonSignOut from './ButtonSignOut'
-import { getSlug } from '../utils/helpers'
-import config from '../config'
-import Logo from '../assets/imgs/logo_tiny.png'
+import ButtonSignOut from './ButtonSignOut';
+import { getSlug } from '../utils/helpers';
+import config from '../config';
+import Logo from '../assets/imgs/logo_tiny.png';
 
 class Navigation extends React.Component {
   state = {
     visible: false,
     redirectTo: '',
-  }
+  };
 
   static propTypes = {
     DIC: PropTypes.object.isRequired,
-  }
+  };
 
   handleVisibility = () => {
-    this.setState(prevState => ({ visible: !prevState.visible }))
-  }
+    this.setState((prevState) => ({ visible: !prevState.visible }));
+  };
 
-  handleNavigation = e => {
-    const { name } = e.target
+  handleNavigation = (e) => {
+    const { name } = e.target;
 
     if (name) {
       setTimeout(() => {
         document.querySelector(`.${name}`).scrollIntoView({
           behavior: 'smooth',
           block: 'start',
-        })
-      })
+        });
+      });
     }
 
-    this.setState({ visible: false })
-  }
+    this.setState({ visible: false });
+  };
 
   handleSignOut = () => {
-    localStorage.removeItem(config.api.API_TOKEN)
-    this.props.checkAuth()
-  }
+    localStorage.removeItem(config.api.API_TOKEN);
+    this.props.checkAuth();
+  };
 
   render() {
-    const { DIC, auth } = this.props
-    const { visible } = this.state
-    const icon = visible ? 'close' : 'menu'
+    const { DIC, auth } = this.props;
+    const { visible } = this.state;
+    const icon = visible ? 'close' : 'menu';
 
     const NAV = [
       {
@@ -53,13 +53,14 @@ class Navigation extends React.Component {
           DIC.NAV_BASES,
           DIC.NAV_TEXTOS,
           DIC.NAV_CRITERIOS,
+          DIC.NAV_IMPRESOS,
           DIC.NAV_COLEGIOS,
           DIC.NAV_LATINOAMERICA,
         ],
       },
       { label: DIC.NAV_INSCRIPCION, children: [] },
       { label: DIC.NAV_GALERIA, children: [] },
-    ]
+    ];
 
     const List = (
       <ul className={`app-nav-list ${icon}`}>
@@ -84,36 +85,44 @@ class Navigation extends React.Component {
           </Link>
         </li>
         {NAV.map((item, i) => {
-          const label = getSlug(item.label)
-          const children = item.children.length
-          const section = `app-section-${i}`
-          const iconDown = children ? 'item dropdown' : ''
+          const label = getSlug(item.label);
+          const children = item.children.length;
+          const section = `app-section-${i}`;
+          const iconDown = children ? 'item dropdown' : '';
 
           return (
             <li key={label} className="app-nav-item">
-              <Link className={iconDown} to="/" onClick={this.handleNavigation} name={section}>
+              <Link
+                className={iconDown}
+                to="/"
+                onClick={this.handleNavigation}
+                name={section}
+              >
                 {item.label.toUpperCase()}
               </Link>
               {!!children && (
                 <ul className={`app-subnav-list`}>
-                  {item.children.map(item => {
-                    const link = '/' + getSlug(item)
+                  {item.children.map((item) => {
+                    const link = '/' + getSlug(item);
                     return (
                       <li key={link} className="app-subnav-item">
                         <Link onClick={this.handleVisibility} to={link}>
                           {item.toUpperCase()}
                         </Link>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               )}
             </li>
-          )
+          );
         })}
         {auth && (
           <li className="app-nav-item btnAdminSignOut">
-            <ButtonSignOut label={'Cerrar Sesión'} handleClick={this.handleSignOut} />
+            <ButtonSignOut
+              label={'Cerrar Sesión'}
+              handleClick={this.handleSignOut}
+            />
           </li>
         )}
         {!auth && (
@@ -136,7 +145,7 @@ class Navigation extends React.Component {
           </a>
         </li>
       </ul>
-    )
+    );
 
     const ResponsiveMenu = (
       <div className={`app-respMenu ${icon}`}>
@@ -154,7 +163,7 @@ class Navigation extends React.Component {
         </button>
         {auth && <ButtonSignOut handleClick={this.handleSignOut} />}
       </div>
-    )
+    );
 
     return (
       <nav className={`app-nav ${icon}`}>
@@ -162,8 +171,8 @@ class Navigation extends React.Component {
         {List}
         <div className={`app-menu-bg ${icon}`} />
       </nav>
-    )
+    );
   }
 }
 
-export default Navigation
+export default Navigation;

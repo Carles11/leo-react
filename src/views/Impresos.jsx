@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import withScroll from '../components/HOC/withScroll';
+// import withScroll from '../components/HOC/withScroll';
 
 const Impresos = (props) => {
   const { DIC } = props;
@@ -32,7 +32,7 @@ Impresos.propTypes = {
   DIC: PropTypes.object.isRequired,
 };
 
-const ImpresosWithScroll = withScroll(Impresos);
+// const ImpresosWithScroll = withScroll(Impresos);
 
-export const Unwrapped = Impresos;
-export default ImpresosWithScroll;
+// export const Unwrapped = Impresos;
+export default Impresos;

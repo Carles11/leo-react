@@ -64,6 +64,7 @@ const dictionary = {
     NAV_LATINOAMERICA: 'Semifinal latinoamericana',
     NAV_LATINOAMERICA_SUBJECT:
       'Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?',
+    NAV_IMPRESOS: 'Impresos',
     NAV_IMPRESSUM: 'Impressum',
     NAV_INFO: 'Información para profesores',
     NAV_INSCRIPCION: 'Inscripción',

@@ -76,6 +76,16 @@ const Routes = props => {
           />
         )}
       />
+      <Route
+        path='/impresos'
+        component={props => (
+          <RoutesAsync
+            props={props}
+            DIC={DIC}
+            loadingPromise={import('./views/Impresos')}
+          />
+        )}
+      />
 
       <Route
         path='/colegios-inscritos'
