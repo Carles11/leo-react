@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import CuadroGanadores from '../assets/docs/impresos/Cuadro_ganadores.docx';
 import PuntosJurado from '../assets/docs/impresos/Impreso_puntos_para_el_jurado.docx';
 import Einwilligung from '../assets/docs/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
+import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
   const { DIC } = props;
@@ -87,6 +88,26 @@ const Impresos = (props) => {
                 >
                   <span className="hidden">
                     {`Descargar el texto 'Datenschützerklärung'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li key="logo-leo" className="app-list-item  ml5r mr5r">
+            <header className="app-list-header">
+              <h2>Logo </h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el texto ‟Leo, leo… ¿Qué lees ?”`}
+                  download={logo}
+                  href={logo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el texto ‟Leo, leo… ¿Qué lees ?”`}
+                >
+                  <span className="hidden">
+                    {`Descargar el texto ‟Leo, leo… ¿Qué lees ?”`}
                   </span>
                 </a>
               </div>
