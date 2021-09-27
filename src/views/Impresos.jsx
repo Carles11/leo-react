@@ -3,9 +3,9 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 // import withScroll from '../components/HOC/withScroll';
-import CuadroGanadores from '../assets/docs/impresos/Cuadro_ganadores.docx';
-import PuntosJurado from '../assets/docs/impresos/Impreso_puntos_para_el_jurado.docx';
-import Einwilligung from '../assets/docs/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
+import CuadroGanadores from '../assets/docus/impresos/Cuadro_ganadores.docx';
+import PuntosJurado from '../assets/docus/impresos/Impreso_puntos_para_el_jurado.docx';
+import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
 import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {

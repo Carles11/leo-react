@@ -12,7 +12,7 @@ import SingleInput from './form/SingleInput';
 import Checkbox from './form/Checkbox';
 import Button from './Button';
 import { isDisabled } from '../utils/helpers';
-import Einwilligung from '../assets/docs/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
+import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
 import '../css/layout/MiniGrid.css';
 
 const categories = ['A1', 'A2', 'B1', 'B2'];
