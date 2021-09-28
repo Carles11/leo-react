@@ -1,11 +1,11 @@
-import React from 'react'
-import Gallery from 'react-photo-gallery'
-import Lightbox from 'react-images'
+import React from 'react';
+import Gallery from 'react-photo-gallery';
+import Lightbox from 'react-images';
 
-import Loader from './Loader'
-import Filter from './Filter'
-import * as API from '../utils/API'
-import withWindow from './HOC/withWindow'
+import Loader from './Loader';
+import Filter from './Filter';
+import * as API from '../utils/API';
+import withWindow from './HOC/withWindow';
 
 class ImageGallery extends React.Component {
   state = {
@@ -17,87 +17,95 @@ class ImageGallery extends React.Component {
     filter: {},
     position: 0,
     lazyLoad: false,
-  }
+  };
 
   componentDidUpdate(prevState) {
-    const { position, lazyLoad } = this.state
+    const { position, lazyLoad } = this.state;
 
     if (position !== prevState.position && !lazyLoad) {
-      this.setState(oldState => ({ lazyLoad: !oldState.lazyLoad }))
-      this.getPhotos(2019)
+      this.setState((oldState) => ({ lazyLoad: !oldState.lazyLoad }));
+      this.getPhotos(2019);
     }
   }
 
-  handleFilter = e => {
-    const { data } = this.state
-    const { year } = e.target.dataset
-    const photos = data.filter(photo => photo.year === Number(year))
+  handleFilter = (e) => {
+    const { data } = this.state;
+    const { year } = e.target.dataset;
+    const photos = data.filter((photo) => photo.year === Number(year));
 
-    this.setState({ photos })
-  }
+    this.setState({ photos });
+  };
 
-  getPhotos = async year => {
-    const promise = await API.get(`images`)
-    const data = promise.data.sort((a, b) => a._id > b._id)
+  getPhotos = async (year) => {
+    const promise = await API.get(`images`);
+    const promiseData = promise.data ? promise.data : null;
+    const fuckinPromise = promiseData !== null;
+    console.log('promiseData', promiseData);
+    console.log('fuckinPromise', fuckinPromise);
+    if (promiseData !== null) {
+      const data = promiseData && promiseData.sort((a, b) => a._id > b._id);
 
-    this.setState({
-      data,
-      photos: promise.data.filter(photo => photo.year === Number(year)),
-      loaded: true,
-    })
+      this.setState({
+        data,
+        photos: promiseData.filter((photo) => photo.year === Number(year)),
+        loaded: true,
+      });
 
-    this.getYears(promise.data)
-  }
+      this.getYears(promiseData);
+    } else {
+      return;
+    }
+  };
 
-  getYears = years => {
+  getYears = (years) => {
     const filter = years.reduce((acc, val) => {
-      if (!acc[val.year]) acc[val.year] = 0
-      acc[val.year]++
-      return acc
-    }, {})
+      if (!acc[val.year]) acc[val.year] = 0;
+      acc[val.year]++;
+      return acc;
+    }, {});
 
-    this.setState({ filter })
-  }
+    this.setState({ filter });
+  };
 
   openLightbox = (event, obj) => {
     this.setState({
       currentImage: obj.index,
       lightboxIsOpen: true,
-    })
-  }
+    });
+  };
 
   closeLightbox = () => {
     this.setState({
       currentImage: 0,
       lightboxIsOpen: false,
-    })
-  }
+    });
+  };
 
   gotoPrevious = () => {
-    const { currentImage } = this.state
+    const { currentImage } = this.state;
 
     this.setState({
       currentImage: currentImage - 1,
-    })
-  }
+    });
+  };
 
   gotoNext = () => {
-    const { currentImage } = this.state
+    const { currentImage } = this.state;
 
     this.setState({
       currentImage: currentImage + 1,
-    })
-  }
+    });
+  };
 
   render() {
-    const { loaded, photos, filter } = this.state
+    const { loaded, photos, filter } = this.state;
 
-    if (!loaded) return <Loader css={'app-section h725'} />
+    if (!loaded) return <Loader css={'app-section h725'} />;
 
     return (
       <React.Fragment>
-        <header className='header-wrapper'>
-          <h2 className='tit-section m2rem tit-section-secondColor'>
+        <header className="header-wrapper">
+          <h2 className="tit-section m2rem tit-section-secondColor">
             Galeria de Imágenes
           </h2>
         </header>
@@ -113,11 +121,11 @@ class ImageGallery extends React.Component {
           isOpen={this.state.lightboxIsOpen}
         />
       </React.Fragment>
-    )
+    );
   }
 }
 
-const ImageGalleryWithWindow = withWindow(ImageGallery)
+const ImageGalleryWithWindow = withWindow(ImageGallery);
 
-export const Unwrapped = ImageGallery
-export default ImageGalleryWithWindow
+export const Unwrapped = ImageGallery;
+export default ImageGalleryWithWindow;

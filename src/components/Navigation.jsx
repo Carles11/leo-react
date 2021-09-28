@@ -35,6 +35,15 @@ class Navigation extends React.Component {
       });
     }
 
+    // function scrollToTestDiv() {
+    //   const divElement = document.getElementById('test');
+    //   divElement.scrollIntoView({ behavior: 'smooth' });
+    // }
+
+    // <a className="nav-link" onClick={scrollToTestDiv}>
+    //   Click here!
+    // </a>
+
     this.setState({ visible: false });
   };
 

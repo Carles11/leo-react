@@ -6,7 +6,8 @@ import withScroll from '../components/HOC/withScroll';
 
 const Bases = (props) => {
   const { DIC } = props;
-
+  const currentYear = new Date();
+  const nextYearEdition = currentYear.getFullYear() + 1;
   return (
     <section className="app-content pb2rem mb2rem">
       <Helmet
@@ -23,29 +24,33 @@ const Bases = (props) => {
         <p>Estimados compañeros:</p>
         <p>
           El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía
-          de vuestros alumnos de español, a la décima edición del Concurso
-          Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”. A continuación
-          encontraréis las bases del concurso, el proceso de selección de
-          candidatos e información general sobre las semifinales
+          de vuestros alumnos de español, a la undécima edición del Concurso
+          Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”.{' '}
+        </p>
+        <p>
+          A continuación encontraréis las bases del concurso, el proceso de
+          selección de candidatos e información general sobre las semifinales
           preeliminatorias y la final regional, que tendrá lugar el día{' '}
           <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}</strong>{' '}
           en la sede de Fráncfort del Instituto Cervantes. La fecha límite para
           la inscripción de los colegios participantes será el{' '}
           <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}</strong>
-          .{' '}
+          .
         </p>
+
         <p>
           Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está
           incluido en la red de concursos oficiales del Kultusministerium de
-          Hesse. En su noveno año de celebración consecutiva cuenta con el apoyo
-          institucional de la Consejería de Educación de la Embajada de España
-          en Alemania, del Instituto Cervantes de Fráncfort, del Consulado
-          General de España en Fráncfort, del Consulado General de México en
-          Fráncfort, del Consulado General de Colombia en Fráncfort, del
-          Consulado General de Chile en Fráncfort, del Consulado General de Perú
-          en Fráncfort y de la Asociación Alemana de Profesores de Español en
-          Hesse (DSV). Así mismo cuenta con el patrocinio de las editoriales
-          Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.
+          Hesse. En su undécimo año de celebración consecutiva cuenta con el
+          apoyo institucional de la Consejería de Educación de la Embajada de
+          España en Alemania, del Instituto Cervantes de Fráncfort, del
+          Consulado General de España en Fráncfort, del Consulado General de
+          México en Fráncfort, del Consulado General de Colombia en Fráncfort,
+          del Consulado General de Chile en Fráncfort, del Consulado General de
+          Perú en Offenbach, del Consulado General de Argentina en Fráncfort y
+          de la Asociación Alemana de Profesores de Español (DSV). Asímismo con
+          el patrocinio de las editoriales Grupo SM, Schulverlag Klett,
+          Cornelsen Verlag y Edinumen.
         </p>
       </article>
       <hr className="hr-margin" />
@@ -53,20 +58,16 @@ const Bases = (props) => {
         <ol className="app-section-width app-olist">
           <li className="app-olist-item">
             <p className="txt txt-inline">
-              <strong className="txt-highlight">
-                Selección interna de participantes:&nbsp;
-              </strong>
               Cada uno de los colegios participantes habrá realizado hasta el{' '}
-              {''}
               <strong className="txt-highlight">
                 {`${DIC.CONCURSO_EDICION_SF_INSCRIPTION_DUE}`}
               </strong>{' '}
-              {''}
               la selección interna de sus candidatos para la semifinal, éstos
               serán un mínimo de uno y un máximo de cuatro, según el número de
               categorías en las que se participe. El proceso de selección queda
               regido y organizado por cada uno de los centros que concurran.
             </p>
+
             <p className="txt">
               Cada colegio participante contará con candidatos de repuesto por
               si el día de la final los elegidos no pudieran asistir.
@@ -103,8 +104,7 @@ const Bases = (props) => {
               la hora de puntuar, ya que por el desarrollo intrínseco del alumno
               la competencia lectora -tanto en la lengua materna como en la
               extranjera- mejora con la edad. La edad máxima para participar
-              será de
-              <strong className="txt-highlight">&nbsp;16 años.</strong>
+              será de <strong className="txt-highlight">&nbsp;16 años.</strong>.
             </p>
             <p className="txt">
               Los alumnos que hayan concursado ya en una categoría no podrán
@@ -133,7 +133,7 @@ const Bases = (props) => {
               candidatos por parte del jurado, ésta será la selección de textos
               a leer:
               <strong className="txt-highlight">
-                &nbsp;En la categoría A1 habrá 3 textos, en A2 y B1 4 y en B2 5
+                En la categoría A1 habrá 3 textos, en A2 y B1 4 y en B2 5
                 textos, fijados por la organización del concurso, los alumnos
                 prepararán todos los textos de su categoría y leerán uno de
                 ellos, elegido al azar el día del concurso. Los textos A1
@@ -144,7 +144,8 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 Los textos para la categoría B2 son fragmentos -adaptados- de
                 literatura juvenil latinoamericana (resultado de la cooperación
-                con los consulados de México, Colombia, Chile y Perú).
+                con los consulados de México, Colombia, Chile, Perú y
+                Argentina).
               </strong>
             </p>
           </li>
@@ -180,14 +181,14 @@ const Bases = (props) => {
               Los
               <strong className="txt-highlight">&nbsp;premios&nbsp;</strong>
               para los ganadores y finalistas serán lotes de libros de las
-              editoriales Grupo SM, Schulverlag Klett y Cornelsen Verlag,
-              licencias del juego digital para aprender español Guadalingo de la
-              editorial Edinumen, vales de libros de la Asociación Alemana de
-              Profesores de Español en Hesse y matrículas DELE del Instituto
-              Cervantes de Fráncfort. También recibirán un certificado por su
-              participación, para los alumnos que consigan los primeros puestos
-              en las cuatro categorías, los certificados estarán firmados por el
-              Ministro de Cultura de Hesse.
+              editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y
+              Edinumen, licencias del juego digital para aprender español
+              Guadalingo de la editorial Edinumen, vales de libros de la
+              Asociación Alemana de Profesores de Español y matrículas DELE del
+              Instituto Cervantes de Fráncfort. También recibirán un certificado
+              por su participación, para los alumnos que consigan los primeros
+              puestos en las cuatro categorías, los certificados estarán
+              firmados por el Ministro de Cultura de Hesse.
             </p>
           </li>
           <li className="app-olist-item">
@@ -207,8 +208,8 @@ const Bases = (props) => {
               criterios:
             </p>
             <ul>
-              <li>Pronunciación / entonación</li>
-              <li>Comprensión / interpretación</li>
+              <li>- Pronunciación / entonación</li>
+              <li>- Comprensión / interpretación</li>
             </ul>
             <p className="txt">
               La puntuación será de 1 a 5, para cada una de las tres categorías,
@@ -243,8 +244,10 @@ const Bases = (props) => {
               . Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
-              número de centros que se inscriban al concurso. El número de SF no
-              será mayor a 6, para evitar que la final se prolongue demasiado.
+              número de centros que se inscriban al concurso (fecha máxima de
+              inscripción 30 de noviembre de 2022). Se intentará que el número
+              de SF no sea mayor a 6, para evitar que la final se prolongue
+              demasiado.
             </p>
             <p className="txt">
               Todos los centros escolares que se inscriban al concurso estarán
@@ -253,7 +256,10 @@ const Bases = (props) => {
               de terminar el plazo de inscripción. Organizar una semifinal sólo
               requiere tener una sala grande en el colegio, contactar e invitar
               a los miembros del jurado con la ayuda del resto de los centros de
-              la semifinal y recoger los premios en el IC.
+              la semifinal y recoger los premios en el IC. Un representante de
+              cada semifinal recogerá los premios para su eliminatoria en el
+              Instituto Cervantes de Fráncfort en la fecha indicada por la
+              organización (normalmente en febrero de cada año).
             </p>
             <p className="txt">
               Un representante de cada semifinal recogerá los premios para su
@@ -266,17 +272,21 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 Semifinal Latinoamérica: &nbsp;
               </strong>
-              Fruto de la colaboración con los Consulados Generales de México,
-              Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
-              procedentes de países latinoamericanos. Para ello no será
-              necesario ser poseedor de la nacionalidad del país. La SF se
-              celebrará también antes del{' '}
+              : Fruto de la colaboración con los Consulados Generales de México,
+              Colombia, Chile, Perú y Argentina se celebrará una semifinal B2
+              para alumnos procedentes de países latinoamericanos. Para ello no
+              será necesario ser poseedor de la nacionalidad del país. La SF se
+              celebrará el{' '}
               <strong className="txt-highlight">
                 {' '}
                 {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}{' '}
               </strong>
               en el Instituto Cervantes de Fráncfort con el apoyo y tutela de
-              los consulados latinoamericanos antes mencionados.
+              los consulados latinoamericanos antes mencionados. El plazo de
+              inscripción para esta semifinal terminará el{' '}
+              <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>
+              . La inscripción tendrá lugar a través de la página
+              <strong className="txt-highlight">www.leo-leo-hessen.com</strong>.
             </p>
             <p className="txt">
               <strong className="txt-highlight">Semifinal ALCE:&nbsp;</strong>
@@ -286,7 +296,7 @@ const Bases = (props) => {
               Semifinal ALCE, la fecha se dará a conocer en las aulas de dicho
               programa de enseñanza. Participarán sólo en la categoría B2 y
               presentarán a dos candidatos para la final en el Instituto
-              Cervantes el{' '}
+              Cervantes el
               <strong className="txt-highlight">
                 {' '}
                 {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
@@ -297,11 +307,15 @@ const Bases = (props) => {
           <li className="app-olist-item double">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Página web:&nbsp;</strong>Desde
-              de la convocatoria 2019 el concurso cuenta con una página web{' '}
-              <strong className="txt-highlight">www.leo-leo-hessen.com</strong>{' '}
+              de la convocatoria 2019 el concurso cuenta con una página
+              web&nbsp;
+              <strong className="txt-highlight">
+                www.leo-leo-hessen.com
+              </strong>{' '}
               donde los colegios interesados se podrán informar de los detalles
               del concurso. En la página se encuentran audios para practicar los
-              textos de lectura.
+              textos de lectura. Asimismo se pueden encontrar aquí diferentes
+              impresos útiles a lo largo del concurso.
             </p>
           </li>
           <li className="app-olist-item double">
@@ -322,31 +336,23 @@ const Bases = (props) => {
               </strong>
               Debido a la actual{' '}
               <strong className="txt-highlight">pandemia de Covid-19</strong> se
-              ofrecerá para la convocatoria 2021 una{' '}
+              ofrecerá para la convocatoria {nextYearEdition} una{' '}
               <strong className="txt-highlight">
                 alternativa digital para la realización de las semifinales
-                regionales y de la final{' '}
+                regionales, la final del{' '}
               </strong>{' '}
               <strong className="txt-highlight">
-                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}.
+                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
               </strong>{' '}
-              En caso de que la situación a partir de marzo de 2021 no permita
-              una celebración presencial de estos actos, se llevarán a cabo a
-              través de{' '}
-              <strong className="txt-highlight">videoconferencia</strong>. El
-              programa a utilizar por todos los centros y candidatos será:{' '}
-              <strong className="txt-highlight">
-                Microsoft Office 365 – Teams
-              </strong>
-              , ya que el Ministerio de Cultura de Hesse ha puesto este programa
-              -de forma gratuita- a disposición de todos los centros de
-              enseñanza reglada de Hesse.
+              se realizará -siempre y cuando la situación pandámica lo permita-
+              de forma presencial en el salón de actos del Instituto Cervantes
+              de Fráncfort.
             </p>
             <p>
               En caso de que los alumnos no puedan encontrarse para una lectura
               presencial de los textos, y para evitar problemas técnicos o
               posibles irregularidades durante la lectura, los candidatos
-              lectores se conectarán a las videoconferencias{' '}
+              lectores se conectarán a las videoconferencias
               <strong className="txt-highlight">
                 desde su centro escolar en compañía de su profesor/a de español
               </strong>
@@ -358,31 +364,6 @@ const Bases = (props) => {
               centro o por separado, según se acuerde con el centro organizador
               de la SF) y un representante del centro organizador que actuará de
               moderador/a.
-            </p>
-            <p>
-              La organización del concurso ha creado un{' '}
-              <strong className="txt-highlight">puesto de apoyo </strong>para la
-              realización de las SF y F a través de videoconferencia. Llegado el
-              momento se dará más información al respecto.
-            </p>
-            <p>
-              En caso de una{' '}
-              <strong className="txt-highlight">final virtual</strong> las
-              fechas para su realización serán{' '}
-              <strong className="txt-highlight">
-                el 17 y el 18 de mayo de 2021{' '}
-              </strong>
-              en horario escolar. Las SF habrán sido realizadas, como se indica
-              en el punto 9, antes del{' '}
-              <strong className="txt-highlight">
-                {' '}
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}{' '}
-              </strong>
-              , los centros escolares organizadores decidirán si la SF es
-              virtual por videoconferencia o presencial. La misma regla regirá
-              la SF ALCE y la SF Latinoamérica. La organización del concurso
-              fijará, llegado el momento, la modalidad de la final: presencial o
-              virtual.{' '}
             </p>
           </li>
           <li className="app-olist-item double">
@@ -397,7 +378,7 @@ const Bases = (props) => {
             </p>
             <p>
               Asimismo, los padres autorizan con este documento que sus hijos/as
-              puedan participar en las SF y F en versión digital a través de
+              puedan participar en las SF/F en versión digital a través de
               videoconferencia, en caso de que fuera necesario.
             </p>
           </li>
