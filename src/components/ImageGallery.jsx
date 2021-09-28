@@ -39,9 +39,7 @@ class ImageGallery extends React.Component {
   getPhotos = async (year) => {
     const promise = await API.get(`images`);
     const promiseData = promise.data ? promise.data : null;
-    const fuckinPromise = promiseData !== null;
-    console.log('promiseData', promiseData);
-    console.log('fuckinPromise', fuckinPromise);
+
     if (promiseData !== null) {
       const data = promiseData && promiseData.sort((a, b) => a._id > b._id);
 
