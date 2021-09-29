@@ -1,8 +1,6 @@
 .grid-row {
   display: flex;
   flex-direction: row;
-
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -11,13 +9,14 @@
 
     flex-direction: column;
   }
-
 }
 
 .mini-grid-row {
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
-  align-items: end;
+  -ms-flex-align: end;
+  align-items: flex-start;
 }
 
 .mini-grid-margin {
