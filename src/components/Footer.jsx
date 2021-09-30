@@ -171,7 +171,7 @@ const Footer = (props) => {
               <img src={logoPeru} alt="Klett" />
             </a>
             <a
-              href="http://www.consulado.pe/es/frankfurt/Paginas/Inicio.aspx"
+              href="https://cfran.cancilleria.gob.ar/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de Consulado de Argentina en Frankfurt"

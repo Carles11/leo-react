@@ -38,7 +38,7 @@ class Colegios extends React.Component {
           <h1 className="tit-header mb2rem">{DIC.NAV_COLEGIOS}</h1>
         </header>
         {!schools.length && (
-          <h4 className="txt-center">No hay escuelas inscritas todavía.</h4>
+          <h4 className="txt-center">No hay colegios inscritos todavía.</h4>
         )}
         {!!schools.length && (
           <article>

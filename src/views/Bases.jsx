@@ -279,13 +279,13 @@ const Bases = (props) => {
               celebrará el{' '}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}{' '}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}{' '}
               </strong>
               en el Instituto Cervantes de Fráncfort con el apoyo y tutela de
               los consulados latinoamericanos antes mencionados. El plazo de
               inscripción para esta semifinal terminará el{' '}
               <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>
-              . La inscripción tendrá lugar a través de la página
+              . La inscripción tendrá lugar a través de la página&nbsp;
               <strong className="txt-highlight">www.leo-leo-hessen.com</strong>.
             </p>
             <p className="txt">
