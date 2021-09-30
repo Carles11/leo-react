@@ -75,22 +75,6 @@ const Footer = (props) => {
               <img src={logoHws} alt="Hessenwaldschule" />
             </a>
             <a
-              href="http://www.lesbar-die-buchhandlung.de/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de la Buchhandlung Lesbar"
-            >
-              <img src={logoLesbar} alt="Buchhandlung Lesbar" />
-            </a>
-            <a
-              href="https://www.hispanorama.de/landesverbaende/hessen/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Spanisch Deutsch Lehrerverband"
-            >
-              <img src={logoDsg} alt="SDV" />
-            </a>
-            <a
               href="https://frankfurt.cervantes.es/de/start.shtm"
               target="_blank"
               rel="noopener noreferrer"
@@ -106,6 +90,15 @@ const Footer = (props) => {
             >
               <img src={logoAecid} alt="AECID (cooperación)" />
             </a>
+            <a
+              href="https://www.hispanorama.de/landesverbaende/hessen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Spanisch Deutsch Lehrerverband"
+            >
+              <img src={logoDsg} alt="SDV" />
+            </a>
+
             <a
               href="http://alemania.embajada.gov.co/"
               target="_blank"
@@ -129,6 +122,30 @@ const Footer = (props) => {
               aria-label="Enlace a la página web del consulado de México"
             >
               <img src={logoMexico} alt="Consulado de México" />
+            </a>
+            <a
+              href="http://www.consulado.pe/es/frankfurt/Paginas/Inicio.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Consulado del Perú en Frankfurt"
+            >
+              <img src={logoPeru} alt="Klett" />
+            </a>
+            <a
+              href="https://cfran.cancilleria.gob.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Consulado de Argentina en Frankfurt"
+            >
+              <img src={logoArgentina} alt="Klett" />
+            </a>
+            <a
+              href="http://www.lesbar-die-buchhandlung.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la Buchhandlung Lesbar"
+            >
+              <img src={logoLesbar} alt="Buchhandlung Lesbar" />
             </a>
             <a
               href="https://www.grupo-sm.com/"
@@ -161,22 +178,6 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Klett"
             >
               <img src={logoKlett} alt="Klett" />
-            </a>
-            <a
-              href="http://www.consulado.pe/es/frankfurt/Paginas/Inicio.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Consulado del Perú en Frankfurt"
-            >
-              <img src={logoPeru} alt="Klett" />
-            </a>
-            <a
-              href="https://cfran.cancilleria.gob.ar/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Consulado de Argentina en Frankfurt"
-            >
-              <img src={logoArgentina} alt="Klett" />
             </a>
           </article>
         </section>

@@ -26,7 +26,7 @@ const Impresos = (props) => {
       <article className="app-section-width">
         <p className="txt txt-center">
           <strong className="txt-subtitle">
-            Descarga aquí los impresos para tu escuela:&nbsp;
+            Descarga aquí los impresos para tu colegio:&nbsp;
           </strong>
         </p>
       </article>

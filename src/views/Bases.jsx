@@ -21,7 +21,7 @@ const Bases = (props) => {
         <h1 className="tit-header mb2rem">{DIC.NAV_BASES}</h1>
       </header>
       <article className="app-section-width">
-        <p>Estimados compañeros:</p>
+        <p>Estimados/as compañeros/as:</p>
         <p>
           El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía
           de vuestros alumnos de español, a la undécima edición del Concurso
@@ -239,15 +239,18 @@ const Bases = (props) => {
               <strong className="txt-highlight">Las semifinales&nbsp;</strong>
               se habrán celebrado antes del{' '}
               <strong className="txt-highlight">
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}
               </strong>
               . Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
               número de centros que se inscriban al concurso (fecha máxima de
-              inscripción 30 de noviembre de 2022). Se intentará que el número
-              de SF no sea mayor a 6, para evitar que la final se prolongue
-              demasiado.
+              inscripción{' '}
+              <strong className="txt-highlight">
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}
+              </strong>
+              ). Se intentará que el número de SF no sea mayor a 6, para evitar
+              que la final se prolongue demasiado.
             </p>
             <p className="txt">
               Todos los centros escolares que se inscriban al concurso estarán
@@ -352,7 +355,7 @@ const Bases = (props) => {
               En caso de que los alumnos no puedan encontrarse para una lectura
               presencial de los textos, y para evitar problemas técnicos o
               posibles irregularidades durante la lectura, los candidatos
-              lectores se conectarán a las videoconferencias
+              lectores se conectarán a las videoconferencias&nbsp;
               <strong className="txt-highlight">
                 desde su centro escolar en compañía de su profesor/a de español
               </strong>
