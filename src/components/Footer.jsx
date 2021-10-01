@@ -1,21 +1,24 @@
 import React from 'react';
 import Button from './Button';
 
-import logoLesbar from '../assets/imgs/logo-lesbar.jpg';
-import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoHessen from '../assets/imgs/logo-hessen.jpg';
-import logoDsg from '../assets/imgs/logo-dsg.jpg';
+import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
 import logoAecid from '../assets/imgs/logo-aecid.jpg';
+
 import logoArgentina from '../assets/imgs/logo-argentina.jpg';
 import logoColombia from '../assets/imgs/logo-colombia.jpg';
+import logoPeru from '../assets/imgs/logo-peru.jpg';
 import logoChile from '../assets/imgs/logo-chile.jpg';
 import logoMexico from '../assets/imgs/logo-mexico.jpg';
+
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoSm from '../assets/imgs/logo-sm.jpg';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
 import logoKlett from '../assets/imgs/logo-klett.jpg';
-import logoPeru from '../assets/imgs/logo-peru.jpg';
+import logoLesbar from '../assets/imgs/logo-lesbar.jpg';
+import logoDsg from '../assets/imgs/logo-dsg.jpg';
+import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
 
 const Footer = (props) => {
   const { DIC, FOOTER_DATA } = props;
@@ -139,46 +142,59 @@ const Footer = (props) => {
             >
               <img src={logoArgentina} alt="Klett" />
             </a>
-            <a
-              href="http://www.lesbar-die-buchhandlung.de/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de la Buchhandlung Lesbar"
-            >
-              <img src={logoLesbar} alt="Buchhandlung Lesbar" />
-            </a>
-            <a
-              href="https://www.grupo-sm.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web del grupo SM"
-            >
-              <img src={logoSm} alt="Grupo SM" />
-            </a>
-            <a
-              href="https://www.cornelsen.de/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Cornelsen"
-            >
-              <img src={logoCornelsen} alt="Cornelsen" />
-            </a>
-            <a
-              href="https://edinumen.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Edinumen"
-            >
-              <img src={logoEdinumen} alt="Edinumen" />
-            </a>
-            <a
-              href="https://www.klett.de/index/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Klett"
-            >
-              <img src={logoKlett} alt="Klett" />
-            </a>
+
+            <p>
+              <a
+                href="http://www.lesbar-die-buchhandlung.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web de la Buchhandlung Lesbar"
+              >
+                <img src={logoLesbar} alt="Buchhandlung Lesbar" />
+              </a>
+              <a
+                href="https://www.karten-ideen.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web de Karten IDEE"
+              >
+                <img src={logoKartenIDEE} alt="logo Karten IDEE" />
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://www.grupo-sm.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web del grupo SM"
+              >
+                <img src={logoSm} alt="Grupo SM" />
+              </a>
+              <a
+                href="https://www.cornelsen.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web de Cornelsen"
+              >
+                <img src={logoCornelsen} alt="Cornelsen" />
+              </a>
+              <a
+                href="https://edinumen.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web de Edinumen"
+              >
+                <img src={logoEdinumen} alt="Edinumen" />
+              </a>
+              <a
+                href="https://www.klett.de/index/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web de Klett"
+              >
+                <img src={logoKlett} alt="Klett" />
+              </a>
+            </p>
           </article>
         </section>
       </div>
