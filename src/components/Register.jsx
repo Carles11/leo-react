@@ -328,7 +328,7 @@ class Register extends React.Component {
             </div>
             <p className='app-form-label-txt-error' />
 */}
-            <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
+            <Button type={'submit'} label={'Enviar'} css={'m1rem'} disabled />
           </form>
         </div>
       </article>
