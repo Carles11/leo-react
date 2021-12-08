@@ -1,18 +1,18 @@
 /* eslint-disable */
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
-import registerServiceWorker from './registerServiceWorker'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import registerServiceWorker from './registerServiceWorker';
 
-import App from './App.jsx'
+import App from './App.jsx';
 
-const el = document.querySelector('.app-root')
+const el = document.getElementById('root');
 
 ReactDOM.render(
-	<Router>
-		<App />
-	</Router>,
-	el,
-)
+  <Router>
+    <App />
+  </Router>,
+  el
+);
 
-registerServiceWorker()
+registerServiceWorker();
