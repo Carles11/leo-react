@@ -130,7 +130,7 @@ class Register extends React.Component {
           <header className="header-wrapper">
             <h2 className="tit-section pSides05rem">{DIC.FORM_TITLE}</h2>
             <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
-            {/* <h4 className="subtit-section warning-color">{DIC.FORM_WARNING}</h4> */}
+            <h4 className="subtit-section warning-color">{DIC.FORM_WARNING}</h4>
             {/* <h4 className="subtit-section-red">{DIC.FORM_CANCELLATION}</h4> */}
           </header>
           <form
@@ -152,7 +152,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_SCHOOL_NAME}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
             <SingleInput
               name="contact"
@@ -161,7 +161,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CONTACT}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
 
             <SingleInput
@@ -171,7 +171,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_ADDRESS}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
             <SingleInput
               name="cp"
@@ -180,7 +180,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CP}
               pattern=".{3,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
             <SingleInput
               name="city"
@@ -189,7 +189,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CITY}
               pattern=".{5,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
             <SingleInput
               name="phone"
@@ -198,7 +198,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_PHONE}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
             <SingleInput
               name="email"
@@ -207,7 +207,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_MAIL}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              // disabled
+              disabled
             />
             <div id="checkboxWrapper" className="app-form-whole">
               <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
@@ -218,7 +218,7 @@ class Register extends React.Component {
                   label={item}
                   handleCheckbox={this.handleCheckbox}
                   send={send}
-                  // disabled
+                  disabled
                 />
               ))}
             </div>
@@ -231,7 +231,7 @@ class Register extends React.Component {
                     label="Ok"
                     handleCheckbox={this.handleCheckbox}
                     send={send}
-                    // disabled
+                    disabled
                   />
                   <p className="app-form-label-txt ">
                     He leído y acepto{' '}
@@ -257,7 +257,7 @@ class Register extends React.Component {
                       label="Ok"
                       handleCheckbox={this.handleCheckbox}
                       send={send}
-                      // disabled
+                      disabled
                     />
                   </div>
                   <p className="app-form-label-txt ">
