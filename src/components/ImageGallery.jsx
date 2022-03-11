@@ -21,11 +21,12 @@ class ImageGallery extends React.Component {
 
   componentDidUpdate(prevState) {
     const { position, lazyLoad } = this.state;
-    const newDate = new Date();
-    const currentYear = newDate.getFullYear();
+    // const newDate = new Date();
+    // const currentYear = newDate.getFullYear();
+    // this.getPhotos(currentYear - 3); //keep it in case we get photos to show currentYear
     if (position !== prevState.position && !lazyLoad) {
       this.setState((oldState) => ({ lazyLoad: !oldState.lazyLoad }));
-      this.getPhotos(currentYear - 3); // we show 2019 by dafault
+      this.getPhotos(2019); // we show 2019 by dafault
     }
   }
 
