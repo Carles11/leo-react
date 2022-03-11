@@ -25,7 +25,7 @@ class ImageGallery extends React.Component {
     const currentYear = newDate.getFullYear();
     if (position !== prevState.position && !lazyLoad) {
       this.setState((oldState) => ({ lazyLoad: !oldState.lazyLoad }));
-      this.getPhotos(currentYear - 2); // we show 2019 by defect
+      this.getPhotos(currentYear - 3); // we show 2019 by dafault
     }
   }
 
