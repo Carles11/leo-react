@@ -106,7 +106,6 @@ class ImageGallery extends React.Component {
 
   render() {
     const { loaded, photos, filter } = this.state;
-    console.log('FIFIFIFIFILTER', filter);
     if (!loaded) return <Loader css={'app-section h725'} />;
 
     return (
