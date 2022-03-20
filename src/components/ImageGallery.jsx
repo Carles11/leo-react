@@ -26,7 +26,7 @@ class ImageGallery extends React.Component {
     // this.getPhotos(currentYear - 3); //keep it in case we get photos to show currentYear
     if (position !== prevState.position && !lazyLoad) {
       this.setState((oldState) => ({ lazyLoad: !oldState.lazyLoad }));
-      this.getPhotos(2019); // we show 2019 by dafault
+      this.getPhotos(2019); // we show 2019 by default
     }
   }
 
@@ -40,18 +40,25 @@ class ImageGallery extends React.Component {
 
   getPhotos = async (year) => {
     const promise = await API.get(`images`);
+
     const promiseData = promise.data ? promise.data : null;
 
-    if (promiseData !== null) {
-      const data = promiseData && promiseData.sort((a, b) => a._id > b._id);
+    const onlyPhotosOver2019 = promiseData.filter(
+      (photo) => photo.year >= 2019
+    );
+    if (onlyPhotosOver2019 !== null) {
+      let data =
+        onlyPhotosOver2019 && onlyPhotosOver2019.sort((a, b) => a._id > b._id);
 
       this.setState({
         data,
-        photos: promiseData.filter((photo) => photo.year === Number(year)),
+        photos: onlyPhotosOver2019.filter(
+          (photo) => photo.year === Number(year)
+        ),
         loaded: true,
       });
 
-      this.getYears(promiseData);
+      this.getYears(onlyPhotosOver2019);
     } else {
       return;
     }
@@ -99,7 +106,7 @@ class ImageGallery extends React.Component {
 
   render() {
     const { loaded, photos, filter } = this.state;
-
+    console.log('FIFIFIFIFILTER', filter);
     if (!loaded) return <Loader css={'app-section h725'} />;
 
     return (
