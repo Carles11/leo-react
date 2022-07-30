@@ -6,13 +6,13 @@ const dictionary = {
       'La lectura nos ayuda a comunicarnos con nuestro entorno y los concursos motivan a alumnos y profesores de todos los ámbitos de la enseñanza a conseguir nuevas metas. En este contexto surgió en 2012 la idea de poner en marcha un concurso de lectura en español en Hesse. Tras una fase de prueba se ha ido consolidando la iniciativa obteniendo en 2015 el apoyo del Kultusministerium de Hesse y entrando a formar parte de la red oficial de concursos escolares en esta Comunidad Autónoma. La trayectoria del concurso desde 2012 ha demostrado la gran acogida del concurso por parte de los centros educativos. Esto se ha debido especialmente a la fácil organización del concurso en la clase de español. Todos los alumnos de secundaria en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas (MCER).',
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
     CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2021',
-    CONCURSO_EDICION_FINAL_NEXT_DATE: '19 de mayo de 2022',
+    CONCURSO_EDICION_FINAL_NEXT_DATE: '12 de mayo de 2023',
     CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: '23 de abril de 2022',
     CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '24 de abril de 2022',
     CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '30 de abril de 2022',
     CONCURSO_EDICION_SF_INSCRIPTION_DUE: '01 de marzo de 2022',
     CONCURSO_EDICION_TXT:
-      'La Final de la undécima convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 19 de mayo de 2022. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2021.',
+      'La Final de la undécima convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día 12 de mayo de 2023. La fecha límite para la inscripción de los colegios participantes será el 30 de noviembre de 2022.',
     CONCURSO_ORGANIZA: '¿Quién lo organiza?',
     CONCURSO_ORGANIZA_TXT:
       'Siguiendo la larga tradición de los concursos de lectura en Alemania el Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” nació como propuesta educativa en el colegio Hessenwaldschule (Weiterstadt) para dar respuesta a un vacío de iniciativas que reforzaran el aprendizaje de la lengua española.',
@@ -25,7 +25,7 @@ const dictionary = {
     DESCRIPTION: 'Concurso de lectura en español',
     DOWNLOAD_TEXT: 'Descargue aquí los textos de la edición anterior 2018.',
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
-    SUBDESCRIPTION: 'Próxima final el 19 de mayo de 2022',
+    SUBDESCRIPTION: 'Próxima final el 12 de mayo de 2023',
     EDITION_CURRENT: 'XI convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
@@ -42,7 +42,8 @@ const dictionary = {
     FORM_PHONE: 'Teléfono móvil de contacto',
     FORM_SCHOOL_NAME: 'Nombre del colegio',
     FORM_TITLE: 'Formulario de inscripción',
-    FORM_WARNING: 'LO SENTIMOS, EL PLAZO DE INSCRIPCIÓN HA FINALIZADO.',
+    FORM_WARNING:
+      'LO SENTIMOS, EL PLAZO DE INSCRIPCIÓN PARA LA EDICIÓN 2022 HA FINALIZADO. PRÓXIMAMENTE SE ABRIRÁ LA INSCRIPCIÓN PARA LA EDICIÓN 2023',
     FORM_CANCELLATION:
       'POR CAUSAS AJENAS AL CONCURSO, LA EDICIÓN DE ESTE AÑO 2020 HA SIDO CANCELADA.',
     FORM_SUBTITLE: 'Registra tu colegio',
