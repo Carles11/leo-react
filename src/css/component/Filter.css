@@ -7,16 +7,21 @@
   justify-content: flex-start;
   align-items: center;
   opacity: 0.99;
-  transition-property: left; 
+  transition-property: left;
   transition-duration: 0.3s;
 }
 
-.app-filter:hover {
+/* This shows YEARS label on hover */
+/* .app-filter:hover {
+  left: 0;
+} */
+/* This shows YEARS label ALWAYS */
+.app-filter {
   left: 0;
 }
 
-.app-filter:hover .app-filter-label span[class^=icon-] {
-  transform: rotate(360deg)
+.app-filter:hover .app-filter-label span[class^='icon-'] {
+  transform: rotate(360deg);
 }
 
 .app-filter-label {
@@ -51,11 +56,11 @@
   align-items: center;
 }
 
-.app-filter-label span[class^=icon-] {
+.app-filter-label span[class^='icon-'] {
   display: block;
   transform: rotate(270deg);
   transition-property: transform;
-  transition-duration: 0.5s; 
+  transition-duration: 0.5s;
   margin-left: 0.5rem;
 }
 
@@ -96,7 +101,7 @@
   border-bottom: none;
   cursor: pointer;
   transition-property: background;
-  transition-duration: 0.5s; 
+  transition-duration: 0.5s;
 }
 
 .app-filter-item > button:hover {
@@ -106,8 +111,8 @@
   border: 1px solid #eeeeee;
 }
 
-.app-filter-item > button[data-count]:not([data-count=""]):after {
+.app-filter-item > button[data-count]:not([data-count='']):after {
   margin-left: 0.5rem;
-  content: "(" attr(data-count) ")";
+  content: '(' attr(data-count) ')';
   color: #cccccc;
 }
