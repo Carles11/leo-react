@@ -36,7 +36,8 @@
   z-index: 1;
   height: 650px;
 
-  @media screen {}
+  @media screen {
+  }
 }
 
 .app-section {
@@ -59,7 +60,8 @@
 .app-section-1 {
   height: auto !important;
   min-height: auto;
-  background: url("../../assets/imgs/logo.jpg") -100px -50px no-repeat var(--mainColor);
+  background: url('../../assets/imgs/logo.jpg') -100px -50px no-repeat
+    var(--mainColor);
 }
 
 .app-section-2 {
@@ -109,7 +111,7 @@
 }
 
 .app-list-button {
-  margin-right: 1rem;
+  margin: 1rem;
 }
 
 @media only screen and (max-width: 850px) {
@@ -136,10 +138,13 @@
     margin-right: 0rem;
     margin-bottom: 0.5rem;
   }
+  .app-content {
+    padding: 4rem 1rem;
+    width: 96%;
+  }
 }
 
 .hr-margin {
   margin: 3rem auto;
   width: 40%;
-
 }

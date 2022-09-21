@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import ReactMessages from 'react-messages'
-import ReactToPrint from 'react-to-print'
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactMessages from 'react-messages';
+import ReactToPrint from 'react-to-print';
 
-import * as API from '../utils/API'
-import Loader from './Loader'
-import PrintComponent from './PrintComponent'
-import ExcelExport from '../components/ExcelExport'
+import * as API from '../utils/API';
+import Loader from './Loader';
+import PrintComponent from './PrintComponent';
+import ExcelExport from '../components/ExcelExport';
 
 class AdminList extends React.Component {
   state = {
@@ -18,114 +18,108 @@ class AdminList extends React.Component {
       icon: 'warning',
       state: true,
     },
-  }
+  };
 
   static propTypes = {
     type: PropTypes.string.isRequired,
-  }
+  };
 
   componentDidMount() {
-    this.getData()
+    this.getData();
   }
 
   getData = async () => {
-    const { error } = this.state
-    const { type } = this.props
-    const promise = await API.get(type)
+    const { error } = this.state;
+    const { type } = this.props;
+    const promise = await API.get(type);
 
     if (promise.success) {
-      this.setState({ list: promise.data, loaded: true })
+      this.setState({ list: promise.data, loaded: true });
     } else {
       this.setState({
         error: Object.assign(error, { next: true }),
         loaded: true,
-      })
+      });
     }
-  }
+  };
 
-  handleRemove = async e => {
-    const { id } = e.target.dataset
-    const { error } = this.state
-    const { type } = this.props
+  handleRemove = async (e) => {
+    const { id } = e.target.dataset;
+    const { error } = this.state;
+    const { type } = this.props;
     const c = window.confirm(
-      'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.',
-    )
+      'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.'
+    );
 
     if (c) {
-      const promise = await API.remove(`${type}/${id}`)
+      const promise = await API.remove(`${type}/${id}`);
 
       if (promise.success) {
-        this.setState({ list: promise.data, loaded: true })
+        this.setState({ list: promise.data, loaded: true });
       } else {
         this.setState({
           error: Object.assign(error, { next: true }),
           loaded: true,
-        })
+        });
       }
     }
-  }
+  };
 
-  handleShow = e => {
-    const { id } = e.target.dataset
-    const el = document.querySelector(`.app-list-content[data-id="${id}"]`)
+  handleShow = (e) => {
+    const { id } = e.target.dataset;
+    const el = document.querySelector(`.app-list-content[data-id="${id}"]`);
 
     if (!el.classList.contains('show')) {
-      el.classList.add('show')
+      el.classList.add('show');
     } else {
-      el.classList.remove('show')
+      el.classList.remove('show');
     }
-  }
+  };
 
   render() {
-    const { list, loaded, error } = this.state
-    const mailAddress = list.map(l => l.email).join(',')
+    const { list, loaded, error } = this.state;
+    const mailAddress = list.map((l) => l.email).join(',');
 
     const PrintButton = (
       <button
-        type='button'
-        aria-label='Descargar PDF'
-        className='btn btn-invert'>
-        Descargar / Imprimir
+        type="button"
+        aria-label="Descargar PDF"
+        className="btn btn-invert"
+      >
+        Descargar .pdf / Imprimir
       </button>
-    )
+    );
 
     const SendToAllButton = (
       <a
         href={`mailto:${mailAddress}`}
-        aria-label='Correo a todas las escuelas'
-        className='btn btn-invert'>
+        aria-label="Correo a todas las escuelas"
+        className="btn btn-invert"
+      >
         Enviar correo a todos
       </a>
-    )
+    );
 
-    const ExportToExcelButton = (
-      <button
-        type='button'
-        aria-label='Exportar Excel'
-        className='btn btn-invert'>
-        Excel
-        <ExcelExport schools={list} />
-      </button>
-    )
+    const ExportToExcelButton = <ExcelExport schools={list} />;
 
     return (
       <React.Fragment>
         {!loaded && <Loader />}
         {loaded && (
           <article>
-            <header className='app-admin-title'>
+            <header className="app-admin-title">
               <h1>
                 Colegios registrados: <small>{list.length}</small>
               </h1>
-              <div className='app-list-button'>{SendToAllButton}</div>
+              <div className="app-list-button">{SendToAllButton}</div>
               <div>
                 <ReactToPrint
                   trigger={() => PrintButton}
                   content={() => this.componentRef}
-                  documentTitle={() => "Exportar Excel"}
+                  documentTitle={() => 'Exportar Excel'}
                 />
               </div>
-              <div className='app-list-button'>{ExportToExcelButton}</div>
+              <div className="app-list-button">{ExportToExcelButton}</div>
             </header>
             <ReactMessages
               message={error.message}
@@ -138,13 +132,13 @@ class AdminList extends React.Component {
               data={list}
               handleRemove={this.handleRemove}
               handleShow={this.handleShow}
-              ref={el => (this.componentRef = el)}
+              ref={(el) => (this.componentRef = el)}
             />
           </article>
         )}
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default AdminList
+export default AdminList;
