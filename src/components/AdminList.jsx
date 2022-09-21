@@ -173,10 +173,13 @@ class AdminList extends React.Component {
         {loaded && (
           <article>
             <header className="app-admin-title">
-              <h1>
-                Colegios registrados:{' '}
-                <small>{year ? filteredList.length : list.length}</small>
-              </h1>
+              <div className="app-admin-header">
+                <h1>
+                  Colegios registrados:{' '}
+                  <small>{year ? filteredList.length : list.length}</small>
+                </h1>
+                <div className="app-list-button_last">{YearFilter}</div>
+              </div>
               <div className="app-list-button">{SendToAllButton}</div>
               <div>
                 <ReactToPrint
@@ -186,7 +189,6 @@ class AdminList extends React.Component {
                 />
               </div>
               <div className="app-list-button">{ExportToExcelButton}</div>
-              <div className="app-list-button_last">{YearFilter}</div>
             </header>
             <ReactMessages
               message={error.message}

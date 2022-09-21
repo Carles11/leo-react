@@ -110,6 +110,12 @@
   font-size: var(--maxSize);
 }
 
+.app-admin-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
 .app-list-button {
   margin: 1rem;
 }

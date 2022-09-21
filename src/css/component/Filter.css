@@ -95,7 +95,7 @@
 .year-filter-list.active {
   visibility: visible;
   top: 4rem;
-  z-index: 1;
+  z-index: 99;
 }
 
 .app-filter-item {
