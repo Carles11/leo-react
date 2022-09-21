@@ -11,19 +11,27 @@ class PrintComponent extends React.Component {
   };
 
   render() {
-    const { data, handleRemove, handleShow } = this.props;
+    const { data, filteredData, year, handleRemove, handleShow } = this.props;
 
     return (
       <ul className="app-list">
-        {!!data.length &&
-          data.map((item) => (
-            <Item
-              key={item._id}
-              item={item}
-              handleRemove={handleRemove}
-              handleShow={handleShow}
-            />
-          ))}
+        {!year && !!data.length
+          ? data.map((item) => (
+              <Item
+                key={item._id}
+                item={item}
+                handleRemove={handleRemove}
+                handleShow={handleShow}
+              />
+            ))
+          : filteredData.map((item) => (
+              <Item
+                key={item._id}
+                item={item}
+                handleRemove={handleRemove}
+                handleShow={handleShow}
+              />
+            ))}
         {data.length === 0 && (
           <p className="txt">Todavía no hay ningún colegio en el listado.</p>
         )}

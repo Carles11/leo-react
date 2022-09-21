@@ -12,6 +12,8 @@ class AdminList extends React.Component {
   state = {
     loaded: false,
     list: [],
+    filteredList: [],
+    year: null,
     error: {
       message: 'Hay algún problema al cargar el listado, inténtalo más tarde.',
       next: false,
@@ -78,19 +80,21 @@ class AdminList extends React.Component {
   };
 
   handleVisibility = () => {
+    console.log('handleVisibility------');
+
     this.setState((prevState) => ({ visible: !prevState.visible }));
   };
 
   handleFilter = (e) => {
+    console.log('handleFilter-----');
     const yearsOptions = this.state.list;
     const { year } = e.target.dataset;
     const schools = yearsOptions.filter(
       (school) => school.year === Number(year)
     );
 
-    this.setState({ list: schools });
-    console.log('SCUUUUUUUULS', schools);
-    console.log('YEEEEEEEEEAAA', year);
+    this.setState({ filteredList: schools, year });
+    this.handleVisibility();
   };
 
   unite = (data) => {
@@ -100,13 +104,18 @@ class AdminList extends React.Component {
     return uniqueEditions;
   };
 
+  executeSeveralFuncs = (e) => {
+    this.handleFilter(e);
+    this.handleVisibility;
+  };
+
   render() {
-    const { list, loaded, error, visible } = this.state;
+    const { list, filteredList, year, loaded, error, visible } = this.state;
     const mailAddress = list.map((l) => l.email).join(',');
     const active = visible ? 'active' : '';
 
     const existingYears = this.unite(list);
-    console.log('EEEEEEEe', existingYears);
+    console.log('existingYears', existingYears);
 
     const PrintButton = (
       <button
@@ -124,18 +133,18 @@ class AdminList extends React.Component {
           type="button"
           aria-label="Year filtering"
           className="btn btn-invert"
-          onClick={this.handleVisibility}
+          onMouseOver={this.handleVisibility}
         >
           Filtrar año <span className="icon-arrow-down-circle" />
         </button>
-        <ul className={`app-filter-list ${active}`}>
+        <ul className={`year-filter-list ${active}`}>
           {existingYears.map((k) => (
             <li className="app-filter-item" key={k}>
               <button
                 id={`btn_${k}`}
                 data-year={k}
                 data-count={existingYears[k]}
-                onClick={this.handleFilter}
+                onClick={(e) => this.executeSeveralFuncs(e)}
                 disabled={!visible}
               >
                 {k}
@@ -159,13 +168,14 @@ class AdminList extends React.Component {
     const ExportToExcelButton = <ExcelExport schools={list} />;
 
     return (
-      <React.Fragment>
+      <div>
         {!loaded && <Loader />}
         {loaded && (
           <article>
             <header className="app-admin-title">
               <h1>
-                Colegios registrados: <small>{list.length}</small>
+                Colegios registrados:{' '}
+                <small>{year ? filteredList.length : list.length}</small>
               </h1>
               <div className="app-list-button">{SendToAllButton}</div>
               <div>
@@ -187,13 +197,15 @@ class AdminList extends React.Component {
             />
             <PrintComponent
               data={list}
+              year={year}
+              filteredData={filteredList}
               handleRemove={this.handleRemove}
               handleShow={this.handleShow}
               ref={(el) => (this.componentRef = el)}
             />
           </article>
         )}
-      </React.Fragment>
+      </div>
     );
   }
 }
