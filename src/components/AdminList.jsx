@@ -111,7 +111,9 @@ class AdminList extends React.Component {
 
   render() {
     const { list, filteredList, year, loaded, error, visible } = this.state;
-    const mailAddress = list.map((l) => l.email).join(',');
+    const mailAddress = !year
+      ? list.map((l) => l.email).join(',')
+      : filteredList.map((l) => l.email).join(',');
     const active = visible ? 'active' : '';
 
     const existingYears = this.unite(list);
@@ -132,7 +134,7 @@ class AdminList extends React.Component {
         <button
           type="button"
           aria-label="Year filtering"
-          className="btn btn-invert"
+          className=" btn-invert"
           onMouseOver={this.handleVisibility}
         >
           Filtrar año <span className="icon-arrow-down-circle" />
@@ -180,15 +182,17 @@ class AdminList extends React.Component {
                 </h1>
                 <div className="app-list-button_last">{YearFilter}</div>
               </div>
-              <div className="app-list-button">{SendToAllButton}</div>
-              <div>
-                <ReactToPrint
-                  trigger={() => PrintButton}
-                  content={() => this.componentRef}
-                  documentTitle={() => 'Exportar Excel'}
-                />
+              <div className="app-admin-admin-tools">
+                <div className="app-list-button">{SendToAllButton}</div>
+                <div>
+                  <ReactToPrint
+                    trigger={() => PrintButton}
+                    content={() => this.componentRef}
+                    documentTitle={() => 'Exportar Excel'}
+                  />
+                </div>
+                <div className="app-list-button">{ExportToExcelButton}</div>
               </div>
-              <div className="app-list-button">{ExportToExcelButton}</div>
             </header>
             <ReactMessages
               message={error.message}
