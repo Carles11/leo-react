@@ -13,7 +13,6 @@ const dictionary = {
     CONCURSO_EDICION_SF_INSCRIPTION_DUE: '01 de marzo de 2023',
     CONCURSO_EDICION_TXT:
       'La Final de la duodécima convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
-    CONCURSO_ORGANIZA: '¿Quién lo organiza?',
     CONCURSO_EDICION_TXT_CONT:
       'La fecha límite para la inscripción de los colegios participantes será el ',
     CONCURSO_ORGANIZA: '¿Quién lo organiza?',

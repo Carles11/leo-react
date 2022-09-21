@@ -14,19 +14,20 @@ class ImageGallery extends React.Component {
     lightboxIsOpen: false,
     data: [],
     photos: [],
+    year: 2022,
     filter: {},
     position: 0,
     lazyLoad: false,
   };
 
   componentDidUpdate(prevState) {
-    const { position, lazyLoad } = this.state;
+    const { position, lazyLoad, year } = this.state;
     // const newDate = new Date();
     // const currentYear = newDate.getFullYear();
     // this.getPhotos(currentYear - 3); //keep it in case we get photos to show currentYear
     if (position !== prevState.position && !lazyLoad) {
       this.setState((oldState) => ({ lazyLoad: !oldState.lazyLoad }));
-      this.getPhotos(2022); // we show 2022 by default
+      this.getPhotos(year); // we show 2022 by default
     }
   }
 
@@ -35,7 +36,7 @@ class ImageGallery extends React.Component {
     const { year } = e.target.dataset;
     const photos = data.filter((photo) => photo.year === Number(year));
 
-    this.setState({ photos });
+    this.setState({ photos, year });
   };
 
   getPhotos = async (year) => {
@@ -105,14 +106,14 @@ class ImageGallery extends React.Component {
   };
 
   render() {
-    const { loaded, photos, filter } = this.state;
+    const { loaded, photos, filter, year } = this.state;
     if (!loaded) return <Loader css={'app-section h725'} />;
 
     return (
       <React.Fragment>
         <header className="header-wrapper">
           <h2 className="tit-section m2rem tit-section-secondColor">
-            Galeria de Imágenes
+            Galeria de Imágenes {year}
           </h2>
         </header>
 
