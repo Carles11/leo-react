@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import ReactMessages from 'react-messages';
 
 import * as API from '../utils/API';
+import { getNextEditionYear } from '../utils/helpers';
+
 import {
   showFormErrors,
   showInputError,
@@ -57,6 +59,7 @@ class Register extends React.Component {
   handleData = (e) => {
     const { category } = this.state;
     const { elements } = e.target;
+    const nextEditionYear = getNextEditionYear();
 
     const name = elements.name.value.trim();
     const phone = elements.phone.value.trim();
@@ -65,10 +68,11 @@ class Register extends React.Component {
     const email = elements.email.value.trim();
     const cp = elements.cp.value.trim();
     const city = elements.city.value.trim();
+    const year = nextEditionYear;
 
     this.cleanFields(elements);
 
-    return { name, phone, address, contact, email, category, cp, city };
+    return { name, phone, address, contact, email, category, cp, city, year };
   };
 
   handlePost = async (body) => {
@@ -243,7 +247,7 @@ class Register extends React.Component {
                     >
                       <strong>las bases</strong>
                     </a>{' '}
-                    del concurso 2022
+                    del concurso 2023
                   </p>
                 </div>
               </div>
@@ -328,7 +332,11 @@ class Register extends React.Component {
             </div>
             <p className='app-form-label-txt-error' />
 */}
-            <Button type={'submit'} label={'Enviar'} css={'m1rem'} disabled />
+            <Button
+              type={'submit'}
+              label={'Enviar'}
+              css={'m1rem'} /*disabled*/
+            />
           </form>
         </div>
       </article>

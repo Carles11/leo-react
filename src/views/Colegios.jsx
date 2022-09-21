@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 import * as API from '../utils/API';
+import { getNextEditionYear } from '../utils/helpers';
 import withScroll from '../components/HOC/withScroll';
 // import Loader from '../components/Loader'
 
@@ -22,9 +23,9 @@ class Colegios extends React.Component {
   }
 
   render() {
+    const nextEditionYear = getNextEditionYear();
     const { DIC } = this.props;
     const { schools } = this.state;
-
     return (
       <section className="app-content pb2rem mb2rem">
         <Helmet
@@ -43,14 +44,17 @@ class Colegios extends React.Component {
         {!!schools.length && (
           <article>
             <ul className="app-list app-section-boxes">
-              {schools.map((item) => (
-                <li key={item._id} className="app-list-item">
-                  <header className="app-list-header">
-                    <h2>{item.name}</h2>
-                    <small>{item.address}</small>
-                  </header>
-                </li>
-              ))}
+              {schools.map(
+                (item) =>
+                  item.year === nextEditionYear && (
+                    <li key={item._id} className="app-list-item">
+                      <header className="app-list-header">
+                        <h2>{item.name}</h2>
+                        <small>{item.address}</small>
+                      </header>
+                    </li>
+                  )
+              )}
             </ul>
           </article>
         )}
