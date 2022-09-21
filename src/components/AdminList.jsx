@@ -18,6 +18,7 @@ class AdminList extends React.Component {
       icon: 'warning',
       state: true,
     },
+    visible: false,
   };
 
   static propTypes = {
@@ -76,9 +77,36 @@ class AdminList extends React.Component {
     }
   };
 
+  handleVisibility = () => {
+    this.setState((prevState) => ({ visible: !prevState.visible }));
+  };
+
+  handleFilter = (e) => {
+    const yearsOptions = this.state.list;
+    const { year } = e.target.dataset;
+    const schools = yearsOptions.filter(
+      (school) => school.year === Number(year)
+    );
+
+    this.setState({ list: schools });
+    console.log('SCUUUUUUUULS', schools);
+    console.log('YEEEEEEEEEAAA', year);
+  };
+
+  unite = (data) => {
+    const editions = data.map((item) => item.year);
+
+    const uniqueEditions = [...new Set(editions)];
+    return uniqueEditions;
+  };
+
   render() {
-    const { list, loaded, error } = this.state;
+    const { list, loaded, error, visible } = this.state;
     const mailAddress = list.map((l) => l.email).join(',');
+    const active = visible ? 'active' : '';
+
+    const existingYears = this.unite(list);
+    console.log('EEEEEEEe', existingYears);
 
     const PrintButton = (
       <button
@@ -88,6 +116,34 @@ class AdminList extends React.Component {
       >
         Descargar .pdf / Imprimir
       </button>
+    );
+    const YearFilter = (
+      <div>
+        {' '}
+        <button
+          type="button"
+          aria-label="Year filtering"
+          className="btn btn-invert"
+          onClick={this.handleVisibility}
+        >
+          Filtrar año <span className="icon-arrow-down-circle" />
+        </button>
+        <ul className={`app-filter-list ${active}`}>
+          {existingYears.map((k) => (
+            <li className="app-filter-item" key={k}>
+              <button
+                id={`btn_${k}`}
+                data-year={k}
+                data-count={existingYears[k]}
+                onClick={this.handleFilter}
+                disabled={!visible}
+              >
+                {k}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
 
     const SendToAllButton = (
@@ -120,6 +176,7 @@ class AdminList extends React.Component {
                 />
               </div>
               <div className="app-list-button">{ExportToExcelButton}</div>
+              <div className="app-list-button_last">{YearFilter}</div>
             </header>
             <ReactMessages
               message={error.message}
