@@ -53,7 +53,7 @@ class AdminList extends React.Component {
     const c = window.confirm(
       'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.'
     );
-
+    console.log('REREREMOVOOOOVE', type, id);
     if (c) {
       const promise = await API.remove(`${type}/${id}`);
 
@@ -80,13 +80,10 @@ class AdminList extends React.Component {
   };
 
   handleVisibility = () => {
-    console.log('handleVisibility------');
-
     this.setState((prevState) => ({ visible: !prevState.visible }));
   };
 
   handleFilter = (e) => {
-    console.log('handleFilter-----');
     const yearsOptions = this.state.list;
     const { year } = e.target.dataset;
     const schools = yearsOptions.filter(
@@ -117,7 +114,6 @@ class AdminList extends React.Component {
     const active = visible ? 'active' : '';
 
     const existingYears = this.unite(list);
-    console.log('existingYears', existingYears);
 
     const PrintButton = (
       <button

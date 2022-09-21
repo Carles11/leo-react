@@ -48,7 +48,6 @@ class Register extends React.Component {
     }
 
     showCheckboxError(elem);
-    console.log('E-TARGET', elem);
     if (category.indexOf(value) === -1) {
       category.push(value);
     } else {
