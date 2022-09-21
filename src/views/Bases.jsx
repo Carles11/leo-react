@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import withScroll from '../components/HOC/withScroll';
 
@@ -22,11 +23,7 @@ const Bases = (props) => {
       </header>
       <article className="app-section-width">
         <p>Estimados/as compañeros/as:</p>
-        <p>
-          El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía
-          de vuestros alumnos de español, a la undécima edición del Concurso
-          Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”.{' '}
-        </p>
+        <p>{DIC.CONCURSO_BASES_TITLE}</p>
         <p>
           A continuación encontraréis las bases del concurso, el proceso de
           selección de candidatos e información general sobre las semifinales
@@ -35,13 +32,16 @@ const Bases = (props) => {
           en la sede de Fráncfort del Instituto Cervantes. La fecha límite para
           la inscripción de los colegios participantes será el{' '}
           <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}</strong>
-          .
+          . Para confirmar que el colegio ha quedado correctamente inscrito, hay
+          que mirar en la lista de{' '}
+          <Link to="/colegios-inscritos">Colegios inscritos</Link>. Con este fin
+          no se mandan correos de confirmación.
         </p>
 
         <p>
           Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está
           incluido en la red de concursos oficiales del Kultusministerium de
-          Hesse. En su undécimo año de celebración consecutiva cuenta con el
+          Hesse. En su duodécimo año de celebración consecutiva cuenta con el
           apoyo institucional de la Consejería de Educación de la Embajada de
           España en Alemania, del Instituto Cervantes de Fráncfort, del
           Consulado General de España en Fráncfort, del Consulado General de
@@ -91,12 +91,13 @@ const Bases = (props) => {
               categoría apropiada. La elección de la categoría en la que
               participan los alumnos queda al criterio del profesor que los
               presente al concurso. Como pauta orientativa se establece un nivel
-              A1 para alumnos en primer año de aprendizaje; A2 segundo o tercero
-              y B1 cuarto o quinto; dependiendo de si los alumnos estudian el
-              español como segunda o tercera lengua extranjera. Otro criterio
-              importante a la hora de establecer el nivel en el que participen
-              los candidatos será el nivel (MCER) del libro de texto que se esté
-              utilizando en clase en la segunda mitad del curso escolar.
+              A1 para alumnos en primer año de aprendizaje; A2 segundo o en
+              algunas ocasiones tercero y B1 cuarto o en algunas ocasiones
+              quinto; dependiendo de si los alumnos estudian el español como
+              segunda o tercera lengua extranjera. Otro criterio importante a la
+              hora de establecer el nivel en el que participen los candidatos
+              será el nivel (MCER) del libro de texto que se esté utilizando en
+              clase en la segunda mitad del curso escolar.
             </p>
             <br />
             <p className="txt">
@@ -133,11 +134,11 @@ const Bases = (props) => {
               candidatos por parte del jurado, ésta será la selección de textos
               a leer:
               <strong className="txt-highlight">
-                En la categoría A1 habrá 3 textos, en A2 y B1 4 y en B2 5
-                textos, fijados por la organización del concurso, los alumnos
-                prepararán todos los textos de su categoría y leerán uno de
-                ellos, elegido al azar el día del concurso. Los textos A1
-                constarán de 1300 caracteres y los de A2, B1 y B2 de 1500.
+                En la categoría A1 habrá 3 texto, en A2 y B1 4 y en B2 5 textos,
+                fijados por la organización del concurso, los alumnos prepararán
+                todos los textos de su categoría y leerán uno de ellos, elegido
+                al azar el día del concurso. Los textos A1 constarán de 1300
+                caracteres y los de A2, B1 y B2 de 1500.
               </strong>
             </p>
             <p className="txt">
@@ -230,7 +231,7 @@ const Bases = (props) => {
               </strong>
               el candidato demuestra la comprensión de lo leído a través de la
               segmentación correcta de frases y el uso de recursos prosódicos.
-              Asimismo consigue reflejar el tono y el contexto ambiental de la
+              Asimismo, consigue reflejar el tono y el contexto ambiental de la
               lectura.
             </p>
           </li>
@@ -253,6 +254,14 @@ const Bases = (props) => {
               que la final se prolongue demasiado.
             </p>
             <p className="txt">
+              En cada una de las semifinales se elegirá sólo a un/a alumno/a
+              para ocupar el primer y segundo puesto, ya que sólo una persona
+              puede representar la semifinal en la final del Instituto Cervantes
+              (el segundo puesto queda como sustituto/a y también asiste a la
+              final). Esta regla se hace extensiva a las 4 categorías de lectura
+              (A1 – B2).
+            </p>
+            <p className="txt">
               Todos los centros escolares que se inscriban al concurso estarán
               dispuestos a celebrar y organizar en su colegio una de las
               semifinales. En caso contrario se avisará a la organización antes
@@ -264,32 +273,32 @@ const Bases = (props) => {
               Instituto Cervantes de Fráncfort en la fecha indicada por la
               organización (normalmente en febrero de cada año).
             </p>
-            <p className="txt">
-              Un representante de cada semifinal recogerá los premios para su
-              eliminatoria en Instituto Cervantes de Fráncfort en la fecha
-              indicada por la organización (normalmente en febrero de cada año).
-            </p>
           </li>
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">
                 Semifinal Latinoamérica: &nbsp;
               </strong>
-              : Fruto de la colaboración con los Consulados Generales de México,
+              Fruto de la colaboración con los Consulados Generales de México,
               Colombia, Chile, Perú y Argentina se celebrará una semifinal B2
               para alumnos procedentes de países latinoamericanos. Para ello no
               será necesario ser poseedor de la nacionalidad del país. La SF se
               celebrará el{' '}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}{' '}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}{' '}
               </strong>
               en el Instituto Cervantes de Fráncfort con el apoyo y tutela de
               los consulados latinoamericanos antes mencionados. El plazo de
               inscripción para esta semifinal terminará el{' '}
               <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>
               . La inscripción tendrá lugar a través de la página&nbsp;
-              <strong className="txt-highlight">www.leo-leo-hessen.com</strong>.
+              <Link to="/">
+                <strong className="txt-highlight">
+                  www.leo-leo-hessen.com
+                </strong>
+              </Link>
+              .
             </p>
             <p className="txt">
               <strong className="txt-highlight">Semifinal ALCE:&nbsp;</strong>
@@ -309,12 +318,14 @@ const Bases = (props) => {
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
-              <strong className="txt-highlight">Página web:&nbsp;</strong>Desde
-              de la convocatoria 2019 el concurso cuenta con una página
-              web&nbsp;
-              <strong className="txt-highlight">
-                www.leo-leo-hessen.com
-              </strong>{' '}
+              <strong className="txt-highlight">Página web:&nbsp;</strong>A
+              partir de la convocatoria 2019 el concurso cuenta con una página
+              web{' '}
+              <Link to="/">
+                <strong className="txt-highlight">
+                  www.leo-leo-hessen.com
+                </strong>
+              </Link>{' '}
               donde los colegios interesados se podrán informar de los detalles
               del concurso. En la página se encuentran audios para practicar los
               textos de lectura. Asimismo se pueden encontrar aquí diferentes
@@ -337,7 +348,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 Alternativa virtual:&nbsp;
               </strong>
-              Debido a la actual{' '}
+              Debido a la{' '}
               <strong className="txt-highlight">pandemia de Covid-19</strong> se
               ofrecerá para la convocatoria {nextYearEdition} una{' '}
               <strong className="txt-highlight">
@@ -347,7 +358,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
               </strong>{' '}
-              se realizará -siempre y cuando la situación pandámica lo permita-
+              se realizará -siempre y cuando la situación pandémica lo permita-
               de forma presencial en el salón de actos del Instituto Cervantes
               de Fráncfort.
             </p>
