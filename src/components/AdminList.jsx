@@ -137,7 +137,8 @@ class AdminList extends React.Component {
           className=" btn-invert"
           onMouseOver={this.handleVisibility}
         >
-          Filtrar año <span className="icon-arrow-down-circle" />
+          {!year ? 'Mostrando lista total' : `Mostrando año ${year}`}{' '}
+          <span className="icon-arrow-down-circle" />
         </button>
         <ul className={`year-filter-list ${active}`}>
           {existingYears.map((k) => (
