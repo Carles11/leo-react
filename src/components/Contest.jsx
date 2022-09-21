@@ -20,15 +20,18 @@ const Contest = (props) => {
             <h2 className="tit-box">{DIC[p.title]}</h2>
             <p className="txt txt-IE">
               {DIC[`${p.title}_TXT`]}
-              <strong className="txt-highlight">
-                {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}
-              </strong>
-              . {''}
+              {p.title === 'CONCURSO_EDICION' && (
+                <strong className="txt-highlight">
+                  {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}. {''}
+                </strong>
+              )}
+
               {DIC[`${p.title}_TXT_CONT`]}
-              <strong className="txt-highlight">
-                {DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}
-              </strong>
-              .
+              {p.title === 'CONCURSO_EDICION' && (
+                <strong className="txt-highlight">
+                  {DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}.
+                </strong>
+              )}
             </p>
             {link}
           </div>
