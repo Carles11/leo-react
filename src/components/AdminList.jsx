@@ -101,11 +101,6 @@ class AdminList extends React.Component {
     return uniqueEditions;
   };
 
-  executeSeveralFuncs = (e) => {
-    this.handleFilter(e);
-    this.handleVisibility;
-  };
-
   render() {
     const { list, filteredList, year, loaded, error, visible } = this.state;
     const mailAddress = !year
@@ -143,7 +138,10 @@ class AdminList extends React.Component {
                 id={`btn_${k}`}
                 data-year={k}
                 data-count={existingYears[k]}
-                onClick={(e) => this.executeSeveralFuncs(e)}
+                onClick={(e) => {
+                  this.handleFilter(e);
+                  this.handleVisibility;
+                }}
                 disabled={!visible}
               >
                 {k}
