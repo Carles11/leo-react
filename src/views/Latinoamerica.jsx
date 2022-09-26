@@ -25,7 +25,7 @@ const Latinoamerica = (props) => {
             Semifinal Latinoamérica:&nbsp;
           </strong>
           Fruto de la colaboración con los Consulados Generales de México,
-          Colombia, Chile y Perú se celebrará una semifinal B2 para alumnos
+          Colombia, Argentina, Chile y Perú se celebrará una semifinal B2 para alumnos
           procedentes de Latinoamérica. Para ello no será necesario ser poseedor
           de la nacionalidad del país latinoamericano que se represente. La SF
           se celebrará también en el Instituto Cervantes de Fráncfort el{' '} <strong className='txt-highlight'>

@@ -245,13 +245,9 @@ const Bases = (props) => {
               . Los coordinadores de las semifinales acordarán la fecha concreta
               en la que tendrá lugar esta prueba eliminatoria con los centros
               participantes en cada una de ellas. Este proceso dependerá del
-              número de centros que se inscriban al concurso (fecha máxima de
-              inscripción{' '}
-              <strong className="txt-highlight">
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}
-              </strong>
-              ). Se intentará que el número de SF no sea mayor a 6, para evitar
-              que la final se prolongue demasiado.
+              número de centros que se inscriban al concurso. Se intentará que
+              el número de SF no sea mayor a 6, para evitar que la final se
+              prolongue demasiado.
             </p>
             <p className="txt">
               En cada una de las semifinales se elegirá sólo a un/a alumno/a
