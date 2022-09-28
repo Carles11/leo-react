@@ -37,7 +37,8 @@ class AdminList extends React.Component {
     const promise = await API.get(type);
 
     if (promise.success) {
-      this.setState({ list: promise.data, loaded: true });
+      this.setState({ list: promise.data, loaded: true }) &&
+        window.location.reload();
     } else {
       this.setState({
         error: Object.assign(error, { next: true }),
@@ -53,12 +54,13 @@ class AdminList extends React.Component {
     const c = window.confirm(
       'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.'
     );
-    console.log('REREREMOVOOOOVE', type, id);
+    // console.log('REREREMOVOOOOVE', type, id);
     if (c) {
       const promise = await API.remove(`${type}/${id}`);
 
       if (promise.success) {
         this.setState({ list: promise.data, loaded: true });
+        window.location.reload();
       } else {
         this.setState({
           error: Object.assign(error, { next: true }),
@@ -128,7 +130,7 @@ class AdminList extends React.Component {
           className=" btn-invert"
           onMouseOver={this.handleVisibility}
         >
-          {!year ? 'Mostrando lista total' : `Mostrando año ${year}`}{' '}
+          {!year ? 'Mostrando listado completo' : `Mostrando año ${year}`}{' '}
           <span className="icon-arrow-down-circle" />
         </button>
         <ul className={`year-filter-list ${active}`}>
