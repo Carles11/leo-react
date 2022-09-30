@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import CuadroGanadores from '../assets/docus/impresos/Cuadro_ganadores.docx';
 import PuntosJurado from '../assets/docus/impresos/Impreso_puntos_para_el_jurado.docx';
 import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
-import logo from '../assets/imgs/logo.png';
+// import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
   const { DIC } = props;
@@ -93,7 +93,7 @@ const Impresos = (props) => {
               </div>
             </header>
           </li>
-          <li key="logo-leo" className="app-list-item  ml5r mr5r">
+          {/* <li key="logo-leo" className="app-list-item  ml5r mr5r">
             <header className="app-list-header">
               <h2>Logo </h2>
               <div className="app-list-content-btn">
@@ -112,7 +112,7 @@ const Impresos = (props) => {
                 </a>
               </div>
             </header>
-          </li>
+          </li> */}
         </ul>
       </article>
     </div>
