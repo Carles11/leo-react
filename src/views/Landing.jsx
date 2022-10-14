@@ -18,10 +18,8 @@ const Landing = (props) => {
     const cookies = new Cookies('registered');
 
     if (cookies.get('firstTimeVisit')) {
-      console.log('FAFAFAFAFAFAF', firstVisit);
-      setFirstVisit(true); //Modal does not open if cookie exists
+      setFirstVisit(false); //Modal does not open if cookie exists
     } else if (!cookies.get('firstTimeVisit')) {
-      console.log('TRURURURURUURUR', firstVisit);
       cookies.set('firstTimeVisit', 'true', {
         path: '/',
         maxAge: 60 * 60 * 24 * 365,
