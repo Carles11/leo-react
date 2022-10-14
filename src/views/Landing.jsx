@@ -23,7 +23,7 @@ const Landing = (props) => {
     const expDate14d = nextWeek;
 
     if (cookies.get('firstTimeVisit')) {
-      setFirstVisit(true); //Modal does not open if cookie exists
+      setFirstVisit(false); //Modal does not open if cookie exists
     } else if (!cookies.get('firstTimeVisit')) {
       cookies.set('firstTimeVisit', 'true', {
         path: '/',
