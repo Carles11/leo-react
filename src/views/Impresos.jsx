@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
 
 // import withScroll from '../components/HOC/withScroll';
+import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
 import CuadroGanadores from '../assets/docus/impresos/Cuadro_ganadores.docx';
 import PuntosJurado from '../assets/docus/impresos/Impreso_puntos_para_el_jurado.docx';
-import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
+import ControlList from '../assets/docus/impresos/Lista-de-control-2022-2023.docx';
 // import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
@@ -88,6 +89,26 @@ const Impresos = (props) => {
                 >
                   <span className="hidden">
                     {`Descargar el texto 'Datenschützerklärung'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li key="datenschuetzerklaerung" className="app-list-item  ml5r mr5r">
+            <header className="app-list-header">
+              <h2>Lista de control para escuelas (check-list)</h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el texto 'Datenschützerklärung'`}
+                  download={ControlList}
+                  href={ControlList}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el texto 'ControlList'`}
+                >
+                  <span className="hidden">
+                    {`Descargar el texto 'ControlList'`}
                   </span>
                 </a>
               </div>
