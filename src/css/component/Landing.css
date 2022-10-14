@@ -1,0 +1,12 @@
+.aviso-portada {
+  border: 2px solid var(--mainColor);
+  border-radius: 2px;
+  background-color: var(--warningColor);
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 90%;
+}
+.aviso-portada h1,
+p {
+  text-align: center;
+}

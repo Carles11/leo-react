@@ -9,6 +9,7 @@
 
 
 /** COMPONENT STYLES **/
+@import './component/Landing.css';
 @import './component/Background.css';
 @import './component/Button.css';
 @import './component/Form.css';
