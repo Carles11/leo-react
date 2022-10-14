@@ -39,6 +39,9 @@
   @media screen {
   }
 }
+.leo-bg-img {
+  max-width: 100%;
+}
 
 .app-section {
   position: relative;
