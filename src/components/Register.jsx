@@ -1,21 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import ReactMessages from 'react-messages';
 
 import * as API from '../utils/API';
 import { getNextEditionYear } from '../utils/helpers';
 
-import {
-  showFormErrors,
-  showInputError,
-  showCheckboxError,
-} from '../utils/errorHandler';
-import SingleInput from './form/SingleInput';
-import Checkbox from './form/Checkbox';
-import Button from './Button';
-import { isDisabled } from '../utils/helpers';
 import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
 import '../css/layout/MiniGrid.css';
+import {
+  showCheckboxError,
+  showFormErrors,
+  showInputError,
+} from '../utils/errorHandler';
+import { isDisabled } from '../utils/helpers';
+import Button from './Button';
+import Checkbox from './form/Checkbox';
+import SingleInput from './form/SingleInput';
 
 const categories = ['A1', 'A2', 'B1', 'B2'];
 
@@ -126,7 +126,7 @@ class Register extends React.Component {
         <ReactMessages
           message={message}
           next={send}
-          duration={9000}
+          duration={7000}
           error={error}
         />
         <div className="app-section-width">
