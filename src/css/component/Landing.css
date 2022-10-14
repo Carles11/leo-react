@@ -10,3 +10,9 @@
 p {
   text-align: center;
 }
+
+@media only screen and (max-device-width: 649px) {
+  .aviso-portada {
+    margin: 3rem auto;
+  }
+}

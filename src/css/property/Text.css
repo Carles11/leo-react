@@ -129,6 +129,7 @@ ul > li {
   font-size: var(--maxSize);
   color: var(--mainColor);
   margin-bottom: 0;
+  text-align: center;
 }
 
 @media only screen and (max-width: 850px) {

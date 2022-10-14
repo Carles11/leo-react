@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
-// import ReactMessages from 'react-messages';
 import Cookies from 'universal-cookie';
 
 import Contest from '../components/Contest';
@@ -24,7 +23,7 @@ const Landing = (props) => {
     const expDate14d = nextWeek;
 
     if (cookies.get('firstTimeVisit')) {
-      setFirstVisit(false); //Modal does not open if cookie exists
+      setFirstVisit(true); //Modal does not open if cookie exists
     } else if (!cookies.get('firstTimeVisit')) {
       cookies.set('firstTimeVisit', 'true', {
         path: '/',
@@ -52,11 +51,6 @@ const Landing = (props) => {
       </p>
     </div>
   );
-
-  // const runMessage = () => {
-  //   console.log('FIRATSVIAIISISSSIITITTT', firstVisit);
-  //   return <ReactMessages message={message} duration={7000} />;
-  // };
 
   return (
     <section className="app-landing">
