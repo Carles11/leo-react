@@ -16,13 +16,19 @@ const Landing = (props) => {
 
   useEffect(() => {
     const cookies = new Cookies('registered');
+    const nextWeek = new Date();
+
+    // add 7 days to the current date
+    nextWeek.setDate(new Date().getDate() + 7);
+
+    const expDate14d = nextWeek;
 
     if (cookies.get('firstTimeVisit')) {
       setFirstVisit(false); //Modal does not open if cookie exists
     } else if (!cookies.get('firstTimeVisit')) {
       cookies.set('firstTimeVisit', 'true', {
         path: '/',
-        maxAge: 60 * 60 * 24 * 365,
+        maxAge: expDate14d, // sets validity to 14 days from now
       });
       setFirstVisit(true); //Creates a cookie and shows modal.
     }
@@ -30,8 +36,11 @@ const Landing = (props) => {
 
   const message = (
     <div className="aviso-portada">
-      <h1>Cursillo preparatorio en línea: Leo, leo 2023.</h1>
-      <p>Jueves 1 de diciembre de 2022, de 16.30 a 17.30</p>
+      <h1>
+        Cursillo preparatorio en línea <br />
+        para colegios que se inscriben por primera vez.
+      </h1>
+      <p>Jueves 1 de diciembre de 2022, de 16.30 a 17.30 h</p>
       <p>
         Inscripción al cursillo: Mandar un correo a{' '}
         <strong>
