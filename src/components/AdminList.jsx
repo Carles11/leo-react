@@ -1,12 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import ReactMessages from 'react-messages';
 import ReactToPrint from 'react-to-print';
 
+import ExcelExport from '../components/ExcelExport';
 import * as API from '../utils/API';
 import Loader from './Loader';
 import PrintComponent from './PrintComponent';
-import ExcelExport from '../components/ExcelExport';
 
 class AdminList extends React.Component {
   state = {
@@ -88,11 +88,16 @@ class AdminList extends React.Component {
   handleFilter = (e) => {
     const yearsOptions = this.state.list;
     const { year } = e.target.dataset;
-    const schools = yearsOptions.filter(
-      (school) => school.year === Number(year)
-    );
 
-    this.setState({ filteredList: schools, year });
+    let schools;
+    if (year !== 'Mostrar listado completo') {
+      schools = yearsOptions.filter((school) => school.year === Number(year));
+
+      this.setState({ filteredList: schools, year });
+    } else {
+      schools = yearsOptions;
+      this.setState({ filteredList: schools, year: null });
+    }
     this.handleVisibility();
   };
 
@@ -111,6 +116,7 @@ class AdminList extends React.Component {
     const active = visible ? 'active' : '';
 
     const existingYears = this.unite(list);
+    existingYears.push('Mostrar listado completo');
 
     const PrintButton = (
       <button
@@ -142,7 +148,6 @@ class AdminList extends React.Component {
                 data-count={existingYears[k]}
                 onClick={(e) => {
                   this.handleFilter(e);
-                  this.handleVisibility;
                 }}
                 disabled={!visible}
               >
