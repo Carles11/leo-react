@@ -1,11 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ButtonSignOut from './ButtonSignOut';
-import { getSlug } from '../utils/helpers';
-import config from '../config';
 import Logo from '../assets/imgs/logo_tiny.png';
+import config from '../config';
+import { getSlug } from '../utils/helpers';
+import ButtonSignOut from './ButtonSignOut';
 
 class Navigation extends React.Component {
   state = {
@@ -95,6 +95,7 @@ class Navigation extends React.Component {
           </Link>
         </li>
         {NAV.map((item, i) => {
+          console.log('ITEMMMM----', item);
           const label = getSlug(item.label);
           const children = item.children.length;
           const section = `app-section-${i}`;
@@ -113,7 +114,8 @@ class Navigation extends React.Component {
               {!!children && (
                 <ul className={`app-subnav-list`}>
                   {item.children.map((item) => {
-                    const link = '/' + getSlug(item);
+                    const route = getSlug(item);
+                    const link = '/' + route;
                     return (
                       <li key={link} className="app-subnav-item">
                         <Link onClick={this.handleVisibility} to={link}>

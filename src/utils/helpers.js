@@ -1,8 +1,13 @@
-export const getSlug = (text) =>
-  text
-    .toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '');
+export const getSlug = (text) => {
+  if (text !== 'Semifinal latinoamérica') {
+    return text
+      .toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^\w-]+/g, '');
+  } else {
+    return 'semifinal-latinoamerica';
+  }
+};
 
 export const isDisabled = (el) => {
   if (el.hasAttribute('disabled')) {
