@@ -1,14 +1,14 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import withScroll from '../components/HOC/withScroll'
+import withScroll from '../components/HOC/withScroll';
 
 const Latinoamerica = (props) => {
-  const { DIC } = props
+  const { DIC } = props;
 
   return (
-    <div className='app-content pb2rem mb2rem'>
+    <div className="app-content pb2rem mb2rem">
       <Helmet
         title={DIC.NAV_LATINOAMERICA}
         meta={[
@@ -17,25 +17,29 @@ const Latinoamerica = (props) => {
         ]}
       />
       <header>
-        <h1 className='tit-header mb2rem'>{DIC.NAV_LATINOAMERICA}</h1>
+        <h1 className="tit-header mb2rem">{DIC.NAV_LATINOAMERICA}</h1>
       </header>
-      <article className='app-section-width'>
-        <p className='txt'>
-          <strong className='txt-highlight'>
+      <article className="app-section-width">
+        <p className="txt">
+          <strong className="txt-highlight">
             Semifinal Latinoamérica:&nbsp;
           </strong>
-          Fruto de la colaboración con los Consulados Generales de México,
-          Colombia, Argentina, Chile y Perú se celebrará una semifinal B2 para alumnos
-          procedentes de Latinoamérica. Para ello no será necesario ser poseedor
-          de la nacionalidad del país latinoamericano que se represente. La SF
-          se celebrará también en el Instituto Cervantes de Fráncfort el{' '} <strong className='txt-highlight'>
-          {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}</strong>. Plazo de inscripción hasta el{''} <strong className='txt-highlight'>
-          {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>.
+          {DIC.SEMIFINAL_LATINOAMERICA_PARAGRAPH_1} La SF se celebrará también
+          en el Instituto Cervantes de Fráncfort el{' '}
+          <strong className="txt-highlight">
+            {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}
+          </strong>
+          . Plazo de inscripción hasta el{''}{' '}
+          <strong className="txt-highlight">
+            {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}
+          </strong>
+          .
         </p>
-        <p className='txt'>
+        <p className="txt">
           Para inscribirse a esta semifinal envíe un correo electrónico a{' '}
           <a
-            href={`mailto:c.cid@hws.schule?subject=${DIC.NAV_LATINOAMERICA_SUBJECT}`}>
+            href={`mailto:c.cid@hws.schule?subject=${DIC.NAV_LATINOAMERICA_SUBJECT}`}
+          >
             <strong>c.cid@hws.schule</strong>
           </a>{' '}
           con los siguientes datos:
@@ -45,20 +49,20 @@ const Latinoamerica = (props) => {
           <li>Edad</li>
           <li>País latinoamericano al que representa</li>
           <li>Persona de contacto</li>
-          <li>E-Mail</li>
+          <li>E-mail</li>
           <li>Dirección</li>
           <li>Teléfono</li>
         </ul>
       </article>
     </div>
-  )
-}
+  );
+};
 
 Latinoamerica.propTypes = {
   DIC: PropTypes.object.isRequired,
-}
+};
 
-const LatinoamericaWithScroll = withScroll(Latinoamerica)
+const LatinoamericaWithScroll = withScroll(Latinoamerica);
 
-export const Unwrapped = Latinoamerica
-export default LatinoamericaWithScroll
+export const Unwrapped = Latinoamerica;
+export default LatinoamericaWithScroll;

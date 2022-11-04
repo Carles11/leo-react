@@ -63,6 +63,8 @@ const dictionary = {
     DESCRIPTION: 'Concurso de lectura en español',
     DOWNLOAD_TEXT: 'Descargue aquí los textos de la edición anterior 2018.',
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
+    SEMIFINAL_LATINOAMERICA_PARAGRAPH_1:
+      'Fruto de la colaboración con los Consulados Generales de México, Colombia, Chile, Perú y Argentina se celebrará una semifinal de nivel B2 para alumnos procedentes de países latinoamericanos. Para ello no será necesario ser poseedor de la nacionalidad del país, solamente tener ascendencia de un país latinoamericano. ',
     SUBDESCRIPTION: 'Próxima final el 2 de junio de 2023',
     EDITION_CURRENT: 'XII convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
@@ -98,9 +100,9 @@ const dictionary = {
     NAV_CERTIFICADOS: 'Certificados',
     NAV_COLEGIOS: 'Colegios inscritos',
     NAV_CONCURSO: 'Concurso',
-    NAV_GALERIA: 'Galeria',
+    NAV_GALERIA: 'Galería',
     NAV_CRITERIOS: 'Criterios de lectura',
-    NAV_LATINOAMERICA: 'Semifinal latinoamericana',
+    NAV_LATINOAMERICA: 'Semifinal latinoamérica',
     NAV_LATINOAMERICA_SUBJECT:
       'Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?',
     NAV_IMPRESOS: 'Impresos',

@@ -183,7 +183,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>
               . Para más información sobre la inscripción, consultar el
               apartado&nbsp;
-              <Link to="/semifinal-latinoamericana">
+              <Link to="/semifinal-latinoamerica">
                 <strong className="txt-highlight">
                   Semifinal Latinoamérica
                 </strong>

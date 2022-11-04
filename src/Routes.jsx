@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Switch, Route } from 'react-router-dom'
-import RoutesAsync from './RoutesAsync'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import RoutesAsync from './RoutesAsync';
 
-const Routes = props => {
-  const { DIC, auth, checkAuth } = props
+const Routes = (props) => {
+  const { DIC, auth, checkAuth } = props;
 
   return (
     <Switch>
       <Route
         exact
-        path='/'
-        component={props => (
+        path="/"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -21,8 +21,8 @@ const Routes = props => {
       />
 
       <Route
-        path='/admin'
-        component={props => (
+        path="/admin"
+        component={(props) => (
           <RoutesAsync
             props={props}
             auth={auth}
@@ -33,8 +33,8 @@ const Routes = props => {
       />
 
       <Route
-        path='/admin-panel'
-        component={props => (
+        path="/admin-panel"
+        component={(props) => (
           <RoutesAsync
             props={props}
             auth={auth}
@@ -45,8 +45,8 @@ const Routes = props => {
       />
 
       <Route
-        path='/bases-del-concurso'
-        component={props => (
+        path="/bases-del-concurso"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -56,8 +56,8 @@ const Routes = props => {
       />
 
       <Route
-        path='/textos-de-lectura'
-        component={props => (
+        path="/textos-de-lectura"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -67,8 +67,8 @@ const Routes = props => {
       />
 
       <Route
-        path='/criterios-de-lectura'
-        component={props => (
+        path="/criterios-de-lectura"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -77,8 +77,8 @@ const Routes = props => {
         )}
       />
       <Route
-        path='/impresos'
-        component={props => (
+        path="/impresos"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -88,8 +88,8 @@ const Routes = props => {
       />
 
       <Route
-        path='/colegios-inscritos'
-        component={props => (
+        path="/colegios-inscritos"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -98,8 +98,8 @@ const Routes = props => {
         )}
       />
       <Route
-        path='/semifinal-latinoamericana'
-        component={props => (
+        path="/semifinal-latinoamerica"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -108,8 +108,8 @@ const Routes = props => {
         )}
       />
       <Route
-        path='/aviso-legal'
-        component={props => (
+        path="/aviso-legal"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -118,8 +118,8 @@ const Routes = props => {
         )}
       />
       <Route
-        path='/impressum'
-        component={props => (
+        path="/impressum"
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -128,7 +128,7 @@ const Routes = props => {
         )}
       />
       <Route
-        component={props => (
+        component={(props) => (
           <RoutesAsync
             props={props}
             DIC={DIC}
@@ -137,13 +137,13 @@ const Routes = props => {
         )}
       />
     </Switch>
-  )
-}
+  );
+};
 
 Routes.propTypes = {
   DIC: PropTypes.object.isRequired,
   auth: PropTypes.bool.isRequired,
   checkAuth: PropTypes.func.isRequired,
-}
+};
 
-export default Routes
+export default Routes;

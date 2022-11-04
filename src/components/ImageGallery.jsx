@@ -1,11 +1,11 @@
 import React from 'react';
-import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
+import Gallery from 'react-photo-gallery';
 
-import Loader from './Loader';
-import Filter from './Filter';
 import * as API from '../utils/API';
+import Filter from './Filter';
 import withWindow from './HOC/withWindow';
+import Loader from './Loader';
 
 class ImageGallery extends React.Component {
   state = {
@@ -113,7 +113,7 @@ class ImageGallery extends React.Component {
       <React.Fragment>
         <header className="header-wrapper">
           <h2 className="tit-section m2rem tit-section-secondColor">
-            Galeria de Imágenes {year}
+            Galería de imágenes {year}
           </h2>
         </header>
 
