@@ -4,7 +4,7 @@ export const PARAGRAPHS = [
   { title: 'CONCURSO_ORGANIZA' },
   { title: 'CONCURSO_PARTICIPAR' },
   { title: 'CONCURSO_PATROCINA' },
-]
+];
 
 export const FOOTER_DATA = [
   { label: 'Aviso legal', url: '/aviso-legal' },
@@ -16,15 +16,13 @@ export const FOOTER_DATA = [
   },
   {
     label: 'HKM Hessen Schülerwettbewerbe',
-    url:
-      'https://kultusministerium.hessen.de/foerderangebote/schuelerwettbewerbe',
+    url: 'https://kultusministerium.hessen.de/programme-und-projekte/schuelerwettbewerbe',
     external: true,
   },
   {
     label: 'GER Gemeinsamen Europäischen Referenzrahmen',
-    url:
-      'http://www.europaeischer-referenzrahmen.de/spanisch-sprachzertifikate.php',
+    url: 'http://www.europaeischer-referenzrahmen.de/spanisch-sprachzertifikate.php',
     external: true,
   },
   { label: 'Admin', url: '/admin' },
-]
+];
