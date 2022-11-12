@@ -1,24 +1,25 @@
 import React from 'react';
 import Button from './Button';
 
+import logoAecid from '../assets/imgs/logo-aecid.jpg';
 import logoHessen from '../assets/imgs/logo-hessen.jpg';
 import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
-import logoAecid from '../assets/imgs/logo-aecid.jpg';
 
 import logoArgentina from '../assets/imgs/logo-argentina.jpg';
-import logoColombia from '../assets/imgs/logo-colombia.jpg';
-import logoPeru from '../assets/imgs/logo-peru.jpg';
 import logoChile from '../assets/imgs/logo-chile.jpg';
+import logoColombia from '../assets/imgs/logo-colombia.jpg';
 import logoMexico from '../assets/imgs/logo-mexico.jpg';
+import logoPeru from '../assets/imgs/logo-peru.jpg';
+import logoVenezuela from '../assets/imgs/logo-venezuela.jpg';
 
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
-import logoSm from '../assets/imgs/logo-sm.jpg';
+import logoDsg from '../assets/imgs/logo-dsg.jpg';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
+import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
 import logoKlett from '../assets/imgs/logo-klett.jpg';
 import logoLesbar from '../assets/imgs/logo-lesbar.jpg';
-import logoDsg from '../assets/imgs/logo-dsg.jpg';
-import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
+import logoSm from '../assets/imgs/logo-sm.jpg';
 
 const Footer = (props) => {
   const { DIC, FOOTER_DATA } = props;
@@ -111,14 +112,6 @@ const Footer = (props) => {
               <img src={logoColombia} alt="Cancillería (Colombia)" />
             </a>
             <a
-              href="http://www.echile.de/index.php/de/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de la embajada de Chile"
-            >
-              <img src={logoChile} alt="Consulado de Chile" />
-            </a>
-            <a
               href="https://consulmex.sre.gob.mx/frankfurt/"
               target="_blank"
               rel="noopener noreferrer"
@@ -127,12 +120,28 @@ const Footer = (props) => {
               <img src={logoMexico} alt="Consulado de México" />
             </a>
             <a
+              href="https://www.chile.gob.cl/frankfurt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la embajada de Chile"
+            >
+              <img src={logoChile} alt="Consulado de Chile" />
+            </a>
+            <a
               href="http://www.consulado.pe/es/frankfurt/Paginas/Inicio.aspx"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de Consulado del Perú en Frankfurt"
             >
               <img src={logoPeru} alt="Klett" />
+            </a>
+            <a
+              href="http://www.consulado-venezuela-frankfurt.de/de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la embajada de Venezuela"
+            >
+              <img src={logoVenezuela} alt="Consulado de Chile" />
             </a>
             <a
               href="https://cfran.cancilleria.gob.ar/"
