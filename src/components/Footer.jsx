@@ -11,7 +11,7 @@ import logoChile from '../assets/imgs/logo-chile.jpg';
 import logoColombia from '../assets/imgs/logo-colombia.jpg';
 import logoMexico from '../assets/imgs/logo-mexico.jpg';
 import logoPeru from '../assets/imgs/logo-peru.jpg';
-import logoVenezuela from '../assets/imgs/logo-venezuela.jpg';
+import logoVenezuela from '../assets/imgs/logo-venezuela.png';
 
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoDsg from '../assets/imgs/logo-dsg.jpg';
