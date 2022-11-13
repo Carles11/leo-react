@@ -168,11 +168,11 @@ const Bases = (props) => {
                 Semifinal Latinoamérica: &nbsp;
               </strong>
               Fruto de la colaboración con los Consulados Generales de México,
-              Colombia, Chile, Perú y Argentina se celebrará una semifinal de
-              nivel B2 para alumnos procedentes de países latinoamericanos. Para
-              ello no será necesario ser poseedor de la nacionalidad del país,
-              solamente tener ascendencia de un país latinoamericano. La SF se
-              celebrará el{' '}
+              Colombia, Chile, Perú, Argentina y Venezuela se celebrará una
+              semifinal de nivel B2 para alumnos procedentes de países
+              latinoamericanos. Para ello no será necesario ser poseedor de la
+              nacionalidad del país, solamente tener ascendencia de un país
+              latinoamericano. La SF se celebrará el{' '}
               <strong className="txt-highlight">
                 {' '}
                 {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}{' '}
