@@ -1,5 +1,5 @@
 export const getSlug = (text) => {
-  if (text !== 'Semifinal latinoamérica') {
+  if (text !== 'Semifinal Latinoamérica') {
     return text
       .toLowerCase()
       .replace(/ /g, '-')
