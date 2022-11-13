@@ -139,7 +139,7 @@ const Footer = (props) => {
               href="http://www.consulado-venezuela-frankfurt.de/de/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Enlace a la página web de la embajada de Venezuela"
+              aria-label="Enlace a la página web de la embajada de la República Bolivariana de Venezuela"
             >
               <img src={logoVenezuela} alt="Consulado de Chile" />
             </a>
