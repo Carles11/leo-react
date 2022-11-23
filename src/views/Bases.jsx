@@ -175,7 +175,7 @@ const Bases = (props) => {
               latinoamericano. La SF se celebrará el{' '}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE}`}{' '}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}{' '}
               </strong>
               en el Instituto Cervantes de Fráncfort con el apoyo y la tutela de
               los consulados latinoamericanos antes mencionados. El plazo de
