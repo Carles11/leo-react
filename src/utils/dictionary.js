@@ -41,9 +41,9 @@ const dictionary = {
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
     CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2022',
     CONCURSO_EDICION_FINAL_NEXT_DATE: '2 de junio de 2023',
-    CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: '22 de abril de 2023',
+    CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: ' 1 de mayo de 2023',
     // CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '28 de abril de 2023',
-    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '29 de abril de 2023',
+    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '6 de mayo de 2023',
     CONCURSO_EDICION_SF_INSCRIPTION_DUE: '01 de marzo de 2023',
     CONCURSO_EDICION_TXT:
       'La Final de la duodécima convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
@@ -83,7 +83,7 @@ const dictionary = {
     FORM_SCHOOL_NAME: 'Nombre del colegio',
     FORM_TITLE: 'Formulario de inscripción',
     FORM_WARNING:
-      'LO SENTIMOS, EL PLAZO DE INSCRIPCIÓN PARA LA EDICIÓN 2022 HA FINALIZADO. PRÓXIMAMENTE SE ABRIRÁ LA INSCRIPCIÓN PARA LA EDICIÓN 2023.',
+      'LO SENTIMOS, EL PLAZO DE INSCRIPCIÓN PARA LA EDICIÓN 2023 HA FINALIZADO. PRÓXIMAMENTE SE ABRIRÁ LA INSCRIPCIÓN PARA LA EDICIÓN 2023.',
     FORM_CANCELLATION:
       'POR CAUSAS AJENAS AL CONCURSO, LA EDICIÓN DE ESTE AÑO 2020 HA SIDO CANCELADA.',
     FORM_SUBTITLE: 'Registra tu colegio',
