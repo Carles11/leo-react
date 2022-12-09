@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class Checkbox extends React.Component {
   state = {
@@ -27,7 +27,7 @@ class Checkbox extends React.Component {
     const { active } = this.state;
     const { label, handleCheckbox, disabled } = this.props;
     const id = `${label}_checkbox`;
-
+    // console.log({ disabled });
     return (
       <div className="app-form-checkbox">
         <input
