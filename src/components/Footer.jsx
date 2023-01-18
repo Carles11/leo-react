@@ -19,7 +19,6 @@ import logoDsg from '../assets/imgs/logo-dsg.jpg';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
 import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
 import logoKlett from '../assets/imgs/logo-klett.jpg';
-import logoLesbar from '../assets/imgs/logo-lesbar.jpg';
 import logoSm from '../assets/imgs/logo-sm.jpg';
 
 const Footer = (props) => {
@@ -162,14 +161,14 @@ const Footer = (props) => {
             </a>
 
             <p>
-              <a
+              {/* <a
                 href="http://www.lesbar-die-buchhandlung.de/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Enlace a la página web de la Buchhandlung Lesbar"
               >
                 <img src={logoLesbar} alt="Buchhandlung Lesbar" />
-              </a>
+              </a> */}
               <a
                 href="https://www.karten-ideen.de/"
                 target="_blank"
