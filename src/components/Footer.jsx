@@ -7,7 +7,8 @@ import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
 
 import logoArgentina from '../assets/imgs/logo-argentina.jpg';
-import logoChile from '../assets/imgs/logo-chile.jpg';
+import logoCastillaLeon from '../assets/imgs/logo-castilla-y-leon.png';
+import logoChile from '../assets/imgs/logo-chile.png';
 import logoColombia from '../assets/imgs/logo-colombia.jpg';
 import logoMexico from '../assets/imgs/logo-mexico.jpg';
 import logoPeru from '../assets/imgs/logo-peru.jpg';
@@ -150,6 +151,14 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Consulado de Argentina en Frankfurt"
             >
               <img src={logoArgentina} alt="Klett" />
+            </a>
+            <a
+              href="https://www.jcyl.es"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Castilla y León"
+            >
+              <img src={logoCastillaLeon} alt="Klett" />
             </a>
 
             <p>
