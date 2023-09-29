@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-import logoAecid from '../assets/imgs/logo-aecid.jpg';
+import logoAecid from '../assets/imgs/logo-aecid.png';
 import logoHessen from '../assets/imgs/logo-hessen.png';
 import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
@@ -13,6 +13,7 @@ import logoColombia from '../assets/imgs/logo-colombia.jpg';
 import logoMexico from '../assets/imgs/logo-mexico.png';
 import logoPeru from '../assets/imgs/logo-peru.jpg';
 import logoVenezuela from '../assets/imgs/logo-venezuela.png';
+import logoRepublicaDominicana from '../assets/imgs/Logo-republica-dominicana.png';
 
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoDsg from '../assets/imgs/logo-dsg.jpg';
@@ -20,6 +21,7 @@ import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
 import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
 import logoKlett from '../assets/imgs/logo-klett.jpg';
 import logoSm from '../assets/imgs/logo-sm.jpg';
+import logoColegioDelibes from '../assets/imgs/logo-colegio-delibes.png';
 
 const Footer = (props) => {
   const { DIC, FOOTER_DATA } = props;
@@ -158,6 +160,14 @@ const Footer = (props) => {
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de Castilla y León"
             >
+              <img src={logoRepublicaDominicana} alt="Klett" />
+            </a>
+            <a
+              href="https://www.jcyl.es"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Castilla y León"
+            >
               <img src={logoCastillaLeon} alt="Klett" />
             </a>
 
@@ -211,6 +221,14 @@ const Footer = (props) => {
                 aria-label="Enlace a la página web de Klett"
               >
                 <img src={logoKlett} alt="Klett" />
+              </a>
+              <a
+                href="https://www.colegiodelibes.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Enlace a la página web de Colegio Delibes"
+              >
+                <img src={logoColegioDelibes} alt="Colegio Delibes" />
               </a>
             </p>
           </article>
