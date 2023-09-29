@@ -3,29 +3,33 @@ const dictionary = {
     AVISO_LEGAL_CONTENT: 'Datenschützerklärung',
     CONCURSO: 'El concurso',
     CONCURSO_BASES_TITLE:
-      'El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía de vuestros alumnos de español, a la duodécima edición del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?”.',
+      'El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía de vuestros alumnos y alumnas de español, a la decimotercera edición del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”.',
     CONCURSO_BASES_PARAGRAPH_2:
-      'Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está incluido en la red de concursos oficiales del Kultusministerium de Hesse. Actualmente, el concurso cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort, del Consulado General de Perú en Offenbach, del Consulado General de Argentina en Fráncfort, del Consulado General de la República Bolivariana de Venezuela en Fráncfort y de la Asociación Alemana de Profesores de Español (DSV). Asimismo, cuenta con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.',
+      'Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está incluido en la red de concursos oficiales del Kultusministerium de Hesse. En su decimotercero año de celebración cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, de la Asociación Alemana del Profesorado de Español DSV), de los Consulados Generales de España, México, Chile, Colombia, Argentina, Perú, Venezuela y República Dominicana en Fráncfort, del Comisionado para la Lengua Española de la Junta de Castilla y León a través del Colegio Delibes en Salamanca. Asimismo con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.',
     CONCURSO_BASES_PARAGRAPH_3:
-      ' Éstos serán un mínimo de uno y un máximo de cuatro, según el número de categorías en las que se participe. El proceso de selección queda regido y organizado por cada uno de los centros que concurran. Cada colegio participante contará, además, con candidatos de repuesto por si el día de la semifinal los elegidos no pudieran participar.',
+      ', éstos/éstas serán un mínimo de uno y un máximo de cuatro, según el número de categorías en las que se participe. El proceso de selección queda regido y organizado por cada uno de los centros que concurran.',
+    CONCURSO_BASES_PARAGRAPH_3_bis:
+      'Cada colegio participante contará con candidatos/as de repuesto por si el día de la semifinal o de la final los elegidos no pudieran asistir.',
     CONCURSO_BASES_PARAGRAPH_4:
-      'La categoría B2 queda reservada a alumnos con español como lengua materna y para todos aquellos que hablen español como si lo fueran, por ejemplo, por haber vivido una larga temporada en un país de lengua española. El jurado se reserva el derecho de descalificar a los alumnos que no hayan sido inscritos en la categoría apropiada. La elección de la categoría en la que participan los alumnos queda al criterio del profesor que los presente al concurso. Como pauta orientativa se establece un nivel A1 para alumnos en primer año de aprendizaje; A2, para segundo o en algunas ocasiones tercero y B1, para cuarto o en algunas ocasiones quinto, dependiendo de si los alumnos estudian el español como segunda o tercera lengua extranjera. Otro criterio importante a la hora de establecer el nivel en el que participen los candidatos será el nivel del libro de texto según el MCER que se esté utilizando en clase en la segunda mitad del curso escolar.',
+      'La categoría B2 queda reservada para alumnos/as con español como lengua materna o de herencia y para todas aquellas personas que hablen español como si lo fueran, por ejemplo, por haber vivido una larga temporada en un país de lengua española. El jurado se reserva el derecho de descalificar a los/las alumnos/as que no hayan sido inscritos en la categoría apropiada. La elección de la categoría en la que participan los/las alumnos/as queda al criterio del profesorado que los presente al concurso. Como pauta orientativa se establece un nivel A1 para alumnos en primer año de aprendizaje; A2 segundo o en algunas ocasiones tercero y B1 cuarto o en algunas ocasiones quinto; dependiendo de si los alumnos estudian el español como segunda o tercera lengua extranjera y de cuándo hayan empezado el aprendizaje de la misma. Otro criterio importante a la hora de establecer el nivel en el que participen los/las candidatos/as será el nivel (MCER) del libro de texto que se esté utilizando durante la segunda mitad del curso escolar correspondiente.',
     CONCURSO_BASES_PARAGRAPH_5:
-      'Los alumnos que hayan concursado ya en una categoría no podrán repetir en el futuro en la misma categoría, sí en la siguiente. Los alumnos que participen en el nivel B2 podrán volver a concursar, siempre y cuando no hayan recibido hasta el momento ningún primer premio.',
+      'Los/as alumnos/as que hayan concursado ya en una categoría no podrán repetir en el futuro en la misma categoría, sí en la siguiente. Los/as alumnos/as que participen en el nivel B2 podrán volver a concursar, siempre y cuando no hayan recibido hasta el momento ningún primer premio.',
     CONCURSO_BASES_PARAGRAPH_6:
-      'Para la fecha de la semifinal cada alumno participante habrá preparado los textos establecidos. Dependiendo de la categoría, los participantes prepararán tres, cuatro o cinco textos procedentes de libros de texto de español como lengua extranjera o de literatura juvenil y leerán el texto que se elija al azar en el momento previo a la lectura. ',
+      'Para la fecha de la semifinal cada alumno/a participante habrá preparado los textos preestablecidos, procedentes de libros de texto de español como lengua extranjera o de literatura juvenil (según la categoría) y correspondientes al nivel para el que participe. Los textos de lectura seleccionados se podrán descargar de esta misma página web en el apartado “textos de lectura”. Cada uno de ellos va acompañado por un audio (para facilitar la práctica autónoma del alumnado en casa).',
     CONCURSO_BASES_PARAGRAPH_7:
-      'Buscando la homogeneidad de los textos, en cuanto a su grado de dificultad y extensión, y para facilitar la evaluación de los candidatos por parte del jurado, ésta será la selección de textos fijados por la organización del concurso a leer: En la categoría A1 habrá 3 textos; en A2 y B1, 4 textos y en B2, 5 textos. Los textos del nivel A1 constan de 1300 caracteres y los de A2, B1 y B2 de 1500. ',
+      'Buscando la homogeneidad de los textos, en cuanto a su grado de dificultad y extensión, y para facilitar la evaluación de los candidatos por parte del jurado, ésta será la selección de textos a leer: ',
+    CONCURSO_BASES_PARAGRAPH_7_bis:
+      'En la categoría A1 habrá 3 textos; en A2 y B1, 4 textos y en B2, 5 textos. Los textos del nivel A1 constan de 1300 caracteres y los de A2, B1 y B2 de 1500. ',
     CONCURSO_BASES_PARAGRAPH_8:
       'Los textos para la categoría B2 son fragmentos, en muchos casos adaptados, de literatura juvenil latinoamericana como resultado de la cooperación con los consulados de México, Colombia, Chile, Perú y Argentina.',
     CONCURSO_BASES_PARAGRAPH_9:
-      'La selección de textos establecida para cada edición no cambia durante las distintas fases del concurso.?',
+      'La selección de textos establecida para cada edición no cambia durante las distintas fases del concurso.',
     CONCURSO_BASES_PARAGRAPH_10:
-      'Con el fin de garantizar la ecuanimidad en la decisión del jurado, se estableció a partir de la convocatoria de 2017 que todos los miembros del jurado de la final fueran personas ajenas a los colegios participantes. Igualmente, se espera que, siempre que sea posible, los jurados de las semifinales también estén formados por personas externas (al menos 2 de los miembros del jurado). ',
+      'Con el fin de garantizar la ecuanimidad en la decisión del jurado se estableció a partir de la convocatoria de 2017, que todos los miembros del jurado de la final fueran personas ajenas a los colegios participantes. Igualmente es de desear que siempre que sea posible los jurados de las semifinales también estén formados por personas externas al centro escolar (por lo menos 2 de los miembros del jurado). Todos los miembros del jurado hablarán español como lengua materna. ',
     CONCURSO_BASES_PARAGRAPH_11:
-      ' En caso de que otros alumnos (o incluso familiares) quieran formar parte del público asistente de la final en el Instituto Cervantes, deberá ser precisado su número de antemano y avalado su "buen comportamiento” mediante la asistencia de otro profesor acompañante.',
+      ' En caso de que otro alumnado (o padres) del colegio quieran formar parte del público asistente a la final, deberá ser precisado su número de antemano y avalado su "buen comportamiento“ mediante la asistencia de otro/a profesor/a acompañante. ',
     CONCURSO_BASES_PARAGRAPH_12:
-      'Los premios para los ganadores y finalistas pueden estar formados por lotes de libros de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen; licencias del juego digital para aprender español Guadalingo de la editorial Edinumen; vales de libros de la Asociación Alemana de Profesores de Español (DSV) y matrículas DELE del Instituto Cervantes de Fráncfort. Todos los participantes en la final recibirán un certificado y, en el caso de los alumnos ganadores de las cuatro categorías, los certificados estarán firmados por el Ministro de Cultura de Hesse.',
+      'Para los ganadores y finalistas serán lotes de libros de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen, licencias del juego digital para aprender español Guadalingo de la editorial Edinumen, vales de libros de la Asociación Alemana del Profesorado de Español y matrículas DELE del Instituto Cervantes de Fráncfort. También recibirán un certificado por su participación, para los alumnos que consigan los primeros puestos en las cuatro categorías, los certificados estarán firmados por el Ministro de Cultura de Hesse.',
     CONCURSO_BASES_PARAGRAPH_13:
       ' Como se ha dicho anteriormente, el proceso interno de selección de los candidatos queda ligado al criterio de cada centro. El nivel de los semifinalistas y finalistas se ajustará a la categoría para la que se les ha inscrito.',
     CONCURSO_BASES_PARAGRAPH_14:
@@ -39,12 +43,12 @@ const dictionary = {
     CONCURSO_BASES_PARAGRAPH_18:
       'Todos los centros escolares que se inscriban al concurso estarán dispuestos a celebrar y organizar en su colegio una de las semifinales. En caso contrario, se avisará a la organización antes de terminar el plazo de inscripción. Organizar una semifinal solo requiere disponer de una sala grande en el colegio, contactar e invitar a los miembros del jurado con la ayuda del resto de los centros de la semifinal y recoger los premios en el Instituto Cervantes. Un representante de cada semifinal recogerá los premios para su eliminatoria en el Instituto Cervantes de Fráncfort en la fecha indicada por la organización (normalmente en febrero).',
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
-    CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2022',
-    CONCURSO_EDICION_FINAL_NEXT_DATE: '2 de junio de 2023',
+    CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2023',
+    CONCURSO_EDICION_FINAL_NEXT_DATE: '24 de mayo de 2024 ',
     CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: ' 1 de mayo de 2023',
     // CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '28 de abril de 2023',
     CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '6 de mayo de 2023',
-    CONCURSO_EDICION_SF_INSCRIPTION_DUE: '01 de marzo de 2023',
+    CONCURSO_EDICION_SF_INSCRIPTION_DUE: '01 de marzo de 2024',
     CONCURSO_EDICION_TXT:
       'La Final de la duodécima convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
     CONCURSO_EDICION_TXT_CONT:
@@ -65,7 +69,7 @@ const dictionary = {
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
     SEMIFINAL_LATINOAMERICA_PARAGRAPH_1:
       'Fruto de la colaboración con los Consulados Generales de México, Colombia, Chile, Perú y Argentina se celebrará una semifinal de nivel B2 para alumnos procedentes de países latinoamericanos. Para ello no será necesario ser poseedor de la nacionalidad del país, solamente tener ascendencia de un país latinoamericano. ',
-    SUBDESCRIPTION: 'Próxima final el 2 de junio de 2023',
+    SUBDESCRIPTION: 'Próxima final el 24 de mayo de 2024 ',
     EDITION_CURRENT: 'XII convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',

@@ -24,6 +24,7 @@ const Bases = (props) => {
       <article className="app-section-width">
         <p>Estimados/as compañeros/as:</p>
         <p>{DIC.CONCURSO_BASES_TITLE}</p>
+
         <p>
           A continuación encontraréis las bases del concurso, el proceso de
           selección de candidatos e información general sobre las semifinales
@@ -33,9 +34,10 @@ const Bases = (props) => {
           la inscripción de los colegios participantes será el{' '}
           <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}</strong>
           . Para confirmar que el colegio ha quedado correctamente inscrito, hay
-          que mirar en la lista de{' '}
-          <Link to="/colegios-inscritos">Colegios inscritos</Link>, ya que no se
-          mandan correos de confirmación.
+          que revisar la lista de{' '}
+          <Link to="/colegios-inscritos">Colegios inscritos</Link> en la pestaña
+          “Información para profesores” de la página web del concurso. Con este
+          fin no se envian correos de confirmación.
         </p>
 
         <p>{DIC.CONCURSO_BASES_PARAGRAPH_2}</p>
@@ -49,10 +51,12 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 {`${DIC.CONCURSO_EDICION_SF_INSCRIPTION_DUE}`}
               </strong>{' '}
-              la selección interna de sus candidatos para la semifinal.{' '}
+              la selección interna de sus candidatos para la semifinal,{' '}
               {DIC.CONCURSO_BASES_PARAGRAPH_3}
             </p>
+            <p>{DIC.CONCURSO_BASES_PARAGRAPH_3_bis}</p>
           </li>
+          {/* 2. NIVELES DE PARTICIPACION */}
           <li className="app-olist-item">
             <strong className="txt-highlight">
               Niveles de participación:&nbsp;
@@ -75,29 +79,39 @@ const Bases = (props) => {
             </p>
             <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_5}</p>
           </li>
+          {/* 3.TEXTOS */}
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Textos:&nbsp;</strong>
-              {DIC.CONCURSO_BASES_PARAGRAPH_6}
-              {''}
-              <strong className="txt-highlight">
-                Los alumnos prepararán todos los textos de su categoría y leerán
-                uno de ellos, elegido al azar el día del concurso.
-              </strong>{' '}
+              {DIC.CONCURSO_BASES_PARAGRAPH_6}{' '}
             </p>
             <p className="txt">
               <strong className="txt-highlight">
-                Características de los textos:&nbsp;
+                TEXTOS A LEER EN LA FINAL: &nbsp;
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_7}
             </p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_8}</p>
             <p className="txt">
+              {' '}
+              <strong className="txt-highlight">
+                {DIC.CONCURSO_BASES_PARAGRAPH_7_bis}{' '}
+              </strong>
+            </p>
+            <p className="txt">
+              {' '}
+              <strong className="txt-highlight">
+                {DIC.CONCURSO_BASES_PARAGRAPH_8}{' '}
+              </strong>
+            </p>
+            <p className="txt">
+              IMPORTANTE:{' '}
               <strong className="txt-highlight">
                 {DIC.CONCURSO_BASES_PARAGRAPH_9}
               </strong>
             </p>
           </li>
+          {/* 4.JURADO */}
+
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Jurado:&nbsp;</strong>
@@ -108,6 +122,7 @@ const Bases = (props) => {
               candidato antes de la suma de los puntos.
             </p>
           </li>
+          {/* 5. PUBLICO */}
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Público:&nbsp;</strong>
@@ -115,6 +130,7 @@ const Bases = (props) => {
             </p>
           </li>
           <li className="app-olist-item">
+            <strong className="txt-highlight">Premios:&nbsp;</strong>
             <p className="txt txt-inline">{DIC.CONCURSO_BASES_PARAGRAPH_12}</p>
           </li>
           <li className="app-olist-item">

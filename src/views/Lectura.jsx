@@ -41,7 +41,7 @@ class Lectura extends React.PureComponent {
               .sort((a, b) => (a.year > b.year ? -1 : 1))
               .map((d) => (
                 <React.Fragment key={d._id}>
-                  {d.year === 2023 ? (
+                  {d.year === 2024 ? (
                     <h2 className="subtit-section subtit-section-underline txt-center w100">
                       {d.title}
                       <br />
@@ -72,7 +72,7 @@ class Lectura extends React.PureComponent {
                     </h2>
                   ) : null}
 
-                  {d.year === 2023 &&
+                  {d.year === 2024 &&
                     d.projects.map((project) => (
                       <article
                         key={project.title}
