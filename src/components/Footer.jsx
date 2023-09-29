@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 import logoAecid from '../assets/imgs/logo-aecid.jpg';
-import logoHessen from '../assets/imgs/logo-hessen.jpg';
+import logoHessen from '../assets/imgs/logo-hessen.png';
 import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
 
@@ -10,7 +10,7 @@ import logoArgentina from '../assets/imgs/logo-argentina.jpg';
 import logoCastillaLeon from '../assets/imgs/logo-castilla-y-leon.png';
 import logoChile from '../assets/imgs/logo-chile.png';
 import logoColombia from '../assets/imgs/logo-colombia.jpg';
-import logoMexico from '../assets/imgs/logo-mexico.jpg';
+import logoMexico from '../assets/imgs/logo-mexico.png';
 import logoPeru from '../assets/imgs/logo-peru.jpg';
 import logoVenezuela from '../assets/imgs/logo-venezuela.png';
 
@@ -28,7 +28,7 @@ const Footer = (props) => {
 
   return (
     <footer className="app-footer">
-      <div className="app-footer-wrapper w1024">
+      <div className="app-footer-wrapper w1280">
         <ul className="app-footer-links">
           {FOOTER_DATA.map((item) => (
             <li key={item.label}>
@@ -86,6 +86,7 @@ const Footer = (props) => {
             >
               <img src={logoIc} alt="Instituto Cervantes" />
             </a>
+
             <a
               href="http://www.aecid.es/ES"
               target="_blank"

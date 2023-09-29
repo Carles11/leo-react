@@ -89,6 +89,9 @@
 .w1024 {
   width: 1024px;
 }
+.w1280 {
+  width: 1280px;
+}
 
 @media only screen and (max-width: 649px) {
 }
