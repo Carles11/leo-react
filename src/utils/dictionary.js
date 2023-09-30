@@ -83,7 +83,7 @@ const dictionary = {
     SEMIFINAL_LATINOAMERICA_PARAGRAPH_1:
       'Fruto de la colaboración con los Consulados Generales de México, Colombia, Chile, Perú y Argentina se celebrará una semifinal de nivel B2 para alumnos procedentes de países latinoamericanos. Para ello no será necesario ser poseedor de la nacionalidad del país, solamente tener ascendencia de un país latinoamericano. ',
     SUBDESCRIPTION: 'Próxima final el 24 de mayo de 2024 ',
-    EDITION_CURRENT: 'XII convocatoria',
+    EDITION_CURRENT: 'XIII convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',
@@ -104,7 +104,7 @@ const dictionary = {
     FORM_CANCELLATION:
       'POR CAUSAS AJENAS AL CONCURSO, LA EDICIÓN DE ESTE AÑO 2020 HA SIDO CANCELADA.',
     FORM_SUBTITLE: 'Registra tu colegio',
-    HEADER_MAIN: 'Leo, leo ... ¿Qué lees?',
+    HEADER_MAIN: 'Leo, leo... ¿Qué lees?',
     MSG_SCHOOL_CREATED:
       'Gracias por inscribirse al concurso de lectura en español "Leo, leo... ¿qué lees?". Finalizado el plazo de inscripción nos pondremos en contacto con usted.',
     MSG_SCHOOL_ERROR:
