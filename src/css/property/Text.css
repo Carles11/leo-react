@@ -5,6 +5,7 @@ ul > li {
   font-size: var(--textSize);
   color: var(--textColor);
   line-height: var(--maxSize);
+  text-align: left;
 }
 
 .txt-IE {

@@ -22,10 +22,10 @@ const Bases = (props) => {
         <h1 className="tit-header mb2rem">{DIC.NAV_BASES}</h1>
       </header>
       <article className="app-section-width">
-        <p>Estimados/as compañeros/as:</p>
-        <p>{DIC.CONCURSO_BASES_TITLE}</p>
+        <p className="txt">Estimados/as compañeros/as:</p>
+        <p className="txt txt-inline">{DIC.CONCURSO_BASES_TITLE}</p>
 
-        <p>
+        <p className="txt ">
           A continuación encontraréis las bases del concurso, el proceso de
           selección de candidatos e información general sobre las semifinales
           eliminatorias y la final regional, que tendrá lugar el día{' '}
@@ -70,7 +70,7 @@ const Bases = (props) => {
               {DIC.CONCURSO_BASES_PARAGRAPH_4}
             </p>
             <br />
-            <p className="txt">
+            <p className="txt txt-inline">
               La edad de los participantes será tenida en cuenta por el jurado a
               la hora de puntuar, ya que por el desarrollo intrínseco del alumno
               la competencia lectora -tanto en la lengua materna como en la
@@ -142,36 +142,40 @@ const Bases = (props) => {
             </p>
 
             <p className="txt">
-              La calidad de la lectura se determinará según los siguientes dos
+              La «calidad» de la lectura se determinará según los siguientes dos
               criterios:
+            </p>
+            <ul>
+              <li>Pronunciación / entonación</li>
+              <li>Comprensión / interpretación</li>
+            </ul>
+            <p className="txt">
+              La puntuación será de 1 a 5, para cada una de las tres categorías,
+              siendo 5 el máximo.
             </p>
             <ul>
               <li>
                 {' '}
                 <strong className="txt-highlight">
-                  - Pronunciación / entonación{' '}
+                  Pronunciación / entonación{' '}
                 </strong>{' '}
                 {DIC.CONCURSO_BASES_PARAGRAPH_14}
               </li>
               <li>
                 {' '}
                 <strong className="txt-highlight">
-                  - Comprensión / interpretación{' '}
+                  Comprensión / interpretación{' '}
                 </strong>{' '}
                 {DIC.CONCURSO_BASES_PARAGRAPH_15}
               </li>
             </ul>
-            <p className="txt">
-              La puntuación será de 1 a 5, para cada una de las tres categorías,
-              siendo 5 el máximo.
-            </p>
           </li>
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Semifinales:&nbsp;</strong>
-              Las Semifinales (SF) se habrán celebrado antes del{' '}
+              Las Semifinales se habrán celebrado antes del{' '}
               <strong className="txt-highlight">
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}
+                {` ${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}. `}
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_16}
             </p>
@@ -183,45 +187,36 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 Semifinal Latinoamérica: &nbsp;
               </strong>
-              Fruto de la colaboración con los Consulados Generales de México,
-              Colombia, Chile, Perú, Argentina y Venezuela se celebrará una
-              semifinal de nivel B2 para alumnos procedentes de países
-              latinoamericanos. Para ello no será necesario ser poseedor de la
-              nacionalidad del país, solamente tener ascendencia de un país
-              latinoamericano. La SF se celebrará el{' '}
+              {DIC.CONCURSO_BASES_PARAGRAPH_19}
               <strong className="txt-highlight">
                 {' '}
                 {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}{' '}
               </strong>
-              en el Instituto Cervantes de Fráncfort con el apoyo y la tutela de
-              los consulados latinoamericanos antes mencionados. El plazo de
-              inscripción para esta semifinal terminará el{' '}
+              {DIC.CONCURSO_BASES_PARAGRAPH_20}
               <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>
-              . Para más información sobre la inscripción, consultar el
-              apartado&nbsp;
-              <Link to="/semifinal-latinoamerica">
-                <strong className="txt-highlight">
-                  Semifinal Latinoamérica
-                </strong>
-              </Link>
-              .
+              . La inscripción tendrá lugar a través de la página{' '}
+              <a href="https://www.leo-leo-hessen.com">{DIC.CONCURSO_WEB}</a>.
             </p>
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Semifinal ALCE:&nbsp;</strong>
-              Los alumnos con español como lengua materna procedentes de las
-              Aulas de Lengua y Cultura Española (ALCE), coordinadas por el
-              Ministerio de Educación de España, podrán participar en la
-              Semifinal ALCE. La fecha se dará a conocer en las aulas de dicho
-              programa de enseñanza. Los alumnos participarán solo en la
-              categoría B2 y presentarán a dos candidatos para la final en el
-              Instituto Cervantes el día
+              {DIC.CONCURSO_BASES_PARAGRAPH_21}
               <strong className="txt-highlight">
                 {' '}
                 {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
               </strong>
               .
+            </p>
+          </li>
+          <li className="app-olist-item double">
+            <p className="txt txt-inline">
+              <strong className="txt-highlight">Página web:&nbsp;</strong>
+              El concurso cuenta con una página web{' '}
+              <a href="https://www.leo-leo-hessen.com">
+                {DIC.CONCURSO_WEB}
+              </a>{' '}
+              {DIC.CONCURSO_BASES_PARAGRAPH_22}
             </p>
           </li>
           <li className="app-olist-item double">
@@ -231,47 +226,38 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 {`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}
               </strong>{' '}
-              y se realizará exclusivamente a través de la página web. Para
-              confirmar que el colegio ha quedado correctamente inscrito, hay
-              que mirar en la lista de Colegios inscritos, ya que no se mandan
-              correos de confirmación. Para la Semifinal Latinoamérica también
-              se utilizará este medio.
+              y se realizará{' '}
+              <strong className="txt-highlight">
+                exclusivamente a través de la página web{' '}
+              </strong>
+              . Para la Semifinal Latinoamérica también se utilizará este medio.
             </p>
+            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_23}</p>
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
               <strong className="txt-highlight">
                 Alternativa virtual:&nbsp;
               </strong>
-              Si el desarrollo del concurso se viera afectado por la{' '}
-              <strong className="txt-highlight">pandemia de Covid-19</strong> se
-              ofrecerá para la convocatoria de {nextYearEdition} una alternativa
-              digital para la realización de las semifinales regionales. La
-              final del{' '}
+              Desde la pandemia Covid-19 se ofrece una{' '}
               <strong className="txt-highlight">
-                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
-              </strong>{' '}
-              se realizará, siempre y cuando la situación pandémica lo permita,
+                una alternativa digital para la realización de las semifinales
+                regionales
+              </strong>
+              , la final del {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE} se realizará
               de forma presencial en el salón de actos del Instituto Cervantes
               de Fráncfort.
             </p>
             <p>
-              En caso de celebrarse la SF de manera digital y para evitar
-              problemas técnicos o posibles irregularidades durante la
-              lectura,&nbsp;
+              En caso de que el alumnado no pueda encontrarse para una lectura
+              presencial de los textos para alguna de las semifinales, y para
+              evitar problemas técnicos o posibles irregularidades durante la
+              lectura, los/las candidatos/as lectores se conectarán a las
+              videoconferencias &nbsp;
               <strong className="txt-highlight">
-                los candidatos lectores se conectarán a las
-                videoconferencias desde su centro escolar en compañía de su
-                profesor/a de español,
+                desde su centro escolar en compañía de su profesor/a de español
               </strong>
-              quien avalará el cumplimiento de las normas establecidas.
-            </p>
-            <p>
-              En cada SF virtual se conectarán, por tanto: los candidatos en
-              presencia de su profesor/a, los miembros del jurado (todos juntos
-              desde un centro o por separado, según se acuerde con el centro
-              organizador de la SF) y un representante del centro organizador
-              que actuará de moderador/a.
+              , quien avalará el cumplimiento de las normas establecidas.
             </p>
           </li>
           <li className="app-olist-item double">
@@ -279,16 +265,15 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 Protección de datos:&nbsp;
               </strong>
-              Los centros inscritos se asegurarán de poseer la autorización de
-              los padres de los participantes para la posible publicación de sus
-              nombres y/o fotos en la página web del concurso una vez terminada
-              la final.
+              Los centros inscritos{' '}
+              <strong className="txt-highlight">
+                se asegurarán de poseer la autorización{' '}
+              </strong>
+              de los padres del alumnado que participen para la posible
+              publicación de sus fotos en la página web del concurso una vez
+              terminada la final.
             </p>
-            <p>
-              Asimismo, los padres autorizan con este documento que sus hijos/as
-              puedan participar en la SF y en la F en versión digital a través
-              de videoconferencia, en caso de que fuera necesario.
-            </p>
+            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_24}</p>
           </li>
         </ol>
       </article>
