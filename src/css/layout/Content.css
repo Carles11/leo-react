@@ -146,9 +146,6 @@
   .app-admin-title {
     flex-direction: column;
     padding-bottom: 1rem;
-  }
-
-  .app-admin-title h1 {
     text-align: center;
   }
 
