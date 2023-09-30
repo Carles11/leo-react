@@ -5,7 +5,7 @@ import Button from './Button';
 
 const Item = (props) => {
   const { item, handleRemove, handleShow } = props;
-
+  const courseIsDesired = item.interestCheckbox ? 'Sí' : 'No';
   return (
     <React.Fragment>
       <li className="app-list-item">
@@ -64,6 +64,10 @@ const Item = (props) => {
             <p className="app-list-content-item">
               <small>Categorias:</small>
               {item.category.join(', ')}
+            </p>
+            <p className="app-list-content-item">
+              <small>Cursillo digital:</small>
+              {courseIsDesired}
             </p>
             <p className="app-list-content-item">
               <small>Edición:</small>

@@ -63,7 +63,7 @@ class Register extends React.Component {
   };
 
   handleData = (e) => {
-    const { category } = this.state;
+    const { category, interestCheckbox } = this.state;
     const { elements } = e.target;
     const nextEditionYear = getNextEditionYear();
 
@@ -78,13 +78,24 @@ class Register extends React.Component {
 
     this.cleanFields(elements);
 
-    return { name, phone, address, contact, email, category, cp, city, year };
+    return {
+      name,
+      phone,
+      address,
+      contact,
+      email,
+      category,
+      interestCheckbox,
+      cp,
+      city,
+      year,
+    };
   };
 
   handlePost = async (body) => {
     const { DIC } = this.props;
     const promise = await API.post('schools', body);
-
+    console.log('BODY-', body);
     if (promise.success) {
       this.setState({
         send: true,
@@ -295,10 +306,9 @@ class Register extends React.Component {
                   <div>
                     <Checkbox
                       key="interest"
-                      label="Ok"
+                      label="Oki"
                       handleCheckbox={this.handleInterestCheckbox}
                       checked={interestCheckbox}
-                      disabled={send} // Adjust disabled state based on your condition
                     />
                   </div>
                   <p className="app-form-label-txt ">
