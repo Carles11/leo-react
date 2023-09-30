@@ -7,8 +7,8 @@ import withScroll from '../components/HOC/withScroll';
 
 const Bases = (props) => {
   const { DIC } = props;
-  const currentYear = new Date();
-  const nextYearEdition = currentYear.getFullYear() + 1;
+  // const currentYear = new Date();
+  // const nextYearEdition = currentYear.getFullYear() + 1;
   return (
     <section className="app-content pb2rem mb2rem">
       <Helmet

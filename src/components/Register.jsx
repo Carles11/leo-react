@@ -53,8 +53,8 @@ class Register extends React.Component {
     } else {
       elem.dataset.checked = '';
     }
-
     showCheckboxError(elem);
+
     if (category.indexOf(value) === -1) {
       category.push(value);
     } else {
@@ -95,7 +95,7 @@ class Register extends React.Component {
   handlePost = async (body) => {
     const { DIC } = this.props;
     const promise = await API.post('schools', body);
-    console.log('BODY-', body);
+
     if (promise.success) {
       this.setState({
         send: true,
@@ -247,13 +247,14 @@ class Register extends React.Component {
             </div>
 
             <div className="grid-col">
-              <div id="checkboxWrapper" className=" app-form-whole">
+              <div id="checkboxWrapper" className="app-form-whole">
                 <p className="app-form-label-txt">{DIC.FORM_CONSENT}</p>
                 <div className="mini-grid-row">
                   <p className="app-form-label-txt-error" />
                   <Checkbox
                     key="bases"
-                    label="Ok"
+                    label="bases-accept"
+                    text="Ok"
                     handleCheckbox={this.handleCheckbox}
                     send={send}
                     // disabled
@@ -279,7 +280,8 @@ class Register extends React.Component {
                     <p className="app-form-label-txt-error" />
                     <Checkbox
                       key="photo"
-                      label="Ok"
+                      label="image-accept"
+                      text="Ok"
                       handleCheckbox={this.handleCheckbox}
                       send={send}
                       // disabled
@@ -306,7 +308,8 @@ class Register extends React.Component {
                   <div>
                     <Checkbox
                       key="interest"
-                      label="Oki"
+                      label="course-interest"
+                      text="Ok"
                       handleCheckbox={this.handleInterestCheckbox}
                       checked={interestCheckbox}
                     />

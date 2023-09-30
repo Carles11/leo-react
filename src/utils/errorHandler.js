@@ -1,3 +1,4 @@
+// import { text } from 'body-parser';
 import getDictionary from './dictionary';
 
 const DIC = getDictionary();

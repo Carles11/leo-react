@@ -23,7 +23,7 @@ class Filter extends React.PureComponent {
     const { filter } = this.props;
     const { visible } = this.state;
     const active = visible ? 'active' : '';
-    console.log('fififififilter---', filter);
+
     return (
       <div className="app-filter">
         <div className="app-filter-label">

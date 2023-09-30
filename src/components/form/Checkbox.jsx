@@ -25,7 +25,7 @@ class Checkbox extends React.Component {
 
   render() {
     const { active } = this.state;
-    const { label, handleCheckbox, disabled } = this.props;
+    const { label, handleCheckbox, disabled, text } = this.props;
     const id = `${label}_checkbox`;
     // console.log({ disabled });
     return (
@@ -36,10 +36,11 @@ class Checkbox extends React.Component {
           value={label}
           checked={active}
           onChange={handleCheckbox}
+          data-key={label} // Use a data-key attribute to store information
           disabled={disabled}
         />
         <label onClick={this.handleClick} htmlFor={id}>
-          {label}
+          {text || label}
         </label>
       </div>
     );
