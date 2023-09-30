@@ -25,6 +25,7 @@ class Register extends React.Component {
     error: false,
     message: '',
     category: [],
+    interestCheckbox: false,
   };
 
   static propTypes = {
@@ -34,6 +35,12 @@ class Register extends React.Component {
   handleChange = (e) => {
     e.target.classList.add('active');
     showInputError(e.target);
+  };
+
+  handleInterestCheckbox = () => {
+    this.setState((prevState) => ({
+      interestCheckbox: !prevState.interestCheckbox,
+    }));
   };
 
   handleCheckbox = (e) => {
@@ -115,7 +122,7 @@ class Register extends React.Component {
 
   render() {
     const { DIC } = this.props;
-    const { message, send, error } = this.state;
+    const { message, send, error, interestCheckbox } = this.state;
     // const styleMessage = {
     //   color: 'white',
     //   marginTop: 0,
@@ -135,7 +142,7 @@ class Register extends React.Component {
             <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
 
             {/* COMMENT/UNCOMMENT FOLLOWING LINE TO SHOW/HIDE MESSAGE "PLAZO DE INSCRIPCIÓN TERMINADO" */}
-            <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4>
+            {/* <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4> */}
             {/* <h4 className="subtit-section-red">{DIC.FORM_CANCELLATION}</h4> */}
           </header>
           <form
@@ -157,7 +164,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_SCHOOL_NAME}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
             <SingleInput
               name="contact"
@@ -166,7 +173,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CONTACT}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
 
             <SingleInput
@@ -176,7 +183,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_ADDRESS}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
             <SingleInput
               name="cp"
@@ -185,7 +192,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CP}
               pattern=".{3,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
             <SingleInput
               name="city"
@@ -194,7 +201,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CITY}
               pattern=".{5,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
             <SingleInput
               name="phone"
@@ -203,7 +210,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_PHONE}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
             <SingleInput
               name="email"
@@ -212,7 +219,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_MAIL}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              // disabled
             />
             <div id="checkboxWrapper" className="app-form-whole">
               <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
@@ -223,12 +230,14 @@ class Register extends React.Component {
                   label={item}
                   handleCheckbox={this.handleCheckbox}
                   send={send}
-                  disabled
+                  // disabled
                 />
               ))}
             </div>
-            <div className="grid-row">
+
+            <div className="grid-col">
               <div id="checkboxWrapper" className=" app-form-whole">
+                <p className="app-form-label-txt">{DIC.FORM_CONSENT}</p>
                 <div className="mini-grid-row">
                   <p className="app-form-label-txt-error" />
                   <Checkbox
@@ -236,7 +245,7 @@ class Register extends React.Component {
                     label="Ok"
                     handleCheckbox={this.handleCheckbox}
                     send={send}
-                    disabled
+                    // disabled
                   />
                   <p className="app-form-label-txt ">
                     He leído y acepto{' '}
@@ -262,7 +271,7 @@ class Register extends React.Component {
                       label="Ok"
                       handleCheckbox={this.handleCheckbox}
                       send={send}
-                      disabled
+                      // disabled
                     />
                   </div>
                   <p className="app-form-label-txt ">
@@ -281,63 +290,26 @@ class Register extends React.Component {
                   </p>
                 </div>
               </div>
-            </div>
-            {/*
-            <div id='checkboxWrapper' className='app-form-accept'>
-              <div className='app-form-accept'>
-                <input
-                  id='bases'
-                  label='bases'
-                  handleCheckbox={this.handleCheckbox}
-                  send={send}
-                  name='bases'
-                  type='checkbox'
-                />
-                <label htmlFor='bases' className='app-form-label-txt '>
-                  He leído y acepto{' '}
-                  <a
-                    className='btn-link-auth'
-                    href='https://www.leo-leo-hessen.com/bases-del-concurso'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <strong>las bases</strong>
-                  </a>{' '}
-                  del concurso 202  */}
-            {/* {DIC.FORM_ACCEPT_BASES} */}
-            {/*</label> 
-              </div>
-              <div className='app-form-accept'>
-                <input
-                  id='photo'
-                  label='photo'
-                  handleCheckbox={this.handleCheckbox}
-                  send={send}
-                  name='photo'
-                  type='checkbox'
-                />
-                <label htmlFor='photo' className='app-form-label-txt'>
-                  {/* {DIC.FORM_ACCEPT_PHOTO_AUTH} 
-                  Sé que debo adquirir
-                  <a
-                    className='btn-link-auth'
-                    href={Einwilligung}
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <strong>la autorización (.pdf)</strong>
-                  </a>{' '}
-                  de los alumnos/as que participan en el concurso en cuanto a la
-                  posible publicación de sus nombres y/o fotos en la página web
-                  del concurso o en revistas especializadas
-                </label>
+              <div id="checkboxInterestWrapper" className="app-form-whole">
+                <div className="mini-grid-row">
+                  <div>
+                    <Checkbox
+                      key="interest"
+                      label="Ok"
+                      handleCheckbox={this.handleInterestCheckbox}
+                      checked={interestCheckbox}
+                      disabled={send} // Adjust disabled state based on your condition
+                    />
+                  </div>
+                  <p className="app-form-label-txt ">
+                    Tengo interés en asistir al cursillo digital preparatorio
+                    del 5 de diciembre de 17.30 a 18.30
+                  </p>
+                </div>
               </div>
             </div>
-            <p className='app-form-label-txt-error' />
-*/}
-            <Button
-              type={'submit'}
-              label={'Enviar'}
-              css={'m1rem'} /*disabled*/
-            />
+
+            <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
           </form>
         </div>
       </article>

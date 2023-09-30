@@ -91,6 +91,7 @@ const dictionary = {
     FORM_ADDRESS: 'Dirección',
     FORM_CATEGORIES:
       'Selecciona las categorias del concurso en las que participará el colegio:',
+    FORM_CONSENT: 'Consentimientos:',
     FORM_CONTACT: 'Persona de contacto',
     FORM_COURSE: 'Curso',
     FORM_CP: 'Código Postal',

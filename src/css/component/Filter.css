@@ -94,7 +94,7 @@
 
 .year-filter-list.active {
   visibility: visible;
-  top: 4rem;
+  top: 16rem;
   z-index: 1001;
 }
 

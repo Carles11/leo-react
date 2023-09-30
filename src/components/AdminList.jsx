@@ -54,7 +54,7 @@ class AdminList extends React.Component {
     const c = window.confirm(
       'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.'
     );
-    // console.log('REREREMOVOOOOVE', type, id);
+
     if (c) {
       const promise = await API.remove(`${type}/${id}`);
 
@@ -134,7 +134,7 @@ class AdminList extends React.Component {
           type="button"
           aria-label="Year filtering"
           className=" btn-invert"
-          onMouseOver={this.handleVisibility}
+          onClick={this.handleVisibility}
         >
           {!year ? 'Mostrando listado completo' : `Mostrando año ${year}`}{' '}
           <span className="icon-arrow-down-circle" />
