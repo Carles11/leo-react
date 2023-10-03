@@ -58,20 +58,32 @@ export const showCheckboxError = (item) => {
     );
   }
 
-  // Check if at least one checkbox is checked, excluding the checkbox with key "interest"
-  const isChecked = checkboxes
-    .filter((checkbox) => checkbox.getAttribute('key') !== 'interest')
-    .some((checkbox) => checkbox.dataset.checked);
+  const basesAccept = item.value === 'bases-accept';
+  const imageAccept = item.value === 'image-accept';
+
+  console.log(basesAccept, imageAccept);
+  console.log(item.parentNode.parentNode.parentNode);
+
+  if ((basesAccept || imageAccept) && item.dataset.checked !== 'checked') {
+    checkboxes = checkboxes.push(
+      item.parentNode.parentNode.parentNode.querySelectorAll(
+        'input[type=checkbox]'
+      )
+    );
+    error = item.parentNode.parentNode.parentNode.querySelector(
+      '.app-form-label-txt-error'
+    );
+    error.textContent = 'Esta selección es obligatoria.';
+    return false;
+  }
+
+  // Check if at least one checkbox is checked,
+  const isChecked = checkboxes.some((checkbox) => checkbox.dataset.checked);
 
   // Display or clear the error message based on the checked status
   if (isChecked) {
     error.textContent = '';
     return true; // Checkbox is checked, no error
-  }
-
-  // Exclude the error handling for the checkbox with key "interest"
-  if (item.getAttribute('key') === 'interest') {
-    return true;
   }
 
   error.textContent = 'Esta selección es obligatoria.';

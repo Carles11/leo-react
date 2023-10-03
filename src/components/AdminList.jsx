@@ -13,7 +13,7 @@ class AdminList extends React.Component {
     loaded: false,
     list: [],
     filteredList: [],
-    year: null,
+    year: 2024,
     error: {
       message: 'Hay algún problema al cargar el listado, inténtalo más tarde.',
       next: false,
@@ -32,13 +32,17 @@ class AdminList extends React.Component {
   }
 
   getData = async () => {
-    const { error } = this.state;
+    const { error, year } = this.state;
     const { type } = this.props;
     const promise = await API.get(type);
 
     if (promise.success) {
-      this.setState({ list: promise.data, loaded: true }) &&
-        window.location.reload();
+      const list = promise.data;
+      const filteredList = year
+        ? list.filter((school) => school.year === year)
+        : list;
+
+      this.setState({ list, filteredList, loaded: true });
     } else {
       this.setState({
         error: Object.assign(error, { next: true }),
@@ -85,9 +89,10 @@ class AdminList extends React.Component {
     this.setState((prevState) => ({ visible: !prevState.visible }));
   };
 
-  handleFilter = (e) => {
+  handleFilter = (e, defaultYear) => {
     const yearsOptions = this.state.list;
-    const { year } = e.target.dataset;
+
+    const { year } = e !== null ? e.target.dataset : defaultYear;
 
     let schools;
     if (year !== 'Mostrar listado completo') {
@@ -127,6 +132,7 @@ class AdminList extends React.Component {
         Descargar .pdf / Imprimir
       </button>
     );
+
     const YearFilter = (
       <div>
         {' '}
@@ -172,7 +178,7 @@ class AdminList extends React.Component {
     const ExportToExcelButton = (
       <ExcelExport schools={!year ? list : filteredList} />
     );
-
+    console.log('yeyeyeyeye', year);
     return (
       <div>
         {!loaded && <Loader />}

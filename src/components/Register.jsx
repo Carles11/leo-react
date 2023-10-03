@@ -276,17 +276,16 @@ class Register extends React.Component {
 
               <div id="checkboxWrapper" className="app-form-accept">
                 <div className="mini-grid-row">
-                  <div>
-                    <p className="app-form-label-txt-error" />
-                    <Checkbox
-                      key="photo"
-                      label="image-accept"
-                      text="Ok"
-                      handleCheckbox={this.handleCheckbox}
-                      send={send}
-                      // disabled
-                    />
-                  </div>
+                  <p className="app-form-label-txt-error" />
+                  <Checkbox
+                    key="photo"
+                    label="image-accept"
+                    text="Ok"
+                    handleCheckbox={this.handleCheckbox}
+                    send={send}
+                    // disabled
+                  />
+
                   <p className="app-form-label-txt ">
                     Sé que debo adquirir
                     <a
