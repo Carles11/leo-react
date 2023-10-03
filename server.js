@@ -6,20 +6,21 @@ const app = express();
 const PORT = process.env.REACT_APP_PORT || 5000;
 const ENV = process.env.NODE_ENV || 'development';
 
+app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: 'true' }));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-app.use(express.static(path.join(__dirname, 'build')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.cookieParser('mySecret'));
+app.use(express.session());
+app.use('/api', expressJwt({ secret: 'mySecret' }));
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-app.use(express.cookieParser('mySecret'));
-app.use(express.session());
-app.use('/api', expressJwt({ secret: 'mySecret' }));
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
