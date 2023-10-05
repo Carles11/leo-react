@@ -125,7 +125,7 @@ const dictionary = {
       'Solicitud de inscripción a la semifinal latinoamericana del concurso Leo, leo... qué lees?',
     NAV_IMPRESOS: 'Impresos',
     NAV_IMPRESSUM: 'Impressum',
-    NAV_INFO: 'Información para profesores',
+    NAV_INFO: 'Información para el profesorado',
     NAV_INSCRIPCION: 'Inscripción',
     NAV_TEXTOS: 'Textos de lectura',
     NOTFOUND: 'No se ha encontrado la página.',
