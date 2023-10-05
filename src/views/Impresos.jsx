@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_signature.pdf';
 import CuadroGanadores from '../assets/docus/impresos/Cuadro_ganadores.docx';
 import PuntosJurado from '../assets/docus/impresos/Impreso_puntos_para_el_jurado.docx';
-import ControlList from '../assets/docus/impresos/Lista-de-control-2022-2023.docx';
+import ControlList from '../assets/docus/impresos/Lista_de_control.docx';
 // import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
