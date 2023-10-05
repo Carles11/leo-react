@@ -233,8 +233,10 @@ class Register extends React.Component {
               // disabled
             />
             <div id="checkboxWrapper" className="app-form-whole">
-              <p className="app-form-label-txt">{DIC.FORM_CATEGORIES}</p>
-              <p className="app-form-label-txt-error" />
+              <p className="app-form-label-txt txt-left">
+                {DIC.FORM_CATEGORIES}
+              </p>
+              <p className="app-form-label-txt-error txt-left" />
               {categories.map((item) => (
                 <Checkbox
                   key={item}
@@ -248,9 +250,11 @@ class Register extends React.Component {
 
             <div className="grid-col">
               <div id="checkboxWrapper" className="app-form-whole">
-                <p className="app-form-label-txt">{DIC.FORM_CONSENT}</p>
+                <p className="app-form-label-txt txt-left">
+                  {DIC.FORM_CONSENT}
+                </p>
                 <div className="mini-grid-row">
-                  <p className="app-form-label-txt-error" />
+                  <p className="app-form-label-txt-error txt-left" />
                   <Checkbox
                     key="bases"
                     label="bases-accept"
@@ -259,7 +263,7 @@ class Register extends React.Component {
                     send={send}
                     // disabled
                   />
-                  <p className="app-form-label-txt ">
+                  <p className="app-form-label-txt txt-left">
                     He leído y acepto{' '}
                     <a
                       className="btn-link-auth"
@@ -269,7 +273,7 @@ class Register extends React.Component {
                     >
                       <strong>las bases</strong>
                     </a>{' '}
-                    del concurso 2023
+                    del concurso {getNextEditionYear()}
                   </p>
                 </div>
               </div>
@@ -286,7 +290,7 @@ class Register extends React.Component {
                     // disabled
                   />
 
-                  <p className="app-form-label-txt ">
+                  <p className="app-form-label-txt txt-left">
                     Sé que debo adquirir
                     <a
                       className="btn-link-auth"
@@ -313,9 +317,9 @@ class Register extends React.Component {
                       checked={interestCheckbox}
                     />
                   </div>
-                  <p className="app-form-label-txt ">
-                    Tengo interés en asistir al cursillo digital preparatorio
-                    del 5 de diciembre de 17.30 a 18.30
+                  <p className="app-form-label-txt txt-left">
+                    Tengo interés en asistir al cursillo digital preparatorio el
+                    5 de diciembre de 2023, de 17.30 h a 18.30 h.
                   </p>
                 </div>
               </div>

@@ -49,6 +49,9 @@ ul > li {
 .txt-center {
   text-align: center;
 }
+.txt-left {
+  text-align: left !important;
+}
 
 .tit-header {
   position: relative;
