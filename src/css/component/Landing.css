@@ -1,14 +1,14 @@
 .aviso-portada {
   border: 2px solid var(--mainColor);
   border-radius: 2px;
-  background-color: var(--warningColor);
+  background-color: var(--menuBg);
   padding: 1rem;
   margin: 1rem auto;
   max-width: 90%;
 }
 .aviso-portada h1,
 p {
-  text-align: center;
+  text-align: center !important;
 }
 
 @media only screen and (max-device-width: 649px) {

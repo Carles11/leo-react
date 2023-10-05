@@ -39,7 +39,7 @@ const Landing = (props) => {
         Cursillo preparatorio en línea <br />
         para colegios que se inscriben por primera vez.
       </h1>
-      <p>Jueves 1 de diciembre de 2022, de 16.30 a 17.30 h</p>
+      <p>Martes, 5 de diciembre de 2023 de 17.30 a 18.30 h</p>
       <p>
         Inscripción al cursillo: Mandar un correo a{' '}
         <strong>
