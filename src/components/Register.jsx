@@ -25,6 +25,8 @@ class Register extends React.Component {
     error: false,
     message: '',
     category: [],
+    bases_consent: false,
+    image_consent: false,
     interestCheckbox: false,
   };
 
@@ -40,6 +42,25 @@ class Register extends React.Component {
   handleInterestCheckbox = () => {
     this.setState((prevState) => ({
       interestCheckbox: !prevState.interestCheckbox,
+    }));
+  };
+
+  handleConsentsCheckbox = (e) => {
+    const elem = e.target;
+    const consent = e.target.value;
+    const part = consent.split('_');
+    const consentKey = `${part[0]}_consent`;
+
+    if (!elem.dataset.checked) {
+      elem.dataset.checked = 'checked';
+    } else {
+      elem.dataset.checked = '';
+    }
+
+    showCheckboxError(elem);
+
+    this.setState((prevState) => ({
+      [consentKey]: !prevState[consentKey],
     }));
   };
 
@@ -63,7 +84,8 @@ class Register extends React.Component {
   };
 
   handleData = (e) => {
-    const { category, interestCheckbox } = this.state;
+    const { category, interestCheckbox, bases_consent, image_consent } =
+      this.state;
     const { elements } = e.target;
     const nextEditionYear = getNextEditionYear();
 
@@ -85,6 +107,8 @@ class Register extends React.Component {
       contact,
       email,
       category,
+      bases_consent,
+      image_consent,
       interestCheckbox,
       cp,
       city,
@@ -249,7 +273,10 @@ class Register extends React.Component {
             </div>
 
             <div className="grid-col">
-              <div id="checkboxWrapper" className="app-form-whole">
+              <div
+                id="checkboxesBasesConsentWrapper"
+                className="app-form-whole"
+              >
                 <p className="app-form-label-txt txt-left">
                   {DIC.FORM_CONSENT}
                 </p>
@@ -257,9 +284,10 @@ class Register extends React.Component {
                   <p className="app-form-label-txt-error txt-left" />
                   <Checkbox
                     key="bases"
-                    label="bases-accept"
+                    id="bases-accept"
+                    label="bases_consent"
                     text="Ok"
-                    handleCheckbox={this.handleCheckbox}
+                    handleCheckbox={this.handleConsentsCheckbox}
                     send={send}
                     // disabled
                   />
@@ -278,14 +306,18 @@ class Register extends React.Component {
                 </div>
               </div>
 
-              <div id="checkboxWrapper" className="app-form-accept">
+              <div
+                id="checkboxesImageConsentWrapper"
+                className="app-form-whole"
+              >
                 <div className="mini-grid-row">
-                  <p className="app-form-label-txt-error" />
+                  <p className="app-form-label-txt-error text-left" />
                   <Checkbox
                     key="photo"
-                    label="image-accept"
+                    id="image-accept"
+                    label="image_consent"
                     text="Ok"
-                    handleCheckbox={this.handleCheckbox}
+                    handleCheckbox={this.handleConsentsCheckbox}
                     send={send}
                     // disabled
                   />

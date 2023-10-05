@@ -58,11 +58,11 @@ export const showCheckboxError = (item) => {
     );
   }
 
-  const basesAccept = item.value === 'bases-accept';
-  const imageAccept = item.value === 'image-accept';
+  const basesAccept = item.value === 'bases_consent';
+  const imageAccept = item.value === 'image_consent';
 
-  console.log(basesAccept, imageAccept);
-  console.log(item.parentNode.parentNode.parentNode);
+  // console.log(basesAccept, imageAccept);
+  // console.log(item.parentNode.parentNode.parentNode);
 
   if ((basesAccept || imageAccept) && item.dataset.checked !== 'checked') {
     checkboxes = checkboxes.push(
@@ -70,10 +70,11 @@ export const showCheckboxError = (item) => {
         'input[type=checkbox]'
       )
     );
+    console.log('CAHEKHELEKLE', checkboxes);
     error = item.parentNode.parentNode.parentNode.querySelector(
       '.app-form-label-txt-error'
     );
-    error.textContent = 'Esta selección es obligatoria.';
+    error.textContent = 'Debe aceptar este campo para inscribirse.';
     return false;
   }
 
@@ -116,19 +117,40 @@ export const showFormErrors = () => {
   const inputs = document.querySelectorAll('input:required');
   const textareas = document.querySelectorAll('textarea:required');
   const checkboxParent = document.getElementById('checkboxWrapper');
+  const checkboxBasesConsent = document.getElementById(
+    'checkboxesBasesConsentWrapper'
+  );
+  const checkboxImageConsent = document.getElementById(
+    'checkboxesImageConsentWrapper'
+  );
 
   let isFormValid = true;
 
+  // Check required inputs
   inputs.forEach((input) => {
     const isInputValid = showInputError(input);
     if (!isInputValid) isFormValid = false;
   });
 
+  // Check required textareas
   textareas.forEach((textarea) => {
     const isTextareaValid = showInputError(textarea);
     if (!isTextareaValid) isFormValid = false;
   });
 
+  // Check the checkboxes
   if (checkboxParent && !showCheckboxError(checkboxParent)) isFormValid = false;
+
+  // Check if both consent checkboxes are checked
+
+  if (checkboxBasesConsent && !showCheckboxError(checkboxBasesConsent)) {
+    console.error('Please check this checkbox.');
+    isFormValid = false;
+  }
+  if (checkboxImageConsent && !showCheckboxError(checkboxImageConsent)) {
+    console.error('Please check this checkbox.');
+    isFormValid = false;
+  }
+
   return isFormValid;
 };
