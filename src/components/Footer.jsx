@@ -144,7 +144,7 @@ const Footer = (props) => {
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de la embajada de la República Bolivariana de Venezuela"
             >
-              <img src={logoVenezuela} alt="Consulado de Chile" />
+              <img src={logoVenezuela} alt="Consulado de Venezuela" />
             </a>
             <a
               href="https://cfran.cancilleria.gob.ar/"
@@ -155,10 +155,10 @@ const Footer = (props) => {
               <img src={logoArgentina} alt="Klett" />
             </a>
             <a
-              href="https://www.jcyl.es"
+              href="https://www.consuladodominicanoff.de/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Castilla y León"
+              aria-label="Enlace a la página web del Consulado General de la República Dominicana en Frankfurt"
             >
               <img src={logoRepublicaDominicana} alt="Klett" />
             </a>
