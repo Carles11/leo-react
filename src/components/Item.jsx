@@ -6,6 +6,9 @@ import Button from './Button';
 const Item = (props) => {
   const { item, handleRemove, handleShow } = props;
   const courseIsDesired = item.interestCheckbox ? 'Sí' : 'No';
+  const consentIsGiven =
+    item.bases_consent && item.image_consent ? 'Confirmados' : 'Sin confirmar';
+  console.log('consentIsGiven', consentIsGiven);
   return (
     <React.Fragment>
       <li className="app-list-item">
@@ -68,6 +71,10 @@ const Item = (props) => {
             <p className="app-list-content-item">
               <small>Cursillo digital:</small>
               {courseIsDesired}
+            </p>
+            <p className="app-list-content-item">
+              <small>Consentimientos?</small>
+              {consentIsGiven}
             </p>
             <p className="app-list-content-item">
               <small>Edición:</small>

@@ -178,7 +178,6 @@ class AdminList extends React.Component {
     const ExportToExcelButton = (
       <ExcelExport schools={!year ? list : filteredList} />
     );
-    console.log('yeyeyeyeye', year);
     return (
       <div>
         {!loaded && <Loader />}

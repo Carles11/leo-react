@@ -95,7 +95,6 @@ class Navigation extends React.Component {
           </Link>
         </li>
         {NAV.map((item, i) => {
-          // console.log('ITEMMMM----', item);
           const label = getSlug(item.label);
           const children = item.children.length;
           const section = `app-section-${i}`;
