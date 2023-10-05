@@ -155,7 +155,7 @@ const Footer = (props) => {
               <img src={logoArgentina} alt="Klett" />
             </a>
             <a
-              href="https://www.consuladodominicanoff.de/"
+              href="http://www.consuladodominicanoff.de/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Enlace a la página web del Consulado General de la República Dominicana en Frankfurt"
