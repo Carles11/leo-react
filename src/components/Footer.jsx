@@ -26,7 +26,7 @@ import logoColegioDelibes from '../assets/imgs/logo-colegio-delibes.png';
 const Footer = (props) => {
   const { DIC, FOOTER_DATA } = props;
 
-  const copy = `${new Date().getFullYear()}  ${DIC.HEADER_MAIN}`;
+  const currentYearFooter = `${new Date().getFullYear()}  ${DIC.HEADER_MAIN}`;
 
   return (
     <footer className="app-footer">
@@ -57,7 +57,7 @@ const Footer = (props) => {
           <li>
             <span>
               &copy;&nbsp;
-              {copy}
+              {currentYearFooter}
             </span>
           </li>
         </ul>
