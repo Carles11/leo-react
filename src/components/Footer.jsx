@@ -73,7 +73,7 @@ const Footer = (props) => {
               <img src={logoHessen} alt="Hessen" />
             </a>
             <a
-              href="http://www.hessenwaldschule.net/ "
+              href="https://www.hessenwaldschule.de/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de la Hessenwaldschule"
