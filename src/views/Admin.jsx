@@ -36,14 +36,15 @@ class Admin extends React.Component {
 
     return (
       <React.Fragment>
-        {!auth && (
+        {!auth ? (
           <SignIn
             handleSubmit={this.handleData}
             message={message}
             next={next}
           />
+        ) : (
+          <Redirect to="/admin-panel" />
         )}
-        {auth && <Redirect to="/admin-panel" />}
       </React.Fragment>
     );
   }

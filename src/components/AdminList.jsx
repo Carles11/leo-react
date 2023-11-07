@@ -7,6 +7,7 @@ import ExcelExport from '../components/ExcelExport';
 import * as API from '../utils/API';
 import Loader from './Loader';
 import PrintComponent from './PrintComponent';
+import Modal from './Modal';
 
 class AdminList extends React.Component {
   state = {
@@ -21,6 +22,7 @@ class AdminList extends React.Component {
       state: true,
     },
     visible: false,
+    showModal: false,
   };
 
   static propTypes = {
@@ -51,6 +53,26 @@ class AdminList extends React.Component {
     }
   };
 
+  handleEdit = async (e) => {
+    const { id } = e.target.dataset;
+    const { error } = this.state;
+    const { type } = this.props;
+    const obj = {};
+    console.log({ id, error, type, obj });
+    this.setState((prevState) => ({ showModal: !prevState.showModal }));
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    // const promise = await API.update(`${type}/${id}`, obj,true);
+
+    // if (promise.success) {
+    //   this.setState({ list: promise.data, loaded: true });
+    //   window.location.reload();
+    // } else {
+    //   this.setState({
+    //     error: Object.assign(error, { next: true }),
+    //     loaded: true,
+    //   });
+    // }
+  };
   handleRemove = async (e) => {
     const { id } = e.target.dataset;
     const { error } = this.state;
@@ -114,7 +136,8 @@ class AdminList extends React.Component {
   };
 
   render() {
-    const { list, filteredList, year, loaded, error, visible } = this.state;
+    const { list, filteredList, year, loaded, error, visible, showModal } =
+      this.state;
     const mailAddress = !year
       ? list.map((l) => l.email).join(',')
       : filteredList.map((l) => l.email).join(',');
@@ -216,9 +239,18 @@ class AdminList extends React.Component {
               filteredData={filteredList}
               handleRemove={this.handleRemove}
               handleShow={this.handleShow}
+              handleEdit={this.handleEdit}
               ref={(el) => (this.componentRef = el)}
             />
           </article>
+        )}
+        {showModal && (
+          <Modal
+            title="Actualiza esta escuela"
+            onClose={() => this.setState({ showModal: false })}
+          >
+            MODAL CONTENT
+          </Modal>
         )}
       </div>
     );
