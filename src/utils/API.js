@@ -1,7 +1,7 @@
 import config from '../config';
 
 const { API_URL, API_AUTH, API_TOKEN } = config.api;
-
+console.log({ API_URL, API_AUTH, API_TOKEN });
 const getOptions = () => {
   const ACCESS_TOKEN =
     localStorage.getItem(API_TOKEN) &&
