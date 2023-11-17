@@ -21,6 +21,9 @@ const getOptions = () => {
 };
 
 const request = async (url, newOptions, auth) => {
+  // console.log({ url });
+  // console.log({ API_AUTH });
+  // console.log({ API_URL });
   try {
     const URL = auth ? `${API_AUTH}${url}` : `${API_URL}${url}`;
     const promise = await fetch(URL, newOptions);
