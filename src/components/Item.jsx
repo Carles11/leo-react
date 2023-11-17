@@ -4,22 +4,23 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 const Item = (props) => {
-  const { item, handleRemove, handleShow } = props;
+  const { item, handleEdit, handleRemove, handleShow } = props;
   const courseIsDesired = item.interestCheckbox ? 'Sí' : 'No';
   const consentIsGiven =
     item.bases_consent && item.image_consent ? 'Confirmados' : 'Sin confirmar';
-  console.log('consentIsGiven', consentIsGiven);
+
   return (
     <React.Fragment>
       <li className="app-list-item">
         <header className="app-list-header">
           <h2>{item.name}</h2>
           <div className="app-list-content-btn">
-            {/* <button
+            <button
               className="app-list-btn icon-edit-2"
               arial-label="Edit"
-            >
-            </button> */}
+              data-id={item._id}
+              onClick={handleEdit}
+            ></button>
             <button
               className="app-list-btn icon-x-circle"
               arial-label="Remove Item"
@@ -91,6 +92,7 @@ Item.propTypes = {
   item: PropTypes.object.isRequired,
   handleRemove: PropTypes.func.isRequired,
   handleShow: PropTypes.func.isRequired,
+  handleEdit: PropTypes.func.isRequired,
 };
 
 export default Item;

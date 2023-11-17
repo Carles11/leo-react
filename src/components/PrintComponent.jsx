@@ -8,10 +8,12 @@ class PrintComponent extends React.Component {
     data: PropTypes.array.isRequired,
     handleRemove: PropTypes.func.isRequired,
     handleShow: PropTypes.func.isRequired,
+    handleEdit: PropTypes.func.isRequired,
   };
 
   render() {
-    const { data, filteredData, year, handleRemove, handleShow } = this.props;
+    const { data, filteredData, year, handleEdit, handleRemove, handleShow } =
+      this.props;
 
     return (
       <ul className="app-list">
@@ -22,6 +24,7 @@ class PrintComponent extends React.Component {
                 item={item}
                 handleRemove={handleRemove}
                 handleShow={handleShow}
+                handleEdit={handleEdit}
               />
             ))
           : filteredData.map((item) => (
@@ -30,6 +33,7 @@ class PrintComponent extends React.Component {
                 item={item}
                 handleRemove={handleRemove}
                 handleShow={handleShow}
+                handleEdit={handleEdit}
               />
             ))}
         {data.length === 0 && (

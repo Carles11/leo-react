@@ -53,5 +53,15 @@ export const post = (url, obj, auth = false) =>
     auth
   );
 
+export const update = (url, obj, auth = false) =>
+  request(
+    url,
+    Object.assign({}, getOptions(), {
+      method: 'PUT',
+      body: JSON.stringify(obj),
+    }),
+    auth
+  );
+
 export const remove = (url) =>
   request(url, Object.assign({}, getOptions(), { method: 'DELETE' }));
