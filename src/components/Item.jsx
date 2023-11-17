@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 const Item = (props) => {
-  const { item, handleEdit, handleRemove, handleShow } = props;
+  const { item, handleRemove, handleShow } = props;
   const courseIsDesired = item.interestCheckbox ? 'Sí' : 'No';
   const consentIsGiven =
     item.bases_consent && item.image_consent ? 'Confirmados' : 'Sin confirmar';
@@ -15,12 +15,13 @@ const Item = (props) => {
         <header className="app-list-header">
           <h2>{item.name}</h2>
           <div className="app-list-content-btn">
+            {/* Edit button with logic to edit school 
             <button
               className="app-list-btn icon-edit-2"
               arial-label="Edit"
               data-id={item._id}
               onClick={handleEdit}
-            ></button>
+            ></button>*/}
             <button
               className="app-list-btn icon-x-circle"
               arial-label="Remove Item"
