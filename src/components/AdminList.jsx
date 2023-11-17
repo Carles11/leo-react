@@ -249,7 +249,7 @@ class AdminList extends React.Component {
             title="Actualiza esta escuela"
             onClose={() => this.setState({ showModal: false })}
           >
-            MODAL CONTENT
+            MODAL CONTENT UPDATE SCHOOL
           </Modal>
         )}
       </div>
