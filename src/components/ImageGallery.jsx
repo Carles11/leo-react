@@ -44,9 +44,8 @@ class ImageGallery extends React.Component {
 
     const promiseData = promise.data ? promise.data : null;
 
-    const onlyPhotosOver2019 = promiseData.filter(
-      (photo) => photo.year >= 2019
-    );
+    const onlyPhotosOver2019 =
+      promiseData && promiseData.filter((photo) => photo.year >= 2019);
     if (onlyPhotosOver2019 !== null) {
       let data =
         onlyPhotosOver2019 && onlyPhotosOver2019.sort((a, b) => a._id > b._id);
