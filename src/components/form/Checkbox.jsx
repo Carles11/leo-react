@@ -10,6 +10,7 @@ class Checkbox extends React.Component {
     label: PropTypes.string.isRequired,
     handleCheckbox: PropTypes.func.isRequired,
     send: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired,
   };
 
   componentDidUpdate(prevProps) {
