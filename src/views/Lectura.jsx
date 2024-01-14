@@ -17,12 +17,13 @@ class Lectura extends React.PureComponent {
 
   handleAudio = (audio) => {
     this.setState({ audio });
+    const audioURL = new Audio(audio);
+    audioURL.play;
   };
 
   render() {
     const { DIC } = this.props;
     const { data, audio } = this.state;
-
     return (
       <section className="app-content pb2rem mb2rem">
         <Helmet
@@ -116,15 +117,28 @@ class Lectura extends React.PureComponent {
                                 </div>
                               </header>
                               {audio === item.audio && (
-                                <audio
-                                  className="app-audio"
-                                  src={audio}
-                                  controls="controls"
-                                  autoPlay
-                                >
-                                  Your browser does not support the{' '}
-                                  <code>audio</code> element.
-                                </audio>
+                                <div className="mini-grid-row">
+                                  {/* 
+                                  ########  Somehow starting 2024 the audio tag stopped working. We need to use iframe now ########
+                                  <audio
+                                    className="app-audio"
+                                    src={audio}
+                                    controls="controls"
+                                    autoPlay
+                                  >
+                                    Your browser does not support the{' '}
+                                    <code>audio</code> element.
+                                  </audio> */}
+                                  <iframe
+                                    frameborder="1"
+                                    width="10"
+                                    height="10"
+                                    src={audio}
+                                  ></iframe>
+                                  <small className="mini-grid-margin">
+                                    Descargando archivo...
+                                  </small>
+                                </div>
                               )}
                             </li>
                           ))}
