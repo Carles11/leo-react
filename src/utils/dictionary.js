@@ -59,7 +59,7 @@ const dictionary = {
     CONCURSO_EDICION_FINAL_NEXT_DATE: '24 de mayo de 2024 ',
     CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: ' 20 de abril de 2024',
     // CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '28 de abril de 2023',
-    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '30 de abril de 2024',
+    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '27 de abril de 2024',
     CONCURSO_EDICION_SF_INSCRIPTION_DUE: '01 de marzo de 2024',
     CONCURSO_EDICION_TXT:
       'La Final de la decimotercera convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
