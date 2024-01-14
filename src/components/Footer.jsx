@@ -16,7 +16,7 @@ import logoVenezuela from '../assets/imgs/logo-venezuela.png';
 import logoRepublicaDominicana from '../assets/imgs/Logo-republica-dominicana.png';
 
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
-import logoDsg from '../assets/imgs/logo-dsg.jpg';
+import logoDsv from '../assets/imgs/logo-dsv.png';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
 import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
 import logoKlett from '../assets/imgs/logo-klett.jpg';
@@ -103,7 +103,7 @@ const Footer = (props) => {
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de Spanisch Deutsch Lehrerverband"
             >
-              <img src={logoDsg} alt="SDV" />
+              <img src={logoDsv} alt="SDV" />
             </a>
 
             <a
