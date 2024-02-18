@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 import logoAecid from '../assets/imgs/logo-aecid.png';
-import logoHessen from '../assets/imgs/logo-hessen.png';
+import logoHessen from '../assets/imgs/logo-hessen.jpg';
 import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
 
