@@ -107,7 +107,7 @@ class ImageGallery extends React.Component {
   render() {
     const { loaded, photos, filter, year } = this.state;
     if (!loaded) return <Loader css={'app-section h725'} />;
-
+    console.log({ photos });
     return (
       <React.Fragment>
         <header className="header-wrapper">
