@@ -14,7 +14,7 @@ class AdminList extends React.Component {
     loaded: false,
     list: [],
     filteredList: [],
-    year: 2024,
+    year: 2025 || 2024,
     error: {
       message: 'Hay algún problema al cargar el listado, inténtalo más tarde.',
       next: false,
@@ -201,6 +201,8 @@ class AdminList extends React.Component {
     const ExportToExcelButton = (
       <ExcelExport schools={!year ? list : filteredList} />
     );
+
+    console.log({ filteredList });
     return (
       <div>
         {!loaded && <Loader />}
