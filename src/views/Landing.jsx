@@ -33,24 +33,24 @@ const Landing = (props) => {
     }
   }, []);
 
-  const message = (
-    <div className="aviso-portada">
-      <h1>
-        Cursillo preparatorio en línea <br />
-        para colegios que se inscriben por primera vez.
-      </h1>
-      <p>Martes, 5 de diciembre de 2023 de 17.30 a 18.30 h</p>
-      <p>
-        Inscripción al cursillo: Mandar un correo a{' '}
-        <strong>
-          <a href="mailto:a.feregrino-langer@adolf-reichwein-schule.net">
-            {' '}
-            esta dirección
-          </a>
-        </strong>
-      </p>
-    </div>
-  );
+  // const message = (
+  //   <div className="aviso-portada">
+  //     <h1>
+  //       Cursillo preparatorio en línea <br />
+  //       para colegios que se inscriben por primera vez.
+  //     </h1>
+  //     <p>Martes, 5 de diciembre de 2023 de 17.30 a 18.30 h</p>
+  //     <p>
+  //       Inscripción al cursillo: Mandar un correo a{' '}
+  //       <strong>
+  //         <a href="mailto:a.feregrino-langer@adolf-reichwein-schule.net">
+  //           {' '}
+  //           esta dirección
+  //         </a>
+  //       </strong>
+  //     </p>
+  //   </div>
+  // );
 
   return (
     <section className="app-landing">
@@ -63,7 +63,7 @@ const Landing = (props) => {
       />
 
       <Header DIC={DIC} />
-      {firstVisit && message}
+      {/* {firstVisit && message} */}
       <Contest DIC={DIC} PARAGRAPHS={PARAGRAPHS} />
       <Register DIC={DIC} />
       <article className="app-section app-section-2">

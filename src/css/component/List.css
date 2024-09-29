@@ -83,7 +83,9 @@
   margin-left: 2px;
   background: white;
   color: var(--mainColor);
-  transition: color 0.5s, background 0.5s;
+  transition:
+    color 0.5s,
+    background 0.5s;
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box;

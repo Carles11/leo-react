@@ -65,13 +65,21 @@
   background-clip: padding-box;
   border: 1px solid var(--mainColorDark);
   border-radius: 0.25rem;
-  -webkit-transition: border-color ease-in-out 0.15s,
+  -webkit-transition:
+    border-color ease-in-out 0.15s,
     -webkit-box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s,
+  transition:
+    border-color ease-in-out 0.15s,
     -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s,
+  -o-transition:
+    border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+  transition:
+    border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+  transition:
+    border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s,
     -webkit-box-shadow ease-in-out 0.15s;
 }
 
@@ -149,28 +157,32 @@ textarea.active.invalid {
   margin: 0 1rem 0.5rem 0;
   position: relative;
   border-radius: 50px;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
+  box-shadow:
+    inset 0px 1px 1px rgba(0, 0, 0, 0.5),
     0px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
 .app-form-checkbox:before {
-  content: "SI";
+  content: 'SI';
   color: var(--secondColor);
   position: absolute;
   left: 10px;
   z-index: 0;
-  font: 12px/26px Arial, sans-serif;
+  font:
+    12px/26px Arial,
+    sans-serif;
   font-weight: bold;
-
 }
 
 .app-form-checkbox:after {
-  content: "NO";
+  content: 'NO';
   color: #000;
   position: absolute;
   right: 10px;
   z-index: 0;
-  font: 12px/26px Arial, sans-serif;
+  font:
+    12px/26px Arial,
+    sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
 }
@@ -189,17 +201,20 @@ textarea.active.invalid {
   background: var(--textColor);
   color: white;
   border-radius: 50px;
-  transition: left 0.4s ease, background 0.4s ease, color 0.4s ease;
+  transition:
+    left 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
   line-height: 1.2;
 }
 
-.app-form-checkbox input[type="checkbox"] {
+.app-form-checkbox input[type='checkbox'] {
   visibility: hidden;
 }
 
-.app-form-checkbox input[type="checkbox"]:checked+label {
+.app-form-checkbox input[type='checkbox']:checked + label {
   left: 43px;
   background: var(--secondColor);
   color: white;

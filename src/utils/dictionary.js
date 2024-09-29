@@ -77,7 +77,6 @@ const dictionary = {
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
     CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2024',
     CONCURSO_EDICION_FINAL_NEXT_DATE: '19 de mayo de 2025',
-    CONCURSO_EDICION_FINAL_NEXT_DATE: '19 de mayo de 2025',
     CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: ' 20 de abril de 2024',
     // CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '28 de abril de 2023',
     CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '27 de abril de 2024',
@@ -104,7 +103,7 @@ const dictionary = {
     SEMIFINAL_LATINOAMERICA_PARAGRAPH_1:
       'Fruto de la colaboración con los Consulados Generales de México, Colombia, Chile, Perú y Argentina se celebrará una semifinal de nivel B2 para alumnos procedentes de países latinoamericanos. Para ello no será necesario ser poseedor de la nacionalidad del país, solamente tener ascendencia de un país latinoamericano. ',
     SUBDESCRIPTION: 'Próxima final el 19 de mayo de 2025 ',
-    EDITION_CURRENT: 'XIII convocatoria',
+    EDITION_CURRENT: 'XIV convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',

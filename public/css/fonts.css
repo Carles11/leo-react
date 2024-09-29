@@ -1,24 +1,29 @@
 @font-face {
-	font-family: Regular;
-	font-display: block;
-	src: local("Regular"),
-		url(../fonts/SourceSansPro-Regular.otf) format("truetype");
+  font-family: Regular;
+  font-display: block;
+  src:
+    local('Regular'),
+    url(../fonts/SourceSansPro-Regular.otf) format('truetype');
 }
 @font-face {
-	font-family: Lighter;
-	font-display: block;
-	src: local("Lighter"),
-		url(../fonts/SourceSansPro-ExtraLight.otf) format("truetype");
+  font-family: Lighter;
+  font-display: block;
+  src:
+    local('Lighter'),
+    url(../fonts/SourceSansPro-ExtraLight.otf) format('truetype');
 }
 @font-face {
-	font-family: Bold;
-	font-display: block;
-	src: local("Bold"), url(../fonts/SourceSansPro-Black.otf) format("truetype");
+  font-family: Bold;
+  font-display: block;
+  src:
+    local('Bold'),
+    url(../fonts/SourceSansPro-Black.otf) format('truetype');
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?nxaivd');
-  src:  url('../fonts/icomoon.eot?nxaivd#iefix') format('embedded-opentype'),
+  src: url('../fonts/icomoon.eot?nxaivd');
+  src:
+    url('../fonts/icomoon.eot?nxaivd#iefix') format('embedded-opentype'),
     url('../fonts/icomoon.ttf?nxaivd') format('truetype'),
     url('../fonts/icomoon.woff?nxaivd') format('woff'),
     url('../fonts/icomoon.svg?nxaivd#icomoon') format('svg');
@@ -26,7 +31,8 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -42,26 +48,26 @@
 }
 
 .icon-arrow-down-circle:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-check-circle:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-edit-2:before {
-  content: "\e903";
+  content: '\e903';
 }
 .icon-headphones:before {
-  content: "\e904";
+  content: '\e904';
 }
 .icon-mail:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-menu:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-power:before {
-  content: "\e906";
+  content: '\e906';
 }
 .icon-x-circle:before {
-  content: "\e907";
+  content: '\e907';
 }

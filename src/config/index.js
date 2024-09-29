@@ -12,7 +12,7 @@ try {
     config.env = 'testing';
   }
   // eslint-disable-next-line
-	envConfig = require(`./${config.env}`)
+  envConfig = require(`./${config.env}`);
 } catch (e) {
   envConfig = {};
 }

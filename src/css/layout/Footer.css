@@ -1,111 +1,111 @@
 .app-footer {
-	position: relative;
-	background: var(--mainColorDark);
-	color: white;
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	padding: 1rem;
+  position: relative;
+  background: var(--mainColorDark);
+  color: white;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
 }
 
 .app-footer-wrapper {
-	max-width: 100%;
-	margin: 0 auto;
-	display: block;
-	display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  display: flex;
 }
 
 .app-footer-links {
-	width: auto;
-	position: relative;
-	padding: 0rem 5rem 0rem 0.5rem;
-	margin-right: 1.5rem;
-	border-right: 1px dotted var(--mainColor);
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+  width: auto;
+  position: relative;
+  padding: 0rem 5rem 0rem 0.5rem;
+  margin-right: 1.5rem;
+  border-right: 1px dotted var(--mainColor);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .app-footer-links li,
 .app-footer-links a {
-	color: white;
-	font-family: Lighter;
-	font-size: var(--tinySize);
-	margin: 0 0.5rem;
-	height: 2rem;
+  color: white;
+  font-family: Lighter;
+  font-size: var(--tinySize);
+  margin: 0 0.5rem;
+  height: 2rem;
 }
 
 .app-footer-links li:last-of-type {
-	padding-top: 0.75rem;
+  padding-top: 0.75rem;
 }
 
 .app-footer-links li > span {
-	font-family: Lighter;
-	font-size: var(--tinySize);
-	color: white;
-	margin-left: 0.5rem;
+  font-family: Lighter;
+  font-size: var(--tinySize);
+  color: white;
+  margin-left: 0.5rem;
 }
 
 .app-footer-links li a {
-	color: var(--secondColor);
+  color: var(--secondColor);
 }
 
 .app-footer-imgs {
-	flex: 1 0 0;
-	width: 100%;
-	padding: 0 3.5rem;
+  flex: 1 0 0;
+  width: 100%;
+  padding: 0 3.5rem;
 }
 
 .app-footer-imgs h3 {
-	font-family: Lighter;
-	font-size: var(--textSize);
-	margin: 1.5rem 0;
+  font-family: Lighter;
+  font-size: var(--textSize);
+  margin: 1.5rem 0;
 }
 
 .app-footer-imgs article {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .app-footer-imgs article a {
-	margin: 0.25rem 0.5rem 0.25rem 0;
-	padding: 0.25rem 0.25rem 0 0.25rem;
-	border: 1px solid var(--mainColor);
-	transition: border 0.5s;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  padding: 0.25rem 0.25rem 0 0.25rem;
+  border: 1px solid var(--mainColor);
+  transition: border 0.5s;
 }
 
 .app-footer-imgs article a:hover {
-	border: 1px solid white;
+  border: 1px solid white;
 }
 
 .app-footer a > .line {
-	height: 1.25rem;
+  height: 1.25rem;
 }
 
 .app-footer a > .line span {
-	border-bottom: 1px solid var(--secondColor);
+  border-bottom: 1px solid var(--secondColor);
 }
 
 @media only screen and (max-width: 600px) {
-	.app-footer-wrapper {
-		flex-direction: column;
-	}
+  .app-footer-wrapper {
+    flex-direction: column;
+  }
 
-	.app-footer-links {
-		align-items: center;
-		padding: 0;
-		margin-right: 0;
-		border-right: none;
-	}
+  .app-footer-links {
+    align-items: center;
+    padding: 0;
+    margin-right: 0;
+    border-right: none;
+  }
 
-	.app-footer-imgs {
-		padding: 0;
-	}
+  .app-footer-imgs {
+    padding: 0;
+  }
 
-	.app-footer-imgs h3 {
-		text-align: center;
-	}
+  .app-footer-imgs h3 {
+    text-align: center;
+  }
 }
