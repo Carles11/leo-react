@@ -73,7 +73,7 @@ class Lectura extends React.PureComponent {
                     </h2>
                   ) : null}
 
-                  {d.year === 2024 &&
+                  {d.year === 2025 &&
                     d.projects.map((project) => (
                       <article
                         key={project.title}

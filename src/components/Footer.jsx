@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 import logoAecid from '../assets/imgs/logo-aecid.png';
+import logoConsuladoEspFra from '../assets/imgs/logo-consulado-esp-fra.png';
 import logoHessen from '../assets/imgs/logo-hessen.jpg';
 import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
@@ -9,7 +10,7 @@ import logoIc from '../assets/imgs/logo-ic.jpg';
 import logoArgentina from '../assets/imgs/logo-argentina.jpg';
 import logoCastillaLeon from '../assets/imgs/logo-castilla-y-leon.png';
 import logoChile from '../assets/imgs/logo-chile.png';
-import logoColombia from '../assets/imgs/logo-colombia.jpg';
+import logoColombiaEmbajada from '../assets/imgs/logo-colombia-embajada-nuevo.png';
 import logoMexico from '../assets/imgs/logo-mexico.png';
 import logoPeru from '../assets/imgs/logo-peru.jpg';
 import logoVenezuela from '../assets/imgs/logo-venezuela.png';
@@ -19,7 +20,7 @@ import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoDsv from '../assets/imgs/logo-dsv.png';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
 import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
-import logoKlett from '../assets/imgs/logo-klett.jpg';
+import logoKlett from '../assets/imgs/logo-klett.png';
 import logoSm from '../assets/imgs/logo-sm.jpg';
 import logoColegioDelibes from '../assets/imgs/logo-colegio-delibes.png';
 
@@ -90,12 +91,23 @@ const Footer = (props) => {
             </a>
 
             <a
-              href="http://www.aecid.es/ES"
+              href="https://www.aecid.es/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de AECID (cooperación)"
             >
               <img src={logoAecid} alt="AECID (cooperación)" />
+            </a>
+            <a
+              href="https://www.exteriores.gob.es/Consulados/francfort/es/Paginas/index.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Consulado General de España en Fráncfort"
+            >
+              <img
+                src={logoConsuladoEspFra}
+                alt="Logo Consulado de España en Fráncfort"
+              />
             </a>
             <a
               href="https://www.hispanorama.de/landesverbaende/hessen/"
@@ -112,7 +124,7 @@ const Footer = (props) => {
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de la embajada de Colombia"
             >
-              <img src={logoColombia} alt="Cancillería (Colombia)" />
+              <img src={logoColombiaEmbajada} alt="Cancillería (Colombia)" />
             </a>
             <a
               href="https://consulmex.sre.gob.mx/frankfurt/"

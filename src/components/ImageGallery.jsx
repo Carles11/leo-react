@@ -14,7 +14,7 @@ class ImageGallery extends React.Component {
     lightboxIsOpen: false,
     data: [],
     photos: [],
-    year: 2023,
+    year: 2024,
     filter: {},
     position: 0,
     lazyLoad: false,
