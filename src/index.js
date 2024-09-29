@@ -6,13 +6,13 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './App.jsx';
 
-const el = document.getElementById('root');
+const element = document.getElementById('root');
 
 ReactDOM.render(
   <Router>
     <App />
   </Router>,
-  el
+  element
 );
 
 registerServiceWorker();
