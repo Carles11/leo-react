@@ -55,7 +55,7 @@ class Colegios extends React.Component {
                         <small>{item.address}</small>
                       </header>
                     </li>
-                  )
+                  ),
               )}
             </ul>
           </article>

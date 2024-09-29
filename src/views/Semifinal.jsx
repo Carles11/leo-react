@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-const Semifinal = props => {
+const Semifinal = (props) => {
   return (
-    <div className='app-content pb2rem mb2rem'>
+    <div className="app-content pb2rem mb2rem">
       <Helmet
         title={DIC.NAV_CRITERIOS}
         meta={[
@@ -11,10 +11,10 @@ const Semifinal = props => {
         ]}
       />
       <header>
-        <h1 className='tit-header mb2rem'>{DIC.NAV_CRITERIOS}</h1>
+        <h1 className="tit-header mb2rem">{DIC.NAV_CRITERIOS}</h1>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default Semifinal
+export default Semifinal;

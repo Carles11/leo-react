@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const ButtonSignOut = (props) => {
-  const { handleClick, label } = props
-  const labelTxt = label ? label.toUpperCase() : ''
+  const { handleClick, label } = props;
+  const labelTxt = label ? label.toUpperCase() : '';
 
   return (
     <button
@@ -14,15 +14,15 @@ const ButtonSignOut = (props) => {
       {labelTxt}
       <span className="icon-power" />
     </button>
-  )
-}
+  );
+};
 
 ButtonSignOut.defaultProps = {
   label: '',
-}
+};
 
 ButtonSignOut.propTypes = {
   handleClick: PropTypes.func.isRequired,
-}
+};
 
-export default ButtonSignOut
+export default ButtonSignOut;

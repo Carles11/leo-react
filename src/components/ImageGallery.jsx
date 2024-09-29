@@ -53,7 +53,7 @@ class ImageGallery extends React.Component {
       this.setState({
         data,
         photos: onlyPhotosOver2019.filter(
-          (photo) => photo.year === Number(year)
+          (photo) => photo.year === Number(year),
         ),
         loaded: true,
       });

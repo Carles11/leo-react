@@ -3,18 +3,18 @@ const config = {
   test: 'test',
   prod: 'production',
   env: process.env.NODE_ENV || '',
-}
+};
 
-let envConfig
+let envConfig;
 
 try {
   if (config.env === 'test') {
-    config.env = 'testing'
+    config.env = 'testing';
   }
   // eslint-disable-next-line
 	envConfig = require(`./${config.env}`)
 } catch (e) {
-  envConfig = {}
+  envConfig = {};
 }
 
-export default Object.assign({}, config, envConfig)
+export default Object.assign({}, config, envConfig);

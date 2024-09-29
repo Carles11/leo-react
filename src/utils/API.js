@@ -53,7 +53,7 @@ export const post = (url, obj, auth = false) =>
       method: 'POST',
       body: JSON.stringify(obj),
     }),
-    auth
+    auth,
   );
 
 export const update = (url, obj, auth = false) =>
@@ -63,7 +63,7 @@ export const update = (url, obj, auth = false) =>
       method: 'PUT',
       body: JSON.stringify(obj),
     }),
-    auth
+    auth,
   );
 
 export const remove = (url) =>

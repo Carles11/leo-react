@@ -146,7 +146,7 @@ class Register extends React.Component {
     });
 
     const checkboxes = Array.from(
-      document.querySelectorAll('.app-form-whole input[type=checkbox]')
+      document.querySelectorAll('.app-form-whole input[type=checkbox]'),
     );
     checkboxes.forEach((item) => (item.checked = false));
 

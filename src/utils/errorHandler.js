@@ -15,7 +15,7 @@ function handleText(item) {
       itemArg.error.textContent = `${itemArg.label} ${DIC.ERROR_EMAIL}`;
     } else if (
       itemArg.validity.patternMismatch ||
-      (isPassword && itemArg.validity.patternMismatch) // eslint-disable-line no-tabs
+      (isPassword && itemArg.validity.patternMismatch)
     ) {
       itemArg.error.textContent = `${itemArg.label} ${DIC.ERROR_TEXT}`;
     }
@@ -51,10 +51,10 @@ export const showCheckboxError = (item) => {
     error = item.querySelector('.app-form-label-txt-error');
   } else {
     checkboxes = Array.from(
-      item.parentNode.parentNode.querySelectorAll('input[type=checkbox]')
+      item.parentNode.parentNode.querySelectorAll('input[type=checkbox]'),
     );
     error = item.parentNode.parentNode.querySelector(
-      '.app-form-label-txt-error'
+      '.app-form-label-txt-error',
     );
   }
 
@@ -67,12 +67,12 @@ export const showCheckboxError = (item) => {
   if ((basesAccept || imageAccept) && item.dataset.checked !== 'checked') {
     checkboxes = checkboxes.push(
       item.parentNode.parentNode.parentNode.querySelectorAll(
-        'input[type=checkbox]'
-      )
+        'input[type=checkbox]',
+      ),
     );
     console.log('CAHEKHELEKLE', checkboxes);
     error = item.parentNode.parentNode.parentNode.querySelector(
-      '.app-form-label-txt-error'
+      '.app-form-label-txt-error',
     );
     error.textContent = 'Debe aceptar este campo para inscribirse.';
     return false;
@@ -118,10 +118,10 @@ export const showFormErrors = () => {
   const textareas = document.querySelectorAll('textarea:required');
   const checkboxParent = document.getElementById('checkboxWrapper');
   const checkboxBasesConsent = document.getElementById(
-    'checkboxesBasesConsentWrapper'
+    'checkboxesBasesConsentWrapper',
   );
   const checkboxImageConsent = document.getElementById(
-    'checkboxesImageConsentWrapper'
+    'checkboxesImageConsentWrapper',
   );
 
   let isFormValid = true;

@@ -1,28 +1,41 @@
 /** @type {import('eslint').Linter.FlatConfig} */
 const { defineConfig } = require("eslint-define-config");
 const airbnb = require("eslint-config-airbnb");
-const prettierConfig = require("eslint-config-prettier");
+const prettier = require("eslint-config-prettier");
+const prettierPlugin = require("eslint-plugin-prettier");
+const reactPlugin = require("eslint-plugin-react");
 
 const config = defineConfig([
     {
-        ...airbnb, // Use the Airbnb config here
-        plugins: ["prettier"],
-        env: {
-            jest: true,
-            browser: true,
+        files: ["**/*.js", "**/*.jsx"], // Adjust according to your file types
+        languageOptions: {
+            ecmaVersion: 2021,
+            sourceType: "module",
+            parser: {
+                parse: (code, options) => {
+                    const babelParser = require("@babel/eslint-parser");
+                    return babelParser.parse(code, {
+                        ...options,
+                        requireConfigFile: false,
+                    });
+                },
+            },
+        },
+        plugins: {
+            react: reactPlugin,
+            prettier: prettierPlugin,
         },
         rules: {
-            semi: [2, "never"],
-            "no-tabs": 0,
-            "no-mixed-spaces-and-tabs": 0,
-            "no-unexpected-multiline": 2,
-            "import/no-named-as-default": 0,
+            "react/jsx-filename-extension": [1, { extensions: ['.jsx', '.js'] }],
+            "react/prop-types": 0,
             "prettier/prettier": "error",
+            // Add more rules based on your needs
         },
     },
     {
-        // Add Prettier configuration separately
-        ...prettierConfig,
+        rules: {
+            ...prettier.rules,
+        },
     },
 ]);
 

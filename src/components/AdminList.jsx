@@ -78,7 +78,7 @@ class AdminList extends React.Component {
     const { error } = this.state;
     const { type } = this.props;
     const c = window.confirm(
-      'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.'
+      'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.',
     );
 
     if (c) {
