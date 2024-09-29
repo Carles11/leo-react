@@ -1,6 +1,9 @@
 {
   "name": "leo",
-  "version": "0.2.10",
+  "version": "14.0.0",
+  "engines": {
+    "node": ">=18.x"
+  },
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.3",
