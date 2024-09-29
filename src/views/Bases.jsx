@@ -63,19 +63,23 @@ const Bases = (props) => {
             </strong>
             <p className="txt txt-inline">
               Se establecen cuatro niveles de participación, definidos según el
-              Marco Europeo de Referencia para las Lenguas (MCER):
+              Marco Europeo de Referencia para las Lenguas:
               <strong className="txt-highlight">
                 &nbsp;A1, A2, B1 y B2.&nbsp;
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_4}
             </p>
+            <p className="txt txt-inline">
+              {DIC.CONCURSO_BASES_PARAGRAPH_4_bis}
+            </p>
+            <p className="txt txt-inline">
+              {DIC.CONCURSO_BASES_PARAGRAPH_4_bis_bis}
+            </p>
             <br />
             <p className="txt txt-inline">
-              La edad de los participantes será tenida en cuenta por el jurado a
-              la hora de puntuar, ya que por el desarrollo intrínseco del alumno
-              la competencia lectora -tanto en la lengua materna como en la
-              extranjera- mejora con la edad. La edad máxima para participar
-              será de <strong className="txt-highlight">&nbsp;16 años.</strong>.
+              {DIC.CONCURSO_BASES_PARAGRAPH_4_bis_bis} La edad máxima para
+              participar será de{' '}
+              <strong className="txt-highlight">&nbsp;16 años.</strong>.
             </p>
             <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_5}</p>
           </li>
@@ -87,7 +91,7 @@ const Bases = (props) => {
             </p>
             <p className="txt">
               <strong className="txt-highlight">
-                TEXTOS A LEER EN LA FINAL: &nbsp;
+                TEXTOS PARA LEER: &nbsp;
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_7}
             </p>
@@ -117,10 +121,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">Jurado:&nbsp;</strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_10}
             </p>
-            <p className="txt">
-              Los miembros del jurado tendrán que entregar la puntuación de cada
-              candidato antes de la suma de los puntos.
-            </p>
+            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_10_bis}</p>
           </li>
           {/* 5. PUBLICO */}
           <li className="app-olist-item">
@@ -136,35 +137,29 @@ const Bases = (props) => {
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">
-                Proceso de selección de candidatos:
+                Proceso de selección de candidatos y criterios de lectura:
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_13}
             </p>
 
-            <p className="txt">
-              La «calidad» de la lectura se determinará según los siguientes dos
-              criterios:
-            </p>
+            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_13_bis}</p>
             <ul>
               <li>Pronunciación / entonación</li>
               <li>Comprensión / interpretación</li>
             </ul>
-            <p className="txt">
-              La puntuación será de 1 a 5, para cada una de las tres categorías,
-              siendo 5 el máximo.
-            </p>
+            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_13_bis_bis}</p>
             <ul>
               <li>
                 {' '}
                 <strong className="txt-highlight">
-                  Pronunciación / entonación{' '}
+                  <em>Pronunciación / entonación:</em>{' '}
                 </strong>{' '}
                 {DIC.CONCURSO_BASES_PARAGRAPH_14}
               </li>
               <li>
                 {' '}
                 <strong className="txt-highlight">
-                  Comprensión / interpretación{' '}
+                  <em> Comprensión / interpretación:</em>{' '}
                 </strong>{' '}
                 {DIC.CONCURSO_BASES_PARAGRAPH_15}
               </li>
@@ -179,8 +174,16 @@ const Bases = (props) => {
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_16}
             </p>
+            <p className="txt">
+              Este proceso dependerá del número de centros que se inscriban al
+              concurso <strong>{DIC.CONCURSO_BASES_PARAGRAPH_16_bis}</strong>.{' '}
+              {DIC.CONCURSO_BASES_PARAGRAPH_16_bis_bis}
+            </p>
             <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_17}</p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_18}</p>
+            <p className="txt">
+              <strong>{DIC.CONCURSO_BASES_PARAGRAPH_18}</strong>{' '}
+              {DIC.CONCURSO_BASES_PARAGRAPH_18_bis}
+            </p>
           </li>
           <li className="app-olist-item">
             <p className="txt txt-inline">
@@ -222,7 +225,7 @@ const Bases = (props) => {
           <li className="app-olist-item double">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Inscripción:&nbsp;</strong>
-              Tendrá lugar hasta el{' '}
+              El plazo de inscripción finalizará el{' '}
               <strong className="txt-highlight">
                 {`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}
               </strong>{' '}
@@ -244,21 +247,11 @@ const Bases = (props) => {
                 una alternativa digital para la realización de las semifinales
                 regionales
               </strong>
-              , la final del {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE} se realizará
+              , la final del {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE} se celebrará
               de forma presencial en el salón de actos del Instituto Cervantes
               de Fráncfort.
             </p>
-            <p>
-              En caso de que el alumnado no pueda encontrarse para una lectura
-              presencial de los textos para alguna de las semifinales, y para
-              evitar problemas técnicos o posibles irregularidades durante la
-              lectura, los/las candidatos/as lectores se conectarán a las
-              videoconferencias &nbsp;
-              <strong className="txt-highlight">
-                desde su centro escolar en compañía de su profesor/a de español
-              </strong>
-              , quien avalará el cumplimiento de las normas establecidas.
-            </p>
+            <p>{DIC.CONCURSO_BASES_PARAGRAPH_23_bis}</p>
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
@@ -274,6 +267,12 @@ const Bases = (props) => {
               terminada la final.
             </p>
             <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_24}</p>
+          </li>
+          <li className="app-olist-item double">
+            <p className="txt txt-inline">
+              <strong className="txt-highlight">Final Nacional:&nbsp;</strong>
+              {DIC.CONCURSO_BASES_PARAGRAPH_25}
+            </p>
           </li>
         </ol>
       </article>
