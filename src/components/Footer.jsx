@@ -164,7 +164,7 @@ const Footer = (props) => {
               rel="noopener noreferrer"
               aria-label="Enlace a la página web de Consulado de Argentina en Frankfurt"
             >
-              <img src={logoArgentina} alt="Klett" />
+              <img src={logoArgentina} alt="logoArgentina" />
             </a>
             <a
               href="http://www.consuladodominicanoff.de/"
@@ -183,8 +183,7 @@ const Footer = (props) => {
               <img src={logoCastillaLeon} alt="Klett" />
             </a>
 
-            <p>
-              {/* <a
+            {/* <a
                 href="http://www.lesbar-die-buchhandlung.de/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -192,57 +191,55 @@ const Footer = (props) => {
               >
                 <img src={logoLesbar} alt="Buchhandlung Lesbar" />
               </a> */}
-              <a
-                href="https://www.karten-ideen.de/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web de Karten IDEE"
-              >
-                <img src={logoKartenIDEE} alt="logo Karten IDEE" />
-              </a>
-            </p>
-            <p>
-              <a
-                href="https://www.grupo-sm.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web del grupo SM"
-              >
-                <img src={logoSm} alt="Grupo SM" />
-              </a>
-              <a
-                href="https://www.cornelsen.de/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web de Cornelsen"
-              >
-                <img src={logoCornelsen} alt="Cornelsen" />
-              </a>
-              <a
-                href="https://edinumen.es/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web de Edinumen"
-              >
-                <img src={logoEdinumen} alt="Edinumen" />
-              </a>
-              <a
-                href="https://www.klett.de/index/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web de Klett"
-              >
-                <img src={logoKlett} alt="Klett" />
-              </a>
-              <a
-                href="https://www.colegiodelibes.es/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web de Colegio Delibes"
-              >
-                <img src={logoColegioDelibes} alt="Colegio Delibes" />
-              </a>
-            </p>
+            <a
+              href="https://www.karten-ideen.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Karten IDEN"
+            >
+              <img src={logoKartenIDEE} alt="logo Karten IDEEN" />
+            </a>
+
+            <a
+              href="https://www.grupo-sm.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web del grupo SM"
+            >
+              <img src={logoSm} alt="Grupo SM" />
+            </a>
+            <a
+              href="https://www.cornelsen.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Cornelsen"
+            >
+              <img src={logoCornelsen} alt="Cornelsen" />
+            </a>
+            <a
+              href="https://edinumen.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Edinumen"
+            >
+              <img src={logoEdinumen} alt="Edinumen" />
+            </a>
+            <a
+              href="https://www.klett.de/index/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Klett"
+            >
+              <img src={logoKlett} alt="Klett" />
+            </a>
+            <a
+              href="https://www.colegiodelibes.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Colegio Delibes"
+            >
+              <img src={logoColegioDelibes} alt="Colegio Delibes" />
+            </a>
           </article>
         </section>
       </div>
