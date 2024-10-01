@@ -10,9 +10,7 @@
 
 function notifyUserAboutUpdate() {
   // Replace this with your preferred notification method (alert, modal, etc.)
-  alert(
-    'Hemos añadido nuevo contenido! Por favor, limpia el cache de la aplicación y cárgala de nuevo.',
-  );
+  alert('Hemos añadido nuevo contenido! Por favor, refresca la página.');
 }
 
 /* eslint-disable */
