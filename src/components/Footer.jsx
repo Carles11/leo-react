@@ -20,6 +20,7 @@ import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoDsv from '../assets/imgs/logo-dsv.png';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
 import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
+import logoKlettSchulverlag from '../assets/imgs/logo-klett.jpg';
 import logoKlett from '../assets/imgs/logo-klett.png';
 import logoSm from '../assets/imgs/logo-sm.jpg';
 import logoColegioDelibes from '../assets/imgs/logo-colegio-delibes.png';
@@ -117,7 +118,9 @@ const Footer = (props) => {
             >
               <img src={logoDsv} alt="SDV" />
             </a>
-
+          </article>
+          <hr />
+          <article>
             <a
               href="http://alemania.embajada.gov.co/"
               target="_blank"
@@ -182,7 +185,9 @@ const Footer = (props) => {
             >
               <img src={logoCastillaLeon} alt="Klett" />
             </a>
-
+          </article>
+          <hr />
+          <article>
             {/* <a
                 href="http://www.lesbar-die-buchhandlung.de/"
                 target="_blank"
@@ -223,6 +228,14 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Edinumen"
             >
               <img src={logoEdinumen} alt="Edinumen" />
+            </a>
+            <a
+              href="https://www.klett.de/index/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de logoKlettSchulverlag"
+            >
+              <img src={logoKlettSchulverlag} alt="logoKlettSchulverlag" />
             </a>
             <a
               href="https://www.klett.de/index/"
