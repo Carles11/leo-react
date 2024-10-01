@@ -8,9 +8,12 @@ ul > li {
   text-align: left;
 }
 
-ul {
+ul.more-space {
   margin: 22px 0;
-  list-style-type: none;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* No bullet for specific list items */
 }
 
 .txt-IE {

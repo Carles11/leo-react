@@ -71,7 +71,7 @@ const Bases = (props) => {
                 &nbsp;A1, A2, B1 y B2.&nbsp;
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_4}
-              <ul>
+              <ul class="no-bullets more-space">
                 <li>Nivel A1: 6°/7° curso escolar como segunda lengua</li>
                 <li style={{ marginBottom: '22px' }}>
                   Nivel A1: 9° curso escolar como tercera lengua
@@ -104,25 +104,25 @@ const Bases = (props) => {
               <strong className="txt-highlight">Textos:&nbsp;</strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_6}{' '}
             </p>
-            <p className="txt">
+            <p className="txt-left">
               <strong className="txt-highlight">
                 TEXTOS PARA LEER: &nbsp;
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_7}
             </p>
-            <p className="txt">
+            <p className="txt-left">
               {' '}
               <strong className="txt-highlight">
                 {DIC.CONCURSO_BASES_PARAGRAPH_7_bis}{' '}
               </strong>
             </p>
-            <p className="txt">
+            <p className="txt-left">
               {' '}
               <strong className="txt-highlight">
                 {DIC.CONCURSO_BASES_PARAGRAPH_8}{' '}
               </strong>
             </p>
-            <p className="txt">
+            <p className="txt-left">
               IMPORTANTE:{' '}
               <strong className="txt-highlight">
                 {DIC.CONCURSO_BASES_PARAGRAPH_9}
@@ -136,7 +136,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">Jurado:&nbsp;</strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_10}
             </p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_10_bis}</p>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_10_bis}</p>
           </li>
           {/* 5. PUBLICO */}
           <li className="app-olist-item">
@@ -157,22 +157,24 @@ const Bases = (props) => {
               {DIC.CONCURSO_BASES_PARAGRAPH_13}
             </p>
 
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_13_bis}</p>
-            <ul>
-              <li>Pronunciación / entonación</li>
-              <li>Comprensión / interpretación</li>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_13_bis}</p>
+            <ul class="no-bullets">
+              <li>- Pronunciación / entonación</li>
+              <li>- Comprensión / interpretación</li>
             </ul>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_13_bis_bis}</p>
-            <ul>
+            <p className="txt-left">
+              {DIC.CONCURSO_BASES_PARAGRAPH_13_bis_bis}
+            </p>
+            <ul class="no-bullets">
               <li>
-                {' '}
+                -{' '}
                 <strong className="txt-highlight">
                   <em>Pronunciación / entonación:</em>{' '}
                 </strong>{' '}
                 {DIC.CONCURSO_BASES_PARAGRAPH_14}
               </li>
               <li>
-                {' '}
+                -{' '}
                 <strong className="txt-highlight">
                   <em> Comprensión / interpretación:</em>{' '}
                 </strong>{' '}
@@ -183,19 +185,19 @@ const Bases = (props) => {
           <li className="app-olist-item">
             <p className="txt txt-inline">
               <strong className="txt-highlight">Semifinales:&nbsp;</strong>
-              Las Semifinales se habrán celebrado antes del{' '}
+              Las semifinales se habrán celebrado antes del{' '}
               <strong className="txt-highlight">
                 {` ${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}. `}
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_16}
             </p>
-            <p className="txt">
+            <p className="txt txt-inline">
               Este proceso dependerá del número de centros que se inscriban al
               concurso <strong>{DIC.CONCURSO_BASES_PARAGRAPH_16_bis}</strong>.{' '}
               {DIC.CONCURSO_BASES_PARAGRAPH_16_bis_bis}
             </p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_17}</p>
-            <p className="txt">
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_17}</p>
+            <p className="txt-left">
               <strong>{DIC.CONCURSO_BASES_PARAGRAPH_18}</strong>{' '}
               {DIC.CONCURSO_BASES_PARAGRAPH_18_bis}
             </p>
@@ -208,10 +210,12 @@ const Bases = (props) => {
               {DIC.CONCURSO_BASES_PARAGRAPH_19}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}{' '}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE_NO_IDEA_WHY}`}{' '}
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_20}
-              <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}</strong>
+              <strong className="txt-highlight">
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}
+              </strong>
               . La inscripción tendrá lugar a través de la página{' '}
               <a href="https://www.leo-leo-hessen.com">{DIC.CONCURSO_WEB}</a>.
             </p>
@@ -250,7 +254,7 @@ const Bases = (props) => {
               </strong>
               . Para la Semifinal Latinoamérica también se utilizará este medio.
             </p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_23}</p>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_23}</p>
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
@@ -266,7 +270,7 @@ const Bases = (props) => {
               de forma presencial en el salón de actos del Instituto Cervantes
               de Fráncfort.
             </p>
-            <p>{DIC.CONCURSO_BASES_PARAGRAPH_23_bis}</p>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_23_bis}</p>
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
@@ -281,7 +285,7 @@ const Bases = (props) => {
               publicación de sus fotos en la página web del concurso una vez
               terminada la final.
             </p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_24}</p>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_24}</p>
           </li>
           <li className="app-olist-item double">
             <p className="txt txt-inline">
@@ -302,4 +306,4 @@ Bases.propTypes = {
 const BasesWithScroll = withScroll(Bases);
 export const Unwrapped = Bases;
 
-export default BasesWithScroll;
+export default Unwrapped;
