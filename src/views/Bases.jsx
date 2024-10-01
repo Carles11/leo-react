@@ -26,18 +26,21 @@ const Bases = (props) => {
         <p className="txt txt-inline">{DIC.CONCURSO_BASES_TITLE}</p>
 
         <p className="txt ">
-          A continuación encontraréis las bases del concurso, el proceso de
-          selección de candidatos e información general sobre las semifinales
-          eliminatorias y la final regional, que tendrá lugar el día{' '}
+          A continuación, encontraréis las bases del concurso, el proceso de
+          selección de candidatos y candidatas, así como información general
+          sobre las semifinales preeliminatorias y la final regional, que tendrá
+          lugar el lunes{' '}
           <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}</strong>{' '}
           en la sede de Fráncfort del Instituto Cervantes. La fecha límite para
           la inscripción de los colegios participantes será el{' '}
           <strong className="txt-highlight">{`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}</strong>
-          . Para confirmar que el colegio ha quedado correctamente inscrito, hay
-          que revisar la lista de{' '}
-          <Link to="/colegios-inscritos">Colegios inscritos</Link> en la pestaña
-          “Información para profesores” de la página web del concurso. Con este
-          fin no se envian correos de confirmación.
+          . Para confirmar que el colegio ha quedado correctamente inscrito,{' '}
+          <strong className="txt-highlight">
+            hay que revisar la lista de «
+            <Link to="/colegios-inscritos">Colegios inscritos</Link>» en la
+            pestaña «Información para profesores» de la página web del concurso.
+            Con este fin no se enviarán correos de confirmación.
+          </strong>
         </p>
 
         <p>{DIC.CONCURSO_BASES_PARAGRAPH_2}</p>
@@ -54,7 +57,7 @@ const Bases = (props) => {
               la selección interna de sus candidatos para la semifinal,{' '}
               {DIC.CONCURSO_BASES_PARAGRAPH_3}
             </p>
-            <p>{DIC.CONCURSO_BASES_PARAGRAPH_3_bis}</p>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_3_bis}</p>
           </li>
           {/* 2. NIVELES DE PARTICIPACION */}
           <li className="app-olist-item">
@@ -68,20 +71,32 @@ const Bases = (props) => {
                 &nbsp;A1, A2, B1 y B2.&nbsp;
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_4}
+              <ul>
+                <li>Nivel A1: 6°/7° curso escolar como segunda lengua</li>
+                <li style={{ marginBottom: '22px' }}>
+                  Nivel A1: 9° curso escolar como tercera lengua
+                </li>
+                <li>Nivel A2: 8° curso escolar como segunda lengua</li>
+                <li style={{ marginBottom: '22px' }}>
+                  Nivel A2: 10° curso escolar como tercera lengua
+                </li>
+                <li style={{ marginBottom: '22px' }}>
+                  Nivel B1: 9°/10° curso escolar como segunda lengua
+                </li>
+                <li>
+                  Nivel B2: Alumnado con el español como lengua de origen entre
+                  10 y 16 años.
+                </li>
+              </ul>
             </p>
-            <p className="txt txt-inline">
-              {DIC.CONCURSO_BASES_PARAGRAPH_4_bis}
-            </p>
-            <p className="txt txt-inline">
-              {DIC.CONCURSO_BASES_PARAGRAPH_4_bis_bis}
-            </p>
-            <br />
-            <p className="txt txt-inline">
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_4_bis}</p>
+
+            <p className="txt-left">
               {DIC.CONCURSO_BASES_PARAGRAPH_4_bis_bis} La edad máxima para
               participar será de{' '}
               <strong className="txt-highlight">&nbsp;16 años.</strong>.
             </p>
-            <p className="txt">{DIC.CONCURSO_BASES_PARAGRAPH_5}</p>
+            <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_5}</p>
           </li>
           {/* 3.TEXTOS */}
           <li className="app-olist-item">

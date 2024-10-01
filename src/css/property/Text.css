@@ -8,6 +8,11 @@ ul > li {
   text-align: left;
 }
 
+ul {
+  margin: 22px 0;
+  list-style-type: none;
+}
+
 .txt-IE {
   flex: 1 1 auto;
   width: 100%;
@@ -35,6 +40,7 @@ ul > li {
   color: var(--mainColorDark);
   text-transform: uppercase;
 }
+
 .txt-highlight {
   font-family: Bold;
 }
@@ -49,6 +55,7 @@ ul > li {
 .txt-center {
   text-align: center;
 }
+
 .txt-left {
   text-align: left !important;
 }

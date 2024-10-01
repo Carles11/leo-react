@@ -5,13 +5,13 @@ const dictionary = {
     CONCURSO_BASES_TITLE:
       'El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía de vuestros alumnos y alumnas de español, a la decimocuarta edición del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”.',
     CONCURSO_BASES_PARAGRAPH_2:
-      'Desde la convocatoria de 2015 el concurso ‟Leo, leo… ¿Qué lees?” está incluido en la red de concursos oficiales del Hessisches Ministerium für Kultus, Bildung und Chancen de Hesse. En su decimocuarto año de celebración cuenta con el apoyo institucional de laConsejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, de la Asociación Alemana del Profesorado de Español (DSV), de los Consulados Generales de España, México, Chile, Colombia, Argentina, Perú, Venezuela y República Dominicana en Fráncfort, del Comisionado para la Lengua Española de la Junta de Castilla y León a través del Colegio Delibes en Salamanca, así como con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.',
+      'Desde la convocatoria de 2015 el concurso «Leo, leo… ¿Qué lees?» está incluido en la red de concursos oficiales del Hessisches Ministerium für Kultus, Bildung und Chancen de Hesse. En su decimocuarto año de celebración cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, de la Asociación Alemana del Profesorado de Español (DSV), de los Consulados Generales de España, México, Chile, Colombia, Argentina, Perú, Venezuela y República Dominicana en Fráncfort, del Comisionado para la Lengua Española de la Junta de Castilla y León a través del Colegio Delibes en Salamanca, así como con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen.',
     CONCURSO_BASES_PARAGRAPH_3:
       'Estos serán un mínimo de uno y un máximo de cuatro, según el número de categorías en las que se participe. El proceso de selección estará regido y organizado por cada uno de los centros participantes.',
     CONCURSO_BASES_PARAGRAPH_3_bis:
       'Cada colegio participante contará con candidatos/as de repuesto por si el día de la semifinal o de la final los elegidos no pudieran asistir.',
     CONCURSO_BASES_PARAGRAPH_4:
-      'La categoría B2 queda reservada para alumnos/as con español como lengua materna o de herencia y para todas aquellas personas que hablen español como si lo fueran, por ejemplo, por haber vivido una larga temporada en un país de lengua española. El jurado se reserva el derecho de descalificar a los/las alumnos/as que no hayan sido inscritos en la categoría apropiada. La elección de la categoría en la que participan los/las alumnos/as queda al criterio del profesorado que los presente al concurso. . Como pauta orientativa, se establece la siguiente pauta: Nivel A1: 6°/7° curso escolar como segunda lengua Nivel A1: 9° curso escolar como tercera lengua   Nivel A2: 8° curso escolar como segunda lengua Nivel A2: 10° curso escolar como tercera lengua   Nivel B1: 9°/10° curso escolar como segunda lengua   Nivel B2: Alumnado con el español como lengua de origen entre 10 y 16 años.',
+      'La categoría B2 queda reservada para alumnos/as con español como lengua materna o de herencia y para todas aquellas personas que hablen español como si lo fueran, por ejemplo, por haber vivido una larga temporada en un país de lengua española. El jurado se reserva el derecho de descalificar a los/las alumnos/as que no hayan sido inscritos en la categoría apropiada. La elección de la categoría en la que participan los/las alumnos/as queda al criterio del profesorado que los presente al concurso. Como pauta orientativa, se establece la siguiente pauta:',
     CONCURSO_BASES_PARAGRAPH_4_bis:
       'Otro criterio importante a la hora de establecer el nivel en el que participen los candidatos será el nivel (MCER) del libro de texto que se esté utilizando durante la segunda mitad del curso escolar correspondiente.',
     CONCURSO_BASES_PARAGRAPH_4_bis_bis:
@@ -80,7 +80,7 @@ const dictionary = {
     CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: ' 20 de abril de 2024',
     // CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '28 de abril de 2023',
     CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '27 de abril de 2024',
-    CONCURSO_EDICION_SF_INSCRIPTION_DUE: '1 de marzo de 2024',
+    CONCURSO_EDICION_SF_INSCRIPTION_DUE: '1 de marzo de 2025',
     CONCURSO_EDICION_TXT:
       'La Final de la decimocuarta convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
     CONCURSO_EDICION_TXT_CONT:
