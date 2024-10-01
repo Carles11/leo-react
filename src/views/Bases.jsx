@@ -306,4 +306,4 @@ Bases.propTypes = {
 const BasesWithScroll = withScroll(Bases);
 export const Unwrapped = Bases;
 
-export default Unwrapped;
+export default BasesWithScroll;
