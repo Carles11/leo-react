@@ -52,7 +52,7 @@ const Bases = (props) => {
             <p className="txt txt-inline">
               Cada uno de los colegios participantes habrá realizado hasta el{' '}
               <strong className="txt-highlight">
-                {`${DIC.CONCURSO_EDICION_SF_INSCRIPTION_DUE}`}
+                {`${DIC.CONCURSO_EDICION_SF_INTERNAL_SELECTION_LIMIT}`}
               </strong>{' '}
               la selección interna de sus candidatos para la semifinal,{' '}
               {DIC.CONCURSO_BASES_PARAGRAPH_3}
@@ -187,7 +187,7 @@ const Bases = (props) => {
               <strong className="txt-highlight">Semifinales:&nbsp;</strong>
               Las semifinales se habrán celebrado antes del{' '}
               <strong className="txt-highlight">
-                {` ${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}. `}
+                {` ${DIC.CONCURSO_EDICION_SF_MUST_BE_DONE_BY}. `}
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_16}
             </p>
@@ -210,7 +210,7 @@ const Bases = (props) => {
               {DIC.CONCURSO_BASES_PARAGRAPH_19}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE_NO_IDEA_WHY}`}{' '}
+                {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}{' '}
               </strong>
               {DIC.CONCURSO_BASES_PARAGRAPH_20}
               <strong className="txt-highlight">
@@ -226,7 +226,7 @@ const Bases = (props) => {
               {DIC.CONCURSO_BASES_PARAGRAPH_21}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
+                {`${DIC.CONCURSO_EDICION_FINAL_ALCE_NEXT_DATE}`}
               </strong>
               .
             </p>
@@ -266,9 +266,12 @@ const Bases = (props) => {
                 una alternativa digital para la realización de las semifinales
                 regionales
               </strong>
-              , la final del {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE} se celebrará
-              de forma presencial en el salón de actos del Instituto Cervantes
-              de Fráncfort.
+              , la final del{' '}
+              <strong className="txt-highlight">
+                {DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}
+              </strong>{' '}
+              se celebrará de forma presencial en el salón de actos del
+              Instituto Cervantes de Fráncfort.
             </p>
             <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_23_bis}</p>
           </li>

@@ -27,7 +27,7 @@ const Latinoamerica = (props) => {
           {DIC.SEMIFINAL_LATINOAMERICA_PARAGRAPH_1} La SF se celebrará también
           en el Instituto Cervantes de Fráncfort el{' '}
           <strong className="txt-highlight">
-            {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE_NO_IDEA_WHY}`}
+            {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}
           </strong>
           . Plazo de inscripción hasta el{''}{' '}
           <strong className="txt-highlight">

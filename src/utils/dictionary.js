@@ -75,14 +75,13 @@ const dictionary = {
     CONCURSO_BASES_PARAGRAPH_25:
       ': En la convocatoria de 2024 ha tenido lugar una primera final nacional. Solo se ha celebrado en la categoría A1 y han participado 13 finalistas de Hamburgo, Berlín, Brandemburgo, Schleswig-Holstein y Hesse. Hessen ha conseguido el primer y segundo puesto. ¡Enhorabuena! Esperamos que se sigan organizando estos desempates a nivel nacional.',
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
+    CONCURSO_EDICION_FINAL_ALCE_NEXT_DATE: '6 de junio de 2025',
     CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2024',
     CONCURSO_EDICION_FINAL_NEXT_DATE: '19 de mayo de 2025',
     CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: '19 de abril de 2025',
-    // CONCURSO_EDICION_SF_LATINOAMERICA_LAST_DATE: '28 de abril de 2023',
-    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE_NO_IDEA_WHY:
-      '26 de abril de 2025',
-    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '30 de abril de 2025',
-    CONCURSO_EDICION_SF_INSCRIPTION_DUE: '1 de marzo de 2025',
+    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '26 de abril de 2025',
+    CONCURSO_EDICION_SF_INTERNAL_SELECTION_LIMIT: '1 de marzo de 2025',
+    CONCURSO_EDICION_SF_MUST_BE_DONE_BY: '30 de abril de 2025',
     CONCURSO_EDICION_TXT:
       'La Final de la decimocuarta convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
     CONCURSO_EDICION_TXT_CONT:
