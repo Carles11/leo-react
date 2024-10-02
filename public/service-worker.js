@@ -1,9 +1,7 @@
-const CACHE_NAME = 'my-app-cache-v1';
+const CACHE_NAME = 'leo-app-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/css/styles.css', // Cache your main CSS file after build
-  '/static/js/app.js', // Cache your JS bundle
   '/favicon.ico',
   // Add other assets here
 ];
