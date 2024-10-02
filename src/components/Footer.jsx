@@ -118,6 +118,22 @@ const Footer = (props) => {
             >
               <img src={logoDsv} alt="SDV" />
             </a>
+            <a
+              href="https://www.jcyl.es"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Castilla y León"
+            >
+              <img src={logoCastillaLeon} alt="Klett" />
+            </a>
+            <a
+              href="https://www.colegiodelibes.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Colegio Delibes"
+            >
+              <img src={logoColegioDelibes} alt="Colegio Delibes" />
+            </a>
           </article>
           <hr />
           <article>
@@ -176,14 +192,6 @@ const Footer = (props) => {
               aria-label="Enlace a la página web del Consulado General de la República Dominicana en Frankfurt"
             >
               <img src={logoRepublicaDominicana} alt="Klett" />
-            </a>
-            <a
-              href="https://www.jcyl.es"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Castilla y León"
-            >
-              <img src={logoCastillaLeon} alt="Klett" />
             </a>
           </article>
           <hr />
@@ -244,14 +252,6 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Klett"
             >
               <img src={logoKlett} alt="Klett" />
-            </a>
-            <a
-              href="https://www.colegiodelibes.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Colegio Delibes"
-            >
-              <img src={logoColegioDelibes} alt="Colegio Delibes" />
             </a>
           </article>
         </section>
