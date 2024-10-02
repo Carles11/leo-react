@@ -20,7 +20,7 @@ const Criterios = (props) => {
         <h1 className="tit-header mb2rem">{DIC.NAV_CRITERIOS}</h1>
       </header>
       <article className="app-section-width">
-        <p className="txt">
+        <p className="txt-left">
           <strong className="txt-highlight">
             Criterios de lectura para el jurado:&nbsp;
           </strong>
@@ -31,11 +31,11 @@ const Criterios = (props) => {
           <li>Pronunciación / entonación</li>
           <li>Comprensión / interpretación</li>
         </ul>
-        <p className="txt">
+        <p className="txt-left">
           La puntuación será de 1 a 5, para cada una de las tres categorías,
           siendo 5 el máximo.
         </p>
-        <p className="txt">
+        <p className="txt-left">
           <strong className="txt-highlight">
             Pronunciación/entonación:&nbsp;
           </strong>
@@ -43,7 +43,7 @@ const Criterios = (props) => {
           en cuenta deficiencias en la pronunciación de la "r/rr"), acentuación
           correcta y velocidad de lectura. No se penalizará la autocorrección.
         </p>
-        <p className="txt">
+        <p className="txt-left">
           <strong className="txt-highlight">
             Comprensión/interpretación:&nbsp;
           </strong>
