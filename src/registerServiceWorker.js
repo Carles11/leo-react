@@ -10,7 +10,7 @@
 
 function notifyUserAboutUpdate() {
   // Replace this with your preferred notification method (alert, modal, etc.)
-  alert('Hemos añadido nuevo contenido! Por favor, refresca la página.');
+  alert('Hay contenido actualizado. Por favor, refresca la página.');
 }
 
 /* eslint-disable */
