@@ -226,7 +226,7 @@ const Bases = (props) => {
               {DIC.CONCURSO_BASES_PARAGRAPH_21}
               <strong className="txt-highlight">
                 {' '}
-                {`${DIC.CONCURSO_EDICION_FINAL_ALCE_NEXT_DATE}`}
+                {`${DIC.CONCURSO_EDICION_FINAL_NEXT_DATE}`}
               </strong>
               .
             </p>

@@ -37,7 +37,7 @@ const dictionary = {
     CONCURSO_BASES_PARAGRAPH_12:
       'Para los ganadores y finalistas habrá lotes de libros de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag y Edinumen, licencias del juego digital para aprender español Guadalingo de la editorial Edinumen, vales de libros de la Asociación Alemana del Profesorado de Español y matrículas DELE del Instituto Cervantes de Fráncfort. También recibirán un certificado por su participación los alumnos que consigan los primeros puestos en las cuatro categorías. Los certificados estarán firmados por el Ministro de Cultura de Hesse.',
     CONCURSO_BASES_PARAGRAPH_13:
-      'Como se ha dicho anteriormente, el proceso interno de selección de los candidatos queda ligado al criterio de cada centro. El nivel de los semifinalistas y finalistas se ajustará al de la categoría para la que se han inscrito.',
+      ' Como se ha dicho anteriormente, el proceso interno de selección de los candidatos queda ligado al criterio de cada centro. El nivel de los semifinalistas y finalistas se ajustará al de la categoría para la que se han inscrito.',
     CONCURSO_BASES_PARAGRAPH_13_bis:
       'La «calidad» de la lectura se determinará según estos dos criterios:',
     CONCURSO_BASES_PARAGRAPH_13_bis_bis:
