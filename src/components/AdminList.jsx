@@ -73,20 +73,30 @@ class AdminList extends React.Component {
     //   });
     // }
   };
+
   handleRemove = async (e) => {
     const { id } = e.target.dataset;
-    const { error } = this.state;
+    const { error, year, list, filteredList } = this.state;
     const { type } = this.props;
     const c = window.confirm(
-      'Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.',
+      '¿Estás seguro de que quieres eliminar esta escuela? Ten en cuenta que esta es una acción irreversible.',
     );
 
     if (c) {
       const promise = await API.remove(`${type}/${id}`);
-
       if (promise.success) {
-        this.setState({ list: promise.data, loaded: true });
-        window.location.reload();
+        // Filter both list and filteredList based on the year filter
+        const updatedList = list.filter((school) => school._id !== id);
+        const updatedFilteredList = year
+          ? updatedList.filter((school) => school.year === year)
+          : updatedList;
+
+        // Update both list and filteredList
+        this.setState({
+          list: updatedList,
+          filteredList: updatedFilteredList,
+          loaded: true,
+        });
       } else {
         this.setState({
           error: Object.assign(error, { next: true }),
@@ -202,7 +212,7 @@ class AdminList extends React.Component {
       <ExcelExport schools={!year ? list : filteredList} />
     );
 
-    console.log({ filteredList });
+    // console.log({ filteredList });
     return (
       <div>
         {!loaded && <Loader />}
