@@ -24,6 +24,7 @@ import logoKlettSchulverlag from '../assets/imgs/logo-klett.jpg';
 import logoKlett from '../assets/imgs/logo-klett.png';
 import logoSm from '../assets/imgs/logo-sm.jpg';
 import logoColegioDelibes from '../assets/imgs/logo-colegio-delibes.png';
+import logoAyuntamientoValladolid from '../assets/imgs/logo-valladolid.png';
 
 const Footer = (props) => {
   const { DIC, FOOTER_DATA } = props;
@@ -133,6 +134,17 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Colegio Delibes"
             >
               <img src={logoColegioDelibes} alt="Colegio Delibes" />
+            </a>
+            <a
+              href="https://www.valladolid.es/es"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web del ayuntamiento de Valladolid"
+            >
+              <img
+                src={logoAyuntamientoValladolid}
+                alt="Ayuntamiento de Valladolid"
+              />
             </a>
           </article>
           <hr />
