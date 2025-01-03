@@ -7,6 +7,7 @@ import Einwilligung from '../assets/docus/Datenschuetzerklaerung_SCHULEN_edit_si
 import CuadroGanadores from '../assets/docus/impresos/Cuadro_ganadores.docx';
 import PuntosJurado from '../assets/docus/impresos/Impreso_puntos_para_el_jurado.docx';
 import ControlList from '../assets/docus/impresos/Lista_de_control.docx';
+import CertificadoGenericoEditable from '../assets/docus/impresos/leo-leo_Bescheinigung_generico_CAMPOS_EDITABLES_lowRes.pdf';
 // import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
@@ -94,7 +95,7 @@ const Impresos = (props) => {
               </div>
             </header>
           </li>
-          <li key="datenschuetzerklaerung" className="app-list-item  ml5r mr5r">
+          <li key="lista-de-control" className="app-list-item  ml5r mr5r">
             <header className="app-list-header">
               <h2>Lista de control para escuelas (check-list)</h2>
               <div className="app-list-content-btn">
@@ -109,6 +110,29 @@ const Impresos = (props) => {
                 >
                   <span className="hidden">
                     {`Descargar el texto 'ControlList'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li
+            key="certificado-genérico-editable"
+            className="app-list-item  ml5r mr5r"
+          >
+            <header className="app-list-header">
+              <h2>Certificado genérico editable</h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el documento 'Certificado genérico editable'`}
+                  download={CertificadoGenericoEditable}
+                  href={CertificadoGenericoEditable}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el documento 'Certificado genérico editable'`}
+                >
+                  <span className="hidden">
+                    {`Descargar el documento 'Certificado genérico editable'`}
                   </span>
                 </a>
               </div>
