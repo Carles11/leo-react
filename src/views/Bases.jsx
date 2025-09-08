@@ -64,14 +64,16 @@ const Bases = (props) => {
             <strong className="txt-highlight">
               Niveles de participación:&nbsp;
             </strong>
-            <p className="txt txt-inline">
-              Se establecen cuatro niveles de participación, definidos según el
-              Marco Europeo de Referencia para las Lenguas:
-              <strong className="txt-highlight">
-                &nbsp;A1, A2, B1 y B2.&nbsp;
-              </strong>
-              {DIC.CONCURSO_BASES_PARAGRAPH_4}
-              <ul class="no-bullets more-space">
+            <section>
+              <p className="txt txt-inline">
+                Se establecen cuatro niveles de participación, definidos según
+                el Marco Europeo de Referencia para las Lenguas:
+                <strong className="txt-highlight">
+                  &nbsp;A1, A2, B1 y B2.&nbsp;
+                </strong>
+              </p>
+              <p className="txt txt-inline">{DIC.CONCURSO_BASES_PARAGRAPH_4}</p>
+              <ul className="no-bullets more-space">
                 <li>Nivel A1: 6°/7° curso escolar como segunda lengua</li>
                 <li style={{ marginBottom: '22px' }}>
                   Nivel A1: 9° curso escolar como tercera lengua
@@ -88,7 +90,7 @@ const Bases = (props) => {
                   10 y 16 años.
                 </li>
               </ul>
-            </p>
+            </section>
             <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_4_bis}</p>
 
             <p className="txt-left">
@@ -158,14 +160,14 @@ const Bases = (props) => {
             </p>
 
             <p className="txt-left">{DIC.CONCURSO_BASES_PARAGRAPH_13_bis}</p>
-            <ul class="no-bullets">
+            <ul className="no-bullets">
               <li>- Pronunciación / entonación</li>
               <li>- Comprensión / interpretación</li>
             </ul>
             <p className="txt-left">
               {DIC.CONCURSO_BASES_PARAGRAPH_13_bis_bis}
             </p>
-            <ul class="no-bullets">
+            <ul className="no-bullets">
               <li>
                 -{' '}
                 <strong className="txt-highlight">
