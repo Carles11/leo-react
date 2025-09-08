@@ -24,19 +24,19 @@ const Latinoamerica = (props) => {
           <strong className="txt-highlight">
             Semifinal Latinoamérica:&nbsp;
           </strong>
-          {DIC.SEMIFINAL_LATINOAMERICA_PARAGRAPH_1} La SF se celebrará también
-          en el Instituto Cervantes de Fráncfort el{' '}
+          {DIC.SEMIFINAL_LATINOAMERICA_PARAGRAPH_1}&nbsp;
           <strong className="txt-highlight">
             {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE}`}
           </strong>
-          . Plazo de inscripción hasta el{''}{' '}
+          . El <strong className="txt-highlight">plazo de inscripción</strong>
+          &nbsp;estará abierto hasta el&nbsp;
           <strong className="txt-highlight">
             {`${DIC.CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE}`}
           </strong>
           .
         </p>
         <p className="txt">
-          Para inscribirse a esta semifinal envíe un correo electrónico a{' '}
+          Para inscribirse en esta semifinal, envíe un correo electrónico a{' '}
           <a
             href={`mailto:c.cid@hws.schule?subject=${DIC.NAV_LATINOAMERICA_SUBJECT}`}
           >
@@ -49,10 +49,19 @@ const Latinoamerica = (props) => {
           <li>Edad</li>
           <li>País latinoamericano al que representa</li>
           <li>Persona de contacto</li>
-          <li>E-mail</li>
+          <li>Dirección de correo electrónico</li>
           <li>Dirección</li>
           <li>Teléfono</li>
         </ul>
+        <p className="txt-left">
+          {' '}
+          <strong>
+            No es necesario que el colegio o un profesor inscriba al candidato;
+            también lo pueden hacer directamente los padres. La convocatoria se
+            difundirá también a través de los consulados latinoamericanos en
+            Hesse.
+          </strong>
+        </p>
       </article>
     </div>
   );
