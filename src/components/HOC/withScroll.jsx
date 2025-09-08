@@ -5,10 +5,10 @@ const withScroll = (Component) =>
     componentDidMount() {
       const section = document.querySelector('.app-content');
       if (section && section !== null) {
-        section.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+        // section.scrollIntoView({
+        //   behavior: 'smooth',
+        //   block: 'start',
+        // });
       }
     }
 
