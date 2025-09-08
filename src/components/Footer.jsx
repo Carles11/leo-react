@@ -19,6 +19,7 @@ import logoRepublicaDominicana from '../assets/imgs/Logo-republica-dominicana.pn
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoDsv from '../assets/imgs/logo-dsv.png';
 import logoEdinumen from '../assets/imgs/logo-edinumen.jpg';
+import logoWestermann from '../assets/imgs/logo-westermann.png';
 import logoKartenIDEE from '../assets/imgs/logo-Karten-Ideen.jpg';
 import logoKlettSchulverlag from '../assets/imgs/logo-klett.jpg';
 import logoKlett from '../assets/imgs/logo-klett.png';
@@ -208,14 +209,6 @@ const Footer = (props) => {
           </article>
           <hr />
           <article>
-            {/* <a
-                href="http://www.lesbar-die-buchhandlung.de/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enlace a la página web de la Buchhandlung Lesbar"
-              >
-                <img src={logoLesbar} alt="Buchhandlung Lesbar" />
-              </a> */}
             <a
               href="https://www.karten-ideen.de/"
               target="_blank"
@@ -264,6 +257,14 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Klett"
             >
               <img src={logoKlett} alt="Klett" />
+            </a>
+            <a
+              href="https://www.westermann.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la Westermann"
+            >
+              <img src={logoWestermann} alt="Westermann" />
             </a>
           </article>
         </section>
