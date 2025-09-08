@@ -176,8 +176,8 @@ class Register extends React.Component {
             <h2 className="tit-section pSides05rem">{DIC.FORM_TITLE}</h2>
             <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
 
-            {/* COMMENT/UNCOMMENT FOLLOWING LINE TO SHOW/HIDE MESSAGE "PLAZO DE INSCRIPCIÓN TERMINADO" */}
-            <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4>
+            {/* COMMENT/UNCOMMENT FOLLOWING LINE TO SHOW/HIDE MESSAGE "PLAZO DE INSCRIPCIÓN TERMINADO" 
+            <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4>*/}
             {/* <h4 className="subtit-section-red">{DIC.FORM_CANCELLATION}</h4> */}
           </header>
           <form
@@ -199,7 +199,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_SCHOOL_NAME}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
             <SingleInput
               name="contact"
@@ -208,7 +208,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CONTACT}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
 
             <SingleInput
@@ -218,7 +218,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_ADDRESS}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
             <SingleInput
               name="cp"
@@ -227,7 +227,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CP}
               pattern=".{3,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
             <SingleInput
               name="city"
@@ -236,7 +236,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CITY}
               pattern=".{5,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
             <SingleInput
               name="phone"
@@ -245,7 +245,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_PHONE}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
             <SingleInput
               name="email"
@@ -254,7 +254,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_MAIL}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled
+              disabled={false}
             />
             <div id="checkboxWrapper" className="app-form-whole">
               <p className="app-form-label-txt txt-left">
@@ -267,7 +267,7 @@ class Register extends React.Component {
                   label={item}
                   handleCheckbox={this.handleCheckbox}
                   send={send}
-                  disabled
+                  disabled={false}
                 />
               ))}
             </div>
@@ -289,7 +289,7 @@ class Register extends React.Component {
                     text="Ok"
                     handleCheckbox={this.handleConsentsCheckbox}
                     send={send}
-                    disabled
+                    disabled={false}
                   />
                   <p className="app-form-label-txt txt-left">
                     He leído y acepto{' '}
@@ -319,7 +319,7 @@ class Register extends React.Component {
                     text="Ok"
                     handleCheckbox={this.handleConsentsCheckbox}
                     send={send}
-                    disabled
+                    disabled={false}
                   />
 
                   <p className="app-form-label-txt txt-left">
@@ -347,7 +347,7 @@ class Register extends React.Component {
                       text="Ok"
                       handleCheckbox={this.handleInterestCheckbox}
                       checked={interestCheckbox}
-                      disabled
+                      disabled={false}
                     />
                   </div>
                   <p className="app-form-label-txt txt-left">
@@ -358,7 +358,7 @@ class Register extends React.Component {
               </div> */}
             </div>
 
-            <Button disabled type={'submit'} label={'Enviar'} css={'m1rem'} />
+            <Button type={'submit'} label={'Enviar'} css={'m1rem'} />
           </form>
         </div>
       </article>

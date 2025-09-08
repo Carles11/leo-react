@@ -14,7 +14,7 @@ class AdminList extends React.Component {
     loaded: false,
     list: [],
     filteredList: [],
-    year: 2025 || 2024,
+    year: 2026 || 2025,
     error: {
       message: 'Hay algún problema al cargar el listado, inténtalo más tarde.',
       next: false,
@@ -232,7 +232,7 @@ class AdminList extends React.Component {
                   <ReactToPrint
                     trigger={() => PrintButton}
                     content={() => this.componentRef}
-                    documentTitle={() => 'Exportar Excel'}
+                    documentTitle={() => 'Leo-leo escuelas'}
                   />
                 </div>
                 <div className="app-list-button">{ExportToExcelButton}</div>
