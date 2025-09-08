@@ -113,7 +113,7 @@ const dictionary = {
     SEMIFINAL_LATINOAMERICA_PARAGRAPH_1:
       'Fruto de la colaboración con los consulados generales de México, Colombia, Chile, Perú y Argentina, se celebrará una semifinal de nivel B2 para alumnos de países latinoamericanos. Para participar no es necesario tener la nacionalidad de ninguno de estos países, basta con tener ascendencia latinoamericana. La semifinal se celebrará también en el Instituto Cervantes de Fráncfort el',
     SUBDESCRIPTION: 'Próxima final el 29 de mayo de 2026 ',
-    EDITION_CURRENT: 'XIV convocatoria',
+    EDITION_CURRENT: 'XV convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',
