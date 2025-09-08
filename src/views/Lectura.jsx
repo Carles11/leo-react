@@ -44,7 +44,7 @@ class Lectura extends React.PureComponent {
                 <React.Fragment key={d._id}>
                   {d.year === 2024 ? (
                     <h2 className="subtit-section subtit-section-underline txt-center w100">
-                      {d.title}
+                      {/* {d.title} */}
                       <br />
                       <small className="txt-center">
                         * Textos A1-B1 leídos por Sara Casado.
