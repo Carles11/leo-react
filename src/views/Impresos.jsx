@@ -8,6 +8,8 @@ import CuadroGanadores from '../assets/docus/impresos/Cuadro_ganadores.docx';
 import PuntosJurado from '../assets/docus/impresos/Impreso_puntos_para_el_jurado.docx';
 import ControlList from '../assets/docus/impresos/Lista_de_control.docx';
 import CertificadoGenericoEditable from '../assets/docus/impresos/leo-leo_Bescheinigung_generico_CAMPOS_EDITABLES_lowRes.pdf';
+import QRdescargable from '../assets/docus/QR_Leo, leo.png';
+import LogoDescargable from '../assets/docus/nuevo-logo-leo-leo.png';
 // import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
@@ -133,6 +135,52 @@ const Impresos = (props) => {
                 >
                   <span className="hidden">
                     {`Descargar el documento 'Certificado genérico editable'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li
+            key="certificado-genérico-editable"
+            className="app-list-item  ml5r mr5r"
+          >
+            <header className="app-list-header">
+              <h2>QR descargable</h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el documento 'QR descargable'`}
+                  download={QRdescargable}
+                  href={QRdescargable}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el documento 'QR descargable'`}
+                >
+                  <span className="hidden">
+                    {`Descargar el documento 'QR descargable'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li
+            key="certificado-genérico-editable"
+            className="app-list-item  ml5r mr5r"
+          >
+            <header className="app-list-header">
+              <h2>Logo descargable</h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el 'Logo descargable'`}
+                  download={LogoDescargable}
+                  href={LogoDescargable}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el 'Logo descargable'`}
+                >
+                  <span className="hidden">
+                    {`Descargar el 'Logo descargable'`}
                   </span>
                 </a>
               </div>
