@@ -14,7 +14,7 @@ class ImageGallery extends React.Component {
     lightboxIsOpen: false,
     data: [],
     photos: [],
-    year: 2024,
+    year: 2025,
     filter: {},
     position: 0,
     lazyLoad: false,
@@ -103,11 +103,11 @@ class ImageGallery extends React.Component {
       currentImage: currentImage + 1,
     });
   };
-
   render() {
     const { loaded, photos, filter, year } = this.state;
+
     if (!loaded) return <Loader css={'app-section h725'} />;
-    // console.log({ photos });
+
     return (
       <React.Fragment>
         <header className="header-wrapper">

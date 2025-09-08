@@ -10,6 +10,8 @@ import ControlList from '../assets/docus/impresos/Lista_de_control.docx';
 import CertificadoGenericoEditable from '../assets/docus/impresos/leo-leo_Bescheinigung_generico_CAMPOS_EDITABLES_lowRes.pdf';
 import QRdescargable from '../assets/docus/QR_Leo, leo.png';
 import LogoDescargable from '../assets/docus/nuevo-logo-leo-leo.png';
+import LogoSoloDescargable from '../assets/docus/nuevo-logo-leo-leo-solo.docx';
+import CartelDescargable2025 from '../assets/docus/cartel-SF-LATAM-2025.png';
 // import logo from '../assets/imgs/logo.png';
 
 const Impresos = (props) => {
@@ -181,6 +183,52 @@ const Impresos = (props) => {
                 >
                   <span className="hidden">
                     {`Descargar el 'Logo descargable'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li
+            key="certificado-genérico-editable"
+            className="app-list-item  ml5r mr5r"
+          >
+            <header className="app-list-header">
+              <h2>Logo descargable (solo logo)</h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el 'Logo descargable'`}
+                  download={LogoSoloDescargable}
+                  href={LogoSoloDescargable}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el 'Logo descargable'`}
+                >
+                  <span className="hidden">
+                    {`Descargar el 'Logo descargable'`}
+                  </span>
+                </a>
+              </div>
+            </header>
+          </li>
+          <li
+            key="certificado-genérico-editable"
+            className="app-list-item  ml5r mr5r"
+          >
+            <header className="app-list-header">
+              <h2>Cartel descargable (2025)</h2>
+              <div className="app-list-content-btn">
+                <a
+                  aria-label={`Descargar el 'Cartel descargable (2025)'`}
+                  download={CartelDescargable2025}
+                  href={CartelDescargable2025}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-list-btn icon-arrow-down-circle"
+                  title={`Descargar el 'Cartel descargable (2025)'`}
+                >
+                  <span className="hidden">
+                    {`Descargar el 'Cartel descargable (2025)'`}
                   </span>
                 </a>
               </div>
