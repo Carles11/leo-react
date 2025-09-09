@@ -11,7 +11,7 @@ export const FOOTER_DATA = [
   { label: 'Impressum', url: '/impressum' },
   {
     label: 'HessenWald Schule',
-    url: 'http://hessenwaldschule.net',
+    url: 'https://www.hessenwaldschule.de/',
     external: true,
   },
   {
