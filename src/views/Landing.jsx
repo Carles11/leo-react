@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import Cookies from 'universal-cookie';
 
@@ -33,6 +33,7 @@ const Landing = (props) => {
     }
   }, []);
 
+  // MESSAGE FOR FIRST TIME VISITORS
   // const message = (
   //   <div className="aviso-portada">
   //     <h1>

@@ -150,6 +150,7 @@ ul.no-bullets {
   .tit-header {
     font-size: var(--hugeSize);
     line-height: 2.5rem;
+    padding: 4rem 0 1.5rem;
   }
 
   .tit-section {

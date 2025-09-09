@@ -12,7 +12,7 @@ import QRdescargable from '../assets/docus/QR_Leo, leo.png';
 import LogoDescargable from '../assets/docus/nuevo-logo-leo-leo.png';
 import LogoSoloDescargable from '../assets/docus/nuevo-logo-leo-leo-solo.docx';
 import CartelDescargable2025 from '../assets/docus/cartel-SF-LATAM-2025.png';
-// import logo from '../assets/imgs/logo.png';
+// import logo from '../assets/imgs/leo/logo.png';
 
 const Impresos = (props) => {
   const { DIC } = props;

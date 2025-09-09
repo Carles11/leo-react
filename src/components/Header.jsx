@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 
 import bg from '../assets/imgs/bg.jpg';
-import logo from '../assets/imgs/logo.png';
+import logo from '../assets/imgs/leo/logo.png';
 import Background from './Background';
 
 const CSS_NAME = 'app-header-bg';
