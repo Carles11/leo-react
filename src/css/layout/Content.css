@@ -35,9 +35,6 @@
   align-items: center;
   z-index: 1;
   height: auto;
-
-  @media screen {
-  }
 }
 .leo-bg-img {
   max-width: 100%;
