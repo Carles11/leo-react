@@ -1,7 +1,7 @@
-import React from 'react';
 import Button from './Button';
 
 import logoAecid from '../assets/imgs/logo-aecid.png';
+import logoARS from '../assets/imgs/logo-ARS.png';
 import logoConsuladoEspFra from '../assets/imgs/logo-consulado-esp-fra.png';
 import logoHessen from '../assets/imgs/logo-hessen.jpg';
 import logoHws from '../assets/imgs/logo-hws.jpg';
@@ -102,16 +102,17 @@ const Footer = (props) => {
               <img src={logoAecid} alt="AECID (cooperación)" />
             </a>
             <a
-              href="https://www.exteriores.gob.es/Consulados/francfort/es/Paginas/index.aspx"
+              href="https://www.ars-pohlheim.net/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Consulado General de España en Fráncfort"
+              aria-label="Enlace a la página web de Adolf Reichwein Schule Pohlheim"
             >
               <img
-                src={logoConsuladoEspFra}
-                alt="Logo Consulado de España en Fráncfort"
+                src={logoARS}
+                alt="Logo de Adolf Reichwein Schule Pohlheim"
               />
             </a>
+
             <a
               href="https://www.hispanorama.de/landesverbaende/hessen/"
               target="_blank"
@@ -205,6 +206,17 @@ const Footer = (props) => {
               aria-label="Enlace a la página web del Consulado General de la República Dominicana en Frankfurt"
             >
               <img src={logoRepublicaDominicana} alt="Klett" />
+            </a>
+            <a
+              href="https://www.exteriores.gob.es/Consulados/francfort/es/Paginas/index.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de Consulado General de España en Fráncfort"
+            >
+              <img
+                src={logoConsuladoEspFra}
+                alt="Logo Consulado de España en Fráncfort"
+              />
             </a>
           </article>
           <hr />

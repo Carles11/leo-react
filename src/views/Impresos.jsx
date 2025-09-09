@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import Helmet from 'react-helmet';
 
 // import withScroll from '../components/HOC/withScroll';
@@ -11,8 +10,6 @@ import CertificadoGenericoEditable from '../assets/docus/impresos/leo-leo_Besche
 import QRdescargable from '../assets/docus/QR_Leo, leo.png';
 import LogoDescargable from '../assets/docus/nuevo-logo-leo-leo.png';
 import LogoSoloDescargable from '../assets/docus/nuevo-logo-leo-leo-solo.docx';
-import CartelDescargable2025 from '../assets/docus/cartel-SF-LATAM-2025.png';
-// import logo from '../assets/imgs/leo/logo.png';
 
 const Impresos = (props) => {
   const { DIC } = props;
@@ -211,29 +208,7 @@ const Impresos = (props) => {
               </div>
             </header>
           </li>
-          <li
-            key="certificado-genérico-editable"
-            className="app-list-item  ml5r mr5r"
-          >
-            <header className="app-list-header">
-              <h2>Cartel descargable (2025)</h2>
-              <div className="app-list-content-btn">
-                <a
-                  aria-label={`Descargar el 'Cartel descargable (2025)'`}
-                  download={CartelDescargable2025}
-                  href={CartelDescargable2025}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="app-list-btn icon-arrow-down-circle"
-                  title={`Descargar el 'Cartel descargable (2025)'`}
-                >
-                  <span className="hidden">
-                    {`Descargar el 'Cartel descargable (2025)'`}
-                  </span>
-                </a>
-              </div>
-            </header>
-          </li>
+
           {/* <li key="logo-leo" className="app-list-item  ml5r mr5r">
             <header className="app-list-header">
               <h2>Logo </h2>
