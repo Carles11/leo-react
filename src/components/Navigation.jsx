@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../assets/imgs/logo_tiny.png';
+import Logo from '../assets/imgs/leo/logo-tiny.png';
 import config from '../config';
 import { getSlug } from '../utils/helpers';
 import ButtonSignOut from './ButtonSignOut';
