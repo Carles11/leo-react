@@ -18,6 +18,8 @@ import Checkbox from './form/Checkbox';
 import SingleInput from './form/SingleInput';
 
 const categories = ['A1', 'A2', 'B1', 'B2'];
+// To disable the form, set FORM_INPUTS_DISABLED to false
+const FORM_INPUTS_DISABLED = true;
 
 class Register extends React.Component {
   state = {
@@ -65,9 +67,12 @@ class Register extends React.Component {
   };
 
   handleCheckbox = (e) => {
+    if (FORM_INPUTS_DISABLED) alert('Inscripciones cerradas');
     const { category } = this.state;
     const { value } = e.target;
     const elem = e.target;
+
+    console.log('handleCheckbox', FORM_INPUTS_DISABLED); // For debugging
 
     if (!elem.dataset.checked) {
       elem.dataset.checked = 'checked';
@@ -76,11 +81,13 @@ class Register extends React.Component {
     }
     showCheckboxError(elem);
 
+    let newCategory;
     if (category.indexOf(value) === -1) {
-      category.push(value);
+      newCategory = [...category, value];
     } else {
-      category.splice(category.indexOf(value), 1);
+      newCategory = category.filter((it) => it !== value);
     }
+    this.setState({ category: newCategory });
   };
 
   handleData = (e) => {
@@ -163,6 +170,7 @@ class Register extends React.Component {
     //   marginTop: 0,
     //   marginLeft: '1rem',
     // }
+    console.log({ FORM_INPUTS_DISABLED });
     return (
       <article className="app-section app-section-1 pSides05rem pb2rem">
         <ReactMessages
@@ -176,8 +184,8 @@ class Register extends React.Component {
             <h2 className="tit-section pSides05rem">{DIC.FORM_TITLE}</h2>
             <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
 
-            {/* COMMENT/UNCOMMENT FOLLOWING LINE TO SHOW/HIDE MESSAGE "PLAZO DE INSCRIPCIÓN TERMINADO" 
-            <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4>*/}
+            {/* COMMENT/UNCOMMENT FOLLOWING LINE TO SHOW/HIDE MESSAGE "PLAZO DE INSCRIPCIÓN TERMINADO" */}
+            <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4>
             {/* <h4 className="subtit-section-red">{DIC.FORM_CANCELLATION}</h4> */}
           </header>
           <form
@@ -199,7 +207,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_SCHOOL_NAME}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
             <SingleInput
               name="contact"
@@ -208,7 +216,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CONTACT}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
 
             <SingleInput
@@ -218,7 +226,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_ADDRESS}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
             <SingleInput
               name="cp"
@@ -227,7 +235,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CP}
               pattern=".{3,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
             <SingleInput
               name="city"
@@ -236,7 +244,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_CITY}
               pattern=".{5,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
             <SingleInput
               name="phone"
@@ -245,7 +253,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_PHONE}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
             <SingleInput
               name="email"
@@ -254,7 +262,7 @@ class Register extends React.Component {
               placeholder={DIC.FORM_MAIL}
               pattern=".{6,}"
               controlFunc={this.handleChange}
-              disabled={false}
+              disabled={FORM_INPUTS_DISABLED}
             />
             <div id="checkboxWrapper" className="app-form-whole">
               <p className="app-form-label-txt txt-left">
@@ -267,7 +275,7 @@ class Register extends React.Component {
                   label={item}
                   handleCheckbox={this.handleCheckbox}
                   send={send}
-                  disabled={false}
+                  disabled={FORM_INPUTS_DISABLED}
                 />
               ))}
             </div>
@@ -289,7 +297,7 @@ class Register extends React.Component {
                     text="Ok"
                     handleCheckbox={this.handleConsentsCheckbox}
                     send={send}
-                    disabled={false}
+                    disabled={FORM_INPUTS_DISABLED}
                   />
                   <p className="app-form-label-txt txt-left">
                     He leído y acepto{' '}
@@ -319,7 +327,7 @@ class Register extends React.Component {
                     text="Ok"
                     handleCheckbox={this.handleConsentsCheckbox}
                     send={send}
-                    disabled={false}
+                    disabled={FORM_INPUTS_DISABLED}
                   />
 
                   <p className="app-form-label-txt txt-left">
