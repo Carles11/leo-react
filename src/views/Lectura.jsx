@@ -5,7 +5,9 @@ import withScroll from '../components/HOC/withScroll';
 import * as API from '../utils/API';
 
 class Lectura extends React.PureComponent {
-  state = { data: [], audio: '' };
+  state = {
+    data: [],
+  };
 
   async componentDidMount() {
     const promise = await API.get('documents');
@@ -15,15 +17,47 @@ class Lectura extends React.PureComponent {
     }
   }
 
-  handleAudio = (audio) => {
-    this.setState({ audio });
-    const audioURL = new Audio(audio);
-    audioURL.play;
+  handleDownloadAudio = (url, title) => {
+    const extension = '. mp3';
+    const filename = `${title}${extension}`;
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+
+    setTimeout(() => {
+      document.body.removeChild(link);
+    }, 100);
+  };
+
+  handleDownloadDocument = (url, title) => {
+    const urlParts = url.split('? ')[0];
+    const extension = urlParts.match(/\.(pdf|doc|docx|txt)$/i)?.[0] || '.pdf';
+    const filename = `${title}${extension}`;
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+
+    setTimeout(() => {
+      document.body.removeChild(link);
+    }, 100);
   };
 
   render() {
     const { DIC } = this.props;
-    const { data, audio } = this.state;
+    const { data } = this.state;
+
     return (
       <section className="app-content pb2rem mb2rem">
         <Helmet
@@ -42,9 +76,8 @@ class Lectura extends React.PureComponent {
               .sort((a, b) => (a.year > b.year ? -1 : 1))
               .map((d) => (
                 <React.Fragment key={d._id}>
-                  {d.year === 2024 ? (
+                  {d.year === 2024 && (
                     <h2 className="subtit-section subtit-section-underline txt-center w100">
-                      {/* {d.title} */}
                       <br />
                       <small className="txt-center">
                         * Textos A1-B1 leídos por Sara Casado.
@@ -69,9 +102,9 @@ class Lectura extends React.PureComponent {
                         <small>
                           <li>Texto 5: María E. Martínez</li>
                         </small>
-                      </ul>{' '}
+                      </ul>
                     </h2>
-                  ) : null}
+                  )}
 
                   {d.year === 2025 &&
                     d.projects.map((project) => (
@@ -86,60 +119,45 @@ class Lectura extends React.PureComponent {
                               <header className="app-list-header">
                                 <h2>{item.title}</h2>
                                 <div className="app-list-content-btn">
+                                  {/* Audio download button */}
                                   {item.audio && (
                                     <button
-                                      aria-label={`Escuchar el audio '${item.title}'`}
+                                      aria-label={`Descargar el audio '${item.title}'`}
                                       onClick={() =>
-                                        this.handleAudio(item.audio)
+                                        this.handleDownloadAudio(
+                                          item.audio,
+                                          item.title,
+                                        )
                                       }
                                       className="app-list-btn icon-headphones"
-                                      title={`Escuchar el audio '${item.title}'`}
+                                      title={`Descargar el audio '${item.title}'`}
+                                      type="button"
                                     >
                                       <span className="hidden">
-                                        {`Escuchar el audio '${item.title}'`}
+                                        {`Descargar el audio '${item.title}'`}
                                       </span>
                                     </button>
                                   )}
 
-                                  <a
+                                  {/* Document download button */}
+                                  <button
                                     aria-label={`Descargar el texto '${item.title}'`}
-                                    download={item.url}
-                                    href={item.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    onClick={() =>
+                                      this.handleDownloadDocument(
+                                        item.url,
+                                        item.title,
+                                      )
+                                    }
                                     className="app-list-btn icon-arrow-down-circle"
                                     title={`Descargar el texto '${item.title}'`}
+                                    type="button"
                                   >
                                     <span className="hidden">
                                       {`Descargar el texto '${item.title}'`}
                                     </span>
-                                  </a>
+                                  </button>
                                 </div>
                               </header>
-                              {audio === item.audio && (
-                                <div className="mini-grid-row">
-                                  {/* 
-                                  ########  Somehow starting 2024 the audio tag stopped working. We need to use iframe now ########
-                                  <audio
-                                    className="app-audio"
-                                    src={audio}
-                                    controls="controls"
-                                    autoPlay
-                                  >
-                                    Your browser does not support the{' '}
-                                    <code>audio</code> element.
-                                  </audio> */}
-                                  <iframe
-                                    frameborder="1"
-                                    width="10"
-                                    height="10"
-                                    src={audio}
-                                  ></iframe>
-                                  <small className="mini-grid-margin">
-                                    Descargando archivo...
-                                  </small>
-                                </div>
-                              )}
                             </li>
                           ))}
                         </ul>
