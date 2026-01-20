@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
+import EinwilligungDeutsch from '../assets/docus/bases_aleman/Vorlesewettbewerb_Spanisch_Teilnahmebedingungen_2025_26.pdf';
 
 import withScroll from '../components/HOC/withScroll';
 
@@ -19,6 +20,24 @@ const Bases = (props) => {
       />
       <header>
         <h1 className="tit-header mb2rem">{DIC.NAV_BASES}</h1>
+        <div className="terms-header">
+          <h2>Teilnahmebedingungen (Deutsch)</h2>
+          <div className="app-list-content-btn">
+            <a
+              aria-label={`Descargar el .pdf 'Teilnahmebedingungen Deutsch'`}
+              download={EinwilligungDeutsch}
+              href={EinwilligungDeutsch}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="app-list-btn icon-arrow-down-circle"
+              title={`Descargar el .pdf 'Teilnahmebedingungen Deutsch'`}
+            >
+              <span className="hidden">
+                {`Descargar el .pdf 'Teilnahmebedingungen Deutsch'`}
+              </span>
+            </a>
+          </div>
+        </div>
       </header>
       <article className="app-section-width">
         <p className="txt">Estimados/as compañeros/as:</p>
