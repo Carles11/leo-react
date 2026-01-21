@@ -335,7 +335,7 @@ ul.no-bullets {
 
   /* Make title right aligned and allow wrapping (no ellipsis) */
   .terms-header h2 {
-    flex: 0 1 70%; /* give title a percentage width so it sits to the left of the button but still right-aligned */
+    flex: 0 1 90%; /* give title a percentage width so it sits to the left of the button but still right-aligned */
     text-align: right;
     white-space: normal; /* allow wrapping */
     overflow: visible;
