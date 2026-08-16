@@ -111,6 +111,32 @@ client to say what should be editable.
 
 ---
 
+### Q-6 · Excel export "Categorías" column is empty 🔵 10 min
+`ExcelExport.jsx` has `<ExcelColumn label="Categorías" value="categories" />`, but the School
+schema field is `category` (singular). The mismatch means this column exports empty for every row.
+Found while working A-1 (`api` repo) on the schools list endpoints — pre-existing, not a
+regression from that fix.
+
+Fix: change `value="categories"` to `value="category"` (confirm the exact field name against
+`schoolModel.js` in the `api` repo first).
+
+**Done when:** the Excel export's "Categorías" column is populated for each school.
+
+---
+
+### Q-7 · `API.js` 401 detection unreliable behind Cloudflare 🔵 30 min
+`utils/API.js`'s `request()` detects an expired/invalid token via
+`promise.statusText === 'Unauthorized'`. Behind Cloudflare over HTTP/2, `statusText` is often
+empty, so this check can silently fail to fire — an expired admin token then surfaces as a
+confusing generic error instead of a clean sign-in-again prompt. Found while working A-1.
+
+Fix: check `promise.status === 401` instead of `statusText` — protocol/CDN-independent.
+
+**Done when:** an expired admin token reliably triggers the sign-in error state, verified against
+production (behind Cloudflare), not just localhost.
+
+---
+
 ### S-6 · CI on GitHub Actions 🔵 half a day
 Blocked by: the test script.
 

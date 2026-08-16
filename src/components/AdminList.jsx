@@ -36,7 +36,7 @@ class AdminList extends React.Component {
   getData = async () => {
     const { error, year } = this.state;
     const { type } = this.props;
-    const promise = await API.get(type);
+    const promise = await API.get(`${type}/all`);
 
     if (promise.success) {
       const list = promise.data;
