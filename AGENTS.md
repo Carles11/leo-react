@@ -107,6 +107,32 @@ src/
   assets/docus/         PDFs and DOCX shipped in the bundle, organised by year
 ```
 
+## Working with coding agents
+
+Learned the hard way, 16 Aug 2026. These are not optional.
+
+1. **Never run `yarn install`, `yarn add`, or any package install command.** OpenCode runs in
+   Linux; this repo is developed on Windows. A Linux install rewrites `node_modules/.bin` with
+   POSIX symlinks (no `.cmd` shims) and installs Linux binaries for native modules like `bcrypt`,
+   which then fail with *"is not a valid Win32 application"*. If a dependency must change, edit
+   `package.json` only and say so — the human runs the install on Windows.
+
+2. **Commit your work.** Create the branch, make the edits, `git add`, `git commit`. Reporting a
+   task as done while leaving changes uncommitted in the working tree has caused three separate
+   tangles. A task is not finished until `git status --short` is empty and `git log -1` shows
+   your commit.
+
+3. **Apply the change — do not stop at a plan** unless explicitly asked to plan. If asked to plan
+   first, say so clearly and wait.
+
+4. **Report the branch name you are actually on**, verified with `git branch --show-current`, not
+   the one you intended to create.
+
+### For the human, before switching branches
+
+Run `git status --short`. Empty means safe to check out. Anything listed means the agent left work
+uncommitted — commit it on the current branch first.
+
 ## Definition of done
 
 Before you say a task is finished:
