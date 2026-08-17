@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import * as API from '../utils/API';
 import { getNextEditionYear } from '../utils/helpers';
 import withScroll from '../components/HOC/withScroll';
-// import Loader from '../components/Loader'
+import Loader from '../components/Loader';
 
 class Colegios extends React.Component {
-  state = { schools: [] };
+  state = { schools: [], loaded: false };
 
   static propTypes = {
     DIC: PropTypes.object.isRequired,
@@ -18,14 +18,19 @@ class Colegios extends React.Component {
     const promise = await API.get('schools');
 
     if (promise.success) {
-      this.setState({ schools: promise.data });
+      this.setState({ schools: promise.data, loaded: true });
+    } else {
+      this.setState({ loaded: true });
     }
   }
 
   render() {
     const nextEditionYear = getNextEditionYear();
     const { DIC } = this.props;
-    const { schools } = this.state;
+    const { schools, loaded } = this.state;
+    const currentSchools = schools.filter(
+      (item) => item.year === nextEditionYear,
+    );
     return (
       <section className="app-content pb2rem mb2rem">
         <Helmet
@@ -40,23 +45,21 @@ class Colegios extends React.Component {
             {DIC.NAV_COLEGIOS} {nextEditionYear}
           </h1>
         </header>
-        {!schools.length && (
+        {!loaded && <Loader />}
+        {loaded && !currentSchools.length && (
           <h4 className="txt-center">No hay colegios inscritos todavía.</h4>
         )}
-        {!!schools.length && (
+        {loaded && !!currentSchools.length && (
           <article>
             <ul className="app-list app-section-boxes">
-              {schools.map(
-                (item) =>
-                  item.year === nextEditionYear && (
-                    <li key={item._id} className="app-list-item">
-                      <header className="app-list-header">
-                        <h2>{item.name}</h2>
-                        <small>{item.address}</small>
-                      </header>
-                    </li>
-                  ),
-              )}
+              {currentSchools.map((item) => (
+                <li key={item._id} className="app-list-item">
+                  <header className="app-list-header">
+                    <h2>{item.name}</h2>
+                    <small>{item.address}</small>
+                  </header>
+                </li>
+              ))}
             </ul>
           </article>
         )}
