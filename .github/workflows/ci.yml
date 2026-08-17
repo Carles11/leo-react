@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [development, master]
+  pull_request:
+    branches: [development, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+        env:
+          # react-scripts treats ESLint warnings as errors when CI=true.
+          # GitHub Actions sets CI=true by default, but this repo has
+          # pre-existing lint warnings, so the build would fail in CI
+          # while succeeding locally. Set CI=false to match local builds.
+          CI: false
+      # Lint is excluded until the pre-existing eslint errors are cleared
+      # (parse error in SingleInput.jsx and ~87 others). A permanently
+      # red CI is worse than none.
+      # Tests are excluded because the Enzyme suite is snapshot-heavy and
+      # slated for replacement (task M-2).

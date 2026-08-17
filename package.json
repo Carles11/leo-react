@@ -2,7 +2,7 @@
   "name": "leo",
   "version": "14.0.0",
   "engines": {
-    "node": ">=18.x"
+    "node": "22.x"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +30,9 @@
     "server": "cross-env NODE_ENV=production && node server.js",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "eslint src && react-app-rewired test --watch --env=jsdom --coverage",
+    "lint": "eslint src",
+    "test": "react-app-rewired test --env=jsdom --watchAll=false",
+    "test:watch": "react-app-rewired test --env=jsdom --watch",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
