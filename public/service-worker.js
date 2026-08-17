@@ -1,43 +1,24 @@
-const CACHE_NAME = 'leo-app-cache-v1';
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/favicon.ico',
-  // Add other assets here
-];
+// Self-destructing service worker (task S-9).
+// The previous worker cached index.html under a fixed cache name and served it cache-first,
+// permanently pinning returning visitors to the build they first loaded. This replacement
+// clears all caches and unregisters itself. Because the file contents differ from the old
+// worker, browsers detect the change on their next update check and install this one.
 
-// Install event - caching assets
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('Opened cache');
-      return cache.addAll(urlsToCache);
-    }),
-  );
+self.addEventListener('install', () => {
+  self.skipWaiting();
 });
 
-// Fetch event - serving cached assets
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Return the cached response if found, or fetch from the network
-      return response || fetch(event.request);
-    }),
-  );
-});
-
-// Activate event - cleaning up old caches
 self.addEventListener('activate', (event) => {
-  const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        }),
-      );
-    }),
+    caches
+      .keys()
+      .then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
+      .then(() => self.registration.unregister())
+      .then(() => self.clients.matchAll({ type: 'window' }))
+      .then((clients) => {
+        clients.forEach((client) => client.navigate(client.url));
+      }),
   );
 });
+
+// No fetch handler — all requests go straight to the network.
