@@ -68,7 +68,7 @@ const Item = (props) => {
             </p>
             <p className="app-list-content-item">
               <small>Categorias:</small>
-              {item.category.join(', ')}
+              {(item.category || []).join(', ')}
             </p>
             <p className="app-list-content-item">
               <small>Cursillo digital:</small>
