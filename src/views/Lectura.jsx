@@ -1,19 +1,23 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import Loader from '../components/Loader';
 import withScroll from '../components/HOC/withScroll';
 import * as API from '../utils/API';
 
 class Lectura extends React.PureComponent {
   state = {
     data: [],
+    loaded: false,
   };
 
   async componentDidMount() {
     const promise = await API.get('documents');
 
     if (promise.success) {
-      this.setState({ data: promise.data });
+      this.setState({ data: promise.data, loaded: true });
+    } else {
+      this.setState({ loaded: true });
     }
   }
 
@@ -56,7 +60,12 @@ class Lectura extends React.PureComponent {
 
   render() {
     const { DIC } = this.props;
-    const { data } = this.state;
+    const { data, loaded } = this.state;
+
+    const years = data.map((d) => d.year).filter((y) => typeof y === 'number');
+    const latest = years.length ? Math.max(...years) : null;
+    const edition =
+      latest !== null ? data.find((d) => d.year === latest) : null;
 
     return (
       <section className="app-content pb2rem mb2rem">
@@ -70,102 +79,68 @@ class Lectura extends React.PureComponent {
         <header>
           <h1 className="tit-header mb2rem">{DIC.NAV_TEXTOS}</h1>
         </header>
-        <div className="app-section-width app-section-boxes">
-          {data.length > 0 &&
-            data
-              .sort((a, b) => (a.year > b.year ? -1 : 1))
-              .map((d) => (
-                <React.Fragment key={d._id}>
-                  {d.year === 2024 && (
-                    <h2 className="subtit-section subtit-section-underline txt-center w100">
-                      <br />
-                      <small className="txt-center">
-                        * Textos A1-B1 leídos por Sara Casado.
-                      </small>
-                      <br />
-                      <small className="txt-center margin-text">
-                        * Textos B2 leídos por:
-                      </small>
-                      <ul className="decoration-none">
-                        <small>
-                          <li>Texto 1: Norma Palacios</li>
-                        </small>
-                        <small>
-                          <li>Texto 2: Gema Bonnín</li>
-                        </small>
-                        <small>
-                          <li>Texto 3: Carolín Fuentes</li>
-                        </small>
-                        <small>
-                          <li>Texto 4: Heidy González</li>
-                        </small>
-                        <small>
-                          <li>Texto 5: María E. Martínez</li>
-                        </small>
-                      </ul>
-                    </h2>
-                  )}
+        {!loaded && <Loader msg={DIC.NAV_TEXTOS} />}
+        {loaded && (
+          <div className="app-section-width app-section-boxes">
+            {edition && edition.projects && edition.projects.length > 0 ? (
+              edition.projects.map((project) => (
+                <article key={project.title} className="app-section-box mb2rem">
+                  <h2 className="txt-highlight">{project.title}</h2>
+                  <ul className="app-list">
+                    {project.items.map((item) => (
+                      <li key={item.title} className="app-list-item">
+                        <header className="app-list-header">
+                          <h2>{item.title}</h2>
+                          <div className="app-list-content-btn">
+                            {item.audio && (
+                              <button
+                                aria-label={`Descargar el audio '${item.title}'`}
+                                onClick={() =>
+                                  this.handleDownloadAudio(
+                                    item.audio,
+                                    item.title,
+                                  )
+                                }
+                                className="app-list-btn icon-headphones"
+                                title={`Descargar el audio '${item.title}'`}
+                                type="button"
+                              >
+                                <span className="hidden">
+                                  {`Descargar el audio '${item.title}'`}
+                                </span>
+                              </button>
+                            )}
 
-                  {d.year === 2025 &&
-                    d.projects.map((project) => (
-                      <article
-                        key={project.title}
-                        className="app-section-box mb2rem"
-                      >
-                        <h2 className="txt-highlight">{project.title}</h2>
-                        <ul className="app-list">
-                          {project.items.map((item) => (
-                            <li key={item.title} className="app-list-item">
-                              <header className="app-list-header">
-                                <h2>{item.title}</h2>
-                                <div className="app-list-content-btn">
-                                  {/* Audio download button */}
-                                  {item.audio && (
-                                    <button
-                                      aria-label={`Descargar el audio '${item.title}'`}
-                                      onClick={() =>
-                                        this.handleDownloadAudio(
-                                          item.audio,
-                                          item.title,
-                                        )
-                                      }
-                                      className="app-list-btn icon-headphones"
-                                      title={`Descargar el audio '${item.title}'`}
-                                      type="button"
-                                    >
-                                      <span className="hidden">
-                                        {`Descargar el audio '${item.title}'`}
-                                      </span>
-                                    </button>
-                                  )}
-
-                                  {/* Document download button */}
-                                  <button
-                                    aria-label={`Descargar el texto '${item.title}'`}
-                                    onClick={() =>
-                                      this.handleDownloadDocument(
-                                        item.url,
-                                        item.title,
-                                      )
-                                    }
-                                    className="app-list-btn icon-arrow-down-circle"
-                                    title={`Descargar el texto '${item.title}'`}
-                                    type="button"
-                                  >
-                                    <span className="hidden">
-                                      {`Descargar el texto '${item.title}'`}
-                                    </span>
-                                  </button>
-                                </div>
-                              </header>
-                            </li>
-                          ))}
-                        </ul>
-                      </article>
+                            <button
+                              aria-label={`Descargar el texto '${item.title}'`}
+                              onClick={() =>
+                                this.handleDownloadDocument(
+                                  item.url,
+                                  item.title,
+                                )
+                              }
+                              className="app-list-btn icon-arrow-down-circle"
+                              title={`Descargar el texto '${item.title}'`}
+                              type="button"
+                            >
+                              <span className="hidden">
+                                {`Descargar el texto '${item.title}'`}
+                              </span>
+                            </button>
+                          </div>
+                        </header>
+                      </li>
                     ))}
-                </React.Fragment>
-              ))}
-        </div>
+                  </ul>
+                </article>
+              ))
+            ) : (
+              <h4 className="txt-center">
+                Los textos de lectura se publicarán aquí en breve.
+              </h4>
+            )}
+          </div>
+        )}
       </section>
     );
   }
