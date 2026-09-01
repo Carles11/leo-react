@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
-import EinwilligungDeutsch from '../assets/docus/bases_aleman/Vorlesewettbewerb_Spanisch_Teilnahmebedingungen_2025_26.pdf';
+import EinwilligungDeutsch from '../assets/docus/bases_aleman/Vorlesewettbewerb_Spanisch_Teilnahmebedingungen_2026_27.pdf';
 
 import withScroll from '../components/HOC/withScroll';
 
@@ -74,8 +74,9 @@ const Bases = (props) => {
               <strong className="txt-highlight">
                 {`${DIC.CONCURSO_EDICION_FINAL_INSCRIPTION_DUE}`}
               </strong>{' '}
-              y se realizará exclusivamente a través de la página web. Para la
-              Semifinal Latinoamérica también se utilizará este medio. Para
+              y se realizará exclusivamente a través de la página web. En la
+              edición 2027 podrán participar 70 centros escolares de Hesse. Para
+              la Semifinal Latinoamérica también se utilizará este medio. Para
               confirmar que el colegio ha quedado correctamente inscrito, hay
               que consultar la lista de colegios inscritos, ya que no se envían
               correos de confirmación.
