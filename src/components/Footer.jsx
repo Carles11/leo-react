@@ -3,7 +3,7 @@ import Button from './Button';
 import logoAecid from '../assets/imgs/logo-aecid.png';
 import logoARS from '../assets/imgs/logo-ARS.png';
 import logoConsuladoEspFra from '../assets/imgs/logo-consulado-esp-fra.png';
-import logoHessen from '../assets/imgs/logo-hessen.jpg';
+import logoHessen from '../assets/imgs/logo-hessen.png';
 import logoHws from '../assets/imgs/logo-hws.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
 
@@ -15,6 +15,7 @@ import logoMexico from '../assets/imgs/logo-mexico.png';
 import logoPeru from '../assets/imgs/logo-peru.jpg';
 import logoVenezuela from '../assets/imgs/logo-venezuela.png';
 import logoRepublicaDominicana from '../assets/imgs/Logo-republica-dominicana.png';
+import logoEcuador from '../assets/imgs/logo-ecuador.png';
 
 import logoCornelsen from '../assets/imgs/logo-cornelsen.jpg';
 import logoDsv from '../assets/imgs/logo-dsv.png';
@@ -198,6 +199,14 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de Consulado de Argentina en Frankfurt"
             >
               <img src={logoArgentina} alt="logoArgentina" />
+            </a>
+            <a
+              href="https://www.cancilleria.gob.ec/alemania/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a la página web de la Embajada del Ecuador en Alemania"
+            >
+              <img src={logoEcuador} alt="Embajada del Ecuador en Alemania" />
             </a>
             <a
               href="http://www.consuladodominicanoff.de/"

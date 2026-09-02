@@ -72,8 +72,6 @@ class Register extends React.Component {
     const { value } = e.target;
     const elem = e.target;
 
-    console.log('handleCheckbox', FORM_INPUTS_DISABLED); // For debugging
-
     if (!elem.dataset.checked) {
       elem.dataset.checked = 'checked';
     } else {
@@ -170,7 +168,6 @@ class Register extends React.Component {
     //   marginTop: 0,
     //   marginLeft: '1rem',
     // }
-    console.log({ FORM_INPUTS_DISABLED });
     return (
       <article className="app-section app-section-1 pSides05rem pb2rem">
         <ReactMessages
