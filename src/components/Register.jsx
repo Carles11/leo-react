@@ -19,7 +19,7 @@ import SingleInput from './form/SingleInput';
 
 const categories = ['A1', 'A2', 'B1', 'B2'];
 // To disable the form, set FORM_INPUTS_DISABLED to false
-const FORM_INPUTS_DISABLED = true;
+const FORM_INPUTS_DISABLED = false;
 
 class Register extends React.Component {
   state = {
@@ -182,7 +182,7 @@ class Register extends React.Component {
             <h3 className="subtit-section">{DIC.FORM_SUBTITLE}</h3>
 
             {/* COMMENT/UNCOMMENT FOLLOWING LINE TO SHOW/HIDE MESSAGE "PLAZO DE INSCRIPCIÓN TERMINADO" */}
-            <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4>
+            {/* <h4 className="subtit-section-red">{DIC.FORM_WARNING}</h4> */}
             {/* <h4 className="subtit-section-red">{DIC.FORM_CANCELLATION}</h4> */}
           </header>
           <form
