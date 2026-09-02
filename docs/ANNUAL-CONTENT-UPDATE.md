@@ -125,6 +125,11 @@ Final sweep: `grep -n "OLD_YEAR" src/utils/dictionary.js`
 - [ ] `src/components/ImageGallery.jsx` (~line 17): `year: 2025` — set to the most recent year that
       actually has photos in `leo_images`, **not** the upcoming edition. Photos are taken after the
       final.
+      > **Images blank in dev but not prod?** That is Google throttling `lh3.googleusercontent.com`
+      > URLs on non-production referers (HTTP 429). Fixed site-wide by the `<meta name="referrer"
+      > content="no-referrer">` in `public/index.html` plus `referrerpolicy="no-referrer"` on the
+      > gallery photos. See `docs/ANNUAL-UPDATE-ROADMAP.md`. Importing images is done via the api
+      > repo's `scripts/import-drive-images.js` (see api `docs/IMPORT-IMAGES.md`).
 - [ ] `src/views/Bases.jsx` — check for any inline year in the body copy.
 
 ---

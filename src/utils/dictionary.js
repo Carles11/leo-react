@@ -3,9 +3,9 @@ const dictionary = {
     AVISO_LEGAL_CONTENT: 'Datenschützerklärung',
     CONCURSO: 'El concurso',
     CONCURSO_BASES_TITLE:
-      'El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía de vuestros alumnos y alumnas de español, a la decimoquinta edición del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”.',
+      'El colegio Hessenwaldschule tiene el gusto de invitaros, en compañía de vuestros alumnos y alumnas de español, a la decimosexta edición del Concurso Escolar de Lectura en Español ‟Leo, leo… ¿Qué lees?”.',
     CONCURSO_BASES_PARAGRAPH_2:
-      'Desde la convocatoria de 2015 el concurso «Leo, leo… ¿Qué lees?» está incluido en la red de concursos oficiales del Hessisches Ministerium für Kultus, Bildung und Chancen de Hesse. En su decimoquinto año de celebración cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, de la Asociación Alemana del Profesorado de Español (DSV), de los Consulados Generales de España, México, Chile, Colombia, Argentina, Perú, Venezuela y República Dominicana en Fráncfort, del Comisionado para la Lengua Española de la Junta de Castilla y León a través del Colegio Delibes en Salamanca, así como con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag, Edinumen y Westermann.',
+      'Desde la convocatoria de 2015, el concurso «Leo, leo… ¿Qué lees?» está incluido en la red de concursos oficiales del Hessisches Ministerium für Kultus, Bildung und Chancen de Hesse. En su decimosexto año de celebración, cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, de la Asociación Alemana del Profesorado de Español (DSV), de los Consulados Generales de España, México, Chile, Colombia, Argentina, Perú, Venezuela y República Dominicana en Fráncfort, del Comisionado para la Lengua Española de la Junta de Castilla y León a través del Colegio Delibes en Salamanca, así como con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag, Edinumen und Klett Sprachen. Además, esta iniciativa de lectura ha cruzado fronteras y actualmente se está llevando a cabo en catorce de los dieciséis Estados Federales de Alemania.',
     CONCURSO_BASES_PARAGRAPH_3:
       'Estos serán un mínimo de uno y un máximo de cuatro, según el número de categorías en las que se participe. El proceso de selección estará regido y organizado por cada uno de los centros participantes.',
     CONCURSO_BASES_PARAGRAPH_3_bis:
@@ -45,7 +45,7 @@ const dictionary = {
     CONCURSO_BASES_PARAGRAPH_13_bis:
       'La «calidad» de la lectura se determinará según estos dos criterios:',
     CONCURSO_BASES_PARAGRAPH_13_bis_bis:
-      'La puntuación será de 1 a 5, para cada una de las tres categorías, siendo 5 el máximo.',
+      'La puntuación será de 1 a 5, para cada una de las dos categorías, siendo 5 el máximo.',
     CONCURSO_BASES_PARAGRAPH_14:
       'El candidato consigue una pronunciación clara y correcta (en los niveles A1 y A2 no se tendrán en cuenta las irregularidades en la pronunciación de la «r/rr»), una acentuación correcta y una velocidad de lectura adecuada. No se penalizará la autocorrección.',
     CONCURSO_BASES_PARAGRAPH_15:
@@ -53,7 +53,7 @@ const dictionary = {
     CONCURSO_BASES_PARAGRAPH_16:
       'Los centros coordinadores de las semifinales acordarán la fecha en la que tendrá lugar esta prueba eliminatoria con los centros participantes en cada una de ellas.',
     CONCURSO_BASES_PARAGRAPH_16_bis:
-      '(fecha máxima de inscripción: 30 de noviembre de 2025)',
+      '(fecha máxima de inscripción: 30 de noviembre de 2026)',
     CONCURSO_BASES_PARAGRAPH_16_bis_bis:
       'El número de semifinales no será superior a siete para evitar que la final se alargue en exceso.',
     CONCURSO_BASES_PARAGRAPH_17:
@@ -79,20 +79,20 @@ const dictionary = {
     CONCURSO_BASES_PARAGRAPH_24:
       'Asimismo, los padres autorizan con este documento que sus hijos/as puedan participar en las semifinales en versión digital a través de videoconferencia, en caso de que fuera necesario.',
     CONCURSO_BASES_PARAGRAPH_25:
-      'En 2024 se celebró con gran éxito la primera final nacional. Para 2026 está prevista la tercera final nacional Leo, leo. El ganador o la ganadora de la categoría A1 pasará entonces de forma automática, siempre y cuando así lo desee, a concursar en la final nacional, donde competirá con el alumnado ganador de los otros estados federales que participen en ella. La final nacional se realizará en modalidad digital. El ganador o la ganadora de la categoría A1 en Hesse tendrá del ',
+      'En 2024 se celebró con gran éxito la primera final nacional. Para 2027 está prevista la cuarta final nacional Leo, leo. El ganador o la ganadora de la categoría A1 pasará entonces de forma automática, siempre y cuando así lo desee, a concursar en la final nacional, donde competirá con el alumnado ganador de los otros estados federales que participen en ella. La final nacional se realizará en modalidad digital. El ganador o la ganadora de la categoría A1 en Hesse tendrá del ',
     CONCURSO_BASES_PARAGRAPH_25_bis:
-      'para enviar su archivo de audio al equipo organizador de la III Final Nacional Leo, leo.',
+      'para enviar su archivo de audio al equipo organizador de la IV Final Nacional Leo, leo.',
     CONCURSO_EDICION: '¿Cuándo es la próxima edición?',
-    CONCURSO_EDICION_FINAL_ALCE_NEXT_DATE: '6 de junio de 2025',
-    CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2025',
-    CONCURSO_EDICION_FINAL_NEXT_DATE: 'viernes 29 de mayo de 2026',
-    CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: '18 de abril de 2026',
-    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: '25 de abril de 2026',
-    CONCURSO_EDICION_SF_INTERNAL_SELECTION_LIMIT: '1 de marzo de 2026',
-    CONCURSO_EDICION_SF_MUST_BE_DONE_BY: '30 de abril de 2026',
-    CONCURSO_EDICION_ENVIO_AUDIOS: '29 de mayo al 4 de junio de 2026',
+    CONCURSO_EDICION_FINAL_ALCE_NEXT_DATE: '30 de abril de 2027',
+    CONCURSO_EDICION_FINAL_INSCRIPTION_DUE: '30 de noviembre de 2026',
+    CONCURSO_EDICION_FINAL_NEXT_DATE: 'viernes 30 de abril de 2027',
+    CONCURSO_EDICION_SF_LATINOAMERICA_INSCRIPTION_DUE: '12 de abril de 2027',
+    CONCURSO_EDICION_SF_LATINOAMERICA_NEXT_DATE: 'sábado 17 de abril de 2027',
+    CONCURSO_EDICION_SF_INTERNAL_SELECTION_LIMIT: '1 de marzo de 2027',
+    CONCURSO_EDICION_SF_MUST_BE_DONE_BY: '15 de abril de 2027',
+    CONCURSO_EDICION_ENVIO_AUDIOS: '30 de abril de 2027 hasta finales de mayo de 2027',
     CONCURSO_EDICION_TXT:
-      'La Final de la decimoquinta convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
+      'La Final de la decimosexta convocatoria del Concurso Escolar de Lectura en Español ‟Leo, leo ... ¿Qué lees?” tendrá lugar en el Salón de Actos de la sede del Instituto Cervantes de Fráncfort el día ',
     CONCURSO_EDICION_TXT_CONT:
       'La fecha límite para la inscripción de los colegios participantes será el ',
     CONCURSO_ORGANIZA: '¿Quién lo organiza?',
@@ -103,7 +103,7 @@ const dictionary = {
       'Todos los alumnos de secundaria en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en las cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas (MCER).',
     CONCURSO_PATROCINA: '¿Quién nos patrocina?',
     CONCURSO_PATROCINA_TXT:
-      'Actualmente, el concurso cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort, del Consulado General de Perú en Offenbach, del Consulado General de Argentina en Fráncfort, del Consulado General de la República Bolivariana de Venezuela en Fráncfort y de la Asociación Alemana de Profesores de Español (DSV). Asimismo, cuenta con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag, Edinumen y Westermann.',
+      'Actualmente, el concurso cuenta con el apoyo institucional de la Consejería de Educación de la Embajada de España en Alemania, del Instituto Cervantes de Fráncfort, del Consulado General de España en Fráncfort, del Consulado General de México en Fráncfort, del Consulado General de Colombia en Fráncfort, del Consulado General de Chile en Fráncfort, del Consulado General de Perú en Offenbach, del Consulado General de Argentina en Fráncfort, del Consulado General de la República Bolivariana de Venezuela en Fráncfort y de la Asociación Alemana de Profesores de Español (DSV). Asimismo, cuenta con el patrocinio de las editoriales Grupo SM, Schulverlag Klett, Cornelsen Verlag, Edinumen y Klett Sprachen.',
     CONCURSO_TXT:
       'La lectura nos ayuda a comunicarnos con nuestro entorno y los concursos motivan a alumnos y profesores de todos los ámbitos de la enseñanza a conseguir nuevas metas. En este contexto surgió en 2012 la idea de poner en marcha un concurso de lectura en español en Hesse. Tras una fase de prueba, la iniciativa se ha ido consolidando, obteniendo en 2015 el apoyo del Hessisches Ministerium für Kultus, Bildung und Chancen de Hesse y entrando a formar parte de la red oficial de concursos escolares en esta Comunidad Autónoma. La trayectoria del concurso desde 2012 ha demostrado la gran acogida del concurso por parte de los centros educativos. Esto se ha debido especialmente a la fácil organización del concurso en la clase de español. Todos los alumnos de secundaria en la enseñanza reglada del sistema educativo alemán con español como segunda y tercera lengua pueden participar en el concurso, que se desarrolla en las cuatro categorías de A1 a B2, según el Marco Común Europeo de Referencia para las lenguas (MCER).',
     CONCURSO_WEB: ' www.leo-leo-hessen.com ',
@@ -112,8 +112,8 @@ const dictionary = {
     DOWNLOAD_TEXT_2019: 'Descargue aquí los textos de la edición de 2019.',
     SEMIFINAL_LATINOAMERICA_PARAGRAPH_1:
       'Fruto de la colaboración con los consulados generales de México, Colombia, Chile, Perú y Argentina, se celebrará una semifinal de nivel B2 para alumnos de países latinoamericanos. Para participar no es necesario tener la nacionalidad de ninguno de estos países, basta con tener ascendencia latinoamericana. La semifinal se celebrará también en el Instituto Cervantes de Fráncfort el',
-    SUBDESCRIPTION: 'Próxima final el 29 de mayo de 2026 ',
-    EDITION_CURRENT: 'XV convocatoria',
+    SUBDESCRIPTION: 'Próxima final el 30 de abril de 2027 ',
+    EDITION_CURRENT: 'XVI convocatoria',
     ERROR_EMAIL: 'Debe ser un correo electrónico válido.',
     ERROR_REQUIRED: 'es un campo obligatorio.',
     ERROR_TEXT: 'Debe tener más de 6 caracteres',
