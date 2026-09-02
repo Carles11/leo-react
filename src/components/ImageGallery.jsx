@@ -31,10 +31,14 @@ class ImageGallery extends React.Component {
     }
   }
 
+  withNoReferrer = (photo) => ({ ...photo, referrerpolicy: 'no-referrer' });
+
   handleFilter = (e) => {
     const { data } = this.state;
     const { year } = e.target.dataset;
-    const photos = data.filter((photo) => photo.year === Number(year));
+    const photos = data
+      .filter((photo) => photo.year === Number(year))
+      .map(this.withNoReferrer);
 
     this.setState({ photos, year });
   };
@@ -52,9 +56,9 @@ class ImageGallery extends React.Component {
 
       this.setState({
         data,
-        photos: onlyPhotosOver2019.filter(
-          (photo) => photo.year === Number(year),
-        ),
+        photos: onlyPhotosOver2019
+          .filter((photo) => photo.year === Number(year))
+          .map(this.withNoReferrer),
         loaded: true,
       });
 
