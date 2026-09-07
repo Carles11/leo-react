@@ -29,6 +29,7 @@ class Register extends React.Component {
     category: [],
     bases_consent: false,
     image_consent: false,
+    final_consent: false,
     interestCheckbox: false,
   };
 
@@ -89,8 +90,13 @@ class Register extends React.Component {
   };
 
   handleData = (e) => {
-    const { category, interestCheckbox, bases_consent, image_consent } =
-      this.state;
+    const {
+      category,
+      interestCheckbox,
+      bases_consent,
+      image_consent,
+      final_consent,
+    } = this.state;
     const { elements } = e.target;
     const nextEditionYear = getNextEditionYear();
 
@@ -114,6 +120,7 @@ class Register extends React.Component {
       category,
       bases_consent,
       image_consent,
+      final_consent,
       interestCheckbox,
       cp,
       city,
@@ -340,6 +347,30 @@ class Register extends React.Component {
                     de los alumnos/as que participan en el concurso en cuanto a
                     la posible publicación de sus nombres y/o fotos en la página
                     web del concurso o en revistas especializadas
+                  </p>
+                </div>
+              </div>
+
+              <div
+                id="checkboxesFinalConsentWrapper"
+                className="app-form-whole"
+              >
+                <div className="mini-grid-row">
+                  <p className="app-form-label-txt-error text-left" />
+                  <Checkbox
+                    key="final"
+                    id="final-accept"
+                    label="final_consent"
+                    text="Ok"
+                    handleCheckbox={this.handleConsentsCheckbox}
+                    send={send}
+                    disabled={FORM_INPUTS_DISABLED}
+                  />
+
+                  <p className="app-form-label-txt txt-left">
+                    Si alguna de mis alumnas o alguno de mis alumnos es
+                    finalista o suplente, nos comprometemos a estar presentes en
+                    la final de Fráncfort
                   </p>
                 </div>
               </div>

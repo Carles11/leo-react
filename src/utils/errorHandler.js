@@ -60,11 +60,15 @@ export const showCheckboxError = (item) => {
 
   const basesAccept = item.value === 'bases_consent';
   const imageAccept = item.value === 'image_consent';
+  const finalAccept = item.value === 'final_consent';
 
   // console.log(basesAccept, imageAccept);
   // console.log(item.parentNode.parentNode.parentNode);
 
-  if ((basesAccept || imageAccept) && item.dataset.checked !== 'checked') {
+  if (
+    (basesAccept || imageAccept || finalAccept) &&
+    item.dataset.checked !== 'checked'
+  ) {
     checkboxes = checkboxes.push(
       item.parentNode.parentNode.parentNode.querySelectorAll(
         'input[type=checkbox]',
@@ -123,6 +127,9 @@ export const showFormErrors = () => {
   const checkboxImageConsent = document.getElementById(
     'checkboxesImageConsentWrapper',
   );
+  const checkboxFinalConsent = document.getElementById(
+    'checkboxesFinalConsentWrapper',
+  );
 
   let isFormValid = true;
 
@@ -148,6 +155,10 @@ export const showFormErrors = () => {
     isFormValid = false;
   }
   if (checkboxImageConsent && !showCheckboxError(checkboxImageConsent)) {
+    console.error('Please check this checkbox.');
+    isFormValid = false;
+  }
+  if (checkboxFinalConsent && !showCheckboxError(checkboxFinalConsent)) {
     console.error('Please check this checkbox.');
     isFormValid = false;
   }
