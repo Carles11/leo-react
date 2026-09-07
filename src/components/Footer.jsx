@@ -5,7 +5,6 @@ import logoARS from '../assets/imgs/logo-ARS.png';
 import logoConsuladoEspFra from '../assets/imgs/logo-consulado-esp-fra.png';
 import logoHessen from '../assets/imgs/logo-hessen.png';
 import logoHws from '../assets/imgs/logo-hws.jpg';
-import logoColegioAlicia from '../assets/imgs/cole-alicia-logo_141.jpg';
 import logoIc from '../assets/imgs/logo-ic.jpg';
 
 import logoArgentina from '../assets/imgs/logo-argentina.jpg';
@@ -90,9 +89,12 @@ const Footer = (props) => {
               href="https://www.ars-pohlheim.net/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Enlace a la página web del Colegio Alicia"
+              aria-label="Enlace a la página web de Adolf Reichwein Schule Pohlheim"
             >
-              <img src={logoColegioAlicia} alt="Colegio Alicia" />
+              <img
+                src={logoARS}
+                alt="Logo de Adolf Reichwein Schule Pohlheim"
+              />
             </a>
             <a
               href="https://frankfurt.cervantes.es/de/start.shtm"
@@ -110,17 +112,6 @@ const Footer = (props) => {
               aria-label="Enlace a la página web de AECID (cooperación)"
             >
               <img src={logoAecid} alt="AECID (cooperación)" />
-            </a>
-            <a
-              href="https://www.ars-pohlheim.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Enlace a la página web de Adolf Reichwein Schule Pohlheim"
-            >
-              <img
-                src={logoARS}
-                alt="Logo de Adolf Reichwein Schule Pohlheim"
-              />
             </a>
 
             <a
