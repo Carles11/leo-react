@@ -107,7 +107,7 @@ class AdminList extends React.Component {
   };
 
   handleShow = (e) => {
-    const { id } = e.target.dataset;
+    const { id } = e.currentTarget.dataset;
     const el = document.querySelector(`.app-list-content[data-id="${id}"]`);
 
     if (!el.classList.contains('show')) {

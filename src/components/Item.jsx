@@ -36,7 +36,7 @@ const Item = (props) => {
             />
           </div>
         </header>
-        <section data-id={item._id} className="app-list-content show">
+        <section data-id={item._id} className="app-list-content">
           <article>
             <p className="app-list-content-item">
               <small>Teléfono:</small>
