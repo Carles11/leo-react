@@ -24,11 +24,19 @@ See task M-7.
 Set in the Render dashboard, baked in **at build time** (CRA inlines `REACT_APP_*`).
 Changing one requires a redeploy.
 
-| Variable | Purpose |
-|---|---|
-| `REACT_APP_API_URL` | Base URL for `/api/leo/` endpoints |
-| `REACT_APP_AUTH_URL` | Base URL for `/auth/` endpoints |
-| `REACT_APP_TOKEN_KEY` | localStorage key the JWT is stored under |
+| Variable | Purpose | Production value |
+|---|---|---|
+| `REACT_APP_API_URL` | Base URL for `/api/leo/` endpoints | `https://goldfish-app-cjwxt.ondigitalocean.app/api/leo/` |
+| `REACT_APP_AUTH_URL` | Base URL for `/auth/` endpoints | `https://goldfish-app-cjwxt.ondigitalocean.app/auth/` |
+| `REACT_APP_TOKEN_KEY` | localStorage key the JWT is stored under | `leoleoTokenKey` |
+
+**Trailing slashes are load-bearing** — the code concatenates paths onto these values.
+
+> **17 Sep 2026 — these two URLs changed.** They used to point at `https://www.api-crix.com/…`.
+> That domain expired and was not renewed; the API now answers on DigitalOcean's own hostname. See
+> the `api` repo's `docs/DEPLOYMENT.md` → “Hostname” for why, and why an IP address is not an
+> option. Because CRA inlines these at build time, changing them needs a **rebuild** — Render's
+> *“Save, rebuild, and deploy”* does it; a restart does not.
 
 Read by `src/config/production.js`. Development falls back to `http://localhost:4000/...` — see
 `src/config/development.js`.

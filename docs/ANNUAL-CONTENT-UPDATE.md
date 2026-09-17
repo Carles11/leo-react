@@ -64,9 +64,9 @@ Budget half a day. Work on `development`, verify against **staging**, then relea
 
 ### Either way
 
-- [ ] Verify at `https://www.api-crix.com/api/leo/documents` that the new entry comes back **with
-      its `year` field**. If `year` is missing, the API's Mongoose schema is stripping it — stop and
-      fix that first (api task A-19/A-8).
+- [ ] Verify at `https://goldfish-app-cjwxt.ondigitalocean.app/api/leo/documents` that the new
+      entry comes back **with its `year` field**. If `year` is missing, the API's Mongoose schema
+      is stripping it — stop and fix that first (api task A-19/A-8).
 
 > **No code change is needed for this step.** Since task Q-2, `Lectura.jsx` renders whichever
 > edition has the highest `year`. Adding the entry is enough.
