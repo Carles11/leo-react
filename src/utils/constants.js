@@ -15,7 +15,7 @@ export const FOOTER_DATA = [
     external: true,
   },
   {
-    label: 'HKM Hessen Schülerwettbewerbe',
+    label: 'HMKB Hessen Schülerwettbewerbe',
     url: 'https://kultusministerium.hessen.de/programme-und-projekte/schuelerwettbewerbe',
     external: true,
   },
