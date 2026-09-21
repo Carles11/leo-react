@@ -26,17 +26,22 @@ Changing one requires a redeploy.
 
 | Variable | Purpose | Production value |
 |---|---|---|
-| `REACT_APP_API_URL` | Base URL for `/api/leo/` endpoints | `https://goldfish-app-cjwxt.ondigitalocean.app/api/leo/` |
-| `REACT_APP_AUTH_URL` | Base URL for `/auth/` endpoints | `https://goldfish-app-cjwxt.ondigitalocean.app/auth/` |
+| `REACT_APP_API_URL` | Base URL for `/api/leo/` endpoints | `https://api.leo-leo-hessen.com/api/leo/` |
+| `REACT_APP_AUTH_URL` | Base URL for `/auth/` endpoints | `https://api.leo-leo-hessen.com/auth/` |
 | `REACT_APP_TOKEN_KEY` | localStorage key the JWT is stored under | `leoleoTokenKey` |
 
 **Trailing slashes are load-bearing** — the code concatenates paths onto these values.
 
-> **17 Sep 2026 — these two URLs changed.** They used to point at `https://www.api-crix.com/…`.
-> That domain expired and was not renewed; the API now answers on DigitalOcean's own hostname. See
-> the `api` repo's `docs/DEPLOYMENT.md` → “Hostname” for why, and why an IP address is not an
-> option. Because CRA inlines these at build time, changing them needs a **rebuild** — Render's
-> *“Save, rebuild, and deploy”* does it; a restart does not.
+> **These two URLs changed twice in September 2026.** `https://www.api-crix.com/…` until that
+> domain expired (17 Sep), then `https://goldfish-app-cjwxt.ondigitalocean.app/…` until AVG began
+> blocking that shared DigitalOcean domain as a scam site and locked out every visitor running
+> AVG or Avast (21 Sep). The API now answers on `api.leo-leo-hessen.com`, a subdomain of this
+> site's own domain. See the `api` repo's `docs/DEPLOYMENT.md` → “Hostname” for the full
+> reasoning, including why an IP address is not an option.
+>
+> **Changing them is a rebuild, not a restart** — CRA inlines `REACT_APP_*` at build time, so use
+> Render's *“Save, rebuild, and deploy”*. And bring the new hostname up on HTTPS **before**
+> changing these values, never after.
 
 Read by `src/config/production.js`. Development falls back to `http://localhost:4000/...` — see
 `src/config/development.js`.
